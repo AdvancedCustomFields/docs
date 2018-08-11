@@ -1,3 +1,9 @@
+---
+title: JavaScript API
+description: Learn how to use ACF's JavaScript library including functions, actions and filters and models.
+category: guides
+---
+
 ## Introduction
 
 Welcome to the Advanced Custom Fields JavaScript API. Here you will find documentation for our JavaScript library including functions, actions and filters and models.
