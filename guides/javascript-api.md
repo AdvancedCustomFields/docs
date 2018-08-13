@@ -2,6 +2,7 @@
 title: JavaScript API
 description: Learn how to use ACF's JavaScript library including functions, actions and filters and models.
 category: guides
+group: Tutorials
 ---
 
 ## Introduction
