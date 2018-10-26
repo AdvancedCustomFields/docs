@@ -2,7 +2,6 @@
 title: acf_register_block()
 description: Registers a custom block type in the Gutenberg editor.
 category: functions
-group: Other
 ---
 
 ## Description
