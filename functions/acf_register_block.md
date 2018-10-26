@@ -8,7 +8,10 @@ group: Other
 ## Description
 Registers a custom block type in the Gutenberg editor.
 
-Blocks are the fundamental element of the Gutenberg editor. WordPress provides many default block types such as paragraph, heading and image. The `acf_register_block()` function can be used to add new block types using ACF fields to power the content and provide an abstraction layer to handle the PHP templates.
+Blocks are the fundamental element of the Gutenberg editor. WordPress provides many default block types such as paragraph, heading and image. The **acf_register_block()** function can be used to add new block types via PHP.
+
+Once registered, your block will appear in the "Block" location rules when editing a field group. This allows you to map fields to your block and define the content.
+To render the block, create a PHP template (or callback function) to output the block HTML using PHP functions like [get_field()](https://www.advancedcustomfields.com/resources/get_field/) and [the_field()](https://www.advancedcustomfields.com/resources/the_field/).
 
 Note: Block type registration should be done within the acf/init action. This is not required, but is a safe way to ensure that ACF is fully initialized.
 
