@@ -132,7 +132,7 @@ acf_register_block( $settings );
 This example shows how to register a block.
 
 #### functions.php
-```php
+```
 add_action('acf/init', 'my_register_blocks');
 function my_register_blocks() {
 	
@@ -155,7 +155,7 @@ function my_register_blocks() {
 ```
 
 #### template-parts/block/content-testimonial.php
-```php
+```
 <?php
 /**
  * Block Name: Testimonial
