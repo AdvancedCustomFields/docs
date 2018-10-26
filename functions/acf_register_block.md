@@ -21,22 +21,6 @@ acf_register_block( $settings );
 
 ### $settings
 *(array)* *(Required)* Array of arguments for registering a block type. Any argument from the JavaScript [registerBlockType()](https://wordpress.org/gutenberg/handbook/block-api/) function may also be used.
-
-<dl>
-
-	<dt>name</dt>
-	<dd>
-	(String) A unique name that identifies the block (without namespace). For example 'testimonial'.
-	```
-	'name' => 'testimonial',
-	```
-	</dd>
-	
-	<dt>Markdown in HTML</dt>
-	<dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-
-</dl>
-
 - **name**  
   (String) A unique name that identifies the block (without namespace). For example 'testimonial'.
   ```
@@ -119,7 +103,7 @@ acf_register_block( $settings );
   'supports' => array( /* ... */ ),
   ```
 	
-    - **align**  
+  - **align**  
     This property adds block controls which allow the user to change the block’s alignment. Defaults to `true`. Set to `false` to hide the alignment toolbar. Set to an array of specific alignment names to customize the toolbar.
     ```
     // disable alignment toolbar
@@ -128,15 +112,15 @@ acf_register_block( $settings );
     // customize alignment toolbar
     'align' => aray( 'left', 'right', 'full' ),
     ```
-    
-    - **mode**  
+
+  - **mode**  
     This property allows the user to toggle between edit and preview modes via a button. Defaults to `true`.
     ```
     // disable preview/edit toggle
     'mode' => false,
     ```
 	
-    - **multiple**  
+  - **multiple**  
     This property allows the block to be added multiple times. Defaults to `true`.
      ```
     'multiple' => false,
