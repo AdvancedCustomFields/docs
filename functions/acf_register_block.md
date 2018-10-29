@@ -76,7 +76,7 @@ acf_register_block( $settings );
 - **post_types**  
   (Array) (Optional) An array of post types to restrict this block type to.
   ```
-  'post_types' => array('quote', 'mention', 'cite'),
+  'post_types' => array('post', 'page'),
   ```
   
 - **render_template**  
