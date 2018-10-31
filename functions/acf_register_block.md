@@ -79,7 +79,7 @@ acf_register_block( $settings );
   'post_types' => array('post', 'page'),
   ```
   
-  - **mode**  
+- **mode**  
   (String) (Optional) The default display mode shown. Either "preview" or "edit". Defaults to "preview".
   ```
   'mode' => 'edit',
