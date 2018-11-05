@@ -85,6 +85,12 @@ acf_register_block( $settings );
   'mode' => 'edit',
   ```
   
+- **align**  
+  (String) (Optional) The default block alignment. Avaialble settings are "left", "center", "right", "wide" and "full". Defaults to an empty string.
+  ```
+  'align' => 'full',
+  ```
+  
 - **render_template**  
   (String) The path to a template file used to render the block HTML. This can either be a relative path to a file within the active theme or a full path to any file.
   ```
