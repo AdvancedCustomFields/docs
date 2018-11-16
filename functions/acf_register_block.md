@@ -25,6 +25,7 @@ acf_register_block( $settings );
 *(array)* *(Required)* Array of arguments for registering a block type. Any argument from the JavaScript [registerBlockType()](https://wordpress.org/gutenberg/handbook/block-api/) function may also be used.
 - **name**  
   (String) A unique name that identifies the block (without namespace). For example 'testimonial'.
+  Note: A block name can only contain lowercase alphanumeric characters and dashes, and must begin with a letter.
   ```
   'name' => 'testimonial',
   ```
