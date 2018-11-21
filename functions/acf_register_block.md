@@ -125,7 +125,7 @@ acf_register_block( $settings );
     'align' => false,
     
     // customize alignment toolbar
-    'align' => aray( 'left', 'right', 'full' ),
+    'align' => array( 'left', 'right', 'full' ),
     ```
 
   - **mode**  
