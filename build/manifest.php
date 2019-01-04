@@ -87,8 +87,8 @@ function read_meta( $file_path ) {
 		'description'	=> '',
 		'category'  	=> '',
 		'keywords'  	=> array(),
-        'slug'      	=> basename( $file_path, '.md' ),
-        'raw_url'      	=> str_replace( DOCS_PATH, 'https://raw.githubusercontent.com/AdvancedCustomFields/docs/master', $file_path),
+		'slug'      	=> basename( $file_path, '.md' ),
+		'raw_url'      	=> str_replace( DOCS_PATH, 'https://raw.githubusercontent.com/AdvancedCustomFields/docs/master', $file_path),
 	), $meta);
 		
 	// Return.
