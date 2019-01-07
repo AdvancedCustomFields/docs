@@ -27,6 +27,15 @@
         "group": "Basic"
     },
     {
+        "title": "get_fields()",
+        "description": "Returns an array of all field values (name => value) for a specific post.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "get_fields",
+        "raw_url": "https:\/\/raw.githubusercontent.com\/AdvancedCustomFields\/docs\/master\/functions\/get_fields.md",
+        "group": "Basic"
+    },
+    {
         "title": "the_field()",
         "description": "Displays the value of a specific field.",
         "category": "functions",
