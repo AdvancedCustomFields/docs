@@ -39,13 +39,9 @@ This example shows how to check if a value exists for a field.
 $value = get_field( "text_field" );
 
 if( $value ) {
-    
     echo $value;
-
 } else {
-
     echo 'empty';
-    
 }
 ```
 
