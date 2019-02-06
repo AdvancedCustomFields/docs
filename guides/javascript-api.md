@@ -582,7 +582,7 @@ acf.add_filter('select2_ajax_results', function( json, params, instance ){
 	
 	
 	// return
-	return data;
+	return json;
 			
 });
 ```
