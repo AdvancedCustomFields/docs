@@ -146,7 +146,7 @@ var $fields = acf.findFields({
 ```
 
 ### getFields `acf.getFields( args )`
-Returns an array of field instances for the given args (see acf.fieldFields for list of args) or a collection of jQuery elements.
+Returns an array of field instances for the given args (see acf.findFields for list of args) or a collection of jQuery elements.
 ```js
 var fields = acf.getFields({
 	type: 'image'
