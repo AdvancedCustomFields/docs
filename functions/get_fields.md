@@ -15,6 +15,9 @@ get_fields([$post_id], [$format_value]);
 - `$post_id`		*(mixed)*	*(Optional)*	The post ID where the value is saved. Defaults to the current post.
 - `$format_value`	*(bool)*	*(Optional)*	Whether to apply formatting logic. Defaults to true.
 
+## Return
+*(array|false)* Array of values or false if no fields are found.
+
 ## Examples
 
 ### Get values from the current post
