@@ -1,12 +1,12 @@
 ---
 title: get_fields()
-description: Returns an array of all field values (name => value) for a specific post.
+description: Returns an array of field values (name => value) for a specific post.
 category: functions
 group: Basic
 ---
 
 ## Description
-Returns an array of all field values (name => value) for a specific post.
+Returns an array of field values (name => value) for a specific post.
 
 ## Parameters
 ```
