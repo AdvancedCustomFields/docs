@@ -53,7 +53,9 @@ function walk( $path ) {
 		
 		// Append doc meta.
 		} elseif( substr($entry, -3) === '.md' ) {
-			$docs[] = read_meta( $item );
+			if( $meta = read_meta( $item ) ) {
+				$docs[] = $meta;
+			}
 		}
 	}
 }
@@ -80,6 +82,11 @@ function read_meta( $file_path ) {
 	// Parse YAML.
 	$document = $parser->parse( $file_contents, false );
 	$meta = $document->getYAML();
+	
+	// Check status
+	if( isset($meta['status']) ) {
+		return false;
+	}
 	
 	// Apply defaults.
 	$meta = array_merge(array(
