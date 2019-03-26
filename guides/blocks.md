@@ -8,52 +8,52 @@ status: draft
 
 ## Introduction
 
-Included in ACF PRO is a powerful framework to rapidly develop custom blocks.
+Included in ACF PRO is a powerful PHP-based framework for developing custom blocks.
 
-Unique to ACF, these blocks are registered using PHP and take advantage of custom fields to power dynamic content.
-This means that no Javascript is required to produce stunning bespoke block types for the Gutenberg editor.
+ACF blocks are highly customisable and powerfully dynamic. They integrate deeply with custom fields allowing PHP developers to create bespoke solutions inline with WordPress theme development.
 
-[screenshot / video]
+<figure>
+  <img src="https://user-images.githubusercontent.com/2296425/54964175-a52c4300-4fbf-11e9-903c-b617576c0ce4.jpg" alt="acf-blocks-introduction"/>
+  <figcaption>Simplified example of registering a testimonial block.</figcaption>
+</figure>
 
+## Features
 
-## Key Concepts
+### 🌎 PHP Environment
+ACF blocks is a PHP framework and does not require any JavaScript. This differentiates itself from the WordPress block API which relies deeply on modern JavaScript techniques, syntax and build tools.
 
-Blocks are an abstract unit for organizing and composing content introduced in WordPress 5.0.
-If it helps, you can think of blocks as a more graceful shortcode, with rich formatting tools for users to compose content.
+### 🎨 Simple Templating
+Similar to WP theme development, ACF blocks are rendered using a template file or callback function allowing for full control over the HTML.
 
-Blocks can be static or dynamic. ACF Blocks are dynamic, meaning they are rendered server-side and allow for PHP logic.
-ACF Blocks are registered and customized within the `functions.php` file using PHP and do not require any knowledge of React or the WP blocks JavaScript API.
+### 🔌 Custom Fields Compatible
+ACF blocks boast full compatibility with all field types including even the Repeater and Clone fields!
 
-ACF blocks differ from WP blocks in that the data is decoupled from the design. This allows for faster development of blocks by focusing only on the HTML output.
+It's a similar story with out template functions too. Whether you are loading a field value via `get_field()`, or looping over a Repeater field using `have_rows()`, the experience remains familiar and consistent to regular theme development.
 
-Block data is saved within the "post_content" as an HTML comment. This makes them unique to metaboxes which save data to the "postmeta" table.
+### 👀 Live Previews
+Content changes, and so do block previews! When editing, ACF blocks will update in the backend giving you a real time preview of your content. 
 
-//The ACF blocks registration function contains a lot of settings to take full control over your blocks behaviour, from alignment to visual design.
+### 🌈 Native Compatibility
+Believe it or not, ACF blocks maintain native compatibility with WordPress core allowing core features such as "alignment", "anchor" and "re-usable blocks" to work!
+
+### 🎉 Anywhere and everywhere
+ACF blocks are not tied to metadata, meaning they can be used anywhere in Gutenberg, and multiple times per post.
 
 
 ## Requirements
 
 ACF Blocks is a premium feature found in [ACF PRO](https://www.advancedcustomfields.com/pro). If not already, please consider upgrading to take advantage of this premium feature!
 
-## Features
 
-The ACF Blocks framework provides a lot of powerful features. Here is a taste of what you can expect.
+## Key Concepts
+Before reading any further, it's a good idea to familiarise yourself with some of the concepts introduced by the Gutenberg editor.
 
-### PHP Environment
-No config, no compiling.
-Settings, rendering
-
-### Full ACF compatibility
-API, field types.
-
-### Live Previews
-Updates on change. matches front end.
-
-### Full WP compatibility
-all settings including alignment, anchor, reusable blocks
-
-### Anywhere and everywhere
-Not tied to meta. Can be used anywehere Gutenberg is used.
+- Blocks are an abstract unit for organizing and composing content introduced in WordPress 5.0.
+  If it helps, you can think of blocks as a more graceful shortcode, with rich formatting tools for users to compose content.
+- Blocks can be static or dynamic. ACF Blocks are dynamic, meaning they are rendered server-side and allow for PHP logic.
+- ACF Blocks are registered and customized within the `functions.php` file using PHP and do not require any knowledge of React or the WP blocks JavaScript API.
+- ACF blocks differ from WP blocks in that the data is decoupled from the design. This allows for faster development of blocks by focusing only on the HTML output.
+- Block data is saved within the "post_content" as an HTML comment. This makes them unique to metaboxes which save data to the "postmeta" table.
 
 
 ## Getting Started
@@ -64,9 +64,7 @@ The ACF Blocks framework performs a lot of "magic" behind the scenes to offer an
 
 Similar to registering a post type in WP, the [acf_register_block()](https://www.advancedcustomfields.com/resources/acf_register_block/) function allows you to register a custom block type from your functions.php file. This function accepts an array of settings that you can use to customize your block including a name, description and more.
 
-This example only uses a small handful of the available settings so please be sure to read the [acf_register_block()](https://www.advancedcustomfields.com/resources/acf_register_block/) docs for a full list.
-
-💡 These settings are closely related to the WordPress JavaScript [registerBlockType()](https://wordpress.org/gutenberg/handbook/blocks/writing-your-first-block-type/) function.
+💡 This example only uses a small handful of the available settings so please be sure to read the [acf_register_block()](https://www.advancedcustomfields.com/resources/acf_register_block/) docs for a full list.
 
 ```
 function register_acf_blocks() {
@@ -99,9 +97,9 @@ From the location rules, use the "Block" rule to select your newly registered bl
 
 ### 3. Render the Block
 
-Lastly, you'll need to tell ACF how to render the block, which is essentially the same process you’re used to for displaying custom fields.
-This is done by creating a template file within your theme that matches the *render_template* setting used when registering the block.
-In this example, the template file will be called 'content-block-testimonial.php'.
+Lastly, you'll need to tell ACF how to render the block, which is essentially the same process you’re used to for displaying custom fields. 
+
+This is done by creating a template file within your theme that matches the *render_template* setting used when registering the block. In this example, the template file will be called 'content-block-testimonial.php'.
 
 💡 There are multiple ways to render a block. Please read the [acf_register_block()](https://www.advancedcustomfields.com/resources/acf_register_block/) docs for a full description on the *render_template* and *render_callback* settings.
 
@@ -110,11 +108,6 @@ One very exciting feature of ACF Blocks is that all the ACF API function such as
 #### template-parts/block/content-testimonial.php
 ```
 <?php
-/**
- * Block Name: Testimonial
- *
- * This is the template that displays the testimonial block.
- */
 
 // create id attribute for specific styling
 $id = 'testimonial-' . $block['id'];
@@ -143,16 +136,49 @@ That’s all there is to it! You can immediately start using your new block with
 
 ## FAQ
 
-- Are blocks a replacement for metaboxes?
-- Do ACF blocks support native components?
-- Can I make changes to the field group?
-- Can I make changes to the template?
-- Can I register a block without fields?
-- Is ACF Blocks included in the free version?
-- Do I need to write any JavaScript?
-- Can I load values from other blocks?
-- Where is block data saved?
-- What is Gutenberg and what are blocks?
+### Are blocks a replacement for metaboxes?
+No. Metaboxes are still an important part of the content editing and theme development process. In fact, ACF will continue to utilize them as the primary tool for saving content.
+^^^
+
+### Can I make changes to the field group?
+Yes. You can make changes to your field group and fields at any time. Making changes like this will not cause any damage to already existing blocks.
+^^^
+
+### Can I make changes to the template?
+Yes. You can make changes to your block template or callback function at any time. ACF blocks are 100% dynamic meaning that they are rendered by the server each time they are loaded. This allows changes to block templates to be applied all existing block content.
+^^^
+
+### Can I register a block without fields?
+Yes. There are many scenarios where a block does not require any fields, such as a "latest post" block.
+^^^
+
+### Is ACF Blocks included in the free version?
+No. Contrary to our original post back in 2018, ACF blocks is only included in our professional version. This decision to go "Pro only" came after realising the amount of time and attention this feature will require over the coming years.
+^^^
+
+### Do I need to write any JavaScript?
+No. The ACF blocks framework is 100% PHP. If your bock requires some JS for added functionality (a carousel slider for example), you can add this also.
+^^^
+
+### Where is block data saved?
+WordPress saves block data as HTML comments in the post_content. ACF blocks follow suit and save their data as a JSON object within that HTML comment.
+^^^
+
+### Can I load values from other blocks?
+Yes and No. Unlike loading a value from a post or user, block values are saved in the block HTML comment found within the post_content. This prevents the `$post_id` parameter from working as expected in our template functions. You can, however, load the post_content of a given post, and then parse the blocks using the `parse_blocks()	` function.
+^^^
+
+### Do ACF blocks support native components?
+Not yet. We are currently experimenting in this area and hope to roll out support for native block components in the future.
+^^^
+
+### What is Gutenberg and what are blocks?
+Introduced in WordPress 5.0, the block-based editor "Gutenberg" has transformed the way content is created. Content is now created in the unit of blocks instead of freeform text. Blocks take various forms including Paragraphs, Headings, Media and Embeds.
+^^^
+
+
+
+## End
 
 We believe that ACF Blocks is one of the more important features ever added to our plugin. It levels the playing field for block type development and allows more developers to take advantage of Gutenberg’s key feature.
 
@@ -213,3 +239,28 @@ This guide will explore the exciting features offered in ACF Blocks and the step
 
 
 ## Working with Blocks
+
+
+
+ a single line of JavaScript.
+
+
+
+
+
+
+
+They utilise custom fields to  They don't require any JavaScript, JSX or React knowledge, and 
+
+Blocks are the new way to think about publishing content in WordPress, and ACF blocks allow PHP developers to access this new and exciting experience.
+
+
+
+
+ provide the functionality needed for PHP developers to better develop bespoke content.
+
+
+
+It takes out the heavy lifting of block development by utilising the power of custom fields to power dynamic content.
+
+These block types are registered using PHP and take advantage of custom fields to power dynamic content. This means that no Javascript is required to develop stunning bespoke block types for the Gutenberg editor.
