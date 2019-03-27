@@ -46,6 +46,15 @@
         "group": "Basic"
     },
     {
+        "title": "Blocks",
+        "description": null,
+        "category": "guides",
+        "keywords": [],
+        "slug": "blocks",
+        "raw_url": "https:\/\/raw.githubusercontent.com\/AdvancedCustomFields\/docs\/master\/guides\/blocks.md",
+        "group": "Features"
+    },
+    {
         "title": "Frequently Asked Questions",
         "description": "An extensive list of frequently asked questions to help you quickly get on with your project.",
         "category": "",
