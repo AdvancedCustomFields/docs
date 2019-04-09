@@ -19,8 +19,8 @@ Our rules differ only if your product is considered as free or premium, and not 
 Please see the following table of rules that govern the inclusion of our plugins.
 
 
-|         | ACF           | ACF PRO  |
-| ------------- |:-------------:|:-----:|
+|   | ACF | ACF PRO |
+| --- |:---:|:---:|
 | Include in a free plugin | ✅ | ❌ |
 | Include in a free theme | ✅ | ❌ |
 | Include in a premium plugin | ✅ | ✅ |
