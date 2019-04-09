@@ -2,7 +2,7 @@
 title: Including ACF within a plugin or theme
 category: guides
 group: Features
-redirect: including-acf-in-a-plugin-theme
+redirects: ['including-acf-in-a-plugin-theme']
 ---
 
 ## Introduction

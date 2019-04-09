@@ -63,6 +63,18 @@
         "raw_url": "https:\/\/raw.githubusercontent.com\/AdvancedCustomFields\/docs\/master\/guides\/frequently-asked-questions.md"
     },
     {
+        "title": "Including ACF within a plugin or theme",
+        "description": "",
+        "category": "guides",
+        "keywords": [],
+        "slug": "including-acf-within-a-plugin-or-theme",
+        "raw_url": "https:\/\/raw.githubusercontent.com\/AdvancedCustomFields\/docs\/master\/guides\/including-acf-within-a-plugin-or-theme.md",
+        "group": "Features",
+        "redirects": [
+            "including-acf-in-a-plugin-theme"
+        ]
+    },
+    {
         "title": "JavaScript API",
         "description": "Learn how to use ACF's JavaScript library including functions, actions and filters and models.",
         "category": "guides",
