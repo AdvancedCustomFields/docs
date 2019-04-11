@@ -305,21 +305,23 @@ function my_enqueue_block_assets() {
 
 #### blocks.js
 ```
-(function($, undefined){
+(function($){
 	
 	// Callback to initialize the block.
-	function initializeBlock( $block ) {
+	var initializeBlock = function( $block ) {
 		$block.find('img').doSomething();
 	}
 	
 	// Initialize each block on page load (front end).
-	$('testimonial').each(function(){
-		initializeBlock( $(this) );
+	$(document).ready(function(){
+		$('.testimonial').each(function(){
+			initializeBlock( $(this) );
+		});
 	});
 	
 	// Initialize block preview (editor).
-	if( acf !== undefined ) {
-		acf.addAction( 'render_block_preview', 'initializeBlock' );
+	if( window.acf ) {
+		window.acf.addAction( 'render_block_preview', initializeBlock );
 	}
 	
 })(jQuery);
