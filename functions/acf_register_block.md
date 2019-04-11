@@ -86,9 +86,9 @@ acf_register_block( $settings );
   
 - **mode**  
   (String) (Optional) The display mode for your block. Avaialble settings are "auto", "preview" or "edit". Defaults to "auto".
-  **auto**: Block changes between preview and edit states depending on if the block is currently selected.
-  **preview**: Block preview is always shown. Edit form appears in sidebar when block is currently selected.
-  **edit**: Block edit form is always shown.
+  **auto**: Preview is shown by default but changes to edit form when block is selected.
+  **preview**: Preview is always shown. Edit form appears in sidebar when block is selected.
+  **edit**: Edit form is always shown.
   ```
   'mode' => 'auto',
   ```
