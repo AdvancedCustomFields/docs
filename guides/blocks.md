@@ -2,7 +2,7 @@
 title: Blocks
 description: 
 category: guides
-group: Features
+group: Tutorials
 ---
 
 ## Introduction
