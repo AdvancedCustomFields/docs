@@ -261,3 +261,67 @@ function my_acf_block_render_callback( $block, $content = '', $is_preview = fals
 	<?php
 }
 ```
+
+### Adding block styles
+To ensure your block is correctly styled in both the editor and front end, we recommend enqueueing your block stylesheet within the [enqueue_block_assets](https://developer.wordpress.org/reference/hooks/enqueue_block_assets/) action. You may decide to create separate .css files for each block or compile them together into a single stylesheet, both are fine choices.
+
+This example will enqueue a stylesheet named **blocks.css** within the active theme.
+
+#### functions.php
+```
+add_action('enqueue_block_assets', 'my_enqueue_block_assets');
+function my_enqueue_block_assets() {
+	wp_enqueue_style( 'my-blocks', get_stylesheet_directory_uri() . '/blocks.css' );
+}
+```
+
+#### blocks.css
+```
+.testimonial {
+	// Styles here.
+}	
+```
+
+### Adding block scripts
+Similar to styles, scripts should also be enqueued within the [enqueue_block_assets](https://developer.wordpress.org/reference/hooks/enqueue_block_assets/) action to ensure they are available to both the editor and front end.
+
+The only difference is that JavaScript does not update the DOM by itself and needs to be manually applied. This, coupled with the dynamic nature of the block editor, means it is important to understand the lifecycle of a block to ensure your JavaScript is executed correctly.
+
+Depending on if the block preview is shown, and whether or not changes have been made, a block may be rendered multiple times during a single page load. In this case, the term "rendered" means that the block HTML has been updated via an AJAX call to your PHP template or callback function.
+
+Each time a block is rendered, the previous HTML is discarded, and the new HTML is displayed. As a result, any JavaScript modifications to the previous DOM elements will no longer by visible or available.
+
+As a solution to this problem, please hook into the JS action "render_block_preview" and apply your JavaScript functionality as if the block was freshly added. 
+
+This example will enqueue a JavaScript file named **blocks.js** within the active theme and demonstrate the instructions mentioned.
+
+#### functions.php
+```
+add_action('enqueue_block_assets', 'my_enqueue_block_assets');
+function my_enqueue_block_assets() {
+	wp_enqueue_script( 'my-blocks', get_stylesheet_directory_uri() . '/blocks.js' );
+}
+```
+
+#### blocks.js
+```
+(function($, undefined){
+	
+	// Callback to initialize the block.
+	function initializeBlock( $block ) {
+		$block.find('img').doSomething();
+	}
+	
+	// Initialize each block on page load (front end).
+	$('testimonial').each(function(){
+		initializeBlock( $(this) );
+	});
+	
+	// Initialize block preview (editor).
+	if( acf !== undefined ) {
+		acf.addAction( 'render_block_preview', 'initializeBlock' );
+	}
+	
+})(jQuery);
+
+```
