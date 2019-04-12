@@ -85,16 +85,18 @@ acf_register_block( $settings );
   ```
   
 - **mode**  
-  (String) (Optional) The display mode for your block. Avaialble settings are "auto", "preview" or "edit". Defaults to "auto".
+  (String) (Optional) The display mode for your block. Available settings are "auto", "preview" and "edit". Defaults to "auto".
   **auto**: Preview is shown by default but changes to edit form when block is selected.
   **preview**: Preview is always shown. Edit form appears in sidebar when block is selected.
   **edit**: Edit form is always shown.
+  
+  Note. When in "preview" or "edit" modes, an icon will appear in the block toolbar to toggle between modes.
   ```
   'mode' => 'auto',
   ```
   
 - **align**  
-  (String) (Optional) The default block alignment. Avaialble settings are "left", "center", "right", "wide" and "full". Defaults to an empty string.
+  (String) (Optional) The default block alignment. Available settings are "left", "center", "right", "wide" and "full". Defaults to an empty string.
   ```
   'align' => 'full',
   ```
