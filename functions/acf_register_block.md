@@ -124,13 +124,13 @@ acf_register_block( $settings );
 - **enqueue_style**  
   (String) (Optional) The url to a .css file to be enqueued whenever your block is displayed (front-end and back-end).
   ```
-  'enqueue_style' => get_template_directory_uri() . 'blocks/testimonial/testimonial.css',
+  'enqueue_style' => get_template_directory_uri() . '/blocks/testimonial/testimonial.css',
   ```
   
 - **enqueue_script**  
   (String) (Optional) The url to a .js file to be enqueued whenever your block is displayed (front-end and back-end).
   ```
-  'enqueue_script' => get_template_directory_uri() . 'blocks/testimonial/testimonial.js',
+  'enqueue_script' => get_template_directory_uri() . '/blocks/testimonial/testimonial.js',
   ```
   
 - **enqueue_assets**  
@@ -144,8 +144,8 @@ acf_register_block( $settings );
   
   // Specifying an anonymouse function
   'enqueue_assets' => function(){
-  	wp_enqueue_style( 'block-testimonial', get_template_directory_uri() . 'blocks/testimonial/testimonial.css' );
-  	wp_enqueue_script( 'block-testimonial', get_template_directory_uri() . 'blocks/testimonial/testimonial.js', array('jquery'), '', true );
+  	wp_enqueue_style( 'block-testimonial', get_template_directory_uri() . '/blocks/testimonial/testimonial.css' );
+  	wp_enqueue_script( 'block-testimonial', get_template_directory_uri() . '/blocks/testimonial/testimonial.js', array('jquery'), '', true );
   ,
   ```
   
@@ -188,19 +188,16 @@ This example shows how to register a block using the render_template setting.
 add_action('acf/init', 'my_register_blocks');
 function my_register_blocks() {
 	
-	// check function exists
+	// check function exists.
 	if( function_exists('acf_register_block') ) {
 		
-		// register a testimonial block
+		// register a testimonial block.
 		acf_register_block(array(
 			'name'				=> 'testimonial',
 			'title'				=> __('Testimonial'),
 			'description'		=> __('A custom testimonial block.'),
 			'render_template'	=> 'template-parts/block/content-testimonial.php',
 			'category'			=> 'formatting',
-			'icon'				=> 'admin-comments',
-			'mode'				=> 'preview',
-			'keywords'			=> array( 'testimonial', 'quote' ),
 		));
 	}
 }
@@ -214,7 +211,9 @@ function my_register_blocks() {
  * This is the template that renders the testimonial block.
  *
  * @param	array $block The block settings and attributes.
+ * @param	string $content The block inner HTML (empty).
  * @param	bool $is_preview True during AJAX preview.
+ * @param	(int|string) $post_id The post ID this block is saved to.
  */
 
 // get image field (array)
@@ -245,19 +244,16 @@ This example shows how to register a block using the render_callback setting.
 add_action('acf/init', 'my_register_blocks');
 function my_register_blocks() {
 	
-	// check function exists
+	// check function exists.
 	if( function_exists('acf_register_block') ) {
 		
-		// register a testimonial block
+		// register a testimonial block.
 		acf_register_block(array(
 			'name'				=> 'testimonial',
 			'title'				=> __('Testimonial'),
 			'description'		=> __('A custom testimonial block.'),
 			'render_callback'	=> 'my_acf_block_render_callback',
 			'category'			=> 'formatting',
-			'icon'				=> 'admin-comments',
-			'mode'				=> 'preview',
-			'keywords'			=> array( 'testimonial', 'quote' ),
 		));
 	}
 }
@@ -266,10 +262,11 @@ function my_register_blocks() {
  *  This is the callback that displays the testimonial block.
  *
  * @param	array $block The block settings and attributes.
- * @param	string $content The block content (emtpy string).
+ * @param	string $content The block inner HTML (empty).
  * @param	bool $is_preview True during AJAX preview.
+ * @param	(int|string) $post_id The post ID this block is saved to.
  */
-function my_acf_block_render_callback( $block, $content = '', $is_preview = false ) {
+function my_acf_block_render_callback( $block, $content = '', $is_preview = false, $post_id = 0 ) {
 	
 	// get image field (array)
 	$avatar = get_field('avatar');
@@ -292,52 +289,84 @@ function my_acf_block_render_callback( $block, $content = '', $is_preview = fals
 }
 ```
 
-### Adding block styles
-To ensure your block is correctly styled in both the editor and front end, we recommend enqueueing your block stylesheet within the [enqueue_block_assets](https://developer.wordpress.org/reference/hooks/enqueue_block_assets/) action. You may decide to create separate .css files for each block or compile them together into a single stylesheet, both are fine choices.
-
-This example will enqueue a stylesheet named **blocks.css** within the active theme.
+### Adding block styles 🎨
+To ensure your block is correctly styled in both the editor and front end, we recommend making use of either the **enqueue_style** or **enqueue_assets** settings like so:
 
 #### functions.php
-```
-add_action('enqueue_block_assets', 'my_enqueue_block_assets');
-function my_enqueue_block_assets() {
-	wp_enqueue_style( 'my-blocks', get_stylesheet_directory_uri() . '/blocks.css' );
-}
+```php
+acf_register_block(array(
+	'name'				=> 'testimonial',
+	'title'				=> __('Testimonial'),
+	'description'		=> __('A custom testimonial block.'),
+	'render_template'	=> get_template_directory() . '/blocks/testimonial/testimonial.php',
+	'enqueue_style' 	=> get_template_directory_uri() . '/blocks/testimonial/testimonial.css',
+));
 ```
 
-#### blocks.css
+#### testimonial.php
+```html
+<blockquote class="testimonial">
+    ...
+</blockquote>
 ```
+
+#### testimonial.css
+```css
 .testimonial {
-	// Styles here.
+	background: #00e4ba;
+	color: #fff;
 }	
 ```
 
-### Adding block scripts
-Similar to styles, scripts should also be enqueued within the [enqueue_block_assets](https://developer.wordpress.org/reference/hooks/enqueue_block_assets/) action to ensure they are available to both the editor and front end.
+**Note:** If creating individual stylesheets is not your cup of tea, please take a look at the [enqueue_block_assets](https://developer.wordpress.org/reference/hooks/enqueue_block_assets/) and [enqueue_block_editor_assets](https://developer.wordpress.org/reference/hooks/enqueue_block_editor_assets/) actions that WordPress provide to enqueue your styles.
 
-The only difference is that JavaScript does not update the DOM by itself and needs to be manually applied. This, coupled with the dynamic nature of the block editor, means it is important to understand the lifecycle of a block to ensure your JavaScript is executed correctly.
+### Adding block scripts ⚡️
+Similar to styles, we recommend making use of either the **enqueue_script** or **enqueue_assets** settings to correctly enqueue JavaScript for your block.
 
-Depending on if the block preview is shown, and whether or not changes have been made, a block may be rendered multiple times during a single page load. In this case, the term "rendered" means that the block HTML has been updated via an AJAX call to your PHP template or callback function.
+For JavaScript to run as intended in both the editor and front-end, it is important to understand the lifecycle of a block when editing a post.
 
-Each time a block is rendered, the previous HTML is discarded, and the new HTML is displayed. As a result, any JavaScript modifications to the previous DOM elements will no longer by visible or available.
+Depending on if the block preview is shown, and whether or not changes have been made, your block may be rendered multiple times during a single page load. In this case, the term "rendered" means that the block's HTML has been updated/replaced via an AJAX call to your PHP template or callback function.
 
-As a solution to this problem, please hook into the JS action "render_block_preview" and apply your JavaScript functionality as if the block was freshly added. 
+Each time a block is rendered, the previous HTML is discarded, and the new HTML is displayed. As a result, any JavaScript modifications to the previous DOM elements will also be discarded.
 
-This example will enqueue a JavaScript file named **blocks.js** within the active theme and demonstrate the instructions mentioned.
+To solve this problem, simply hook into our JS action "render_block_preview" and apply your JavaScript functionality as if the block was freshly added. 
+
+This example demonstrates how to enqueue a script whilst providing compatibility with both the front-end and back-end states of a block.
 
 #### functions.php
-```
-add_action('enqueue_block_assets', 'my_enqueue_block_assets');
-function my_enqueue_block_assets() {
-	wp_enqueue_script( 'my-blocks', get_stylesheet_directory_uri() . '/blocks.js' );
-}
+```php
+acf_register_block(array(
+	'name'				=> 'testimonial',
+	'title'				=> __('Testimonial'),
+	'description'		=> __('A custom testimonial block.'),
+	'render_template'	=> get_template_directory() . '/blocks/testimonial/testimonial.php',
+	'enqueue_script' 	=> get_template_directory_uri() . '/blocks/testimonial/testimonial.js',
+));
 ```
 
-#### blocks.js
+#### testimonial.php
+```html
+<blockquote class="testimonial">
+    <img src="..." />
+    ...
+</blockquote>
 ```
+
+#### testimonial.js
+```js
 (function($){
 	
-	// Callback to initialize the block.
+	/**
+	 * initializeBlock
+	 *
+	 * Adds custom JavaScript to the block HTML.
+	 *
+	 * @date	15/4/19
+	 * @since	1.0.0
+	 *
+	 * @param	object $block The block jQuery element.
+	 * @return	void
+	 */
 	var initializeBlock = function( $block ) {
 		$block.find('img').doSomething();
 	}
@@ -349,7 +378,7 @@ function my_enqueue_block_assets() {
 		});
 	});
 	
-	// Initialize block preview (editor).
+	// Initialize dynamic block preview (editor).
 	if( window.acf ) {
 		window.acf.addAction( 'render_block_preview', initializeBlock );
 	}
