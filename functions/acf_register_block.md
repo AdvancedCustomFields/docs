@@ -110,7 +110,7 @@ acf_register_block( $settings );
   // Specifying an absolute path
   'render_template' => plugin_dir_path( __FILE__ ) . 'template-parts/block/content-testimonial.php',
   ```
-	
+  
 - **render_callback**  
   (Callable) (Optional) Instead of providing a render_template, a callback function name may be specified to output the block's HTML.
   ```
@@ -121,12 +121,40 @@ acf_register_block( $settings );
   'render_callback' => array($this, 'block_render_callback'),
   ```
   
+- **enqueue_style**  
+  (String) (Optional) The url to a .css file to be enqueued whenever your block is displayed (front-end and back-end).
+  ```
+  'enqueue_style' => get_template_directory_uri() . 'blocks/testimonial/testimonial.css',
+  ```
+  
+- **enqueue_script**  
+  (String) (Optional) The url to a .js file to be enqueued whenever your block is displayed (front-end and back-end).
+  ```
+  'enqueue_script' => get_template_directory_uri() . 'blocks/testimonial/testimonial.js',
+  ```
+  
+- **enqueue_assets**  
+  (Callable) (Optional) A callback function that runs whenever your block is displayed (front-end and back-end) and enqueues scripts and/or styles.
+  ```
+  // Specifying a function name
+  'enqueue_assets' => 'my_acf_block_enqueue_assets',
+  
+  // Specifying a class method
+  'enqueue_assets' => array($this, 'block_enqueue_assets'),
+  
+  // Specifying an anonymouse function
+  'enqueue_assets' => function(){
+  	wp_enqueue_style( 'block-testimonial', get_template_directory_uri() . 'blocks/testimonial/testimonial.css' );
+  	wp_enqueue_script( 'block-testimonial', get_template_directory_uri() . 'blocks/testimonial/testimonial.js', array('jquery'), '', true );
+  ,
+  ```
+  
 - **supports**  
   (Array) (Optional) An array of features to support. All properties from the JavaScript [block supports](https://wordpress.org/gutenberg/handbook/block-api/) documentation may be used. The following options are supported:
   ```
   'supports' => array( /* ... */ ),
   ```
-	
+  
   - **align**  
     This property adds block controls which allow the user to change the block’s alignment. Defaults to `true`. Set to `false` to hide the alignment toolbar. Set to an array of specific alignment names to customize the toolbar.
     ```
