@@ -7,13 +7,13 @@ group: Tutorials
 
 ## Introduction
 
-Included in ACF PRO is a powerful PHP-based framework for developing custom blocks.
+Included in ACF PRO is a powerful PHP-based framework for developing custom block types.
 
 ACF blocks are highly customisable and powerfully dynamic. They integrate deeply with custom fields allowing PHP developers to create bespoke solutions inline with WordPress theme development.
 
 <figure>
   <img src="https://user-images.githubusercontent.com/2296425/55047773-0a546700-509a-11e9-9e45-aff00acb48e8.jpg" alt="acf-blocks-introduction"/>
-  <figcaption>Simplified example of registering a testimonial block.</figcaption>
+  <figcaption>Simplified example of registering a custom testimonial block.</figcaption>
 </figure>
 
 ## Features
@@ -113,10 +113,18 @@ One very exciting feature of ACF Blocks is that all the ACF API function such as
 ```
 <?php
 
-// create id attribute for specific styling
+/**
+ * Testimonial Block Template.
+ *
+ * @param	array $block The block data including all properties and settings.
+ * @param	bool $is_preview True when editing in the back-end.
+ * @param	int $post_id The post being edited.
+ */
+ 
+// Create id attribute for specific styling
 $id = 'testimonial-' . $block['id'];
 
-// create align class ("alignwide") from block setting ("wide")
+// Create align class ("alignwide") from block setting ("wide")
 $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
 // Load values and assing defaults.
@@ -146,8 +154,7 @@ $text_color = get_field('text_color');
 </div>
 ```
 
-
-The only thing we haven’t included is the enqueuing of styles which can easily be done via the [admin_enqueue_scripts](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_enqueue_scripts) and [wp_enqueue_scripts](https://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts) actions.
+The only thing we haven’t included is the enqueuing of styles/scripts which can easily be done via the enqueue_style, enqueue_script and enqueue_assets settings available in the [acf_register_block](https://www.advancedcustomfields.com/resources/acf_register_block/) documentation.
 
 ### Demonstration
 
