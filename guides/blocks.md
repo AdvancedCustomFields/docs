@@ -121,11 +121,20 @@ One very exciting feature of ACF Blocks is that all the ACF API function such as
  * @param	int $post_id The post being edited.
  */
  
-// Create id attribute for specific styling
+// Create id attribute allowing for custom "anchor" value.
 $id = 'testimonial-' . $block['id'];
+if( !empty($block['anchor']) ) {
+	$id = $block['anchor'];
+}
 
-// Create align class ("alignwide") from block setting ("wide")
-$align_class = $block['align'] ? 'align' . $block['align'] : '';
+// Create class attribute allowing for custom "className" and "align" values.
+$className = 'testimonial';
+if( !empty($block['className']) ) {
+	$className .= ' ' . $block['className'];
+}
+if( !empty($block['align']) ) {
+	$className .= ' align' . $block['align'];
+}
 
 // Load values and assing defaults.
 $text = get_field('testimonial') ?: 'Your testimonial here...';
@@ -136,7 +145,7 @@ $background_color = get_field('background_color');
 $text_color = get_field('text_color');
 
 ?>
-<div id="<?php echo $id; ?>" class="testimonial <?php echo $align_class; ?>">
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 	<blockquote class="testimonial-blockquote">
 		<span class="testimonial-text"><?php echo $text; ?></span>
 		<span class="testimonial-author"><?php echo $author; ?></span>
