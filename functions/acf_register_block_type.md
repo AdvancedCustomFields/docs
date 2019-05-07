@@ -1,13 +1,14 @@
 ---
-title: acf_register_block()
+title: acf_register_block_type()
 description: Registers a custom block type in the Gutenberg editor.
 category: functions
+redirects: ['acf-register-block']
 ---
 
 ## Description
 Registers a custom block type in the Gutenberg editor.
 
-Blocks are the fundamental element of the Gutenberg editor. WordPress provides many default block types such as paragraph, heading and image. The **acf_register_block()** function can be used to add new block types via PHP.
+Blocks are the fundamental element of the Gutenberg editor. WordPress provides many default block types such as paragraph, heading and image. The **acf_register_block_type()** function can be used to add new block types via PHP.
 
 Once registered, your block will appear in the "Block" location rules when editing a field group. This allows you to map fields to your block and define the content.
 
@@ -22,7 +23,7 @@ Block types can support any number of built-in core features such as name, icon,
 
 ## Parameters
 ```
-acf_register_block( $settings );
+acf_register_block_type( $settings );
 ```
 
 ### $settings
@@ -189,10 +190,10 @@ add_action('acf/init', 'my_register_blocks');
 function my_register_blocks() {
 	
 	// check function exists.
-	if( function_exists('acf_register_block') ) {
+	if( function_exists('acf_register_block_type') ) {
 		
 		// register a testimonial block.
-		acf_register_block(array(
+		acf_register_block_type(array(
 			'name'				=> 'testimonial',
 			'title'				=> __('Testimonial'),
 			'description'		=> __('A custom testimonial block.'),
@@ -245,10 +246,10 @@ add_action('acf/init', 'my_register_blocks');
 function my_register_blocks() {
 	
 	// check function exists.
-	if( function_exists('acf_register_block') ) {
+	if( function_exists('acf_register_block_type') ) {
 		
 		// register a testimonial block.
-		acf_register_block(array(
+		acf_register_block_type(array(
 			'name'				=> 'testimonial',
 			'title'				=> __('Testimonial'),
 			'description'		=> __('A custom testimonial block.'),
@@ -294,7 +295,7 @@ To ensure your block is correctly styled in both the editor and front end, we re
 
 #### functions.php
 ```php
-acf_register_block(array(
+acf_register_block_type(array(
 	'name'				=> 'testimonial',
 	'title'				=> __('Testimonial'),
 	'description'		=> __('A custom testimonial block.'),
@@ -335,7 +336,7 @@ This example demonstrates how to enqueue a script whilst providing compatibility
 
 #### functions.php
 ```php
-acf_register_block(array(
+acf_register_block_type(array(
 	'name'				=> 'testimonial',
 	'title'				=> __('Testimonial'),
 	'description'		=> __('A custom testimonial block.'),
