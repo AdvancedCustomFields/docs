@@ -1,11 +1,14 @@
 [
     {
-        "title": "acf_register_block()",
+        "title": "acf_register_block_type()",
         "description": "Registers a custom block type in the Gutenberg editor.",
         "category": "functions",
         "keywords": [],
-        "slug": "acf_register_block",
-        "raw_url": "https:\/\/raw.githubusercontent.com\/AdvancedCustomFields\/docs\/master\/functions\/acf_register_block.md"
+        "slug": "acf_register_block_type",
+        "raw_url": "https:\/\/raw.githubusercontent.com\/AdvancedCustomFields\/docs\/master\/functions\/acf_register_block_type.md",
+        "redirects": [
+            "acf-register-block"
+        ]
     },
     {
         "title": "get_field()",
