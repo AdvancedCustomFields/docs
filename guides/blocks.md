@@ -66,14 +66,14 @@ Similar to registering a post type, the [acf_register_block_type()](https://www.
 💡 This example only uses a small handful of the available settings so please be sure to read the [acf_register_block_type()](https://www.advancedcustomfields.com/resources/acf_register_block_type/) docs for a full list.
 
 ```
-function register_acf_blocks() {
+function register_acf_block_types() {
 	
 	// register a testimonial block.
 	acf_register_block_type(array(
 		'name'				=> 'testimonial',
 		'title'				=> __('Testimonial'),
 		'description'		=> __('A custom testimonial block.'),
-		'render_template'	=> 'content-block-testimonial.php',
+		'render_template'	=> 'template-parts/blocks/testimonial/testimonial.php',
 		'category'			=> 'formatting',
 		'icon'				=> 'admin-comments',
 		'keywords'			=> array( 'testimonial', 'quote' ),
@@ -82,7 +82,7 @@ function register_acf_blocks() {
 
 // Check if function exists and hook into setup.
 if( function_exists('acf_register_block_type') ) {
-	add_action('acf/init', 'register_acf_blocks');
+	add_action('acf/init', 'register_acf_block_types');
 }
 ```
 
@@ -103,22 +103,23 @@ From the location rules, use the "Block" rule to select your newly registered bl
 
 Lastly, you'll need to tell ACF how to render the block, which is essentially the same process you’re used to for displaying custom fields. 
 
-This is done by creating a template file within your theme that matches the *render_template* setting used when registering the block. In this example, the template file will be called 'content-block-testimonial.php'.
+This is done by creating a template file within your theme that matches the *render_template* setting used when registering the block. In this example, the template file will be called 'template-parts/blocks/testimonial/testimonial.php'.
 
 💡 There are multiple ways to render a block. Please read the [acf_register_block_type()](https://www.advancedcustomfields.com/resources/acf_register_block_type/) docs for a full description on the *render_template* and *render_callback* settings.
 
 One very exciting feature of ACF Blocks is that all the ACF API function such as `get_field()`, `the_field()` and `have_rows()` will work as expected!
 
-#### template-parts/content-block-testimonial.php
+#### template-parts/blocks/testimonial/testimonial.php
 ```
 <?php
 
 /**
  * Testimonial Block Template.
  *
- * @param	array $block The block data including all properties and settings.
- * @param	bool $is_preview True when editing in the back-end.
- * @param	int $post_id The post being edited.
+ * @param	array $block The block settings and attributes.
+ * @param	string $content The block inner HTML (empty).
+ * @param	bool $is_preview True during AJAX preview.
+ * @param	(int|string) $post_id The post ID this block is saved to.
  */
  
 // Create id attribute allowing for custom "anchor" value.
