@@ -106,10 +106,10 @@ acf_register_block_type( $settings );
   (String) The path to a template file used to render the block HTML. This can either be a relative path to a file within the active theme or a full path to any file.
   ```
   // Specifying a relative path within the active theme
-  'render_template' => 'template-parts/block/content-testimonial.php',
+  'render_template' => 'template-parts/blocks/testimonial/testimonial.php',
   
   // Specifying an absolute path
-  'render_template' => plugin_dir_path( __FILE__ ) . 'template-parts/block/content-testimonial.php',
+  'render_template' => plugin_dir_path( __FILE__ ) . 'template-parts/blocks/testimonial/testimonial.php',
   ```
   
 - **render_callback**  
@@ -125,13 +125,13 @@ acf_register_block_type( $settings );
 - **enqueue_style**  
   (String) (Optional) The url to a .css file to be enqueued whenever your block is displayed (front-end and back-end).
   ```
-  'enqueue_style' => get_template_directory_uri() . '/blocks/testimonial/testimonial.css',
+  'enqueue_style' => get_template_directory_uri() . '/template-parts/blocks/testimonial/testimonial.css',
   ```
   
 - **enqueue_script**  
   (String) (Optional) The url to a .js file to be enqueued whenever your block is displayed (front-end and back-end).
   ```
-  'enqueue_script' => get_template_directory_uri() . '/blocks/testimonial/testimonial.js',
+  'enqueue_script' => get_template_directory_uri() . '/template-parts/blocks/testimonial/testimonial.js',
   ```
   
 - **enqueue_assets**  
@@ -145,8 +145,8 @@ acf_register_block_type( $settings );
   
   // Specifying an anonymouse function
   'enqueue_assets' => function(){
-  	wp_enqueue_style( 'block-testimonial', get_template_directory_uri() . '/blocks/testimonial/testimonial.css' );
-  	wp_enqueue_script( 'block-testimonial', get_template_directory_uri() . '/blocks/testimonial/testimonial.js', array('jquery'), '', true );
+  	wp_enqueue_style( 'block-testimonial', get_template_directory_uri() . '/template-parts/blocks/testimonial/testimonial.css' );
+  	wp_enqueue_script( 'block-testimonial', get_template_directory_uri() . '/template-parts/blocks/testimonial/testimonial.js', array('jquery'), '', true );
   ,
   ```
   
@@ -197,44 +197,66 @@ function my_register_blocks() {
 			'name'				=> 'testimonial',
 			'title'				=> __('Testimonial'),
 			'description'		=> __('A custom testimonial block.'),
-			'render_template'	=> 'template-parts/block/content-testimonial.php',
+			'render_template'	=> 'template-parts/blocks/testimonial/testimonial.php',
 			'category'			=> 'formatting',
 		));
 	}
 }
 ```
 
-#### template-parts/block/content-testimonial.php
+#### template-parts/blocks/testimonial/testimonial.php
 ```
 <?php
 
 /**
- * This is the template that renders the testimonial block.
+ * Testimonial Block Template.
  *
  * @param	array $block The block settings and attributes.
  * @param	string $content The block inner HTML (empty).
  * @param	bool $is_preview True during AJAX preview.
  * @param	(int|string) $post_id The post ID this block is saved to.
  */
-
-// get image field (array)
-$avatar = get_field('avatar');
-
-// create id attribute for specific styling
+ 
+// Create id attribute allowing for custom "anchor" value.
 $id = 'testimonial-' . $block['id'];
+if( !empty($block['anchor']) ) {
+	$id = $block['anchor'];
+}
 
-// create align class ("alignwide") from block setting ("wide")
-$align_class = $block['align'] ? 'align' . $block['align'] : '';
+// Create class attribute allowing for custom "className" and "align" values.
+$className = 'testimonial';
+if( !empty($block['className']) ) {
+	$className .= ' ' . $block['className'];
+}
+if( !empty($block['align']) ) {
+	$className .= ' align' . $block['align'];
+}
+
+// Load values and assing defaults.
+$text = get_field('testimonial') ?: 'Your testimonial here...';
+$author = get_field('author') ?: 'Author name';
+$role = get_field('role') ?: 'Author role';
+$image = get_field('image') ?: 295;
+$background_color = get_field('background_color');
+$text_color = get_field('text_color');
 
 ?>
-<blockquote id="<?php echo $id; ?>" class="testimonial <?php echo $align_class; ?>">
-    <p><?php the_field('testimonial'); ?></p>
-    <cite>
-    	<img src="<?php echo $avatar['url']; ?>" alt="<?php echo $avatar['alt']; ?>" />
-    	<span><?php the_field('author'); ?></span>
-    </cite>
-</blockquote>
-
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
+	<blockquote class="testimonial-blockquote">
+		<span class="testimonial-text"><?php echo $text; ?></span>
+		<span class="testimonial-author"><?php echo $author; ?></span>
+		<span class="testimonial-role"><?php echo $role; ?></span>
+	</blockquote>
+    <div class="testimonial-image">
+	    <?php echo wp_get_attachment_image( $image, 'full' ); ?>
+    </div>
+    <style type="text/css">
+    	#<?php echo $id; ?> {
+			background: <?php echo $background_color; ?>;
+			color: <?php echo $text_color; ?>;
+		}
+    </style>
+</div>
 ```
 
 ### Registering a block with callback
@@ -260,7 +282,7 @@ function my_register_blocks() {
 }
 
 /**
- *  This is the callback that displays the testimonial block.
+ * Testimonial Block Callback Function.
  *
  * @param	array $block The block settings and attributes.
  * @param	string $content The block inner HTML (empty).
@@ -269,23 +291,46 @@ function my_register_blocks() {
  */
 function my_acf_block_render_callback( $block, $content = '', $is_preview = false, $post_id = 0 ) {
 	
-	// get image field (array)
-	$avatar = get_field('avatar');
-	
-	// create id attribute for specific styling
+	// Create id attribute allowing for custom "anchor" value.
 	$id = 'testimonial-' . $block['id'];
+	if( !empty($block['anchor']) ) {
+		$id = $block['anchor'];
+	}
 	
-	// create align class ("alignwide") from block setting ("wide")
-	$align_class = $block['align'] ? 'align' . $block['align'] : '';
+	// Create class attribute allowing for custom "className" and "align" values.
+	$className = 'testimonial';
+	if( !empty($block['className']) ) {
+		$className .= ' ' . $block['className'];
+	}
+	if( !empty($block['align']) ) {
+		$className .= ' align' . $block['align'];
+	}
+	
+	// Load values and assing defaults.
+	$text = get_field('testimonial') ?: 'Your testimonial here...';
+	$author = get_field('author') ?: 'Author name';
+	$role = get_field('role') ?: 'Author role';
+	$image = get_field('image') ?: 295;
+	$background_color = get_field('background_color');
+	$text_color = get_field('text_color');
 	
 	?>
-	<blockquote id="<?php echo $id; ?>" class="testimonial <?php echo $align_class; ?>">
-	    <p><?php the_field('testimonial'); ?></p>
-	    <cite>
-	    	<img src="<?php echo $avatar['url']; ?>" alt="<?php echo $avatar['alt']; ?>" />
-	    	<span><?php the_field('author'); ?></span>
-	    </cite>
-	</blockquote>
+	<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
+		<blockquote class="testimonial-blockquote">
+			<span class="testimonial-text"><?php echo $text; ?></span>
+			<span class="testimonial-author"><?php echo $author; ?></span>
+			<span class="testimonial-role"><?php echo $role; ?></span>
+		</blockquote>
+	    <div class="testimonial-image">
+		    <?php echo wp_get_attachment_image( $image, 'full' ); ?>
+	    </div>
+	    <style type="text/css">
+	    	#<?php echo $id; ?> {
+				background: <?php echo $background_color; ?>;
+				color: <?php echo $text_color; ?>;
+			}
+	    </style>
+	</div>
 	<?php
 }
 ```
@@ -299,8 +344,8 @@ acf_register_block_type(array(
 	'name'				=> 'testimonial',
 	'title'				=> __('Testimonial'),
 	'description'		=> __('A custom testimonial block.'),
-	'render_template'	=> get_template_directory() . '/blocks/testimonial/testimonial.php',
-	'enqueue_style' 	=> get_template_directory_uri() . '/blocks/testimonial/testimonial.css',
+	'render_template'	=> get_template_directory() . '/template-parts/blocks/testimonial/testimonial.php',
+	'enqueue_style' 	=> get_template_directory_uri() . '/template-parts/blocks/testimonial/testimonial.css',
 ));
 ```
 
@@ -330,7 +375,7 @@ Depending on if the block preview is shown, and whether or not changes have been
 
 Each time a block is rendered, the previous HTML is discarded, and the new HTML is displayed. As a result, any JavaScript modifications to the previous DOM elements will also be lost.
 
-To solve this problem, simply hook into our JS action "render_block_preview" and apply your JavaScript functionality as if the block was freshly painted. 
+To solve this problem, simply hook into our JS action "render_block_preview/type={$type}" and apply your JavaScript functionality as if the block was freshly painted. 
 
 This example demonstrates how to enqueue a script whilst providing compatibility with both the front-end and back-end states of a block.
 
@@ -340,8 +385,8 @@ acf_register_block_type(array(
 	'name'				=> 'testimonial',
 	'title'				=> __('Testimonial'),
 	'description'		=> __('A custom testimonial block.'),
-	'render_template'	=> get_template_directory() . '/blocks/testimonial/testimonial.php',
-	'enqueue_script' 	=> get_template_directory_uri() . '/blocks/testimonial/testimonial.js',
+	'render_template'	=> get_template_directory() . '/template-parts/blocks/testimonial/testimonial.php',
+	'enqueue_script' 	=> get_template_directory_uri() . '/template-parts/blocks/testimonial/testimonial.js',
 ));
 ```
 
@@ -366,6 +411,7 @@ acf_register_block_type(array(
 	 * @since	1.0.0
 	 *
 	 * @param	object $block The block jQuery element.
+	 * @param	object attributes The block attributes (only available when editing).
 	 * @return	void
 	 */
 	var initializeBlock = function( $block ) {
@@ -381,7 +427,7 @@ acf_register_block_type(array(
 	
 	// Initialize dynamic block preview (editor).
 	if( window.acf ) {
-		window.acf.addAction( 'render_block_preview', initializeBlock );
+		window.acf.addAction( 'render_block_preview/type=testimonial', initializeBlock );
 	}
 	
 })(jQuery);
