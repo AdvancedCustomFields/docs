@@ -195,7 +195,7 @@ No. Contrary to our original post back in 2018, ACF blocks is only included in o
 ^^^
 
 ### Do I need to write any JavaScript?
-No. The ACF blocks framework is 100% PHP. If your bock requires some JS for added functionality (a carousel slider for example), you can add this also.
+No. The ACF blocks framework is 100% PHP. If your block requires some JS for added functionality (a carousel slider for example), you can add this also.
 ^^^
 
 ### Where is block data saved?
