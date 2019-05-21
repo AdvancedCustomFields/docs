@@ -147,7 +147,7 @@ acf_register_block_type( $settings );
   'enqueue_assets' => function(){
   	wp_enqueue_style( 'block-testimonial', get_template_directory_uri() . '/template-parts/blocks/testimonial/testimonial.css' );
   	wp_enqueue_script( 'block-testimonial', get_template_directory_uri() . '/template-parts/blocks/testimonial/testimonial.js', array('jquery'), '', true );
-  ,
+  },
   ```
   
 - **supports**  
