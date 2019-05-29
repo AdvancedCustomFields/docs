@@ -192,7 +192,7 @@ function my_register_blocks() {
 	// check function exists.
 	if( function_exists('acf_register_block_type') ) {
 		
-		// register a testimonial block.
+		// Register a testimonial block.
 		acf_register_block_type(array(
 			'name'				=> 'testimonial',
 			'title'				=> __('Testimonial'),
