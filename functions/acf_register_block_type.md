@@ -86,7 +86,7 @@ acf_register_block_type( $settings );
   ```
   
 - **mode**  
-  (String) (Optional) The display mode for your block. Available settings are "auto", "preview" and "edit". Defaults to "auto".
+  (String) (Optional) The display mode for your block. Available settings are "auto", "preview" and "edit". Defaults to "preview".
   **auto**: Preview is shown by default but changes to edit form when block is selected.
   **preview**: Preview is always shown. Edit form appears in sidebar when block is selected.
   **edit**: Edit form is always shown.
@@ -147,7 +147,7 @@ acf_register_block_type( $settings );
   'enqueue_assets' => function(){
   	wp_enqueue_style( 'block-testimonial', get_template_directory_uri() . '/template-parts/blocks/testimonial/testimonial.css' );
   	wp_enqueue_script( 'block-testimonial', get_template_directory_uri() . '/template-parts/blocks/testimonial/testimonial.js', array('jquery'), '', true );
-  ,
+  },
   ```
   
 - **supports**  
@@ -192,7 +192,7 @@ function my_register_blocks() {
 	// check function exists.
 	if( function_exists('acf_register_block_type') ) {
 		
-		// register a testimonial block.
+		// Register a testimonial block.
 		acf_register_block_type(array(
 			'name'				=> 'testimonial',
 			'title'				=> __('Testimonial'),
