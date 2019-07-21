@@ -122,7 +122,7 @@ foreach( $docs as $doc ) {
 }
 foreach( $groups as $g_title => $g_docs ) {
 	$h3 = ucwords( str_replace('-', ' ', $g_title));
-	$readme .= "\n\n" . "###$h3";
+	$readme .= "\n\n" . "### $h3";
 	
 	foreach( $g_docs as $doc ) {
 		$readme .= "\n" . '- ['.$doc['title'].'](https://github.com/AdvancedCustomFields/docs/blob/master/'.$doc['path'].')';
