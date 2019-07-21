@@ -95,7 +95,6 @@ function read_meta( $file_path ) {
 		'keywords'  	=> array(),
 		'slug'      	=> basename( $file_path, '.md' ),
 		'path'			=> str_replace( DOCS_PATH . '/', '', $file_path),
-		'raw_url'      	=> str_replace( DOCS_PATH, 'https://raw.githubusercontent.com/AdvancedCustomFields/docs/master', $file_path ),
 	), $meta);
 		
 	// Return.
