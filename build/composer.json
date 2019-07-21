@@ -1,0 +1,5 @@
+{
+    "require": {
+        "mnapoli/front-yaml": "^1.6"
+    }
+}

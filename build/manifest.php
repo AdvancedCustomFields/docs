@@ -3,9 +3,10 @@
 // Config.
 define('BUILD_PATH', dirname(__FILE__));
 define('DOCS_PATH', dirname(BUILD_PATH));
+$start_time = microtime(true);
 
 // Include dependancies.
-include_once( BUILD_PATH . '/composer/vendor/autoload.php');
+include_once( BUILD_PATH . '/vendor/autoload.php');
 
 // Globals.
 global $docs, $parser;
@@ -15,16 +16,16 @@ $docs = array();
 $parser = new Mni\FrontYAML\Parser();
 
 /**
-*  walk
-*
-*  Walker function to walk through folders and generate manifest.
-*
-*  @date	4/1/19
-*  @since	5.8.0
-*
-*  @param	string $path The current path.
-*  @return	void
-*/
+ * walk
+ *
+ * Walker function to walk through folders and generate manifest.
+ *
+ * @date	4/1/19
+ * @since	5.8.0
+ *
+ * @param	string $path The current path.
+ * @return	void
+ */
 function walk( $path ) {
 	
 	// Globals.
@@ -61,19 +62,17 @@ function walk( $path ) {
 }
 
 /**
-*  read_meta
-*
-*  Returns an array of meta for the given file.
-*
-*  @date	4/1/19
-*  @since	5.8.0
-*
-*  @param	string $file_path The file to read.
-*  @return	array
-*/
+ * read_meta
+ *
+ * Returns an array of meta for the given file.
+ *
+ * @date	4/1/19
+ * @since	5.8.0
+ *
+ * @param	string $file_path The file to read.
+ * @return	array
+ */
 function read_meta( $file_path ) {
-	
-	// Globals.
 	global $parser;
 	
 	// Read file.
@@ -95,7 +94,8 @@ function read_meta( $file_path ) {
 		'category'  	=> '',
 		'keywords'  	=> array(),
 		'slug'      	=> basename( $file_path, '.md' ),
-		'raw_url'      	=> str_replace( DOCS_PATH, 'https://raw.githubusercontent.com/AdvancedCustomFields/docs/master', $file_path),
+		'path'			=> str_replace( DOCS_PATH . '/', '', $file_path),
+		'raw_url'      	=> str_replace( DOCS_PATH, 'https://raw.githubusercontent.com/AdvancedCustomFields/docs/master', $file_path ),
 	), $meta);
 		
 	// Return.
@@ -108,6 +108,29 @@ walk( DOCS_PATH );
 // Write JSON.
 file_put_contents( DOCS_PATH . '/manifest.json', json_encode($docs, JSON_PRETTY_PRINT));
 
+// Generate README.md file.
+$readme = "
+# Advanced Custom Fields Documentation
+
+Welcome to the GitHub documentation repository for the [Advanced Custom Fields](https://www.advancedcustomfields.com/) WordPress plugin.";
+
+// Sort docs into category groups.
+$groups = array();
+foreach( $docs as $doc ) {
+	$group = $doc['category'] ? $doc['category'] : 'other';
+	$groups[ $group ][] = $doc;
+}
+foreach( $groups as $g_title => $g_docs ) {
+	$h3 = ucwords( str_replace('-', ' ', $g_title));
+	$readme .= "\n\n" . "###$h3";
+	
+	foreach( $g_docs as $doc ) {
+		$readme .= "\n" . '- ['.$doc['title'].'](https://github.com/AdvancedCustomFields/docs/blob/master/'.$doc['path'].')';
+	}
+}
+
+// Write JSON.
+file_put_contents( DOCS_PATH . '/README.md', trim($readme));
+
 // Display JSON
-header('Content-Type: application/json');
-echo json_encode( $docs );
+die("Build complete. " . (microtime(true) - $start_time) . "ms");
