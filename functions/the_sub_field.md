@@ -3,7 +3,6 @@ title: the_sub_field()
 description: Displays the value of a specific sub field.
 category: functions
 group: Loop
-status: draft
 ---
 
 ## Description
@@ -34,20 +33,18 @@ This example shows how to loop through a Repeater field and display a sub field 
 <?php endif; ?>
 ```
 
-### Get a value from within a Flexible Content field.
+### Display a value from within a Flexible Content field.
 This example shows how to loop through a Flexible Content field and generate HTML for different layouts.
 ```
 <?php if( have_rows('content') ): ?>
 	<?php while( have_rows('content') ): the_row(); ?>
 		<?php if( get_row_layout() == 'paragraph' ): ?>
 			<?php the_sub_field('paragraph'); ?>
-		<?php elseif( get_row_layout() == 'image' ): 
-			$image = get_sub_field('image');
-			?>
-			<figure>
-				<?php echo wp_get_attachment_image( $image['ID'], 'full' ); ?>
-				<figcaption><?php echo $image['caption']; ?></figcaption>
-			</figure>
+		<?php elseif( get_row_layout() == 'quote' ): ?>
+			<blockquote>
+			    <p><?php the_sub_field('quote'); ?></p>
+			    <footer>—<?php the_sub_field('author'); ?></footer>
+			</blockquote>
 		<?php endif; ?>
 	<?php endwhile; ?>
 <?php endif; ?>
