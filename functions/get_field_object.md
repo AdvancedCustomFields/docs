@@ -54,7 +54,7 @@ This example shows how to load a field and display its label and value.
 <?php
 $field = get_field_object('my_field');
 ?>
-<p><?php echo $field['label'] ?>: <?php echo $field['value'] ?></p>
+<p><?php echo $field['label']; ?>: <?php echo $field['value']; ?></p>
 ```
 
 ### Display a field's label and value from a specific post
@@ -63,7 +63,7 @@ This example shows how to load a field and display its label and value from the 
 <?php
 $field = get_field_object('my_field', 123);
 ?>
-<p><?php echo $field['label'] ?>: <?php echo $field['value'] ?></p>
+<p><?php echo $field['label']; ?>: <?php echo $field['value']; ?></p>
 ```
 
 ### Retrieve a field using its key
