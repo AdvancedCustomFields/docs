@@ -10,7 +10,7 @@ This function checks to see if a parent field (such as Repeater or Flexible Cont
 
 This function is intended to be used in conjunction with `the_row()` to step through available values.
 
-Using `have_rows()` together with `the_row()` is intended to feel native much like the [have_posts()](https://codex.wordpress.org/Function_Reference/have_posts) and [the_post()](https://developer.wordpress.org/reference/functions/the_post/) WordPress functions.
+Using `have_rows()` together with `the_row()` is intended to feel native much like the [have_posts()](https://codex.wordpress.org/Function_Reference/have_posts/) and [the_post()](https://developer.wordpress.org/reference/functions/the_post/) WordPress functions.
 
 ## Change Log
 - Added in version 4.3.0
@@ -72,7 +72,6 @@ This example shows how to loop through a Flexible Content field and generate HTM
 				<?php echo wp_get_attachment_image( $image['ID'], 'full' ); ?>
 				<figcaption><?php echo $image['caption']; ?></figcaption>
 			</figure>
-			<?php endif; ?>
 		<?php endif; ?>
 	<?php endwhile; ?>
 <?php endif; ?>
