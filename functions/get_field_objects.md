@@ -3,7 +3,6 @@ title: get_field_objects()
 description: Returns the settings of all fields saved on a specific post.
 category: functions
 group: Basic
-status: draft
 ---
 
 ##Description

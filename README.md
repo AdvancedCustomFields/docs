@@ -9,6 +9,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [acf_register_block_type()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/acf_register_block_type.md)
 - [get_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_field.md)
 - [get_field_object()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_field_object.md)
+- [get_field_objects()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_field_objects.md)
 - [get_fields()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_fields.md)
 - [the_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/the_field.md)
 

@@ -44,8 +44,7 @@
         "keywords": [],
         "slug": "get_field_objects",
         "path": "functions\/get_field_objects.md",
-        "group": "Basic",
-        "status": "draft"
+        "group": "Basic"
     },
     {
         "title": "get_fields()",
