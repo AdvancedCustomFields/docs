@@ -20,7 +20,6 @@ get_field_objects( [$post_id = false], [$format_value = true], [$load_value = tr
 - `$load_value`		*(bool)*	*(Optional)*	Whether to load the field’s value. Defaults to true.
 
 ## Return
-
 This function will return an array looking something like the following. Please note that each field contains unique settings.
 ```
 array(
@@ -64,6 +63,19 @@ if( $fields ): ?>
 	</ul>
 <?php endif; ?>
 ```
+### Display all fields labels and values from a specific post
+This example shows how to load all fields and display their labels and values from the post with ID = 123.
+```
+<?php
+$fields = get_field_objects( 123 );
+if( $fields ): ?>
+	<ul>
+		<?php foreach( $fields as $field ): ?>
+			<li><?php echo $field['label']; ?>: <?php echo $field['value']; ?></li>
+		<?php endforeach; ?>
+	</ul>
+<?php endif; ?>
+```
 
-## Further Reading.
+## Further Reading
 - [get_field_object()](https://advancedcustomfields/resources/get_field_object)
