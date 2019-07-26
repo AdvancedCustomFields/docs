@@ -56,6 +56,16 @@
         "group": "Basic"
     },
     {
+        "title": "have_rows()",
+        "description": "Used to loop through a parent field's value.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "have_rows",
+        "path": "functions\/have_rows.md",
+        "group": "Loop",
+        "status": "draft"
+    },
+    {
         "title": "the_field()",
         "description": "Displays the value of a specific field.",
         "category": "functions",
