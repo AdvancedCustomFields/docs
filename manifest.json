@@ -56,6 +56,16 @@
         "group": "Basic"
     },
     {
+        "title": "get_row()",
+        "description": "Returns an array containing all values for the current row.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "get_row",
+        "path": "functions\/get_row.md",
+        "group": "Loop",
+        "status": "draft"
+    },
+    {
         "title": "get_sub_field()",
         "description": "Returns the value of a specific sub field.",
         "category": "functions",
