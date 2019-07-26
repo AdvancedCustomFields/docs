@@ -62,8 +62,7 @@
         "keywords": [],
         "slug": "have_rows",
         "path": "functions\/have_rows.md",
-        "group": "Loop",
-        "status": "draft"
+        "group": "Loop"
     },
     {
         "title": "the_field()",
