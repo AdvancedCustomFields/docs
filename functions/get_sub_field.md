@@ -3,7 +3,6 @@ title: get_sub_field()
 description: Returns the value of a specific sub field.
 category: functions
 group: Loop
-status: draft
 ---
 
 ## Description
