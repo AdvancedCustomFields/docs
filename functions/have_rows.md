@@ -3,17 +3,14 @@ title: have_rows()
 description: Used to loop through a parent field's value.
 category: functions
 group: Loop
-status: draft
 ---
 
 ## Description
-Used to loop through a parent field's value.
-
-This function checks to see if a parent field (such as Repeater or Flexible Content) has any rows of data to loop over. This is a boolean function, meaning it returns either **true** or **false**.
+This function checks to see if a parent field (such as Repeater or Flexible Content) has any rows of data to loop over. This is a boolean function, meaning it returns either `true` or `false`.
 
 This function is intended to be used in conjunction with `the_row()` to step through available values.
 
-Using `have_rows()` together with `the_row()` is intended to feel native much like the `have_posts()` and `the_post()` WordPress functions.
+Using `have_rows()` together with `the_row()` is intended to feel native much like the [have_posts()](https://codex.wordpress.org/Function_Reference/have_posts) and [the_post()](https://developer.wordpress.org/reference/functions/the_post/) WordPress functions.
 
 ## Change Log
 - Added in version 4.3.0
