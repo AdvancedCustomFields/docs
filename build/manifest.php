@@ -82,11 +82,6 @@ function read_meta( $file_path ) {
 	$document = $parser->parse( $file_contents, false );
 	$meta = $document->getYAML();
 	
-	// Check status
-	if( isset($meta['status']) ) {
-		return false;
-	}
-	
 	// Apply defaults.
 	$meta = array_merge(array(
 		'title'			=> '',
@@ -116,6 +111,13 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 // Sort docs into category groups.
 $groups = array();
 foreach( $docs as $doc ) {
+	
+	// Ignore unpublished docs.
+	if( isset($doc['status']) && $doc['status'] !== 'publish' ) {
+		continue;
+	}
+	
+	// Append.
 	$group = $doc['category'] ? $doc['category'] : 'other';
 	$groups[ $group ][] = $doc;
 }

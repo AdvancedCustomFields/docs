@@ -38,6 +38,16 @@
         "group": "Basic"
     },
     {
+        "title": "get_field_objects()",
+        "description": "Returns the settings of all fields saved on a specific post.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "get_field_objects",
+        "path": "functions\/get_field_objects.md",
+        "group": "Basic",
+        "status": "draft"
+    },
+    {
         "title": "get_fields()",
         "description": "Returns an array of field values (name => value) for a specific post.",
         "category": "functions",
@@ -93,5 +103,14 @@
         "slug": "javascript-api",
         "path": "guides\/javascript-api.md",
         "group": "Tutorials"
+    },
+    {
+        "title": "Test Accordion",
+        "description": "",
+        "category": "",
+        "keywords": [],
+        "slug": "accordion",
+        "path": "tests\/accordion.md",
+        "status": "draft"
     }
 ]
