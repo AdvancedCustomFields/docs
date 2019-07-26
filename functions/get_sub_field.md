@@ -11,7 +11,7 @@ Returns the value of a specific sub field value from a Repeater or Flexible Cont
 
 ## Parameters
 ```
-get_sub_field( $selector, [$format_value]);
+get_sub_field( $selector, [$format_value] );
 ```
 - `$selector`		*(string)*	*(Required)*	The sub field name or field key.
 - `$format_value`	*(bool)*	*(Optional)*	Whether to apply formatting logic. Defaults to true.
@@ -31,27 +31,33 @@ else :
 endif;
 ```
 
-
 ### Get a value from within a Flexible Content field.
 This example shows how to loop through a Flexible Content field and load a sub field value.
 ```
-<?php if( have_rows('parent_field') ): ?>
-	<?php while( have_rows('parent_field') ): the_row(); ?>
-		<?php if( get_row_layout() == 'layout_1' ): ?>
-			<?php $value = get_sub_field('sub_field_1'); ?>
-		<?php elseif( get_row_layout() == 'layout_2' ): ?>
-			<?php $value = get_sub_field('sub_field_2'); ?>
-		<?php endif; ?>
-	<?php endwhile; ?>
-<?php endif; ?>
+if( have_rows('parent_field') ):
+	while( have_rows('parent_field') ): the_row();
+		
+		// Layout 1.
+		if( get_row_layout() == 'layout_1' ):
+		
+			// Layout 1 value.
+			$value = get_sub_field('sub_field_1');
+			
+		// Layout 2.
+		elseif( get_row_layout() == 'layout_2' ):
+		
+			// Layout 2 value.
+			$value = get_sub_field('sub_field_2');
+			
+		endif;
+		
+	endwhile;
+endif;
 ```
 
 ### Nested loops
 This example shows how to loop through a nested Repeater field and load a sub field value.
-
 ```
-<?php 
-
 /**
  * Field Structure:
  *
@@ -62,12 +68,19 @@ This example shows how to loop through a nested Repeater field and load a sub fi
  */
 if( have_rows('parent_repeater') ):
     while( have_rows('parent_repeater') ) : the_row();
+		
+		// Get parent value.
 		$parent_title = get_sub_field('parent_title');
+		
+		// Loop over sub repeater rows.
 		if( have_rows('child_repeater') ):
 		    while( have_rows('child_repeater') ) : the_row();
+				
+				// Get sub value.
 				$child_title = get_sub_field('child_title');
+				
 			endwhile;
 		endif;
     endwhile;
-endif; ?>
+endif;
 ```
