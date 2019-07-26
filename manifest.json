@@ -56,6 +56,16 @@
         "group": "Basic"
     },
     {
+        "title": "get_sub_field()",
+        "description": "Returns the value of a specific sub field.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "get_sub_field",
+        "path": "functions\/get_sub_field.md",
+        "group": "Loop",
+        "status": "draft"
+    },
+    {
         "title": "have_rows()",
         "description": "Used to loop through a parent field's value.",
         "category": "functions",
