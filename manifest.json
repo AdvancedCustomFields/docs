@@ -66,6 +66,16 @@
         "status": "draft"
     },
     {
+        "title": "get_row_index()",
+        "description": "Returns the current row index within a have_rows() loop",
+        "category": "functions",
+        "keywords": [],
+        "slug": "get_row_index",
+        "path": "functions\/get_row_index.md",
+        "group": "Loop",
+        "status": "draft"
+    },
+    {
         "title": "get_sub_field()",
         "description": "Returns the value of a specific sub field.",
         "category": "functions",
