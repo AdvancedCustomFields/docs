@@ -76,6 +76,16 @@
         "status": "draft"
     },
     {
+        "title": "get_row_layout()",
+        "description": "Returns the current row layout name within a have_rows() loop",
+        "category": "functions",
+        "keywords": [],
+        "slug": "get_row_layout",
+        "path": "functions\/get_row_layout.md",
+        "group": "Loop",
+        "status": "draft"
+    },
+    {
         "title": "get_sub_field()",
         "description": "Returns the value of a specific sub field.",
         "category": "functions",
