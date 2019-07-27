@@ -31,7 +31,8 @@ This example demonstrates how to use this function to output unique ID's into ea
 		</div>
 	<?php endwhile; ?>
 <?php endif; ?>
-<!-- result -->
+```
+```
 <div class="accordion" id="accordion-1">
 	<h3>My first accordion</h3>
 	<p>Some text here.</p>
