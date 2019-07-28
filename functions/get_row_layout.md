@@ -17,6 +17,23 @@ get_row_layout()
 ```
 
 ## Example
+
+### Basic usage.
+This example shows how to loop through a Flexible Content field and load the row layout for each row.
+```
+if( have_rows('content') ) {
+	while( have_rows('content') ) {
+		the_row();
+		
+		// Get the row layout.
+		$layout = get_row_layout();
+		
+		// Do something...
+	}
+}
+```
+
+### Display layouts.
 This example shows how to loop through a Flexible Content field and generate HTML for different layouts.
 ```
 <?php if( have_rows('content') ): ?>
