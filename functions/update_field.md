@@ -1,6 +1,6 @@
 ---
 title: update_field()
-description: Updates a field value.
+description: Updates the value of a specific field.
 category: functions
 group: Update
 status: draft
