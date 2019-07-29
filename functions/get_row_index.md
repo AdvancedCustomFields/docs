@@ -19,7 +19,7 @@ get_row_index()
 ## Return
 *(int)* A numeric index of the current row. See notes regarding index offset.
 
-### Basic
+## Example
 This example demonstrates how to use this function to output unique ID's into each row's wrapper. This is useful for CSS / JS customization.
 
 ```

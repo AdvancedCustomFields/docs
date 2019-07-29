@@ -16,6 +16,9 @@ This function becomes necessary when displaying values from a Flexible Content f
 get_row_layout()
 ```
 
+## Return
+*(string)* The name of the layout as defined in the Flexible Content field settings.
+
 ## Example
 
 ### Basic usage.
