@@ -20,8 +20,7 @@ get_field_object($selector, [$post_id = false], [$format_value = true], [$load_v
 - `$load_value`		*(bool)*	*(Optional)*	Whether to load the field’s value. Defaults to true.
 
 ## Return
-
-This function will return an array looking something like the following. Please note that each field contains unique settings.
+*(array)* This function will return an array looking something like the following. Please note that each field contains unique settings.
 ```
 array(
 	'ID'				=> 0,
@@ -46,7 +45,7 @@ array(
 );
 ```
 
-## Example
+## Examples
 
 ### Display a field's label and value
 This example shows how to load a field and display its label and value.

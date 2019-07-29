@@ -19,7 +19,7 @@ the_field($selector, [$post_id], [$format_value]);
 - `$post_id`		*(mixed)*	*(Optional)*	The post ID where the value is saved. Defaults to the current post.
 - `$format_value`	*(bool)*	*(Optional)*	Whether to apply formatting logic. Defaults to true.
 
-## Example
+## Examples
 
 ### Display a value from the current post
 This example shows how to display the value of field "text_field" from the current post.
@@ -54,14 +54,3 @@ $post_id = "options";		// same as above
 
 the_field( 'my_field', $post_id );
 ```
-
-## Related
-- Functions: [get_field()](https://www.advancedcustomfields.com/resources/get_field/)
-- Getting Started: [Displaying values in your theme](https://www.advancedcustomfields.com/resources/displaying-custom-field-values-in-your-theme/)
-- Guides: [Get values from another post](https://www.advancedcustomfields.com/resources/how-to-get-values-from-another-post/)
-- Guides: [How to get values from a comment](https://www.advancedcustomfields.com/resources/get-values-comment/)
-- Guides: [Adding fields to Media Attachments](https://www.advancedcustomfields.com/resources/adding-fields-media-attachments/)
-- Guides: [Adding fields to a taxonomy term](https://www.advancedcustomfields.com/resources/adding-fields-taxonomy-term/)
-- Guides: [Get values from a user](https://www.advancedcustomfields.com/resources/how-to-get-values-from-a-user/)
-- Guides: [Get values from a widget](https://www.advancedcustomfields.com/resources/get-values-widget/)
-- Guides: [Get values from an options page](https://www.advancedcustomfields.com/resources/get-values-from-an-options-page/)

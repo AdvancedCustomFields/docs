@@ -5,12 +5,12 @@ category: functions
 group: Basic
 ---
 
-##Description
+## Description
 Returns the settings of all fields saved on a specific post.
 
 Each field contains many settings such as a label, name and type. This function can be used to load these settings as an array along with the field's value.
 
-##Parameters
+## Parameters
 ```
 get_field_objects( [$post_id = false], [$format_value = true], [$load_value = true] );
 ```
@@ -19,7 +19,7 @@ get_field_objects( [$post_id = false], [$format_value = true], [$load_value = tr
 - `$load_value`		*(bool)*	*(Optional)*	Whether to load the field’s value. Defaults to true.
 
 ## Return
-This function will return an array looking something like the following. Please note that each field contains unique settings.
+*(array)* This function will return an array looking something like the following. Please note that each field contains unique settings.
 ```
 array(
 	"my_field" => array(
@@ -47,7 +47,7 @@ array(
 );
 ```
 
-## Example
+## Examples
 
 ### Display all fields labels and values
 This example shows how to load all fields and display their labels and values.
@@ -75,6 +75,3 @@ if( $fields ): ?>
 	</ul>
 <?php endif; ?>
 ```
-
-## Further Reading
-- [get_field_object()](https://advancedcustomfields/resources/get_field_object)

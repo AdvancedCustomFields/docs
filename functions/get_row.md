@@ -3,19 +3,22 @@ title: get_row()
 description: Returns an array containing all values for the current row.
 category: functions
 group: Loop
-status: draft
 ---
 
-Return an array containing all values (in the format key => value) for the current row within a `have_rows()` loop.
+## Description
+Returns an array containing all values (in the format name => value) for the current row within a `have_rows()` loop.
 
-## Change Log
+### Change Log
 - Added in version 5.3.3
 
-##Parameters
+## Parameters
 ```
 get_row([$format_value = true]);
 ```
 - `$format_value`	*(bool)*	*(Optional)*	Whether to apply formatting logic. Defaults to true.
+
+## Return
+*(array)* Array of values in the format name => value.
 
 ## Example
 This example demonstrates how to load the current row values and display them.

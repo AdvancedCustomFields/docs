@@ -17,7 +17,7 @@ the_sub_field( $selector, [$format_value] );
 - `$selector`		*(string)*	*(Required)*	The sub field name or field key.
 - `$format_value`	*(bool)*	*(Optional)*	Whether to apply formatting logic. Defaults to true.
 
-## Example
+## Examples
 
 ### Display a value from within a Repeater field.
 This example shows how to loop through a Repeater field and display a sub field value.

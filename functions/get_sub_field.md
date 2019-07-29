@@ -15,7 +15,10 @@ get_sub_field( $selector, [$format_value] );
 - `$selector`		*(string)*	*(Required)*	The sub field name or field key.
 - `$format_value`	*(bool)*	*(Optional)*	Whether to apply formatting logic. Defaults to true.
 
-## Example
+## Return
+*(mixed)* The sub field value.
+
+## Examples
 
 ### Get a value from within a Repeater field.
 This example shows how to loop through a Repeater field and load a sub field value.

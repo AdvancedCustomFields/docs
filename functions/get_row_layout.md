@@ -3,7 +3,6 @@ title: get_row_layout()
 description: Returns the current row layout name within a have_rows() loop
 category: functions
 group: Loop
-status: draft
 ---
 
 ## Description
@@ -11,15 +10,10 @@ Returns the current row layout name within a `have_rows()` loop.
 
 This function becomes necessary when displaying values from a Flexible Content field as each row may be of a different layout type.
 
-## Parameters
-```
-get_row_layout()
-```
-
 ## Return
 *(string)* The name of the layout as defined in the Flexible Content field settings.
 
-## Example
+## Examples
 
 ### Basic usage.
 This example shows how to loop through a Flexible Content field and load the row layout for each row.

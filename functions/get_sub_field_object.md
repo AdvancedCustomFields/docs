@@ -3,7 +3,6 @@ title: get_sub_field_object()
 description: Returns the settings of a specific sub field.
 category: functions
 group: Loop
-status: draft
 ---
 
 ## Description
@@ -11,7 +10,7 @@ Returns the settings of a specific sub field within a have_rows() loop.
 
 Each field contains many settings such as a label, name and type. This function can be used to load these settings as an array along with the field's value.
 
-## Changelog
+### Changelog
 - Added in version 4.0
 
 ## Parameters
@@ -23,8 +22,7 @@ get_sub_field_object($selector, [$post_id = false], [$format_value = true], [$lo
 - `$load_value`		*(bool)*	*(Optional)*	Whether to load the field’s value. Defaults to true.
 
 ## Return
-
-This function will return an array looking something like the following. Please note that each field contains unique settings.
+*(array)* This function will return an array looking something like the following. Please note that each field contains unique settings.
 ```
 array(
 	'ID'				=> 0,
@@ -50,8 +48,6 @@ array(
 ```
 
 ## Example
-
-### Display a sub field's choices
 This function works in a similar way to `get_sub_field()`, meaning it must be used within a `have_rows()` loop. This example shows how to list out a sub field's choices using its value to highlight the selected one.
 
 ```
