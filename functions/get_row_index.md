@@ -9,6 +9,8 @@ status: draft
 ## Description
 Returns the current row index within a `have_rows()` loop.
 
+Whilst stepping though the rows of a Repeater or Flexible Content field, you may find it necessary to determine the row number (index). This function does exactly that, avoiding the need of a custom `$i++` counter.
+
 ### Return
 *(int)* A numeric index of the current row. See notes regarding index offset.
 
