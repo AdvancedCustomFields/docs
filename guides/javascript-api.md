@@ -1183,9 +1183,7 @@ acf.addFilter('color_picker_args', function( args, field ){
 ```
 
 ## Changelog
-
-### 5.7.0
-* Rebuilt JS library
+- Rebuilt JS library in version 5.7
 
 ## Further Reading
 Believe it or not, this documentation only scrapes the surface of the ACF JavaScript API! If you are interested in learning more about a specific function, finding the full list of models or are in need of more code examples, please take a look at the `acf-input.js` source code located in the plugin folder **assets/js/acf-input.js**.

@@ -8,9 +8,6 @@ group: Loop
 ## Description
 Returns an array containing all values (in the format name => value) for the current row within a `have_rows()` loop.
 
-### Change Log
-- Added in version 5.3.3
-
 ## Parameters
 ```
 get_row([$format_value = true]);
@@ -19,6 +16,9 @@ get_row([$format_value = true]);
 
 ## Return
 *(array)* Array of values in the format name => value.
+
+## Changelog
+- Added in version 5.3.3
 
 ## Example
 This example demonstrates how to load the current row values and display them.

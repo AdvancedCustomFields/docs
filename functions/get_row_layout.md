@@ -15,7 +15,7 @@ This function becomes necessary when displaying values from a Flexible Content f
 
 ## Examples
 
-### Basic usage.
+### Basic usage
 This example shows how to loop through a Flexible Content field and load the row layout for each row.
 ```
 if( have_rows('content') ) {
@@ -30,7 +30,7 @@ if( have_rows('content') ) {
 }
 ```
 
-### Display layouts.
+### Display layouts
 This example shows how to loop through a Flexible Content field and generate HTML for different layouts.
 ```
 <?php if( have_rows('content') ): ?>

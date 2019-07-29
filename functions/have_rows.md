@@ -12,9 +12,6 @@ This function is intended to be used in conjunction with `the_row()` to step thr
 
 Using `have_rows()` together with `the_row()` is intended to feel native much like the [have_posts()](https://codex.wordpress.org/Function_Reference/have_posts/) and [the_post()](https://developer.wordpress.org/reference/functions/the_post/) WordPress functions.
 
-### Change Log
-- Added in version 4.3.0
-
 ## Parameters
 ```
 have_rows( $selector, [$post_id = false] );
@@ -24,6 +21,9 @@ have_rows( $selector, [$post_id = false] );
 
 ## Return
 *(bool)* True if a row exists.
+
+## Changelog
+- Added in version 4.3.0
 
 ## Examples
 

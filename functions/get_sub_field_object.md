@@ -10,9 +10,6 @@ Returns the settings of a specific sub field within a have_rows() loop.
 
 Each field contains many settings such as a label, name and type. This function can be used to load these settings as an array along with the field's value.
 
-### Changelog
-- Added in version 4.0
-
 ## Parameters
 ```
 get_sub_field_object($selector, [$post_id = false], [$format_value = true], [$load_value = true]);
@@ -46,6 +43,9 @@ array(
 	)
 );
 ```
+
+## Changelog
+- Added in version 4.0
 
 ## Example
 This function works in a similar way to `get_sub_field()`, meaning it must be used within a `have_rows()` loop. This example shows how to list out a sub field's choices using its value to highlight the selected one.

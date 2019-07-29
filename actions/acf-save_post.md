@@ -9,15 +9,15 @@ This action is called when saving the submitted `$_POST` data.
 
 This action allows you to hook in **before** or **after** the data has been saved. Therefore, it is important to note that the `get_field()` function will return different values at these times.
 
-## Change Log
-- Data changed from `$_POST['fields']` to `$_POST['acf']` in version 5.0.0
-- Introduced in version 4.0.0
-
 ## Parameters
 ```
 do_action( 'acf/save_post', $post_id );
 ```
 - `$post_id` *(int|string)* The ID of the item (post, user, term, etc) being saved.
+
+## Changelog
+- Data changed from `$_POST['fields']` to `$_POST['acf']` in version 5.0.0
+- Introduced in version 4.0.0
 
 ## Examples
 

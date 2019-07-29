@@ -10,11 +10,11 @@ Returns the current row index within a `have_rows()` loop.
 
 Whilst stepping though the rows of a Repeater or Flexible Content field, you may find it necessary to determine the row number (index). This function does exactly that, avoiding the need of a custom `$i++` counter.
 
-### Change Log
-- Added in version 5.3.4
-
 ## Return
 *(int)* A numeric index of the current row. See notes regarding index offset.
+
+## Changelog
+- Added in version 5.3.4
 
 ## Example
 This example demonstrates how to use this function to output unique ID's into each row's wrapper. This is useful for CSS / JS customization.

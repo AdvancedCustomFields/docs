@@ -9,7 +9,7 @@ group: Basic
 ## Description
 Displays the value of a specific field.
 
-Intuitive and powerful, this function can be used to output the value of any field from any location. Please note this function is the same as `echo get_field();`.
+Intuitive and powerful, this function can be used to output the value of any field from any location. Please note this function is the same as `echo get_field()`.
 
 ## Parameters
 ```

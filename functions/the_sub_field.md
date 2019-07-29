@@ -8,7 +8,7 @@ group: Loop
 ## Description
 Displays the value of a specific sub field value from a Repeater or Flexible Content field loop.
 
-This function is essentially the same as `<?php echo get_sub_field('name'); ?>`.
+This function is essentially the same as `echo get_sub_field()`.
 
 ## Parameters
 ```

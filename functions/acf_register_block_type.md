@@ -18,9 +18,6 @@ Note: Block type registration should be done within the acf/init action. This is
 
 Block types can support any number of built-in core features such as name, icon, description, category and more. See the $settings argument for a complete list of supported features.
 
-### Change Log
-- Added in version 5.8.0
-
 ## Parameters
 ```
 acf_register_block_type( $settings );
@@ -181,6 +178,9 @@ acf_register_block_type( $settings );
 
 ## Return
 *(array)* The validated and registered block settings.
+
+## Changelog
+- Added in version 5.8.0
 
 ## Examples
 
