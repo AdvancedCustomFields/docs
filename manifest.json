@@ -129,6 +129,16 @@
         "group": "Loop"
     },
     {
+        "title": "update_field()",
+        "description": "Updates a field value.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "update_field",
+        "path": "functions\/update_field.md",
+        "group": "Update",
+        "status": "draft"
+    },
+    {
         "title": "Blocks",
         "description": null,
         "category": "guides",
