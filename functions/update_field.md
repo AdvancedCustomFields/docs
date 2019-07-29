@@ -61,7 +61,7 @@ $post_id = "event_4"; // event (custom taxonomy) term ID = 4
 $post_id = "option"; // options page
 $post_id = "options"; // same as above
 
-$value = update_field( 'my_field', 'my_value', $post_id );
+update_field( 'my_field', 'my_value', $post_id );
 ```
 
 ### Saving values to a new post.
