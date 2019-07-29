@@ -6,18 +6,14 @@ group: Loop
 status: draft
 ---
 
-Returns the current row index within a have_rows() loop.
+## Description
+Returns the current row index within a `have_rows()` loop.
 
-## Change Log
-- Added in version 5.3.4
-
-## Parameters
-```
-get_row_index()
-```
-
-## Return
+### Return
 *(int)* A numeric index of the current row. See notes regarding index offset.
+
+### Change Log
+- Added in version 5.3.4
 
 ## Example
 This example demonstrates how to use this function to output unique ID's into each row's wrapper. This is useful for CSS / JS customization.
