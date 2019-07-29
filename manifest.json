@@ -62,8 +62,7 @@
         "keywords": [],
         "slug": "get_row",
         "path": "functions\/get_row.md",
-        "group": "Loop",
-        "status": "draft"
+        "group": "Loop"
     },
     {
         "title": "get_row_index()",
@@ -72,8 +71,7 @@
         "keywords": [],
         "slug": "get_row_index",
         "path": "functions\/get_row_index.md",
-        "group": "Loop",
-        "status": "draft"
+        "group": "Loop"
     },
     {
         "title": "get_row_layout()",
@@ -82,8 +80,7 @@
         "keywords": [],
         "slug": "get_row_layout",
         "path": "functions\/get_row_layout.md",
-        "group": "Loop",
-        "status": "draft"
+        "group": "Loop"
     },
     {
         "title": "get_sub_field()",
@@ -101,8 +98,7 @@
         "keywords": [],
         "slug": "get_sub_field_object",
         "path": "functions\/get_sub_field_object.md",
-        "group": "Loop",
-        "status": "draft"
+        "group": "Loop"
     },
     {
         "title": "have_rows()",
