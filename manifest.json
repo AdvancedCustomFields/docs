@@ -25,8 +25,7 @@
         "keywords": [],
         "slug": "delete_field",
         "path": "functions\/delete_field.md",
-        "group": "Update",
-        "status": "draft"
+        "group": "Update"
     },
     {
         "title": "get_field()",
@@ -145,8 +144,7 @@
         "keywords": [],
         "slug": "update_field",
         "path": "functions\/update_field.md",
-        "group": "Update",
-        "status": "draft"
+        "group": "Update"
     },
     {
         "title": "update_sub_field()",
@@ -155,8 +153,7 @@
         "keywords": [],
         "slug": "update_sub_field",
         "path": "functions\/update_sub_field.md",
-        "group": "Update",
-        "status": "draft"
+        "group": "Update"
     },
     {
         "title": "Blocks",

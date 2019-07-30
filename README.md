@@ -7,6 +7,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 
 ### Functions
 - [acf_register_block_type()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/acf_register_block_type.md)
+- [delete_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/delete_field.md)
 - [get_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_field.md)
 - [get_field_object()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_field_object.md)
 - [get_field_objects()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_field_objects.md)
@@ -19,6 +20,8 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [have_rows()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/have_rows.md)
 - [the_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/the_field.md)
 - [the_sub_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/the_sub_field.md)
+- [update_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/update_field.md)
+- [update_sub_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/update_sub_field.md)
 
 ### Guides
 - [Blocks](https://github.com/AdvancedCustomFields/docs/blob/master/guides/blocks.md)

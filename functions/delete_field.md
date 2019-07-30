@@ -3,7 +3,6 @@ title: delete_field()
 description: Deletes the value of a specific field.
 category: functions
 group: Update
-status: draft
 ---
 
 ## Description

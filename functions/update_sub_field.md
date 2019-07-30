@@ -3,7 +3,6 @@ title: update_sub_field()
 description: Updates the value of a specific sub field.
 category: functions
 group: Update
-status: draft
 ---
 
 ## Description
