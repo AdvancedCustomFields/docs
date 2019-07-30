@@ -17,7 +17,7 @@ delete_field($selector, [$post_id]);
 - `$post_id`		*(mixed)*	*(Optional)*	The post ID where the value is saved. Defaults to the current post.
 
 ## Return
-**(bool)** True on successful delete, false on failure.
+*(bool)* True on successful delete, false on failure.
 
 ## Examples
 
