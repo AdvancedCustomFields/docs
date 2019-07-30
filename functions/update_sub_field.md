@@ -41,10 +41,6 @@ if( have_rows('repeater') ) {
 ```
 
 ### Update a sub field outside of a have_rows() loop
-This example shows how to loop through a Repeater field and update one of its sub field values using the current row number.
-
-
-
 This example shows how to update a sub field value outside of a `have_rows()` loop. Here, the `$selector` parameter is provided an array containing a mixture of field names and row numbers. This array should read from left to right, the parents to children relationship separated by the row number.
 
 Please see notes regarding index offset.
@@ -84,7 +80,7 @@ update_sub_field( array('repeater', 1, 'sub_repeater', 2, 'sub_sub_field'), 'Thi
 ## Notes
 
 ### Index offset
-The index returned from this function begins at 1. This means a Repeater field with 3 rows of data will produce indexes of 1, 2 and 3.
+When targeting a sub field using a specific row number, please note that row numbers begin from 1 and not 0. This means that the first row has an index of 1, the second row has an index of 2, and so on.
 
 To begin indexes from 0, please use the [row_index_offset](https://www.advancedcustomfields.com/resources/acf-settings/) setting like so.
 #### functions.php
