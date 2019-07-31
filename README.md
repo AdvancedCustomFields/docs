@@ -8,6 +8,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 ### Functions
 - [acf_register_block_type()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/acf_register_block_type.md)
 - [delete_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/delete_field.md)
+- [delete_sub_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/delete_sub_field.md)
 - [get_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_field.md)
 - [get_field_object()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_field_object.md)
 - [get_field_objects()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_field_objects.md)

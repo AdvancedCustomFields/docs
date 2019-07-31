@@ -3,7 +3,6 @@ title: delete_sub_field()
 description: Deletes the value of a specific sub field.
 category: functions
 group: Update
-status: draft
 ---
 
 ## Description
