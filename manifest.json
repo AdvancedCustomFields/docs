@@ -20,7 +20,7 @@
     },
     {
         "title": "add_row()",
-        "description": "Adds a new row of data to an existing repeater field value.",
+        "description": "Adds a new row of data to an existing Repeater or Flexible Content field value.",
         "category": "functions",
         "keywords": [],
         "slug": "add_row",
@@ -162,6 +162,15 @@
         "keywords": [],
         "slug": "update_field",
         "path": "functions\/update_field.md",
+        "group": "Update"
+    },
+    {
+        "title": "update_row()",
+        "description": "Updates a row of data for an existing Repeater or Flexible Content field value.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "update_row",
+        "path": "functions\/update_row.md",
         "group": "Update"
     },
     {

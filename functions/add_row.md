@@ -1,18 +1,18 @@
 ---
 title: add_row()
-description: Adds a new row of data to an existing repeater field value.
+description: Adds a new row of data to an existing Repeater or Flexible Content field value.
 category: functions
 group: Update
 ---
 
-Adds a new row of data to an existing repeater field value.
+Adds a new row of data to an existing Repeater or Flexible Content field value.
 
 ## Parameters
 ```
-add_row($selector, $row, [$post_id])
+add_row($selector, $value, [$post_id])
 ```
 - `$selector`		*(string)*	*(Required)*	The field name or field key.
-- `$row`			*(array)*	*(Required)*	The new row data.
+- `$value`			*(array)*	*(Required)*	The new row data.
 - `$post_id`		*(mixed)*	*(Optional)*	The post ID where the value is saved. Defaults to the current post.
 
 ## Return
