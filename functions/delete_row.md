@@ -1,19 +1,18 @@
 ---
-title: update_row()
-description: Updates a row of data for an existing Repeater or Flexible Content field value.
+title: delete_row()
+description: Deletes a row of data from an existing Repeater or Flexible Content field value.
 category: functions
 group: Update
 ---
 
-Updates a row of data for an existing Repeater or Flexible Content field value.
+Deletes a row of data from an existing Repeater or Flexible Content field value.
 
 ## Parameters
 ```
-update_row($selector, $row, $value, [$post_id])
+delete_row($selector, $row, [$post_id])
 ```
 - `$selector`		*(string)*	*(Required)*	The field name or field key.
 - `$row`			*(int)*		*(Required)*	The row number to update.
-- `$value`			*(array)*	*(Required)*	The new row data.
 - `$post_id`		*(mixed)*	*(Optional)*	The post ID where the value is saved. Defaults to the current post.
 
 ## Return
@@ -24,17 +23,18 @@ update_row($selector, $row, $value, [$post_id])
 
 ## Examples
 
-### Add a new row using field names
-This example shows how to update the first row of data of an existing repeater field called 'images'. This repeater field contains 3 sub fields ('image', 'alt', 'link').
-Please see notes regarding index offset.
+### Delete via field name
+This example shows how to delete a row of data from a field called 'images' on the current post being viewed.
 ```
-$row = array(
-	'image'	=> 123,
-	'alt'	=> 'Another great sunset',
-	'link'	=> 'http://website.com'
-);
+// Delete the first row of data.
+delete_row('images', 1);
+```
 
-update_row('images', 1, $row);
+### Delete via field key
+This example shows how to achieve the same as above using the field's key instead of its name.
+```
+// Delete the first row of data.
+delete_row('field_123456', 1);
 ```
 
 ## Notes
