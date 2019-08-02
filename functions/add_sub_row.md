@@ -3,14 +3,13 @@ title: add_sub_row()
 description: Adds a new row of data to a Repeater or Flexible Content sub field value.
 category: functions
 group: Update
-status: draft
 ---
 
 Adds a new row of data to a Repeater or Flexible Content sub field value.
 
 This function can be used inside or outside of a `have_rows()` loop. When used inside, the current row will be used to update the sub field value. When used outside, the rows and parents must be specified to target the correct value place.
 
-Please note this function is used to modify a sub field value. To update a modify field value, please see [add_row()](https://www.advancedcustomfields.com/resources/add_row/).
+Please note this function is used to modify a sub field value. To modify a parent field value, please use the [add_row()](https://www.advancedcustomfields.com/resources/add_row/) function.
 
 ## Parameters
 ```

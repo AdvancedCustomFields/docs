@@ -34,8 +34,7 @@
         "keywords": [],
         "slug": "add_sub_row",
         "path": "functions\/add_sub_row.md",
-        "group": "Update",
-        "status": "draft"
+        "group": "Update"
     },
     {
         "title": "delete_field()",
