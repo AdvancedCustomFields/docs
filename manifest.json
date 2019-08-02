@@ -64,6 +64,16 @@
         "group": "Update"
     },
     {
+        "title": "delete_sub_row()",
+        "description": "Deletes a row of data from an existing Repeater or Flexible Content sub field value.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "delete_sub_row",
+        "path": "functions\/delete_sub_row.md",
+        "group": "Update",
+        "status": "draft"
+    },
+    {
         "title": "get_field()",
         "description": "Returns the value of a specific field.",
         "category": "functions",
