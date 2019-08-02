@@ -33,7 +33,7 @@ if( have_rows('staff_members') ) {
 	while( have_rows('staff_members') ) {
 		the_row();
 		
-		// Get this staff member name.
+		// Get this staff member's name.
 		$name = get_sub_field('name');
 		
 		// Append new row to this staff member's images.

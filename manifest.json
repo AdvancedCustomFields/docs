@@ -201,6 +201,16 @@
         "group": "Update"
     },
     {
+        "title": "update_sub_row()",
+        "description": "Updates a row of data for an existing Repeater or Flexible Content sub field value.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "update_sub_row",
+        "path": "functions\/update_sub_row.md",
+        "group": "Update",
+        "status": "draft"
+    },
+    {
         "title": "Blocks",
         "description": null,
         "category": "guides",
