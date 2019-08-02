@@ -3,7 +3,6 @@ title: update_sub_row()
 description: Updates a row of data for an existing Repeater or Flexible Content sub field value.
 category: functions
 group: Update
-status: draft
 ---
 
 Updates a row of data for an existing Repeater or Flexible Content sub field value.

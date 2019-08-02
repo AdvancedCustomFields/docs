@@ -3,7 +3,6 @@ title: delete_sub_row()
 description: Deletes a row of data from an existing Repeater or Flexible Content sub field value.
 category: functions
 group: Update
-status: draft
 ---
 
 Deletes a row of data from an existing Repeater or Flexible Content sub field value.

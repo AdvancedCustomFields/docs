@@ -12,6 +12,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [delete_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/delete_field.md)
 - [delete_row()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/delete_row.md)
 - [delete_sub_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/delete_sub_field.md)
+- [delete_sub_row()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/delete_sub_row.md)
 - [get_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_field.md)
 - [get_field_object()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_field_object.md)
 - [get_field_objects()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_field_objects.md)
@@ -27,6 +28,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [update_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/update_field.md)
 - [update_row()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/update_row.md)
 - [update_sub_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/update_sub_field.md)
+- [update_sub_row()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/update_sub_row.md)
 
 ### Guides
 - [Blocks](https://github.com/AdvancedCustomFields/docs/blob/master/guides/blocks.md)
