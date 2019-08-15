@@ -8,6 +8,15 @@
         "path": "actions\/acf-save_post.md"
     },
     {
+        "title": "acf_add_options_page()",
+        "description": "Adds an options page to the admin menu.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "acf_add_options_page",
+        "path": "functions\/acf_add_options_page.md",
+        "status": "draft"
+    },
+    {
         "title": "acf_register_block_type()",
         "description": "Registers a custom block type in the Gutenberg editor.",
         "category": "functions",
