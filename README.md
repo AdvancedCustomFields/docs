@@ -6,6 +6,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [acf/save_post](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-save_post.md)
 
 ### Functions
+- [acf_add_options_page()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/acf_add_options_page.md)
 - [acf_register_block_type()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/acf_register_block_type.md)
 - [add_row()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/add_row.md)
 - [add_sub_row()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/add_sub_row.md)

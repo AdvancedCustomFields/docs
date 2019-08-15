@@ -13,8 +13,7 @@
         "category": "functions",
         "keywords": [],
         "slug": "acf_add_options_page",
-        "path": "functions\/acf_add_options_page.md",
-        "status": "draft"
+        "path": "functions\/acf_add_options_page.md"
     },
     {
         "title": "acf_register_block_type()",
