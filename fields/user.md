@@ -11,16 +11,20 @@ The User field allows the selection of one or more users.
 This field type is useful for creating relationships between data objects. It stores its value as the WP_User ID, and can return the full WP_User data on retrieval.
 
 ## Screenshots
-
-<figure>
-	<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-interface.png" alt="acf-user-field-interface" />
-	<figcaption>The User field interface</figcaption>
-</figure>
-
-<figure>
-	<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-settings.png" alt="acf-user-field-settings" />
-	<figcaption>The User field settings</figcaption>
-</figure>
+<div class="gallery">
+	<figure>
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-interface.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-interface.png" alt="acf-user-field-interface" />
+		</a>
+		<figcaption>The User field interface</figcaption>
+	</figure>
+	<figure>
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-settings.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-settings.png" alt="acf-user-field-settings" />
+		</a>
+		<figcaption>The User field settings</figcaption>
+	</figure>
+</div>
 
 ## Changelog
 - Added `return_format` setting in version 5.6.9.
@@ -42,25 +46,7 @@ This field type is useful for creating relationships between data objects. It st
   **User Object** will return the WP_User object.
   **User ID** will return the user ID.
 
-### PHP field settings
-```
-$user_field = array(
-	/* Generic field settings go here... */
-	
-	/* (string|array) One or more role names to limit the users available for selection. */
-	'role' => '',
-	
-	/* (bool) Allows multiple values to be selected. Defaults to false. */
-	'multiple' => false,
-	
-	/* (bool) Allows an empty value to be saved. Defaults to false.
-	'allow_null' => false,
-	
-	/* (string) Specifies the returned value format (array, object, id). Defaults to ‘array’.
-	'return_format' => 'array',
-);
-```
-^^^
+For documentation regarding the PHP settings available for this field type, please see our [Register fields via PHP guide](https://www.advancedcustomfields.com/resources/register-fields-via-php/).
 
 ## Template usage
 
