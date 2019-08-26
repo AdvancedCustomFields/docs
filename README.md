@@ -5,6 +5,9 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 ### Actions
 - [acf/save_post](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-save_post.md)
 
+### Field Types
+- [User](https://github.com/AdvancedCustomFields/docs/blob/master/fields/user.md)
+
 ### Functions
 - [acf_add_options_page()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/acf_add_options_page.md)
 - [acf_register_block_type()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/acf_register_block_type.md)

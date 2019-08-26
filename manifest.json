@@ -14,8 +14,7 @@
         "keywords": [],
         "slug": "user",
         "path": "fields\/user.md",
-        "group": "Relational",
-        "status": "draft"
+        "group": "Relational"
     },
     {
         "title": "acf_add_options_page()",

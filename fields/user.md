@@ -2,7 +2,6 @@
 title: User
 category: field-types
 group: Relational
-status: draft
 ---
 
 ## Description
