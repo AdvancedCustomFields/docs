@@ -6,7 +6,6 @@ status: draft
 ---
 
 ## Description
-
 The User field allows the selection of one or more users. 
 
 This field type is useful for creating relationships between data objects. It stores its value as the WP_User ID, and can return the full WP_User data on retrieval.
@@ -24,35 +23,43 @@ This field type is useful for creating relationships between data objects. It st
 </figure>
 
 ## Changelog
-- Test
+- Added `return_format` setting in version 5.6.9.
 
 ## Settings
 - **Filter by role**  
-  (String|Array) Filters the available users by one or more user roles. Defaults to an empty string.
-  ```
-  'role' => '',
-  ```
-  
+  Filters the available users by one or more user roles. Defaults to an empty string.
+
 - **Select Multiple**  
-  (bool) Allows multiple values to be selected. Defaults to false.
-  ```
-  'multiple' => false,
-  ```
+  Allows multiple values to be selected. Defaults to false.
   
 - **Allow Null**  
-  (bool) Allows an empty value to be saved. Defaults to false.
-  ```
-  'allow_null' => false,
-  ```
+  Allows an empty value to be saved. Defaults to false.
+ 
   
 - **Return Format**  
-  (string) Specifies the returned value format. Defaults to 'array'.
+  Specifies the returned value format. Defaults to 'array'.
   **User Array** will return an array of user data.
   **User Object** will return the WP_User object.
   **User ID** will return the user ID.
-  ```
-  'return_format' => 'array',
-  ```
+
+#### PHP field settings
+```
+$user_field = array(
+	/* Generic field settings go here... */
+	
+	/* (string|array) One or more role names to limit the users available for selection. */
+	'role' => '',
+	
+	/* (bool) Allows multiple values to be selected. Defaults to false. */
+	'multiple' => false,
+	
+	/* (bool) Allows an empty value to be saved. Defaults to false.
+	'allow_null' => false,
+	
+	/* (string) Specifies the returned value format (array, object, id). Defaults to ‘array’.
+	'return_format' => 'array',
+);
+```
 
 ## Template usage
 
