@@ -46,7 +46,7 @@ This field type is useful for creating relationships between data objects. It st
   **User Object** will return the WP_User object.
   **User ID** will return the user ID.
 
-For documentation regarding the PHP settings available for this field type, please see our [Register fields via PHP guide](https://www.advancedcustomfields.com/resources/register-fields-via-php/).
+*For programatic documentation, please see our [Register fields via PHP guide](https://www.advancedcustomfields.com/resources/register-fields-via-php/)*.
 
 ## Template usage
 
