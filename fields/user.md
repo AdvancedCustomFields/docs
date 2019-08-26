@@ -26,39 +26,23 @@ This field type is useful for creating relationships between data objects. It st
 - Added `return_format` setting in version 5.6.9.
 
 ## Settings
-<table>
-	<thead>
-		<tr>
-			<th width="20%">Name</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Filter by role</td>
-			<td>Filters the available users by one or more user roles. Defaults to an empty string.</td>
-		</tr>
-		<tr>
-			<td>Select Multiple</td>
-			<td>Allows multiple values to be selected. Defaults to false.</td>
-		</tr>
-		<tr>
-			<td>Allow Null</td>
-			<td>Allows an empty value to be saved. Defaults to false.</td>
-		</tr>
-		<tr>
-			<td>Return Format</td>
-			<td>
-				Specifies the returned value format. Defaults to 'array'.
-				**User Array** will return an array of user data.
-				**User Object** will return the WP_User object.
-				**User ID** will return the user ID.
-			</td>
-		</tr>
-	</tbody>
-</table>
+- **Filter by role**  
+  Filters the available users by one or more user roles. Defaults to an empty string.
 
-#### PHP field settings
+- **Select Multiple**  
+  Allows multiple values to be selected. Defaults to false.
+  
+- **Allow Null**  
+  Allows an empty value to be saved. Defaults to false.
+ 
+  
+- **Return Format**  
+  Specifies the returned value format. Defaults to 'array'.
+  **User Array** will return an array of user data.
+  **User Object** will return the WP_User object.
+  **User ID** will return the user ID.
+
+### PHP field settings
 ```
 $user_field = array(
 	/* Generic field settings go here... */
@@ -76,6 +60,7 @@ $user_field = array(
 	'return_format' => 'array',
 );
 ```
+^^^
 
 ## Template usage
 
