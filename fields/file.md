@@ -16,8 +16,8 @@ The file field allows a file to be uploaded and selected. This field makes use o
 		<figcaption>The File field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-file-field-settings.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-file-field-settings.png" alt="List of File field settings to set up File field interface" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-file-field-settings.jpg">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-file-field-settings.jpg" alt="List of File field settings to set up File field interface" />
 		</a>
 		<figcaption>The File field settings</figcaption>
 	</figure>
