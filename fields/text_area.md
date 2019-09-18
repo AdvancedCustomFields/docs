@@ -5,7 +5,7 @@ group: Basic
 ---
 
 ## Description
-The Textarea field creates a basic textarea. This field is useful to store simple paragraphs of text to use in your theme.
+The Textarea field creates a basic textarea. This field is useful to store simple (unstyled) paragraphs of text to use in your theme.
 
 ## Screenshots
 <div class="gallery">
@@ -31,7 +31,7 @@ The Textarea field creates a basic textarea. This field is useful to store simpl
   Set a default value for this field when creating a new post.
 
 - **Formatting**
-  This option will determine how to render the value. Selecting “HTML” will convert any tags in the value to html tags. Selecting “auto <br />” will convert any new lines to html line breaks. Selecting “None” will not convert any tags and you will see any html displayed as normal text.
+  This option will determine how to render the value. Selecting “HTML” will convert any tags in the value to HTML tags. Selecting “auto <br />” will convert any new lines to HTML line breaks. Selecting “None” will not convert _any_ tags and you will see any HTML displayed as normal text similar to regular content.
 
 ## Template usage
 
