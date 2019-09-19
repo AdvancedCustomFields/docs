@@ -1,7 +1,7 @@
 ---
 title: Checkbox
 category: field-types
-group: Basic
+group: Choice
 ---
 
 ## Description

@@ -1,7 +1,7 @@
 ---
 title: File
 category: field-types
-group: Basic
+group: Content
 ---
 
 ## Description
