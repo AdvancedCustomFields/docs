@@ -11,7 +11,7 @@ The Checkbox field creates a list of tick-able inputs.
 <div class="gallery">
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-interface.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-interface.png" alt="Checkbox field that allows you to create a list of options to check off" />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-interface.png" alt="A Checkbox field with a list of options that allows you to check off one or multiple choices" />
 		</a>
 		<figcaption>The Checkbox field interface</figcaption>
 	</figure>
