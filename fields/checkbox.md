@@ -49,11 +49,6 @@ The Checkbox field creates a list of tick-able inputs.
 - **Save Custom**
   Saves any custom values to the field’s choices. Please see notes section for more information on this setting.
 
-## Notes
-
-### Save Custom
-If using the [local JSON](https://www.advancedcustomfields.com/resources/local-json/) feature, any custom values saved to the field’s choices will not appear on page reload. This is because the JSON file will not be updated and will override any field settings found in the DB.
-
 ## Template usage
 
 The checkbox field will return an array of selected choices. Either use the [get_field()](https://www.advancedcustomfields.com/resources/get_field/) function to obtain this array, or use [the_field()](https://www.advancedcustomfields.com/resources/the_field/) to output the values, with each one separated by a comma.
@@ -147,6 +142,11 @@ if( $posts ) {
 }
 
 ?>```
+
+## Notes
+
+### Save Custom
+If using the [local JSON](https://www.advancedcustomfields.com/resources/local-json/) feature, any custom values saved to the field’s choices will not appear on page reload. This is because the JSON file will not be updated and will override any field settings found in the DB.
 
 ## Related
 - Guides: [Creating a WP archive with custom field filter](https://www.advancedcustomfields.com/resources/creating-wp-archive-custom-field-filter/)
