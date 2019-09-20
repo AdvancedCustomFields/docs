@@ -80,7 +80,8 @@ if( $colors ): ?>
 ### Display value and label
 This example shows how to load a selected value and label without using the ‘Format value’ setting.
 
-```<?php
+```
+<?php
 
 // Load field settings and values.
 $field = get_field_object( 'colors' );
@@ -93,12 +94,14 @@ if( $colors ): ?>
 		<li><?php echo $field['choices'][$color]; ?></li>
 	<?php endforeach; ?>
 </ul>
-<?php endif; ?>```
+<?php endif; ?>
+```
 
 ### Format value setting
 This example shows how to load a selected value and label using the ‘Format value’ setting (set to ‘Both’).
 
-```<?php
+```
+<?php
 
 // Load field settings and value.
 $colors = get_field( 'colors' );
@@ -110,12 +113,14 @@ if( $colors ): ?>
 		<li><span class="color-<?php echo $color['value']; ?>"><?php echo $color['label']; ?></span></li>
 	<?php endforeach; ?>
 </ul>
-<?php endif; ?>```
+<?php endif; ?>
+```
 
 ### Conditional
 This example shows how to use a selected value to conditionally perform a task. In this case, the conditional is checking to see if 'red' is within the array of options selected from the field 'colors'.
 
-```<?php
+```
+<?php
 
 // Load field settings and value.
 $colors = get_field('colors');
@@ -123,12 +128,14 @@ $colors = get_field('colors');
 // Check for field and specific value.
 if( $colors && in_array( 'red', $colors ) ): ?>
 	<p>Selected the Red choice!</p>
-<?php endif; ?>```
+<?php endif; ?>
+```
 
 ### Query posts
 This example shows how to query posts that have the value ‘red’ selected. The checkbox field saves its value as a serialized array, so it is important to use the meta_query LIKE compare.
 
-```<?php
+```
+<?php
 
 $posts = get_posts( array(
     'meta_query' => array(
@@ -144,7 +151,8 @@ if( $posts ) {
     // ...
 }
 
-?>```
+?>
+```
 
 ## Notes
 
