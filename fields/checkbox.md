@@ -53,19 +53,19 @@ The Checkbox field creates a list of tick-able inputs.
 
 The checkbox field will return an array of selected choices. Either use the [get_field()](https://www.advancedcustomfields.com/resources/get_field/) function to obtain this array, or use [the_field()](https://www.advancedcustomfields.com/resources/the_field/) to output the values, with each one separated by a comma.
 
-### Basic
+### Display list of selected values.
 This example shows how to display a comma separated list of selected values.
 ```<p>Colors: <?php the_field( 'colors' ); ?></p>```
 
-### Custom
+### Display selected values separately.
 This example shows how to load and display multiple selected values.
 
 ```<?php
 
-// Get array of variables.
+// Load field settings and value.
 $colors = get_field( 'colors' );
 
-// Check for variable.
+// Check for field.
 if( $colors ): ?>
 <ul>
 	<?php foreach( $colors as $color ): ?>
@@ -79,11 +79,11 @@ This example shows how to load a selected value and label without using the ‘F
 
 ```<?php
 
-// Get array of variables.
+// Load field settings and values.
 $field = get_field_object( 'colors' );
 $colors = $field['value'];
 
-// Check for variable.
+// Check for field.
 if( $colors ): ?>
 <ul>
 	<?php foreach( $colors as $color ): ?>
@@ -97,10 +97,10 @@ This example shows how to load a selected value and label using the ‘Format va
 
 ```<?php
 
-// Get array of variables.
+// Load field settings and value.
 $colors = get_field( 'colors' );
 
-// Check for variable.
+// Check for field.
 if( $colors ): ?>
 <ul>
 	<?php foreach( $colors as $color ): ?>
@@ -110,16 +110,16 @@ if( $colors ): ?>
 <?php endif; ?>```
 
 ### Conditional
-This example shows how to use a selected value to conditionally perform a task.
+This example shows how to use a selected value to conditionally perform a task. In this case, the conditional is checking to see if 'red' is within the array of options selected from the field 'colors'.
 
 ```<?php
 
-// Get array of variables.
+// Load field settings and value.
 $colors = get_field('colors');
 
-// Check for variable and specific value.
+// Check for field and specific value.
 if( $colors && in_array( 'red', $colors ) ): ?>
-<p>Selected the Red choice!</p>
+	<p>Selected the Red choice!</p>
 <?php endif; ?>```
 
 ### Query posts
