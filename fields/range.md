@@ -67,3 +67,10 @@ $font_size = get_field( 'font_size' );
 <?php endif; ?>
 </style>
 ```
+
+### Use as string.
+This example shows how to use the value associated with 'font_size' Range field as outputted content.
+
+```
+<p>The font size is <?php the_field( 'font_size' ); ?></p>
+```
