@@ -44,7 +44,8 @@ The Text field creates a basic text input. This field is useful to store single 
 
 ## Template usage
 
-The API will return a string.
+### Display value.
+This example demonstrates how to display content within a `h2` tag.
 ```
 <h2><?php the_field( 'text' ); ?></h2>
 ```
