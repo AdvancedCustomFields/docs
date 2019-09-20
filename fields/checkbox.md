@@ -55,12 +55,14 @@ The checkbox field will return an array of selected choices. Either use the [get
 
 ### Display list of selected values.
 This example shows how to display a comma separated list of selected values.
+
 ```<p>Colors: <?php the_field( 'colors' ); ?></p>```
 
 ### Display selected values separately.
 This example shows how to load and display multiple selected values.
 
-```<?php
+```
+<?php
 
 // Load field settings and value.
 $colors = get_field( 'colors' );
@@ -72,7 +74,8 @@ if( $colors ): ?>
 		<li><?php echo $color; ?></li>
 	<?php endforeach; ?>
 </ul>
-<?php endif; ?>```
+<?php endif; ?>
+```
 
 ### Display value and label
 This example shows how to load a selected value and label without using the ‘Format value’ setting.
