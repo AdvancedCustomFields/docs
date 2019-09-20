@@ -11,13 +11,13 @@ The Checkbox field creates a list of tick-able inputs.
 <div class="gallery">
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-interface.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-interface.png" alt="Checkbox field interface that allows you to create a list of options to check off" />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-interface.png" alt="Checkbox field that allows you to create a list of options to check off" />
 		</a>
 		<figcaption>The Checkbox field interface</figcaption>
 	</figure>
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-settings.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-settings.png" alt="List of checkbox field settings to set up Checkbox field interface" />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-settings.png" alt="List of checkbox field settings shown when setting up a Checkbox field" />
 		</a>
 		<figcaption>The Checkbox field settings</figcaption>
 	</figure>
@@ -48,7 +48,6 @@ The Checkbox field creates a list of tick-able inputs.
 
 - **Save Custom**
   Saves any custom values to the field’s choices. Please see notes section for more information on this setting.
-
 
 ## Notes
 

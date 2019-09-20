@@ -11,13 +11,13 @@ The Text field creates a basic text input. This field is useful to store single 
 <div class="gallery">
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-text-field-interface.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-text-field-interface.png" alt="Text field interface that allows you to enter a string" />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-text-field-interface.png" alt="A text field that allows you to enter a string" />
 		</a>
 		<figcaption>The Text field interface</figcaption>
 	</figure>
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-text-field-settings.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-text-field-settings.png" alt="List of text field settings to set up text field interface" />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-text-field-settings.png" alt="List of settings shown when creating a text field" />
 		</a>
 		<figcaption>The Text field settings</figcaption>
 	</figure>

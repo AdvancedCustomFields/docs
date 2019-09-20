@@ -11,13 +11,13 @@ The Range field provides an interactive experience for selecting a numerical val
 <div class="gallery">
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-interface.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-interface.png" alt="Range field interface that allows you to select a numerical value between two points" />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-interface.png" alt="Range field that allows you to select a numerical value between two points" />
 		</a>
 		<figcaption>The Range field interface</figcaption>
 	</figure>
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-settings.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-settings.png" alt="List of range field settings to set up range field interface" />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-settings.png" alt="List of settings shown when creating a Range field" />
 		</a>
 		<figcaption>The Range field settings</figcaption>
 	</figure>
