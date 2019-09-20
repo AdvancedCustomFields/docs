@@ -10,14 +10,14 @@ The Range field provides an interactive experience for selecting a numerical val
 ## Screenshots
 <div class="gallery">
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-interface.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-interface.png" alt="Range field interface that allows you to select a numerical value between two points" />
+		<a href="../assets/acf-range-field-interface.png">
+			<img src="../assets/acf-range-field-interface.png" alt="Range field that allows you to select a numerical value between two points" />
 		</a>
 		<figcaption>The Range field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-settings.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-settings.png" alt="List of range field settings to set up range field interface" />
+		<a href="../assets/acf-range-field-settings.png">
+			<img src="../assets/acf-range-field-settings.png" alt="List of settings shown when creating a Range field" />
 		</a>
 		<figcaption>The Range field settings</figcaption>
 	</figure>
@@ -31,10 +31,10 @@ The Range field provides an interactive experience for selecting a numerical val
   The default value loaded when editing a new post (when no value exists).
 
 - **Minimum Value**
-  The minimum (numeric) value allowed. This value must not be greater than its maximum value. Defaults to 0.
+  The minimum (numeric) value allowed. Defaults to 0.
 
 - **Maximum Value**
-  The maximum (numeric) value allowed. This value must not be less than its minimum value. Defaults to 100.
+  The maximum (numeric) value allowed. Defaults to 100.
 
 - **Step Size**
   The increment at which a numeric value can be set. Defaults to 1.
@@ -48,8 +48,6 @@ The Range field provides an interactive experience for selecting a numerical val
 ## Template usage
 
 The *Range* field will return a numeric value.
-
-_Note:_ If you are working with a sub field, remember to replace any `get_field()` and `the_field()` functions from the following examples with the relative `get_sub_field` and `the_sub_field()` functions.
 
 ### Basic Use within Styles
 This example shows how to use the value associated with the 'font_size' Range field as a style for all `<h2>` elements.
@@ -68,4 +66,11 @@ $font_size = get_field( 'font_size' );
 	}
 <?php endif; ?>
 </style>
+```
+
+### Use as string.
+This example shows how to use the value associated with 'font_size' Range field as outputted content.
+
+```
+<p>The font size is <?php the_field( 'font_size' ); ?></p>
 ```
