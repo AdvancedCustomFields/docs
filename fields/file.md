@@ -10,14 +10,14 @@ The file field allows a file to be uploaded and selected. This field makes use o
 ## Screenshots
 <div class="gallery">
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-file-field-interface.jpg">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-file-field-interface.jpg" alt="A file field that allows you to upload and select a file" />
+		<a href="../assets/acf-file-field-interface.jpg">
+			<img src="../assets/acf-file-field-interface.jpg" alt="A file field that allows you to upload and select a file" />
 		</a>
 		<figcaption>The File field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-file-field-settings.jpg">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-file-field-settings.jpg" alt="The list of File field settings shown when setting up a File field" />
+		<a href="../assets/acf-file-field-settings.jpg">
+			<img src="../assets/acf-file-field-settings.jpg" alt="The list of File field settings shown when setting up a File field" />
 		</a>
 		<figcaption>The File field settings</figcaption>
 	</figure>

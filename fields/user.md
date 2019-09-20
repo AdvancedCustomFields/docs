@@ -5,21 +5,21 @@ group: Relational
 ---
 
 ## Description
-The User field allows the selection of one or more users. 
+The User field allows the selection of one or more users.
 
 This field type is useful for creating relationships between data objects. It stores its value as the WP_User ID, and can return the full WP_User data on retrieval.
 
 ## Screenshots
 <div class="gallery">
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-interface.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-interface.png" alt="acf-user-field-interface" />
+		<a href="../assets/acf-user-field-interface.png">
+			<img src="../assets/acf-user-field-interface.png" alt="acf-user-field-interface" />
 		</a>
 		<figcaption>The User field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-settings.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-settings.png" alt="acf-user-field-settings" />
+		<a href="../assets/acf-user-field-settings.png">
+			<img src="../assets/acf-user-field-settings.png" alt="acf-user-field-settings" />
 		</a>
 		<figcaption>The User field settings</figcaption>
 	</figure>
@@ -29,17 +29,17 @@ This field type is useful for creating relationships between data objects. It st
 - Added `return_format` setting in version 5.6.9.
 
 ## Settings
-- **Filter by role**  
+- **Filter by role**
   Filters the available users by one or more user roles. Defaults to an empty string.
 
-- **Select Multiple**  
+- **Select Multiple**
   Allows multiple values to be selected. Defaults to false.
-  
-- **Allow Null**  
+
+- **Allow Null**
   Allows an empty value to be saved. Defaults to false.
- 
-  
-- **Return Format**  
+
+
+- **Return Format**
   Specifies the returned value format. Defaults to 'array'.
   **User Array** will return an array of user data.
   **User Object** will return the WP_User object.
