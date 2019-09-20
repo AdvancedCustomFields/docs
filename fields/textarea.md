@@ -10,14 +10,14 @@ The Textarea field creates a basic textarea. This field is useful to store simpl
 ## Screenshots
 <div class="gallery">
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-textarea-interface.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-textarea-interface.png" alt="Textarea field that allows you to enter a string" />
+		<a href="./assets/acf-textarea-interface.png">
+			<img src="./assets/acf-textarea-interface.png" alt="Textarea field that allows you to enter a string" />
 		</a>
 		<figcaption>The textarea field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-textarea-settings.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-textarea-settings.png" alt="List of textarea field settings to set up a textarea field" />
+		<a href="./assets/acf-textarea-settings.png">
+			<img src="./assets/acf-textarea-settings.png" alt="List of textarea field settings to set up a textarea field" />
 		</a>
 		<figcaption>The textarea field settings</figcaption>
 	</figure>
