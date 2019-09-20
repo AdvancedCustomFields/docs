@@ -12,14 +12,14 @@ This field type is useful for creating relationships between data objects. It st
 ## Screenshots
 <div class="gallery">
 	<figure>
-		<a href="../assets/acf-user-field-interface.png">
-			<img src="../assets/acf-user-field-interface.png" alt="acf-user-field-interface" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-interface.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-interface.png" alt="acf-user-field-interface" />
 		</a>
 		<figcaption>The User field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="../assets/acf-user-field-settings.png">
-			<img src="../assets/acf-user-field-settings.png" alt="acf-user-field-settings" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-settings.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-user-field-settings.png" alt="acf-user-field-settings" />
 		</a>
 		<figcaption>The User field settings</figcaption>
 	</figure>
