@@ -48,12 +48,11 @@ The file field allows a file to be uploaded and selected. This field makes use o
 
 The file field will return either an array, a string or an integer value depending on the `return value` set. Below are some examples of how you can use this data.
 
-_Note:_ All following examples use an file field called “file”, and if you are working with a sub field, remember to replace any `get_field` and `the_field` functions with the relative `get_sub_field` and `the_sub_field` functions.
-
 ### Basic display (Object)
 This example shows how to display the selected file when using the `array` return type. This return type allows us to easily access data such as `url` and `filename`.
 
-```<?php
+```
+<?php
 
 // Get variable.
 $file = get_field( 'file' );
@@ -63,12 +62,14 @@ if( $file ): ?>
 
 	<a href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?></a>
 
-<?php endif; ?>```
+<?php endif; ?>
+```
 
 ### Customized display (Object)
 This example shows how to display a custom link when using the `object` return type. This return type allows us to easily access data such as `url`, `title`, `type` and more. To see the full data available, please debug the [$file variable](https://www.advancedcustomfields.com/resources/how-to/debug/).
 
-```<?php
+```
+<?php
 
 // Get variable.
 $file = get_field( 'file' );
@@ -107,12 +108,14 @@ if( $file ):
 		</div>
 
 	<?php endif; ?>
-<?php endif; ?>```
+<?php endif; ?>
+```
 
 ### Basic display (ID)
 This example shows how to display the selected file when using the `ID` return type. This return type allows us to efficiently load only the necessary data.
 
-```<?php
+```
+<?php
 
 $file = get_field( 'file' );
 
@@ -122,13 +125,16 @@ if( $file ) {
 
 	?><a href="<?php echo $url; ?>" >Download File</a>
 
-<?php } ?>```
+<?php } ?>
+```
 
 ### Basic display (URL)
 This example shows how to display the selected file when using the `URL` return type. This return type allows us to efficiently display a basic link but prevents us from loading any extra data about the file.
 
-```<?php if( get_field( 'file' ) ): ?>
+```
+<?php if( get_field( 'file' ) ): ?>
 
 	<a href="<?php the_field( 'file' ); ?>" >Download File</a>
 
-<?php endif; ?>```
+<?php endif; ?>
+```
