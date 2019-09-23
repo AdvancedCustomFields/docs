@@ -6,13 +6,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [acf/save_post](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-save_post.md)
 
 ### Field Types
-- [Text](https://github.com/AdvancedCustomFields/docs/blob/master/fields/text.md)
-- [Text Area](https://github.com/AdvancedCustomFields/docs/blob/master/fields/text_area.md)
-- [Range](https://github.com/AdvancedCustomFields/docs/blob/master/fields/range.md)
-- [Checkbox](https://github.com/AdvancedCustomFields/docs/blob/master/fields/checkbox.md)
-- [File](https://github.com/AdvancedCustomFields/docs/blob/master/fields/file.md)
 - [User](https://github.com/AdvancedCustomFields/docs/blob/master/fields/user.md)
-
 
 ### Functions
 - [acf_add_options_page()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/acf_add_options_page.md)

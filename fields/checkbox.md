@@ -2,6 +2,7 @@
 title: Checkbox
 category: field-types
 group: Choice
+status: draft
 ---
 
 ## Description

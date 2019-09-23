@@ -2,6 +2,7 @@
 title: Range
 category: field-types
 group: Basic
+status: draft
 ---
 
 ## Description

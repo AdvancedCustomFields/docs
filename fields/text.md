@@ -2,6 +2,7 @@
 title: Text
 category: field-types
 group: Basic
+status: draft
 ---
 
 ## Description

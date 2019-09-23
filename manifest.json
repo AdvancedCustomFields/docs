@@ -8,6 +8,56 @@
         "path": "actions\/acf-save_post.md"
     },
     {
+        "title": "Checkbox",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "checkbox",
+        "path": "fields\/checkbox.md",
+        "group": "Choice",
+        "status": "draft"
+    },
+    {
+        "title": "File",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "file",
+        "path": "fields\/file.md",
+        "group": "Content",
+        "status": "draft"
+    },
+    {
+        "title": "Range",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "range",
+        "path": "fields\/range.md",
+        "group": "Basic",
+        "status": "draft"
+    },
+    {
+        "title": "Text",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "text",
+        "path": "fields\/text.md",
+        "group": "Basic",
+        "status": "draft"
+    },
+    {
+        "title": "Text Area",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "textarea",
+        "path": "fields\/textarea.md",
+        "group": "Basic",
+        "status": "draft"
+    },
+    {
         "title": "User",
         "description": "",
         "category": "field-types",
