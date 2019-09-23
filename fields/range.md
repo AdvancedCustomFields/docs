@@ -11,14 +11,14 @@ The Range field provides an interactive experience for selecting a numerical val
 ## Screenshots
 <div class="gallery">
 	<figure>
-		<a href="../assets/acf-range-field-interface.png">
-			<img src="../assets/acf-range-field-interface.png" alt="Range field that allows you to select a numerical value between two points" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-interface.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-interface.png" alt="Range field that allows you to select a numerical value between two points" />
 		</a>
 		<figcaption>The Range field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="../assets/acf-range-field-settings.png">
-			<img src="../assets/acf-range-field-settings.png" alt="List of settings shown when creating a Range field" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-settings.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-range-field-settings.png" alt="List of settings shown when creating a Range field" />
 		</a>
 		<figcaption>The Range field settings</figcaption>
 	</figure>
@@ -48,30 +48,23 @@ The Range field provides an interactive experience for selecting a numerical val
 
 ## Template usage
 
-The *Range* field will return a numeric value.
-
-### Basic Use within Styles
-This example shows how to use the value associated with the 'font_size' Range field as a style for all `<h2>` elements.
-
+### Display value within CSS
+This example demonstrates how a Range field value can be used to control the font-size of all `<h2>` elements.
 ```
 <?php
 
-// Get variable.
-$font_size = get_field( 'font_size' );
-
-?>
+$h2_font_size = get_field('h2_font_size');
+if( $h2_font_size ): ?>
 <style type="text/css">
-<?php if( $font_size ): ?>
 	h2 {
-		font-size: <?php echo $font_size; ?>px;
+		font-size: <?php echo $h2_font_size; ?>px;
 	}
-<?php endif; ?>
 </style>
+<?php endif; ?>
 ```
 
-### Use as string.
-This example shows how to use the value associated with 'font_size' Range field as outputted content.
-
+### Display value as text.
+This example demonstrates how to display a Range field value as text.
 ```
-<p>The font size is <?php the_field( 'font_size' ); ?></p>
+<p>Searching for houses within a <?php the_field('search_radius'); ?>km radius.</p>
 ```
