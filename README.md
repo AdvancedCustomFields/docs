@@ -7,6 +7,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 
 ### Field Types
 - [Text](https://github.com/AdvancedCustomFields/docs/blob/master/fields/text.md)
+- [Text Area](https://github.com/AdvancedCustomFields/docs/blob/master/fields/textarea.md)
 - [User](https://github.com/AdvancedCustomFields/docs/blob/master/fields/user.md)
 
 ### Functions

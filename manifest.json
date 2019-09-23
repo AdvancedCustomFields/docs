@@ -53,8 +53,7 @@
         "keywords": [],
         "slug": "textarea",
         "path": "fields\/textarea.md",
-        "group": "Basic",
-        "status": "draft"
+        "group": "Basic"
     },
     {
         "title": "User",

@@ -2,7 +2,6 @@
 title: Text Area
 category: field-types
 group: Basic
-status: draft
 ---
 
 ## Description
@@ -46,19 +45,10 @@ This example demonstrates how to display a textarea field named "product_descrip
 <h3>Product Description</h3>
 <?php the_field('product_description'); ?>
 ```
-```
-<h3>Product Description</h3>
-<p>Paragraphs are automatically added.</p>
-<p>For new lines.</p>
-```
 
 ### Display value without formatting.
 This example demonstrates how to display a textarea field named "product_description" when no formatting setting is enabled.
 ```
 <h3>Product Description</h3>
 <p><?php the_field('product_description'); ?></p>
-```
-```
-<h3>Product Description</h3>
-<p>Paragraphs are not automatically added. For new lines.</p>
 ```
