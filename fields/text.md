@@ -2,11 +2,10 @@
 title: Text
 category: field-types
 group: Basic
-status: draft
 ---
 
 ## Description
-The Text field creates a basic text input. This field is useful to store single string values.
+The Text field creates a basic text input, useful for storing single string values.
 
 ## Screenshots
 <div class="gallery">

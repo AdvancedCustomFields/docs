@@ -44,8 +44,7 @@
         "keywords": [],
         "slug": "text",
         "path": "fields\/text.md",
-        "group": "Basic",
-        "status": "draft"
+        "group": "Basic"
     },
     {
         "title": "Text Area",
