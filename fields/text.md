@@ -11,14 +11,14 @@ The Text field creates a basic text input. This field is useful to store single 
 ## Screenshots
 <div class="gallery">
 	<figure>
-		<a href="../assets/acf-text-field-interface.png">
-			<img src="../assets/acf-text-field-interface.png" alt="A text field that allows you to enter a string" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-text-field-interface.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-text-field-interface.png" alt="A text field that allows you to enter a string" />
 		</a>
 		<figcaption>The Text field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="../assets/acf-text-field-settings.png">
-			<img src="../assets/acf-text-field-settings.png" alt="List of settings shown when creating a text field" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-text-field-settings.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-text-field-settings.png" alt="List of settings shown when creating a text field" />
 		</a>
 		<figcaption>The Text field settings</figcaption>
 	</figure>
@@ -29,7 +29,7 @@ The Text field creates a basic text input. This field is useful to store single 
 
 ## Settings
 - **Default Value**
-  Set a default value for this field when creating a new post.
+  The default value shown when creating a new post.
 
 - **Placeholder**
   Appears within input when no value exists.
@@ -45,8 +45,17 @@ The Text field creates a basic text input. This field is useful to store single 
 
 ## Template usage
 
-### Display value.
-This example demonstrates how to display content within a `h2` tag.
+### Display value
+This example demonstrates how to display a text field named "heading" within a `<h2>` tag.
 ```
-<h2><?php the_field( 'text' ); ?></h2>
+<h2><?php the_field('heading'); ?></h2>
+```
+
+### Load value
+This example demonstrates how to load the value of a text field named "confirm" and perform an action based on its value.
+```
+$confirm = get_field('confirm');
+if( $confirm === 'SEND_EMAIL' ) {
+	// Do something.
+}
 ```
