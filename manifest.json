@@ -34,8 +34,7 @@
         "keywords": [],
         "slug": "range",
         "path": "fields\/range.md",
-        "group": "Basic",
-        "status": "draft"
+        "group": "Basic"
     },
     {
         "title": "Text",
