@@ -11,26 +11,26 @@ The Checkbox field creates a list of tick-able inputs.
 ## Screenshots
 <div class="gallery">
 	<figure>
-		<a href="../assets/acf-checkbox-field-interface.png">
-			<img src="../assets/acf-checkbox-field-interface.png" alt="A Checkbox field with a list of options that allows you to check off one or multiple choices" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-field-interface.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-field-interface.png" alt="A Checkbox field with a list of options that allows you to check off one or multiple choices" />
 		</a>
 		<figcaption>The Checkbox field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="../assets/acf-checkbox-field-settings.png">
-			<img src="../assets/acf-checkbox-field-settings.png" alt="List of checkbox field settings shown when setting up a Checkbox field" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-field-settings.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-checkbox-field-settings.png" alt="List of checkbox field settings shown when setting up a Checkbox field" />
 		</a>
 		<figcaption>The Checkbox field settings</figcaption>
 	</figure>
 </div>
 
 ## Changelog
-- Added `Return Format` setting in version 5.4.0
-- Added `Toggle All` setting in version 5.2.7
+- Added `Return Format` setting in version 5.4.0.
+- Added `Toggle All` setting in version 5.2.7.
 
 ## Settings
 - **Choices**
-  Each choice is entered on a new line (eg. 'Red'). For more control over the value and label, you may use a colon to specific both (eg. 'red : Red').
+  Each choice is entered on a new line (eg. 'Red'). For more control over the value and label, you may use a colon to specify both (eg. 'red : Red').
 
 - **Default Value**
   Specify the default value(s) selected when first editing the field’s value. Enter only values, not labels.
@@ -45,7 +45,7 @@ The Checkbox field creates a list of tick-able inputs.
   Change the value format returned by the [get_field()](https://www.advancedcustomfields.com/resources/get_field/) and similar functions.
 
 - **Allow Custom**
-  Appends a button, which when clicked, adds a text input to the list. Multiple custom values may be added and removed.
+  Appends a button that adds a text input to the list when clicked. Multiple custom values may be added and removed.
 
 - **Save Custom**
   Saves any custom values to the field’s choices. Please see notes section for more information on this setting.
@@ -54,13 +54,13 @@ The Checkbox field creates a list of tick-able inputs.
 
 The checkbox field will return an array of selected choices. Either use the [get_field()](https://www.advancedcustomfields.com/resources/get_field/) function to obtain this array, or use [the_field()](https://www.advancedcustomfields.com/resources/the_field/) to output the values, with each one separated by a comma.
 
-### Display list of selected values.
-This example shows how to display a comma separated list of selected values.
+### Display list of selected values
+This example demonstrates how to display a comma separated list of selected values.
 
 ```<p>Colors: <?php the_field( 'colors' ); ?></p>```
 
-### Display selected values separately.
-This example shows how to load and display multiple selected values.
+### Display selected values separately
+This example demonstrates how to load and display multiple selected values.
 
 ```
 <?php
@@ -79,7 +79,7 @@ if( $colors ): ?>
 ```
 
 ### Display value and label
-This example shows how to load a selected value and label without using the ‘Format value’ setting.
+This example demonstrates how to load a selected value and label without using the ‘Format value’ setting.
 
 ```
 <?php
@@ -88,7 +88,7 @@ This example shows how to load a selected value and label without using the ‘F
 $field = get_field_object( 'colors' );
 $colors = $field['value'];
 
-// Check for field.
+// Create a list of selected values.
 if( $colors ): ?>
 <ul>
 	<?php foreach( $colors as $color ): ?>
@@ -99,7 +99,7 @@ if( $colors ): ?>
 ```
 
 ### Format value setting
-This example shows how to load a selected value and label using the ‘Format value’ setting (set to ‘Both’).
+This example demonstrates how to load a selected value and label using the ‘Format value’ setting (set to ‘Both’).
 
 ```
 <?php
@@ -107,7 +107,7 @@ This example shows how to load a selected value and label using the ‘Format va
 // Load field settings and value.
 $colors = get_field( 'colors' );
 
-// Check for field.
+// Create a list of values and labels.
 if( $colors ): ?>
 <ul>
 	<?php foreach( $colors as $color ): ?>
@@ -123,10 +123,8 @@ This example shows how to use a selected value to conditionally perform a task. 
 ```
 <?php
 
-// Load field settings and value.
-$colors = get_field('colors');
+$colors = get_field( 'colors' );
 
-// Check for field and specific value.
 if( $colors && in_array( 'red', $colors ) ): ?>
 	<p>Selected the Red choice!</p>
 <?php endif; ?>
@@ -157,7 +155,7 @@ if( $posts ) {
 
 ## Notes
 
-### Save Custom
+### Save custom
 If using the [local JSON](https://www.advancedcustomfields.com/resources/local-json/) feature, any custom values saved to the field’s choices will not appear on page reload. This is because the JSON file will not be updated and will override any field settings found in the DB.
 
 ## Related
