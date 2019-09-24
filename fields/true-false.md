@@ -46,7 +46,7 @@ The True / False field allows you to select a value that is either 1 or 0.
   Text displayed within the stylized toggle switch. Defaults to ‘No’. HTML may be entered for icons or custom markup.
 
 ## Template usage
-The True / False field will return a Boolean value of either true or false. The value is saved to the database as ‘1’ or ‘0’.
+The True / False field will return a Boolean value of either `true` or `false`. The value is saved to the database as ‘1’ or ‘0’.
 
 ### Conditional
 This example demonstrates how to use the value 'enable_sidebar' to conditionally do a task.
