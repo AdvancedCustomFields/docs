@@ -28,6 +28,16 @@
         "status": "draft"
     },
     {
+        "title": "Radio Button",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "radio-button",
+        "path": "fields\/radio-button.md",
+        "group": "Choice",
+        "status": "draft"
+    },
+    {
         "title": "Range",
         "description": "",
         "category": "field-types",
@@ -35,6 +45,16 @@
         "slug": "range",
         "path": "fields\/range.md",
         "group": "Basic"
+    },
+    {
+        "title": "Select",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "select",
+        "path": "fields\/select.md",
+        "group": "Choice",
+        "status": "draft"
     },
     {
         "title": "Text",
@@ -53,6 +73,16 @@
         "slug": "textarea",
         "path": "fields\/textarea.md",
         "group": "Basic"
+    },
+    {
+        "title": "True-False",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "true-false",
+        "path": "fields\/true-false.md",
+        "group": "Choice",
+        "status": "draft"
     },
     {
         "title": "User",
