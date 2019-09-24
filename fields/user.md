@@ -29,17 +29,17 @@ This field type is useful for creating relationships between data objects. It st
 - Added `return_format` setting in version 5.6.9.
 
 ## Settings
-- **Filter by role** 
+- **Filter by role**  
   Filters the available users by one or more user roles. Defaults to an empty string.
 
-- **Select Multiple** 
+- **Select Multiple**  
   Allows multiple values to be selected. Defaults to false.
 
-- **Allow Null** 
+- **Allow Null**  
   Allows an empty value to be saved. Defaults to false.
 
 
-- **Return Format** 
+- **Return Format**  
   Specifies the returned value format. Defaults to 'array'.
   **User Array** will return an array of user data.
   **User Object** will return the WP_User object.
