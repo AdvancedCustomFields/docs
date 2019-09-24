@@ -6,19 +6,19 @@ status: draft
 ---
 
 ## Description
-The file field allows a file to be uploaded and selected. This field makes use of the native WP media popup to handle the upload and selection process.
+The file field allows a file to be uploaded and selected by making use of the native WP media popup.
 
 ## Screenshots
 <div class="gallery">
 	<figure>
-		<a href="../assets/acf-file-field-interface.jpg">
-			<img src="../assets/acf-file-field-interface.jpg" alt="A file field that allows you to upload and select a file" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-file-field-interface.jpg">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-file-field-interface.jpg" alt="A file field that allows you to upload and select a file" />
 		</a>
 		<figcaption>The File field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="../assets/acf-file-field-settings.jpg">
-			<img src="../assets/acf-file-field-settings.jpg" alt="The list of File field settings shown when setting up a File field" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-file-field-settings.jpg">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-file-field-settings.jpg" alt="The list of File field settings shown when setting up a File field" />
 		</a>
 		<figcaption>The File field settings</figcaption>
 	</figure>
@@ -34,7 +34,7 @@ The file field allows a file to be uploaded and selected. This field makes use o
   Customize the returned data. Choose from File Array (array of data), File URL (string), or File ID (integer).
 
 - **Library**
-  Limit the file selection to only those that have been uploaded to this post, or the entire library
+  Limit the file selection to only those that have been uploaded to this post, or the entire library.
 
 - **Minimum**
   Add upload validation for minimum filesize in MB (integer). The filesize may also be entered as a string containing the unit. eg. ’400 KB’.
@@ -50,15 +50,14 @@ The file field allows a file to be uploaded and selected. This field makes use o
 The file field will return either an array, a string or an integer value depending on the `return value` set. Below are some examples of how you can use this data.
 
 ### Basic display (Object)
-This example shows how to display the selected file when using the `array` return type. This return type allows us to easily access data such as `url` and `filename`.
+This example demonstrates how to display the selected file when using the `array` return type. This return type allows us to easily access data such as `url` and `filename`.
 
 ```
 <?php
 
-// Get variable.
 $file = get_field( 'file' );
 
-// Check for variable.
+// Show link to file.
 if( $file ): ?>
 
 	<a href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?></a>
@@ -67,26 +66,23 @@ if( $file ): ?>
 ```
 
 ### Customized display (Object)
-This example shows how to display a custom link when using the `object` return type. This return type allows us to easily access data such as `url`, `title`, `type` and more. To see the full data available, please debug the [$file variable](https://www.advancedcustomfields.com/resources/how-to/debug/).
+This example demonstrates how to display a custom link when using the `object` return type. This return type allows us to easily access data such as `url`, `title`, `type` and more. To see the full data available, please debug the [$file variable](https://www.advancedcustomfields.com/resources/how-to/debug/).
 
 ```
 <?php
 
-// Get variable.
 $file = get_field( 'file' );
 
-// Check for variable.
+// Create markup for custom link using the available variables.
 if( $file ):
 
-	// Variables.
 	$url = $file['url'];
 	$title = $file['title'];
 	$caption = $file['caption'];
 
-	// Icon.
 	$icon = $file['icon'];
 
-	// If the file type is 'image', set the thumbnail as $icon.
+	// Set the thumbnail as $icon if the file type is 'image'.
 	if( $file['type'] == 'image' ) {
 		$icon =  $file['sizes']['thumbnail'];
 	}
@@ -113,7 +109,7 @@ if( $file ):
 ```
 
 ### Basic display (ID)
-This example shows how to display the selected file when using the `ID` return type. This return type allows us to efficiently load only the necessary data.
+This example demonstrates how to display the selected file when using the `ID` return type. This return type allows us to efficiently load only the necessary data.
 
 ```
 <?php
@@ -130,7 +126,7 @@ if( $file ) {
 ```
 
 ### Basic display (URL)
-This example shows how to display the selected file when using the `URL` return type. This return type allows us to efficiently display a basic link but prevents us from loading any extra data about the file.
+This example demonstrates how to display the selected file when using the `URL` return type. This return type allows us to efficiently display a basic link but prevents us from loading any extra data about the file.
 
 ```
 <?php if( get_field( 'file' ) ): ?>
