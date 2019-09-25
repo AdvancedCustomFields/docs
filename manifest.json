@@ -14,8 +14,7 @@
         "keywords": [],
         "slug": "checkbox",
         "path": "fields\/checkbox.md",
-        "group": "Choice",
-        "status": "draft"
+        "group": "Choice"
     },
     {
         "title": "File",
