@@ -6,7 +6,7 @@ status: draft
 ---
 
 ## Description
-The Checkbox field creates a list of tick-able inputs.
+The Checkbox field creates a list of check-able inputs.
 
 ## Screenshots
 <div class="gallery">
@@ -30,45 +30,40 @@ The Checkbox field creates a list of tick-able inputs.
 
 ## Settings
 - **Choices**
-  Each choice is entered on a new line (eg. 'Red'). For more control over the value and label, you may use a colon to specify both (eg. 'red : Red').
-
+  The choices displayed when selecting a value. Enter each choice on a new line (eg. `Red`). For more control over the value and label, you may use a colon to specify both (eg. `red : Red`).
+  
 - **Default Value**
-  Specify the default value(s) selected when first editing the field’s value. Enter only values, not labels.
-
+  The default values selected when first editing the field’s value. Enter only values, not labels.
+  
 - **Layout**
-  Changes the layout style of inputs from Vertical to Horizontal.
-
+  The layout orientation of checkbox inputs. Select from "Vertical" or "Horizontal".
+  
 - **Toggle**
-  Adds an extra checkbox above choices to toggle on/off all inputs.
-
+  Prepends an extra checkbox to toggle on/off all inputs.
+  
 - **Return Format**
-  Change the value format returned by the [get_field()](https://www.advancedcustomfields.com/resources/get_field/) and similar functions.
-
+  Specifies the value format returned by ACF functions. Select from "Value", "Label" or "Both".
+  
 - **Allow Custom**
-  Appends a button that adds a text input to the list when clicked. Multiple custom values may be added and removed.
-
+  Appends a button that allows custom values to be added when editing the field's value.
+  
 - **Save Custom**
-  Saves any custom values to the field’s choices. Please see notes section for more information on this setting.
+  Allows custom values to be saved back into the field’s choices. See Notes for more information.
 
 ## Template usage
+The checkbox field returns an array of selected choices.
 
-The checkbox field will return an array of selected choices. Either use the [get_field()](https://www.advancedcustomfields.com/resources/get_field/) function to obtain this array, or use [the_field()](https://www.advancedcustomfields.com/resources/the_field/) to output the values, with each one separated by a comma.
+### Display value
+This example demonstrates how to display the selected values in a comma delimitated list.
+```
+<p>Colors: <?php the_field('colors'); ?></p>
+```
 
-### Display list of selected values
-This example demonstrates how to display a comma separated list of selected values.
-
-```<p>Colors: <?php the_field( 'colors' ); ?></p>```
-
-### Display selected values separately
-This example demonstrates how to load and display multiple selected values.
-
+### Display values in a list
+This example demonstrates how to display the selected values in an unordered list.
 ```
 <?php
-
-// Load field settings and value.
 $colors = get_field( 'colors' );
-
-// Check for field.
 if( $colors ): ?>
 <ul>
 	<?php foreach( $colors as $color ): ?>
@@ -78,36 +73,29 @@ if( $colors ): ?>
 <?php endif; ?>
 ```
 
-### Display value and label
-This example demonstrates how to load a selected value and label without using the ‘Format value’ setting.
-
+### Display labels in a list
+This example demonstrates how to display the selected labels in an unordered list when "Return Format" is set to "Value".
 ```
 <?php
 
 // Load field settings and values.
-$field = get_field_object( 'colors' );
+$field = get_field_object('colors');
 $colors = $field['value'];
 
-// Create a list of selected values.
+// Display labels.
 if( $colors ): ?>
 <ul>
 	<?php foreach( $colors as $color ): ?>
-		<li><?php echo $field['choices'][$color]; ?></li>
+		<li><?php echo $field['choices'][ $color ]; ?></li>
 	<?php endforeach; ?>
 </ul>
 <?php endif; ?>
 ```
 
-### Format value setting
-This example demonstrates how to load a selected value and label using the ‘Format value’ setting (set to ‘Both’).
-
+This example demonstrates how to display the selected labels in an unordered list when "Return Format" is set to "Both".
 ```
 <?php
-
-// Load field settings and value.
-$colors = get_field( 'colors' );
-
-// Create a list of values and labels.
+$colors = get_field('colors');
 if( $colors ): ?>
 <ul>
 	<?php foreach( $colors as $color ): ?>
@@ -117,37 +105,33 @@ if( $colors ): ?>
 <?php endif; ?>
 ```
 
-### Conditional
-This example shows how to use a selected value to conditionally perform a task. In this case, the conditional is checking to see if 'red' is within the array of options selected from the field 'colors'.
-
+### Conditional logic
+This example demonstrates how to check if the choice "red" was selected in the field's value.
 ```
-<?php
-
 $colors = get_field( 'colors' );
-
-if( $colors && in_array( 'red', $colors ) ): ?>
-	<p>Selected the Red choice!</p>
-<?php endif; ?>
+if( $colors && in_array('red', $colors) ) {
+	// Do something.
+}
 ```
 
 ### Query posts
-This example shows how to query posts that have the value ‘red’ selected. The checkbox field saves its value as a serialized array, so it is important to use the meta_query LIKE compare.
+This example demonstrates how to query posts that contain a checkbox field named "colors" with the value "red" selected. Because the checkbox field saves its value as a serialized array, it is important to use the meta_query "LIKE" comparison.
 
 ```
 <?php
 
-$posts = get_posts( array(
+$posts = get_posts(array(
     'meta_query' => array(
         array(
-            'key'     => 'colors', // Name of custom field.
-            'value'   => '"red"', // Matches exactly "red".
+            'key'     => 'colors',
+            'value'   => '"red"',
             'compare' => 'LIKE'
         )
     )
-) );
+));
 
 if( $posts ) {
-    // ...
+    // Do something.
 }
 
 ?>
@@ -157,6 +141,3 @@ if( $posts ) {
 
 ### Save custom
 If using the [local JSON](https://www.advancedcustomfields.com/resources/local-json/) feature, any custom values saved to the field’s choices will not appear on page reload. This is because the JSON file will not be updated and will override any field settings found in the DB.
-
-## Related
-- Guides: [Creating a WP archive with custom field filter](https://www.advancedcustomfields.com/resources/creating-wp-archive-custom-field-filter/)
