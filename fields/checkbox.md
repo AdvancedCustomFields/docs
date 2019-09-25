@@ -63,7 +63,7 @@ This example demonstrates how to display the selected values in a comma delimita
 This example demonstrates how to display the selected values in an unordered list.
 ```
 <?php
-$colors = get_field( 'colors' );
+$colors = get_field('colors');
 if( $colors ): ?>
 <ul>
 	<?php foreach( $colors as $color ): ?>
@@ -108,7 +108,7 @@ if( $colors ): ?>
 ### Conditional logic
 This example demonstrates how to check if the choice "red" was selected in the field's value.
 ```
-$colors = get_field( 'colors' );
+$colors = get_field('colors');
 if( $colors && in_array('red', $colors) ) {
 	// Do something.
 }
@@ -118,8 +118,6 @@ if( $colors && in_array('red', $colors) ) {
 This example demonstrates how to query posts that contain a checkbox field named "colors" with the value "red" selected. Because the checkbox field saves its value as a serialized array, it is important to use the meta_query "LIKE" comparison.
 
 ```
-<?php
-
 $posts = get_posts(array(
     'meta_query' => array(
         array(
@@ -133,8 +131,6 @@ $posts = get_posts(array(
 if( $posts ) {
     // Do something.
 }
-
-?>
 ```
 
 ## Notes
