@@ -29,28 +29,28 @@ The Checkbox field creates a list of check-able inputs.
 - Added `Toggle All` setting in version 5.2.7.
 
 ## Settings
-- **Choices**
+- **Choices**  
   The choices displayed when selecting a value. Enter each choice on a new line (eg. `Red`). For more control over the value and label, you may use a colon to specify both (eg. `red : Red`).
   
-- **Default Value**
+- **Default Value**  
   The default values selected when first editing the field’s value. Enter only values, not labels.
   
-- **Layout**
+- **Layout**  
   The layout orientation of checkbox inputs. Select from "Vertical" or "Horizontal".
   
-- **Toggle**
+- **Toggle**  
   Prepends an extra checkbox to toggle on/off all inputs.
   
-- **Return Format**
+- **Return Format**  
   Specifies the value format returned by ACF functions. Select from "Value", "Label" or "Both".
   
-- **Allow Custom**
+- **Allow Custom**  
   Appends a button that allows custom values to be added when editing the field's value.
   
-- **Save Custom**
+- **Save Custom**  
   Allows custom values to be saved back into the field’s choices. See Notes for more information.
 
-## Template usage
+## Template usage  
 The checkbox field returns an array of selected choices.
 
 ### Display value
