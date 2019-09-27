@@ -6,7 +6,7 @@ status: draft
 ---
 
 ## Description
-The file field allows a file to be uploaded and selected by making use of the native WP media popup.
+The file field allows a file to be uploaded and selected by using the native WP media popup.
 
 ## Screenshots
 <div class="gallery">
@@ -30,23 +30,22 @@ The file field allows a file to be uploaded and selected by making use of the na
 - Added `allowed file types` setting in version 5.1.9.
 
 ## Settings
-- **Return value**
-  Customize the returned data. Choose from File Array (array of data), File URL (string), or File ID (integer).
-
-- **Library**
-  Limit the file selection to only those that have been uploaded to this post, or the entire library.
-
-- **Minimum**
-  Add upload validation for minimum filesize in MB (integer). The filesize may also be entered as a string containing the unit. eg. ’400 KB’.
-
-- **Maximum**
-  Add upload validation for maximum filesize.
-
-- **Allowed file types**
-  Add upload validation for specific file types. Enter a comma separated list to specify which file types are allowed or leave blank for all types.
+- **Return value**  
+  Specifies the format of the returned data. Choose from File Array (array), File URL (string), or File ID (integer).
+  
+- **Library**  
+  Limits file selection to only those that have been uploaded to this post, or the entire library.
+  
+- **Minimum**  
+  Adds upload validation for minimum filesize in MB (integer). The filesize may also be entered as a string containing the unit. eg. ’400 KB’.
+  
+- **Maximum**  
+  Adds upload validation for maximum filesize.
+  
+- **Allowed file types**  
+  Adds upload validation for specific file types. Enter a comma separated list to specify which file types are allowed or leave blank for all types.
 
 ## Template usage
-
 The file field will return either an array, a string or an integer value depending on the `return value` set. Below are some examples of how you can use this data.
 
 ### Basic display (Object)
@@ -54,8 +53,7 @@ This example demonstrates how to display the selected file when using the `array
 
 ```
 <?php
-
-$file = get_field( 'file' );
+$file = get_field('file');
 
 // Show link to file.
 if( $file ): ?>
@@ -70,10 +68,9 @@ This example demonstrates how to display a custom link when using the `object` r
 
 ```
 <?php
+$file = get_field('file');
 
-$file = get_field( 'file' );
-
-// Create markup for custom link using the available variables.
+// Create custom link markup using available variables.
 if( $file ):
 
 	$url = $file['url'];
@@ -82,7 +79,7 @@ if( $file ):
 
 	$icon = $file['icon'];
 
-	// Set the thumbnail as $icon if the file type is 'image'.
+	// Set thumbnail as $icon if file type is 'image'.
 	if( $file['type'] == 'image' ) {
 		$icon =  $file['sizes']['thumbnail'];
 	}
@@ -113,8 +110,7 @@ This example demonstrates how to display the selected file when using the `ID` r
 
 ```
 <?php
-
-$file = get_field( 'file' );
+$file = get_field('file');
 
 if( $file ) {
 
@@ -129,9 +125,9 @@ if( $file ) {
 This example demonstrates how to display the selected file when using the `URL` return type. This return type allows us to efficiently display a basic link but prevents us from loading any extra data about the file.
 
 ```
-<?php if( get_field( 'file' ) ): ?>
+<?php if( get_field('file') ): ?>
 
-	<a href="<?php the_field( 'file' ); ?>" >Download File</a>
+	<a href="<?php the_field('file'); ?>" >Download File</a>
 
 <?php endif; ?>
 ```
