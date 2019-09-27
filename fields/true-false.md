@@ -30,29 +30,29 @@ The True / False field allows you to select a value that is either 1 or 0.
 - Added 'Off Text' setting in version 5.5.0.
 
 ## Settings
-- **Message**
+- **Message**  
   This text is displayed alongside the input.
-
-- **Default Value**
+  
+- **Default Value**  
   Sets the default state (on / off) when adding a new post.
-
-- **Stylized UI**
+  
+- **Stylized UI**  
   Changes the default checkbox input into a stylized toggle switch.
-
-- **On Text**
-  Text displayed within the stylized toggle switch. Defaults to ‘Yes’. HTML may be entered for icons or custom markup.
-
-- **Off Text**
-  Text displayed within the stylized toggle switch. Defaults to ‘No’. HTML may be entered for icons or custom markup.
+  
+- **On Text**  
+  The text displayed within the stylized toggle switch. Defaults to ‘Yes’. HTML may be entered for icons or custom markup.
+  
+- **Off Text**  
+  The text displayed within the stylized toggle switch. Defaults to ‘No’. HTML may be entered for icons or custom markup.
 
 ## Template usage
 The True / False field will return a Boolean value of either `true` or `false`. The value is saved to the database as ‘1’ or ‘0’.
 
 ### Conditional
-This example demonstrates how to use the value 'enable_sidebar' to conditionally do a task.
+This example demonstrates how to use the value of 'enable_sidebar' to conditionally do a task.
 
 ```
-<?php if( get_field( 'enable_sidebar' ) ): ?>
+<?php if( get_field('enable_sidebar') ): ?>
 
 	<?php // Do something. ?>
 
