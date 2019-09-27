@@ -30,54 +30,53 @@ The Radio button field creates a list of select-able inputs.
 - Added 'Other' and 'Save Other' settings in 4.1.7.
 
 ## Settings
-- **Choices**
-  Each choice is entered on a new line (eg. ‘Red’). For more control over the value and label, you may use a ‘ : ‘ character to specify both (eg. ‘red : Red’).
-
-- **Allow Null**
-  By default it is not possible to ‘un-select’ an input. This setting allows you to do so using JavaScript.
-
-- **Other**
+- **Choices**  
+  The choices displayed when selecting a value. Enter each choice on a new line (eg. `Red`). For more control over the value and label, you may use a colon to specify both (eg. `red : Red`).
+  
+- **Allow Null**  
+  Allows you to 'un-select' an input by using JavaScript. Otherwise by default this is not possible.
+  
+- **Other**  
   Adds a text input allowing for a custom value to be entered.
-
-- **Save Other**
-  Allows the custom value to be appended to the field’s choices.
-
-- **Default Value**
-  Specify the default value selected when first editing the field’s value. Enter only value (not label).
-
-- **Layout**
-  Changes the layout style of inputs from Vertical to Horizontal.
-
-- **Return Format**
-  Changes the value format returned by the [get_field()](https://www.advancedcustomfields.com/resources/get_field/) and similar functions.
+  
+- **Save Other**  
+  Allows custom values to be appended to the field’s choices. See Notes for more information.
+  
+- **Default Value**  
+  Specifies the default value selected when first editing the field’s value. Enter only value (not label).
+  
+- **Layout**  
+  The layout orientation of radio inputs. Select from "Vertical" to "Horizontal".
+  
+- **Return Format**  
+  Specifies the value format returned by ACF functions. Select from "Value", "Label" or "Both(Array)".
 
 ## Template usage
 
 ### Display a single selected value
 This example demonstrates how to load and display a single selected value.
 
-```<p>Color: <?php the_field( 'color' ); ?></p>```
+```
+<p>Color: <?php the_field('color'); ?></p>
+```
 
 ### Display value and label
 This example demonstrates how to load a selected value and label without using the ‘Format value’ setting.
 
 ```<?php
-
-// Load field settings and values.
 $field = get_field_object('color');
 $value = $field['value'];
 $label = $field['choices'][ $value ];
 
 ?>
-<p>Color: <span class="color-<?php echo $value; ?>"><?php echo $label; ?></span></p>```
+<p>Color: <span class="color-<?php echo $value; ?>"><?php echo $label; ?></span></p>
+```
 
 ### Format value setting
 This example demonstrates how to load a selected value and label using the ‘Format value’ setting (set to ‘Both’).
 
 ```
 <?php
-
-// Load field settings and value.
 $color = get_field('color');
 
 ?>
@@ -89,12 +88,16 @@ This example demonstrates how to use a selected value to conditionally perform a
 
 ```
 <?php if( get_field('color') == 'red' ): ?>
-	<p>Selected the Red choice!</p>
+  <style type="text/css">
+    img {
+      border: 10px solid red;
+    }
+  </style>
 <?php endif; ?>
 ```
 
 ### Query posts
-This example demonstrates how to query posts that have the value ‘red’ selected.
+This example demonstrates how to query posts that have the value ‘red’ selected for a radio button field named 'color'.
 
 ```
 <?php
@@ -102,14 +105,14 @@ This example demonstrates how to query posts that have the value ‘red’ selec
 $posts = get_posts( array(
     'meta_query' => array(
         array(
-            'key'   => 'color', // name of custom field
+            'key'   => 'color',
             'value' => 'red',
         )
     )
 ) );
 
 if( $posts ) {
-    //...
+    // Do something.
 }
 
 ?>
@@ -117,5 +120,5 @@ if( $posts ) {
 
 ## Notes
 
-### Save custom
+### Save other
 If using the [local JSON](https://www.advancedcustomfields.com/resources/local-json/) feature, any custom values saved to the field’s choices will not appear on page reload. This is because the JSON file will not be updated and will override any field settings found in the DB.
