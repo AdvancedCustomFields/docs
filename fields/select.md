@@ -29,41 +29,41 @@ The Select field creates a drop down select or multiple select input.
 - Added 'Stylized UI' (Select2) setting in version 5.0.0.
 
 ## Settings
-- **Choices**
-  Each choice is entered on a new line (eg. ‘Red’). For more control over the value and label, you may use a ‘ : ‘ character to specify both (eg. ‘red : Red’).
-
-- **Default Value**
-  Specify the default value(s) selected when first editing the field’s value. Enter only values (not labels).
-
-- **Allow Null**
-  If selected, the select list will begin with an empty choice labelled “- Select -“. If using the ‘Stylized UI’ setting, this empty choice will be replaced by a ‘x’ icon allowing you to remove the selected value(s).
-
-- **Multiple**
+- **Choices**  
+  The choices displayed when selecting a value. Enter each choice on a new line (eg. `Red`). For more control over the value and label, you may use a colon to specify both (eg. ‘red : Red’).
+  
+- **Default Value**  
+  The default value(s) selected when first editing the field’s value. Enter only values, not labels.
+  
+- **Allow Null**  
+  If selected, the select list will begin with an empty choice labelled “- Select -“. If using the ‘Stylized UI’ setting, this choice will be replaced by a ‘x’ icon allowing you to remove the selected value(s).
+  
+- **Multiple**  
   Allows you to select more than one choice. If using the ‘Stylized UI’ setting, you may also drag/drop reorder the selected choices.
-
-- **Stylized UI**
+  
+- **Stylized UI**  
   This setting will use the Select2 JavaScript library to enhance your select field with more functionality (search, ajax, reorder).
-
-- **AJAX**
-  This setting appears if using the ‘Stylized UI’ and will use AJAX to populate the select field’s choices. Very useful if using the [acf/load_value](https://www.advancedcustomfields.com/resources/acfload_value/) filter to populate choices as it can help speed up page load times.
-
-- **Return Format**
-  Change the value format returned by the [get_field()](https://www.advancedcustomfields.com/resources/get_field/) and similar functions.
+  
+- **AJAX**  
+  This setting appears if using the ‘Stylized UI’ and uses AJAX to populate the select field’s choices. Useful if using the [acf/load_value](https://www.advancedcustomfields.com/resources/acfload_value/) filter to populate choices as it can help speed up page load times.
+  
+- **Return Format**  
+  Specifies the value format returned by ACF functions. Select from "Value", "Label" or "Both(Array)".
 
 ## Template usage
 
 ### Display single selected value
 This example demonstrates how to load and display a single selected value.
 
-```<p>Color: <?php the_field('color'); ?></p>```
+```
+<p>Color: <?php the_field('color'); ?></p>
+```
 
 ### Display multiple values
 This example demonstrates how to load and display multiple selected values.
 
 ```
 <?php
-
-// Load field settings and value.
 $colors = get_field( 'color' );
 
 // Create a comma-separated list from selected values.
