@@ -14,13 +14,13 @@ The color picker field allows a color to be selected via a JavaScript popup.
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-color-picker-interface.jpg">
 			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-color-picker-interface.jpg" alt="acf-user-field-interface" />
 		</a>
-		<figcaption>The Wysiwyg editor field interface</figcaption>
+		<figcaption>The color picker editor field interface</figcaption>
 	</figure>
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-color-picker-settings.png">
 			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-color-picker-settings.png" alt="acf-user-field-settings" />
 		</a>
-		<figcaption>The Wysiwyg editor field settings</figcaption>
+		<figcaption>The color picker editor field settings</figcaption>
 	</figure>
 </div>
 
