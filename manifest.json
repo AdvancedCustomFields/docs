@@ -23,8 +23,7 @@
         "keywords": [],
         "slug": "file",
         "path": "fields\/file.md",
-        "group": "Content",
-        "status": "draft"
+        "group": "Content"
     },
     {
         "title": "Radio Button",

@@ -7,6 +7,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 
 ### Field Types
 - [Checkbox](https://github.com/AdvancedCustomFields/docs/blob/master/fields/checkbox.md)
+- [File](https://github.com/AdvancedCustomFields/docs/blob/master/fields/file.md)
 - [Range](https://github.com/AdvancedCustomFields/docs/blob/master/fields/range.md)
 - [Text](https://github.com/AdvancedCustomFields/docs/blob/master/fields/text.md)
 - [Text Area](https://github.com/AdvancedCustomFields/docs/blob/master/fields/textarea.md)

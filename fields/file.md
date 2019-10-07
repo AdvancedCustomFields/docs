@@ -2,7 +2,6 @@
 title: File
 category: field-types
 group: Content
-status: draft
 ---
 
 ## Description
