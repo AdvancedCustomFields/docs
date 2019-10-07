@@ -25,16 +25,16 @@ The Radio button field creates a list of select-able inputs.
 </div>
 
 ## Changelog
-- Added 'Return Format' setting in version 5.4.0.
-- Added 'Allow Null' setting in 5.3.8.
-- Added 'Other' and 'Save Other' settings in 4.1.7.
+- Added `Return Format` setting in version 5.4.0.
+- Added `Allow Null` setting in version 5.3.8.
+- Added `Other` and 'Save Other' settings in version 4.1.7.
 
 ## Settings
 - **Choices**  
   The choices displayed when selecting a value. Enter each choice on a new line (eg. `Red`). For more control over the value and label, you may use a colon to specify both (eg. `red : Red`).
   
 - **Allow Null**  
-  Allows you to 'un-select' an input by using JavaScript. Otherwise by default this is not possible.
+  Allows the ability to 'un-select' a selected value.
   
 - **Other**  
   Adds a text input allowing for a custom value to be entered.
@@ -49,12 +49,12 @@ The Radio button field creates a list of select-able inputs.
   The layout orientation of radio inputs. Select from "Vertical" to "Horizontal".
   
 - **Return Format**  
-  Specifies the value format returned by ACF functions. Select from "Value", "Label" or "Both(Array)".
+  Specifies the value format returned by ACF functions. Select from Value, Label or Both (array).
 
 ## Template usage
 
 ### Display a single selected value
-This example demonstrates how to load and display a single selected value.
+This example demonstrates how to display the selected value.
 
 ```
 <p>Color: <?php the_field('color'); ?></p>
@@ -69,7 +69,7 @@ $value = $field['value'];
 $label = $field['choices'][ $value ];
 
 ?>
-<p>Color: <span class="color-<?php echo $value; ?>"><?php echo $label; ?></span></p>
+<p>Color: <span class="color-<?php echo esc_attr($value); ?>"><?php echo esc_html($label); ?></span></p>
 ```
 
 ### Format value setting
@@ -78,22 +78,19 @@ This example demonstrates how to load a selected value and label using the ‘Fo
 ```
 <?php
 $color = get_field('color');
-
 ?>
-<p>Color: <span class="color-<?php echo $color['value']; ?>"><?php echo $color['label']; ?></span></p>
+<p>Color: <span class="color-<?php echo esc_attr($color['value']); ?>"><?php echo esc_html($color['label']); ?></span></p>
 ```
 
 ### Conditional
 This example demonstrates how to use a selected value to conditionally perform a task.
 
 ```
-<?php if( get_field('color') == 'red' ): ?>
-  <style type="text/css">
-    img {
-      border: 10px solid red;
-    }
-  </style>
-<?php endif; ?>
+<?php 
+
+if( get_field('color') == 'red' ) {
+	// Do something.
+}
 ```
 
 ### Query posts
@@ -115,7 +112,6 @@ if( $posts ) {
     // Do something.
 }
 
-?>
 ```
 
 ## Notes
