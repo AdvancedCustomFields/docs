@@ -48,86 +48,71 @@ The file field allows a file to be uploaded and selected by using the native WP 
 ## Template usage
 The file field will return either an array, a string or an integer value depending on the `return value` set. Below are some examples of how you can use this data.
 
-### Basic display (Object)
+### Basic display (Array)
 This example demonstrates how to display the selected file when using the `array` return type. This return type allows us to easily access data such as `url` and `filename`.
 
 ```
 <?php
 $file = get_field('file');
-
-// Show link to file.
 if( $file ): ?>
-
 	<a href="<?php echo $file['url']; ?>"><?php echo $file['filename']; ?></a>
-
 <?php endif; ?>
 ```
 
-### Customized display (Object)
-This example demonstrates how to display a custom link when using the `object` return type. This return type allows us to easily access data such as `url`, `title`, `type` and more. To see the full data available, please debug the [$file variable](https://www.advancedcustomfields.com/resources/how-to/debug/).
+### Advanced display (Array)
+This example demonstrates how to display a custom link when using the `array` return type. This return type allows us to easily access data such as `url`, `title`, `type` and more.
 
 ```
 <?php
 $file = get_field('file');
-
-// Create custom link markup using available variables.
 if( $file ):
-
+	
+	// Extract variables.
 	$url = $file['url'];
 	$title = $file['title'];
 	$caption = $file['caption'];
-
 	$icon = $file['icon'];
 
-	// Set thumbnail as $icon if file type is 'image'.
+	// Display image thumbnail when possible.
 	if( $file['type'] == 'image' ) {
 		$icon =  $file['sizes']['thumbnail'];
 	}
-
+	
+	// Begin caption wrap.
 	if( $caption ): ?>
-
 		<div class="wp-caption">
-
 	<?php endif; ?>
 
-	<a href="<?php echo $url; ?>" title="<?php echo $title; ?>">
-		<img src="<?php echo $icon; ?>" />
-		<span><?php echo $title; ?></span>
+	<a href="<?php echo esc_attr($url); ?>" title="<?php echo esc_attr($title); ?>">
+		<img src="<?php echo esc_attr($icon); ?>" />
+		<span><?php echo esc_html($title); ?></span>
 	</a>
-
-	<?php if( $caption ): ?>
-
-			<p class="wp-caption-text"><?php echo $caption; ?></p>
-
+	
+	<?php 
+	// End caption wrap.
+	if( $caption ): ?>
+		<p class="wp-caption-text"><?php echo esc_html($caption); ?></p>
 		</div>
-
 	<?php endif; ?>
 <?php endif; ?>
 ```
 
 ### Basic display (ID)
-This example demonstrates how to display the selected file when using the `ID` return type. This return type allows us to efficiently load only the necessary data.
+This example demonstrates how to display the selected file when using the `ID` return type.
 
 ```
 <?php
 $file = get_field('file');
-
-if( $file ) {
-
-	$url = wp_get_attachment_url( $file );
-
-	?><a href="<?php echo $url; ?>" >Download File</a>
-
-<?php } ?>
+if( $file ):
+	$url = wp_get_attachment_url( $file ); ?>
+	<a href="<?php echo esc_html($url); ?>" >Download File</a>
+<?php endif; ?>
 ```
 
 ### Basic display (URL)
-This example demonstrates how to display the selected file when using the `URL` return type. This return type allows us to efficiently display a basic link but prevents us from loading any extra data about the file.
-
+This example demonstrates how to display the selected file when using the `URL` return type.
 ```
 <?php if( get_field('file') ): ?>
-
 	<a href="<?php the_field('file'); ?>" >Download File</a>
-
 <?php endif; ?>
 ```
