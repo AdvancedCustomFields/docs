@@ -28,10 +28,10 @@ The date picker field creates a jQuery date selection popup. This field is usefu
 - **Display Format**  
   The date format that is displayed when selecting a date.
 
-- ** Return Format**  
+- **Return Format**  
   The date format that is returned when loading the value. Please note that the value is always saved as YYYYMMDD in the database.
 
-- ** Week Starts On**  
+- **Week Starts On**  
   Specifies the day to start the week on.
 
 ## Template usage
@@ -94,7 +94,8 @@ if( $posts ) {
 	wp_reset_postdata();
 }
 
-?>```
+?>
+```
 
 ### Query posts by date
 This example demonstrates how you can use the `WP_Query` object to find posts where a ‘start_date’ and ‘end_date’ indicate that the post is ‘active’ (today is between the start and end dates).
