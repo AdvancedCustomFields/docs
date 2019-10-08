@@ -12,13 +12,13 @@ The date picker field creates a jQuery date selection popup. This field is usefu
 <div class="gallery">
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-date-picker-field-interface.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-date-picker-field-interface.png" alt="acf-user-field-interface" />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-date-picker-field-interface.png" alt="A date picker field that allows you to choose a specific date" />
 		</a>
 		<figcaption>The date picker field interface</figcaption>
 	</figure>
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-date-picker-field-settings.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-date-picker-field-settings.png" alt="acf-user-field-settings" />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-date-picker-field-settings.png" alt="List of field settings shown when setting up a date picker field" />
 		</a>
 		<figcaption>The date picker field settings</figcaption>
 	</figure>
