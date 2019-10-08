@@ -1,5 +1,5 @@
 ---
-title: True-False
+title: True / False
 category: field-types
 group: Choice
 status: draft
@@ -25,16 +25,16 @@ The True / False field allows you to select a value that is either 1 or 0.
 </div>
 
 ## Changelog
-- Added 'UI' setting in version 5.5.0.
-- Added 'On Text' setting in version 5.5.0.
-- Added 'Off Text' setting in version 5.5.0.
+- Added `UI` setting in version 5.5.0.
+- Added `On Text` setting in version 5.5.0.
+- Added `Off Text` setting in version 5.5.0.
 
 ## Settings
 - **Message**  
-  This text is displayed alongside the input.
+  The text displayed alongside the toggle.
   
 - **Default Value**  
-  Sets the default state (on / off) when adding a new post.
+  Specifies the default state selected when first editing the field’s value.
   
 - **Stylized UI**  
   Changes the default checkbox input into a stylized toggle switch.
@@ -46,53 +46,38 @@ The True / False field allows you to select a value that is either 1 or 0.
   The text displayed within the stylized toggle switch. Defaults to ‘No’. HTML may be entered for icons or custom markup.
 
 ## Template usage
-The True / False field will return a Boolean value of either `true` or `false`. The value is saved to the database as ‘1’ or ‘0’.
+The True / False field returns a Boolean value of either `true` or `false`.
+Note that the actual value saved into the database is an integer of either 1 or 0.
 
 ### Conditional
 This example demonstrates how to use the value of 'enable_sidebar' to conditionally do a task.
 
 ```
-<?php if( get_field('enable_sidebar') ): ?>
+<?php
 
-	<?php // Do something. ?>
-
-<?php endif; ?>
+if( get_field('color') == 'enable_sidebar' ) {
+	// Do something.
+}
 ```
 
 ### Query Posts
-This example demonstrates how to query posts that have a `true` value for the field 'enable_sidebar'.
+This example demonstrates how to query posts that have a `true` value for the field 'show_in_sidebar'.
 
 ```
 <?php
 
 $posts = get_posts( array(
-	'meta_query' => array(
-		array(
-			'key'     => 'enable_sidebar',
-			'compare' => '=',
-			'value'   => '1'
-		)
-	)
+    'meta_query' => array(
+        array(
+            'key'   => 'show_in_sidebar',
+            'value' => '1',
+        )
+    )
 ) );
 
-if( $posts ): ?>
-
-	<ul>
-
-	<?php foreach( $posts as $post ):
-
-		setup_postdata( $post );
-
-		?>
-		<li>
-			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-		</li>
-
-	<?php endforeach; ?>
-
-	</ul>
-
-	<?php wp_reset_postdata(); ?>
-
-<?php endif; ?>
+if( $posts ) {
+	foreach( $posts as $post ) {
+		// Do something.
+	}
+}
 ```
