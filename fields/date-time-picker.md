@@ -30,10 +30,10 @@ The date time picker field creates a jQuery date & time selection popup. This fi
 ## Settings
 - **Display Format**  
   The date format that is displayed when selecting a date.
-
+  
 - **Return Format**  
   The date format that is returned when loading the value.
-
+  
 - **Week Starts On**  
   Specifies the day to start the week on.
 
@@ -170,16 +170,14 @@ if( $posts ): ?>
 ```
 
 ### Save as unix timestamp
-This example demonstrates how to change the value saved from the standard ‘Y-m-d H:i:s’ string to a unix timestamp number. This may be necessary to maintain compatibility with 3rd party date time picker fields.
+This example demonstrates how to change the value saved from the standard ‘Y-m-d H:i:s’ string to a unix timestamp number. This may be necessary to maintain compatibility with third party date time picker fields.
 ```
 <?php 
 
 add_filter('acf/update_value/type=date_time_picker', 'my_update_value_date_time_picker', 10, 3);
 
 function my_update_value_date_time_picker( $value, $post_id, $field ) {
-	
 	return strtotime( $value );
-	
 }
 
 ?>
