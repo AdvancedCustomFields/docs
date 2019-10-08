@@ -2,7 +2,6 @@
 title: Button Group
 category: field-types
 group: Choice
-status: draft
 ---
 
 ## Description
@@ -48,49 +47,48 @@ The Button Group field provides a neat UI for selecting a value.
 ### Display value
 This example demonstrates how to display the selected value using the 'Return Format' setting 'Value'.
 ```
-p>Color: <?php the_field('color'); ?></p>
+<p>Color: <?php the_field('color'); ?></p>
 ```
 
 ### Display value and label
-This example demonstrates how to load a selected value and label using the 'Return Format' setting 'Both'.
+This example demonstrates how to display the selected value and label using the 'Return Format' setting 'Both'.
 
 ```
 <?php
 $color = get_field('color');
-
 ?>
-
-<p>Color: <span class="color-<?php echo $color['value']; ?>"><?php echo $color['label']; ?></span></p>
+<p>Color: <span class="color-<?php echo esc_attr($color['value']); ?>"><?php echo esc_html($color['label']); ?></span></p>
 ```
 
 ### Conditional
 This example demonstrates how to use a selected value to conditionally perform a task.
 
 ```
-<?php if( get_field('color') == 'red' ): ?>
-	<p>Selected the Red choice!</p>
-<?php endif; ?>
+<?php 
+
+if( get_field('color') == 'red' ) {
+	// Do something.
+}
 ```
 
 ### Query Posts
-This example demonstrates how to query posts that have the value 'red' selected.
+This example demonstrates how to query posts that have a 'red' value for the field 'color'.
 
 ```
 <?php
 
-$posts = get_posts(array(
+$posts = get_posts( array(
     'meta_query' => array(
         array(
             'key'   => 'color',
             'value' => 'red',
         )
     )
-));
+) );
 
 if( $posts ) {
-    // Do something.
+	foreach( $posts as $post ) {
+		// Do something.
+	}
 }
-
-?>
 ```
-

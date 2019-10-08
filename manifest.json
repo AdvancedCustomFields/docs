@@ -14,8 +14,7 @@
         "keywords": [],
         "slug": "button-group",
         "path": "fields\/button-group.md",
-        "group": "Choice",
-        "status": "draft"
+        "group": "Choice"
     },
     {
         "title": "Checkbox",

@@ -6,6 +6,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [acf/save_post](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-save_post.md)
 
 ### Field Types
+- [Button Group](https://github.com/AdvancedCustomFields/docs/blob/master/fields/button-group.md)
 - [Checkbox](https://github.com/AdvancedCustomFields/docs/blob/master/fields/checkbox.md)
 - [File](https://github.com/AdvancedCustomFields/docs/blob/master/fields/file.md)
 - [Radio Button](https://github.com/AdvancedCustomFields/docs/blob/master/fields/radio-button.md)
