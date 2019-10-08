@@ -10,6 +10,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [File](https://github.com/AdvancedCustomFields/docs/blob/master/fields/file.md)
 - [Radio Button](https://github.com/AdvancedCustomFields/docs/blob/master/fields/radio-button.md)
 - [Range](https://github.com/AdvancedCustomFields/docs/blob/master/fields/range.md)
+- [Select](https://github.com/AdvancedCustomFields/docs/blob/master/fields/select.md)
 - [Text](https://github.com/AdvancedCustomFields/docs/blob/master/fields/text.md)
 - [Text Area](https://github.com/AdvancedCustomFields/docs/blob/master/fields/textarea.md)
 - [User](https://github.com/AdvancedCustomFields/docs/blob/master/fields/user.md)

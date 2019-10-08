@@ -2,11 +2,10 @@
 title: Select
 category: field-types
 group: Choice
-status: draft
 ---
 
 ## Description
-The Select field creates a drop down select or multiple select input.
+The Select field creates a drop-down list to select one or more choices from.
 
 ## Screenshots
 <div class="gallery">
@@ -25,8 +24,8 @@ The Select field creates a drop down select or multiple select input.
 </div>
 
 ## Changelog
-- Added 'Return Format' setting in version 5.4.0.
-- Added 'Stylized UI' (Select2) setting in version 5.0.0.
+- Added `Return Format` setting in version 5.4.0.
+- Added `Stylized UI` (Select2) setting in version 5.0.0.
 
 ## Settings
 - **Choices**  
@@ -48,7 +47,7 @@ The Select field creates a drop down select or multiple select input.
   This setting appears if using the ‘Stylized UI’ and uses AJAX to populate the select field’s choices. Useful if using the [acf/load_value](https://www.advancedcustomfields.com/resources/acfload_value/) filter to populate choices as it can help speed up page load times.
   
 - **Return Format**  
-  Specifies the value format returned by ACF functions. Select from "Value", "Label" or "Both(Array)".
+  Specifies the value format returned by ACF functions. Select from Value, Label or Both(Array).
 
 ## Template usage
 
@@ -77,14 +76,11 @@ This example demonstrates how to load a selected value and label without using t
 
 ```
 <?php
-
 $field = get_field_object( 'color' );
 $value = $field['value'];
 $label = $field['choices'][ $value ];
-
 ?>
-
-<p>Color: <span class="color-<?php echo $value; ?>"><?php echo $label; ?></span></p>
+<p>Color: <span class="color-<?php echo esc_attr($value); ?>"><?php echo esc_html($label); ?></span></p>
 ```
 
 ### Format value setting
@@ -92,19 +88,18 @@ This example demonstrates how to load a selected value and label using the ‘Fo
 
 ```
 <?php
-
 $color = get_field( 'color' );
-
 ?>
-
-<p>Color: <span class="color-<?php echo $color['value']; ?>"><?php echo $color['label']; ?></span></p>
+<p>Color: <span class="color-<?php echo esc_attr($color['value']); ?>"><?php echo esc_html($color['label']); ?></span></p>
 ```
 
 ### Conditional
 This example demonstrates how to use a selected value to conditionally perform a task. In this case, the conditional is checking to see if 'red' matches the selected option.
 
 ```
-<?php if( get_field( 'color' ) == 'red' ): ?>
-	<p>Selected the Red choice!</p>
-<?php endif; ?>
+<?php 
+
+if( get_field('color') == 'red' ) {
+	// Do something.
+}
 ```

@@ -50,8 +50,7 @@
         "keywords": [],
         "slug": "select",
         "path": "fields\/select.md",
-        "group": "Choice",
-        "status": "draft"
+        "group": "Choice"
     },
     {
         "title": "Text",
