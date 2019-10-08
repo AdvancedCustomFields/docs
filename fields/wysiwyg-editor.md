@@ -43,15 +43,17 @@ This is one of the most useful fields for editing content as it allows for both 
   Defers initialization of editor until editor is clicked instead of on page load. This is useful to speed up load times.
 
 ## Template usage
-The Wysiwyg editor field will return your content formatted for HTML in the same manner that [the_content()](https://developer.wordpress.org/reference/functions/get_the_content/) does.
+The Wysiwyg editor field will return your content formatted for HTML in the same manner that [the_content()](https://developer.wordpress.org/reference/functions/the_content/) does.
 
 ### Basic display
-This example demonstrates how to display your Wysiwyg field's content.
+This example demonstrates how to display a Wysiwyg field's content.
 ```
-<?php the_field('wysiwyg_test'); ?>
+<?php the_field('product_summary'); ?>
 ```
 
 ## Notes
 
-### the_content filter
-The Wysiwyg field uses the [the_content](https://codex.wordpress.org/Plugin_API/Filter_Reference/the_content) filter to format its value into HTML. ACF uses its own `acf_the_content` filter that closely mimics the one found in WP core. If you are using the `the_content` filter to modify content, please be sure to add your filter to `acf_the_content` as well. This will avoid recursion and asset loading issues caused by calling the `the_content` filter multiple times.
+### The acf_the_content filter
+When loading a Wysiwyg field value, the value is passed through a filter `acf_the_content` to apply HTML formatting. This filter, closely based on the WordPress [the_content](https://codex.wordpress.org/Plugin_API/Filter_Reference/the_content) filter, is used instead to avoid unwanted recursion issues.
+
+If you are using the `the_content` filter to modify content, please be sure to also filter `acf_the_content` as well.
