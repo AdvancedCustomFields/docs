@@ -89,7 +89,7 @@ if( !empty( $image ) ): ?>
 ```
 
 ### Customized display (array)
-This example demonstrates how to display a custom size of the selected image when using the `Image Object` return type. This return type allows us to access extra image data such as sizes, width, height and more. To see the full data available, please [debug the $image variable](https://www.advancedcustomfields.com/resources/how-to/debug/).
+This example demonstrates how to display a custom size of the selected image when using the `Image Object` return type. This return type allows us to access extra image data such as sizes, width, height and more.
 ```
 <?php 
 
