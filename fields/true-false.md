@@ -2,7 +2,6 @@
 title: True / False
 category: field-types
 group: Choice
-status: draft
 ---
 
 ## Description

@@ -71,14 +71,13 @@
         "group": "Basic"
     },
     {
-        "title": "True-False",
+        "title": "True \/ False",
         "description": "",
         "category": "field-types",
         "keywords": [],
         "slug": "true-false",
         "path": "fields\/true-false.md",
-        "group": "Choice",
-        "status": "draft"
+        "group": "Choice"
     },
     {
         "title": "User",
