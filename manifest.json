@@ -32,8 +32,7 @@
         "keywords": [],
         "slug": "radio-button",
         "path": "fields\/radio-button.md",
-        "group": "Choice",
-        "status": "draft"
+        "group": "Choice"
     },
     {
         "title": "Range",

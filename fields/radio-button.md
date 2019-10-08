@@ -2,7 +2,6 @@
 title: Radio Button
 category: field-types
 group: Choice
-status: draft
 ---
 
 ## Description
