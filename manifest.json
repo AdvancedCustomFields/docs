@@ -8,6 +8,16 @@
         "path": "actions\/acf-save_post.md"
     },
     {
+        "title": "Button Group",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "button-group",
+        "path": "fields\/button-group.md",
+        "group": "Choice",
+        "status": "draft"
+    },
+    {
         "title": "Checkbox",
         "description": "",
         "category": "field-types",
@@ -15,6 +25,26 @@
         "slug": "checkbox",
         "path": "fields\/checkbox.md",
         "group": "Choice"
+    },
+    {
+        "title": "Color Picker",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "color-picker",
+        "path": "fields\/color-picker.md",
+        "group": "jQuery",
+        "status": "draft"
+    },
+    {
+        "title": "Date Picker",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "date-picker",
+        "path": "fields\/date-picker.md",
+        "group": "jQuery",
+        "status": "draft"
     },
     {
         "title": "File",
@@ -87,6 +117,16 @@
         "slug": "user",
         "path": "fields\/user.md",
         "group": "Relational"
+    },
+    {
+        "title": "Wysiwyg Editor",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "wysiwyg-editor",
+        "path": "fields\/wysiwyg-editor.md",
+        "group": "Content",
+        "status": "draft"
     },
     {
         "title": "acf_add_options_page()",
