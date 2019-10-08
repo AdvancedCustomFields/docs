@@ -34,7 +34,7 @@ The oEmbed field provides an intuitive interface for embedding videos, images, t
 ## Template usage  
 The oEmbed field will return a string containing the embed HTML.
 
-### Basic display
+### Display value.
 This example demonstrates how to display an oEmbed.
 ```
 <div class="embed-container">
@@ -42,7 +42,7 @@ This example demonstrates how to display an oEmbed.
 </div>
 ```
 
-### Advanced display
+### Display value with additional attributes.
 This example demonstrates how to add extra attributes to both the iframe src and HTML.
 ```
 <?php
@@ -103,5 +103,5 @@ Thanks to the work done by [embedresponsively.com](http://embedresponsively.com/
 
 ## Notes
 
-## Customizing other embed features
+### Customizing other embed features
 Due to the large number of embed providers, no settings are available to customize embed features such as overlays and buttons. To customize these settings, you will need to perform a search / replace on the string to add additional arguments to the iframe src.
