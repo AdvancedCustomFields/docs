@@ -13,27 +13,27 @@ This is one of the most useful fields for editing content as it allows for both 
 <div class="gallery">
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-wysiwyg-field-interface.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-wysiwyg-field-interface.png" alt="acf-user-field-interface" />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-wysiwyg-field-interface.png" alt="A Wysiwyg field with sample lorem ipsum content" />
 		</a>
 		<figcaption>The Wysiwyg editor field interface</figcaption>
 	</figure>
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-wysiwyg-field-settings.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-wysiwyg-field-settings.png" alt="acf-user-field-settings" />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-wysiwyg-field-settings.png" alt="List of settings available when creating a Wysiwyg field" />
 		</a>
 		<figcaption>The Wysiwyg editor field settings</figcaption>
 	</figure>
 </div>
 
 ## Changelog
-- Added Visual / Text options for 'Tabs' in version 5.0.0
+- Added Visual / Text options for `Tabs` in version 5.0.0
 
 ## Settings
 - **Tabs**  
-  Selects which modes are shown to the user. Each Wysiwyg editor contains a visual and text mode. Choose from "Visual and Text", "Visual Only, or "Text Only".
+  Selects which modes are shown to the user. Each Wysiwyg editor contains a visual and text mode. Choose from Visual and Text, Visual Only, or Text Only.
   
 - **Toolbar**  
-  Specifies which toolbar to show. Choose from "Full" or "Basic. The “Full” toolbar reflects the typical WordPress editor toolbar with 2 rows of buttons. The “Basic” toolbar is a minified single row of buttons useful for a more trimmed experience.
+  Specifies which toolbar to show. Choose from Full or Basic. The Full toolbar reflects the typical WordPress editor toolbar with 2 rows of buttons. The Basic toolbar is a minified single row of buttons useful for a more trimmed experience.
   
 - **Show Media Upload Buttons**  
   Provides the ability to upload inline media to the Wysiwyg field.
