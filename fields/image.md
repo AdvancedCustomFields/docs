@@ -2,7 +2,6 @@
 title: Image
 category: field-types
 group: Content
-status: draft
 ---
 
 ## Description

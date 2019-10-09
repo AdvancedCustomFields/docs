@@ -79,8 +79,7 @@
         "keywords": [],
         "slug": "image",
         "path": "fields\/image.md",
-        "group": "Content",
-        "status": "draft"
+        "group": "Content"
     },
     {
         "title": "oEmbed",
