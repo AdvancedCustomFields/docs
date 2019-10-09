@@ -8,6 +8,8 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 ### Field Types
 - [Button Group](https://github.com/AdvancedCustomFields/docs/blob/master/fields/button-group.md)
 - [Checkbox](https://github.com/AdvancedCustomFields/docs/blob/master/fields/checkbox.md)
+- [Color Picker](https://github.com/AdvancedCustomFields/docs/blob/master/fields/color-picker.md)
+- [Date Picker](https://github.com/AdvancedCustomFields/docs/blob/master/fields/date-picker.md)
 - [File](https://github.com/AdvancedCustomFields/docs/blob/master/fields/file.md)
 - [Radio Button](https://github.com/AdvancedCustomFields/docs/blob/master/fields/radio-button.md)
 - [Range](https://github.com/AdvancedCustomFields/docs/blob/master/fields/range.md)

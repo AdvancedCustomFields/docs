@@ -32,8 +32,7 @@
         "keywords": [],
         "slug": "color-picker",
         "path": "fields\/color-picker.md",
-        "group": "jQuery",
-        "status": "draft"
+        "group": "jQuery"
     },
     {
         "title": "Date Picker",
@@ -42,6 +41,15 @@
         "keywords": [],
         "slug": "date-picker",
         "path": "fields\/date-picker.md",
+        "group": "jQuery"
+    },
+    {
+        "title": "Date Time Picker",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "date-time-picker",
+        "path": "fields\/date-time-picker.md",
         "group": "jQuery",
         "status": "draft"
     },
@@ -53,6 +61,36 @@
         "slug": "file",
         "path": "fields\/file.md",
         "group": "Content"
+    },
+    {
+        "title": "Gallery",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "gallery",
+        "path": "fields\/gallery.md",
+        "group": "Content",
+        "status": "draft"
+    },
+    {
+        "title": "Image",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "image",
+        "path": "fields\/image.md",
+        "group": "Content",
+        "status": "draft"
+    },
+    {
+        "title": "oEmbed",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "oembed",
+        "path": "fields\/oembed.md",
+        "group": "Content",
+        "status": "draft"
     },
     {
         "title": "Radio Button",
