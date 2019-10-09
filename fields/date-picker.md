@@ -6,7 +6,7 @@ status: draft
 ---
 
 ## Description
-The date picker field creates a jQuery date selection popup. This field is useful for setting dates to use in your theme. (eg. An event’s start and end date.)
+The date picker field provides a jQuery date selection popup.
 
 ## Screenshots
 <div class="gallery">
@@ -29,13 +29,13 @@ The date picker field creates a jQuery date selection popup. This field is usefu
   The date format that is displayed when selecting a date.
 
 - **Return Format**  
-  The date format that is returned when loading the value. Please note that the value is always saved as YYYYMMDD in the database.
+  The date format that is returned when loading the value. Please note that the value is always saved as `Ymd` (YYYMMDD) in the database.
 
 - **Week Starts On**  
   Specifies the day to start the week on.
 
 ## Template usage
-The date picker field will return a string containing your date value in the format provided in the field’s settings. Below are examples using a date picker field named 'date'.
+The date picker field returns a date string using the **Return Format** Setting.
 
 ### Display value
 This example demonstrates how to display a date value.
@@ -44,68 +44,57 @@ This example demonstrates how to display a date value.
 ```
 
 ### Converting and customizing value
-This example demonstrates how to get the raw value (saved in format YYYYMMDD) and convert it to a numeric value to then modify it further.
+This example demonstrates how to convert a string date value into a DateTime object.
 ```
 <?php 
 
-// Get raw date.
-$date = get_field('date', false, false);
+// Load field value.
+$date_string = get_field('date');
 
+// Create DateTime object from value (formats must match).
+$date = DateTime::createFromFormat('Ymd', date_string);
 
-// Make date object.
-$date = new DateTime( $date );
-
+// Output current date in custom format.
 ?>
 <p>Event start date: <?php echo $date->format('j M Y'); ?></p>
 <?php 
 
-// Increase by 1 day.
-$date->modify('+1 day');
-	
+// Increase by 1 day and output again.
+$date->modify('+1 day');	
 ?>
 <p>Event end date: <?php echo $date->format('j M Y'); ?></p>
 ```
 
-### Order posts
-This example demonstrates how you can sort and order a WordPress posts query by a custom field.
+### Query posts sorted in order
+This example demonstrates how you can query posts sorted in order of a custom field value.
 ```
-<?php 
+<?php
 
-// Get posts.
-$posts = get_posts(array(
-	'post_type' => 'event',
+$posts = get_posts( array(
+    'post_type' => 'event',
 	'meta_key'  => 'date',
 	'orderby'   => 'meta_value_num',
 	'order'     => 'ASC',
 ));
 
-
-// Loop through results.
 if( $posts ) {
-	
 	foreach( $posts as $post ) {
-		
-		setup_postdata( $post );
-
 		// Do something.
-
 	}
-
-	wp_reset_postdata();
 }
-
-?>
 ```
 
-### Query posts by date
-This example demonstrates how you can use the `WP_Query` object to find posts where a ‘start_date’ and ‘end_date’ indicate that the post is ‘active’ (today is between the start and end dates).
+### Query posts within date range
+This example demonstrates how you can query posts to find events that are currently happening today.
 ```
 <?php 
 
+// Find todays date in Ymd format.
 $today = date('Ymd');
 
-$args = array (
-    'post_type' => 'post',
+// Query posts using a meta_query to compare two custom fields; start_date and end_date.
+$posts = get_posts( array(
+    'post_type' => 'event',
     'meta_query' => array(
 		array(
 	        'key'     => 'start_date',
@@ -118,11 +107,13 @@ $args = array (
 	        'value'   => $today,
 	    )
     ),
-);
+));
 
-// Get posts.
-$posts = get_posts( $args );
-?>
+if( $posts ) {
+	foreach( $posts as $post ) {
+		// Do something.
+	}
+}
 ```
 
 ## Notes
@@ -132,10 +123,9 @@ If you require the date to be displayed in a non English language, WordPress con
 ```
 <?php
 
-$dateformatstring = "l d F, Y";
-$unixtimestamp = strtotime(get_field('date'));
+// Load field value and convert to numeric timestamp.
+$unixtimestamp = strtotime( get_field('date') );
 
-echo date_i18n( $dateformatstring, $unixtimestamp );
-
-?>
+// Display date in the format "l d F, Y".
+echo date_i18n( "l d F, Y", $unixtimestamp );
 ```
