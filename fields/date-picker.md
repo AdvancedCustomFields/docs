@@ -2,7 +2,6 @@
 title: Date Picker
 category: field-types
 group: jQuery
-status: draft
 ---
 
 ## Description
@@ -35,7 +34,7 @@ The date picker field provides a jQuery date selection popup.
   Specifies the day to start the week on.
 
 ## Template usage
-The date picker field returns a date string using the **Return Format** Setting.
+The date picker field returns a date string using the *Return Format* Setting.
 
 ### Display value
 This example demonstrates how to display a date value.
@@ -43,7 +42,7 @@ This example demonstrates how to display a date value.
 <p>Event Date: <?php the_field('date'); ?></p>
 ```
 
-### Converting and customizing value
+### Modify value
 This example demonstrates how to convert a string date value into a DateTime object.
 ```
 <?php 
