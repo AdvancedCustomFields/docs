@@ -2,11 +2,10 @@
 title: Color Picker
 category: field-types
 group: jQuery
-status: draft
 ---
 
 ## Description
-The color picker field allows a color to be selected via a JavaScript popup.
+The color picker field provides an interactive way to select a hex color string using [Iris](https://automattic.github.io/Iris/).
 
 ## Screenshots
 <div class="gallery">
@@ -32,24 +31,28 @@ The color picker field allows a color to be selected via a JavaScript popup.
 The color picker field will return a string value containing the HEX color value including the prefix ‘#’. Below are examples using a color picker field named "color".
 
 ### Display value within inline styles
-This example demonstrates how to use a selected color to change the background of an element using the style attribute inline.
+This example demonstrates how to generate an inline style using a Color picker value.
 ```
-<div style="background-color:<?php the_field('color'); ?>">Something here...</div>
+<div style="background-color:<?php the_field('color'); ?>">
+
+</div>
 ```
 
 ### Display value within style tags
-This example demonstrates how to use a selected color to change the background of an element using a style tag.
+This example demonstrates how to generate a CSS class using a Color picker value.
 ```
 <style type="text/css">
-.special-color {
-    background-color: <?php the_field('color'); ?>;
+.primary-background {
+    background-color: <?php the_field('primary_background_color'); ?>;
 }
 </style>
 
-<div class="special-color">Something here...</div>
+<div class="primary-background">
+
+</div>
 ```
 
 ## Notes
 
 ### Customization
-The color picker field contains a JavaScript filter allowing you to modify the `wpColorPicker` arguments. Please see the [Adding custom javascript to fields](https://www.advancedcustomfields.com/resources/adding-custom-javascript-fields/) documentation for more info.
+The Color picker field modal can be customized via the JS filter [color_picker_args](https://www.advancedcustomfields.com/resources/javascript-api/#filters-color_picker_args).
