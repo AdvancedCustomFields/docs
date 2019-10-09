@@ -17,8 +17,8 @@ The Image field allows an image to be uploaded and selected by using the native 
 		<figcaption>The Image field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-image-field-settings.jpg">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-image-field-settings.jpg" alt="List of field settings shown when setting up an Image field" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-image-field-settings.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-image-field-settings.png" alt="List of field settings shown when setting up an Image field" />
 		</a>
 		<figcaption>The Image field settings</figcaption>
 	</figure>
