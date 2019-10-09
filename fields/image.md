@@ -6,7 +6,7 @@ status: draft
 ---
 
 ## Description
-The Image field allows an image to be uploaded and selected by using the native WordPress media popup.
+The Image field allows an image to be uploaded and selected by using the native WordPress media modal.
 
 ## Screenshots
 <div class="gallery">
@@ -34,7 +34,7 @@ The Image field allows an image to be uploaded and selected by using the native 
   Specifies the format of the returned data. Choose from Object (array), URL (string), or ID (integer).
   
 - **Preview Size**  
-  The WordPress image size which is displayed when editing the images.
+  The WordPress image size displayed when editing values.
   
 - **Library**  
   Limits file selection to only those that have been uploaded to this post, or the entire library.
@@ -49,54 +49,42 @@ The Image field allows an image to be uploaded and selected by using the native 
   Adds upload validation for specific file types. Enter a comma separated list to specify which file types are allowed or leave blank to accept all types.
 
 ## Template usage  
-The image field will return either an array, a string or an integer value depending on the `Return Value` set.
-
-_Note:_ All following examples use an image field called “image”.
+The image field will return either an array, a string or an integer value depending on the *Return Value* set.
 
 ### Display image (ID)
-This example demonstrates how to display the selected image when using the 'Image ID' return type. This example uses the [wp_get_attachment_image()](https://developer.wordpress.org/reference/functions/wp_get_attachment_image/) function to generate the image HTML.
+This example demonstrates how to display the selected image when using the `Image ID` return type. This example uses the [wp_get_attachment_image()](https://developer.wordpress.org/reference/functions/wp_get_attachment_image/) function to generate the image HTML.
 
 [tip]
 This function also generates the srcset attribute allowing for [responsive images](https://make.wordpress.org/core/2015/11/10/responsive-images-in-wordpress-4-4/)!
 [/tip]
+
 ```
 <?php 
-
 $image = get_field('image');
 $size = 'full'; // (thumbnail, medium, large, full or custom size)
-
 if( $image ) {
-
 	echo wp_get_attachment_image( $image, $size );
-
 }
-
-?>
 ```
 
 ### Display image (array)
-This example demonstrates how to display the selected image when using the `Image Object` return type. This return type allows us to access extra image data such as alt text, caption and sizes.
+This example demonstrates how to display the selected image when using the `Image Object` return type. This return type provides extra image data such as alt text, caption and sizes.
 ```
 <?php 
-
 $image = get_field('image');
-
 if( !empty( $image ) ): ?>
-
-	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
+	<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 <?php endif; ?>
 ```
 
 ### Customized display (array)
 This example demonstrates how to display a custom size of the selected image when using the `Image Object` return type. This return type allows us to access extra image data such as sizes, width, height and more.
+
 ```
-<?php 
-
+<?php
 $image = get_field('image');
-
-if( !empty($image) ): 
-
+if( $image ):
+	
 	// Image variables.
 	$url = $image['url'];
 	$title = $image['title'];
@@ -108,27 +96,22 @@ if( !empty($image) ):
 	$thumb = $image['sizes'][ $size ];
 	$width = $image['sizes'][ $size . '-width' ];
 	$height = $image['sizes'][ $size . '-height' ];
-
+	
+	// Begin caption wrap.
 	if( $caption ): ?>
-
 		<div class="wp-caption">
-
 	<?php endif; ?>
 
-	<a href="<?php echo $url; ?>" title="<?php echo $title; ?>">
-
-		<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
-
+	<a href="<?php echo esc_url($url); ?>" title="<?php echo esc_attr($title); ?>">
+		<img src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?>" />
 	</a>
-
-	<?php if( $caption ): ?>
-
-			<p class="wp-caption-text"><?php echo $caption; ?></p>
-
+	
+	<?php 
+	// End caption wrap.
+	if( $caption ): ?>
+		<p class="wp-caption-text"><?php echo esc_html($caption); ?></p>
 		</div>
-
 	<?php endif; ?>
-
 <?php endif; ?>
 ```
 
@@ -136,8 +119,6 @@ if( !empty($image) ):
 This example demonstrates how to display the selected image when using the 'Image URL' return type. This return type allows us to efficiently display a basic image but prevents us from loading any extra data about the image.
 ```
 <?php if( get_field('image') ): ?>
-
 	<img src="<?php the_field('image'); ?>" />
-
 <?php endif; ?>
 ```
