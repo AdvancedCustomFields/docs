@@ -16,6 +16,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [Text Area](https://github.com/AdvancedCustomFields/docs/blob/master/fields/textarea.md)
 - [True / False](https://github.com/AdvancedCustomFields/docs/blob/master/fields/true-false.md)
 - [User](https://github.com/AdvancedCustomFields/docs/blob/master/fields/user.md)
+- [Wysiwyg Editor](https://github.com/AdvancedCustomFields/docs/blob/master/fields/wysiwyg-editor.md)
 
 ### Functions
 - [acf_add_options_page()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/acf_add_options_page.md)

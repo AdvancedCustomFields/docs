@@ -2,7 +2,6 @@
 title: Wysiwyg Editor
 category: field-types
 group: Content
-status: draft
 ---
 
 ## Description

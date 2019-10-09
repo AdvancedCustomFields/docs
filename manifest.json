@@ -124,8 +124,7 @@
         "keywords": [],
         "slug": "wysiwyg-editor",
         "path": "fields\/wysiwyg-editor.md",
-        "group": "Content",
-        "status": "draft"
+        "group": "Content"
     },
     {
         "title": "acf_add_options_page()",
