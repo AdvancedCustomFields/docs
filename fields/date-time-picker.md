@@ -6,7 +6,7 @@ status: draft
 ---
 
 ## Description
-The date time picker field creates a jQuery date & time selection popup. This field is useful for setting specific dates & times to use in your theme. (eg. An event’s start and end date & time.)
+The date time picker field creates a jQuery date & time selection popup.
 
 ## Screenshots
 <div class="gallery">
@@ -32,13 +32,13 @@ The date time picker field creates a jQuery date & time selection popup. This fi
   The date format that is displayed when selecting a date.
   
 - **Return Format**  
-  The date format that is returned when loading the value.
+  The date format that is returned when loading the value. Please note that the value is always saved as `Y-m-d H:i:s` (YYYY-MM-DD HH:II:SS) in the database.
   
 - **Week Starts On**  
   Specifies the day to start the week on.
 
 ## Template usage
-The date time picker field will return a string containing your date-time value in the format chosen in the field’s settings.
+The date picker field returns a date-time string using the *Return Format* Setting.
 
 ### Display value
 This example demonstrates how to display a date-time value.
@@ -46,14 +46,13 @@ This example demonstrates how to display a date-time value.
 <p>Event starts: <?php the_field('start_date'); ?></p>
 ```
 
-### Query posts
-This example demonstrates how to query and loop over events ordered by a custom date time field value.
+### Query posts sorted in order
+This example demonstrates how you can query posts sorted in order of a custom field value.
 ```
 <?php
 
-// Query events order.
-$posts = get_posts(array(
-	'posts_per_page' => -1,
+$posts = get_posts( array(
+    'posts_per_page' => -1,
 	'post_type'      => 'event',
 	'order'          => 'ASC',
 	'orderby'        => 'meta_value',
@@ -61,36 +60,25 @@ $posts = get_posts(array(
 	'meta_type'      => 'DATETIME',
 ));
 
-if( $posts ): ?>
-
-	<h2>All Events</h2>
-	<ul id="events">
-		<?php foreach( $posts as $p ): ?>
-			<li>
-				<strong><?php echo $p->post_title; ?></strong>: <?php the_field('start_date', $p->ID); ?> -  <?php the_field('end_date', $p->ID); ?>
-			</li>	
-		<?php endforeach; ?>
-	</ul>
-
-<?php endif; ?>
+if( $posts ) {
+	foreach( $posts as $post ) {
+		// Do something.
+	}
+}
 ```
 
-### Query current posts
-This example demonstrates how to query and loop over events which are currently running (they have started, but not yet ended) ordered by a custom date time field value.
-
-When working with the [meta_query array](https://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters), remember that WordPress reads this as `$meta $compare $value` (eg. ‘start_date’ < $now and/or ‘end_date’ > $now).
+### Query posts within date range
+This example demonstrates how you can query posts to find events that are currently happening today.
 ```
-<?php
+<?php 
 
-// Find current date time.
+// Find todays date in Ymd format.
 $date_now = date('Y-m-d H:i:s');
 
-// Query events.
-$posts = get_posts(array(
-	'posts_per_page'   => -1,
-	'post_type'        => 'event',
-	'meta_query'       => array(
-		'relation'          => 'AND',
+// Query posts using a meta_query to compare two custom fields; start_date and end_date.
+$posts = get_posts( array(
+    'post_type' => 'event',
+    'meta_query' => array(
 		array(
 	        'key'           => 'start_date',
 	        'compare'       => '<=',
@@ -104,24 +92,13 @@ $posts = get_posts(array(
 	        'type'          => 'DATETIME',
 	    )
     ),
-	'order'           => 'ASC',
-	'orderby'         => 'meta_value',
-	'meta_key'        => 'start_date',
-	'meta_type'       => 'DATE',
 ));
 
-if( $posts ): ?>
-
-	<h2>Events on right now</h2>
-	<ul id="events">
-		<?php foreach( $posts as $p ): ?>
-			<li>
-				<strong><?php echo $p->post_title; ?></strong>: <?php the_field('start_date', $p->ID); ?> -  <?php the_field('end_date', $p->ID); ?>
-			</li>	
-		<?php endforeach; ?>
-	</ul>
-
-<?php endif; ?>
+if( $posts ) {
+	foreach( $posts as $post ) {
+		// Do something.
+	}
+}
 ```
 
 ### Query upcoming posts
@@ -155,18 +132,11 @@ $posts = get_posts(array(
 	'meta_type'      => 'DATETIME'
 ));
 
-if( $posts ): ?>
-
-	<h2>Upcoming events this week</h2>
-	<ul id="events">
-		<?php foreach( $posts as $p ): ?>
-			<li>
-				<strong><?php echo $p->post_title; ?></strong>: <?php the_field('start_date', $p->ID); ?> -  <?php the_field('end_date', $p->ID); ?>
-			</li>	
-		<?php endforeach; ?>
-	</ul>
-
-<?php endif; ?>
+if( $posts ) {
+	foreach( $posts as $post ) {
+		// Do something.
+	}
+}
 ```
 
 ### Save as unix timestamp
@@ -179,8 +149,6 @@ add_filter('acf/update_value/type=date_time_picker', 'my_update_value_date_time_
 function my_update_value_date_time_picker( $value, $post_id, $field ) {
 	return strtotime( $value );
 }
-
-?>
 ```
 
 ## Notes
@@ -190,3 +158,15 @@ The value selected can be returned and displayed in different formats but will b
 
 ### Date format strings
 To customize the 'Display Format' and 'Return Format' settings further, refer to the full list of date format strings within the [PHP date() documentation](http://php.net/manual/en/function.date.php).
+
+### Translations
+If you require the date to be displayed in a non English language, WordPress contains a function called [date_i18n()](http://codex.wordpress.org/Function_Reference/date_i18n) which will perform the translation for you.
+```
+<?php
+
+// Load field value and convert to numeric timestamp.
+$unixtimestamp = strtotime( get_field('date') );
+
+// Display date in the format "l d F, Y".
+echo date_i18n( "l d F, Y", $unixtimestamp );
+```
