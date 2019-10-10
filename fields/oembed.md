@@ -2,11 +2,10 @@
 title: oEmbed
 category: field-types
 group: Content
-status: draft
 ---
 
 ## Description
-The oEmbed field provides an intuitive interface for embedding videos, images, tweets, audio, and other content. This field makes use of the native [WordPress oEmbed functionality](https://codex.wordpress.org/Embeds).
+The oEmbed field provides an interactive component for embedding videos, images, tweets, audio, and other content. This field makes use of the native [WordPress oEmbed functionality](https://codex.wordpress.org/Embeds).
 
 ## Screenshots
 <div class="gallery">
@@ -17,8 +16,8 @@ The oEmbed field provides an intuitive interface for embedding videos, images, t
 		<figcaption>The oEmbed field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-oembed-field-settings.jpg">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-oembed-field-settings.jpg" alt="List of field settings shown when setting up a oEmbed field" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-oembed-field-settings.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-oembed-field-settings.png" alt="List of field settings shown when setting up a oEmbed field" />
 		</a>
 		<figcaption>The oEmbed field settings</figcaption>
 	</figure>
@@ -32,7 +31,7 @@ The oEmbed field provides an intuitive interface for embedding videos, images, t
   Defines the width and height settings for the embed element.
 
 ## Template usage  
-The oEmbed field will return a string containing the embed HTML.
+The oEmbed field will return a string containing the embed HTML obtained by the [wp_oembed_get()](https://codex.wordpress.org/Function_Reference/wp_oembed_get) function.
 
 ### Display value.
 This example demonstrates how to display an oEmbed.
@@ -47,35 +46,33 @@ This example demonstrates how to add extra attributes to both the iframe src and
 ```
 <?php
 
+// Load value.
 $iframe = get_field('oembed');
 
 // Use preg_match to find iframe src.
 preg_match('/src="(.+?)"/', $iframe, $matches);
 $src = $matches[1];
 
-// Add extra parameters to iframe src.
+// Add extra parameters to src and replcae HTML.
 $params = array(
     'controls'  => 0,
     'hd'        => 1,
     'autohide'  => 1
 );
-
 $new_src = add_query_arg($params, $src);
 $iframe = str_replace($src, $new_src, $iframe);
 
 // Add extra attributes to iframe HTML.
 $attributes = 'frameborder="0"';
-
 $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
 
-// Echo customized iframe.
+// Display customized HTML.
 echo $iframe;
-
 ?>
 ```
 
 ### Responsive embeds
-Thanks to the work done by [embedresponsively.com](http://embedresponsively.com/), it is now possible to make embeds responsive. Please view the website to learn more as each provider may need different CSS settings.
+Thanks to the work done by [embedresponsively.com](http://embedresponsively.com/), it is possible to make embeds responsive. Please view the website to learn more as each provider may need different CSS settings.
 ```
 <div class="embed-container">
 	<?php the_field('oembed'); ?>
