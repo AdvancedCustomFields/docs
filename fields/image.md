@@ -29,7 +29,7 @@ The Image field allows an image to be uploaded and selected by using the native 
 - Added `Allowed File Types` setting in version 5.1.9.
 
 ## Settings
-- **Return Value**  
+- **Return Format**  
   Specifies the format of the returned data. Choose from Object (array), URL (string), or ID (integer).
   
 - **Preview Size**  
