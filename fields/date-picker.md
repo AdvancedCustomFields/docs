@@ -28,7 +28,7 @@ The date picker field provides a jQuery date selection popup.
   The date format that is displayed when selecting a date.
 
 - **Return Format**  
-  The date format that is returned when loading the value. Please note that the value is always saved as `Ymd` (YYYMMDD) in the database.
+  The date format that is returned when loading the value. Please note that the value is always saved as `Ymd` (YYYYMMDD) in the database.
 
 - **Week Starts On**  
   Specifies the day to start the week on.
@@ -116,6 +116,12 @@ if( $posts ) {
 ```
 
 ## Notes
+
+### Database format
+The value selected can be returned and displayed in different formats but will be saved to the database as ‘Ymd’. This format is used throughout the WordPress database tables and will allow for straight-foward database querying.
+
+### Date format strings
+To customize the 'Display Format' and 'Return Format' settings further, refer to the full list of date format strings within the [PHP date() documentation](http://php.net/manual/en/function.date.php).
 
 ### Translations
 If you require the date to be displayed in a non English language, WordPress contains a function called [date_i18n()](http://codex.wordpress.org/Function_Reference/date_i18n) which will perform the translation for you.
