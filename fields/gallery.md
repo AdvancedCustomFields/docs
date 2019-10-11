@@ -2,7 +2,6 @@
 title: Gallery
 category: field-types
 group: Content
-status: draft
 ---
 
 ## Description

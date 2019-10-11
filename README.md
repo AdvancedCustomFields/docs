@@ -11,6 +11,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [Color Picker](https://github.com/AdvancedCustomFields/docs/blob/master/fields/color-picker.md)
 - [Date Picker](https://github.com/AdvancedCustomFields/docs/blob/master/fields/date-picker.md)
 - [File](https://github.com/AdvancedCustomFields/docs/blob/master/fields/file.md)
+- [Gallery](https://github.com/AdvancedCustomFields/docs/blob/master/fields/gallery.md)
 - [Image](https://github.com/AdvancedCustomFields/docs/blob/master/fields/image.md)
 - [oEmbed](https://github.com/AdvancedCustomFields/docs/blob/master/fields/oembed.md)
 - [Radio Button](https://github.com/AdvancedCustomFields/docs/blob/master/fields/radio-button.md)
