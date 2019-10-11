@@ -91,10 +91,10 @@ if( $images ): ?>
     <ul>
         <?php foreach( $images as $image ): ?>
             <li>
-                <a href="<?php echo $image['url']; ?>">
-                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                <a href="<?php echo esc_url($image['url']); ?>">
+                     <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                 </a>
-                <p><?php echo $image['caption']; ?></p>
+                <p><?php echo esc_html($image['caption']); ?></p>
             </li>
         <?php endforeach; ?>
     </ul>
@@ -111,8 +111,8 @@ if( $images ): ?>
         <ul class="slides">
             <?php foreach( $images as $image ): ?>
                 <li>
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                    <p><?php echo $image['caption']; ?></p>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <p><?php echo esc_html($image['caption']); ?></p>
                 </li>
             <?php endforeach; ?>
         </ul>
@@ -121,7 +121,7 @@ if( $images ): ?>
         <ul class="slides">
             <?php foreach( $images as $image ): ?>
                 <li>
-                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="Thumbnail of <?php echo esc_url($image['alt']); ?>" />
                 </li>
             <?php endforeach; ?>
         </ul>
@@ -133,10 +133,16 @@ if( $images ): ?>
 This example demonstrates how to display the images from a Gallery field in a WordPress gallery by generating and rendering a gallery shortcode. The field in this example uses ID as the *Return Format*.
 
 ```
-<?php 
+<?php
+
+// Load value (array of ids).
 $images = get_field('gallery');
 if( $images ) {
+	
+	// Generate string of ids ("123,456,789").
 	$images_string = implode( ',', $image_ids );
+	
+	// Generate and do shortcode.
 	$shortcode = sprintf( '[gallery ids="%s"]', $images_string );
 	echo do_shortcode( $shortcode );
 }
