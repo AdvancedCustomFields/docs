@@ -40,7 +40,7 @@ Conditional logic settings can be applied to an Accordion field. The Accordion f
   Shows the Accordion content panel as open on initial page load. Defaults to false.
   
 - **Multi-expand**  
-  Prevents default behavior of closing sibling Accordions when one if open. Defaults to false.
+  Prevents default behavior of closing sibling Accordions when one is open. Defaults to false.
   
 - **Endpoint**  
   Defines an endpoint for the previous Accordion field. All fields that follow will not be appended to the Accordion's content panel.
