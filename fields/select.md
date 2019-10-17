@@ -44,7 +44,7 @@ The Select field creates a drop-down list to select one or more choices from.
   This setting will use the Select2 JavaScript library to enhance your select field with more functionality (search, ajax, reorder).
   
 - **AJAX**  
-  This setting appears if using the ‘Stylized UI’ and uses AJAX to populate the select field’s choices. Useful if using the [acf/load_value](https://www.advancedcustomfields.com/resources/acfload_value/) filter to populate choices as it can help speed up page load times.
+  This setting appears if using the ‘Stylized UI’ and uses AJAX to populate the select field’s choices. Useful if using the [acf/load_value](https://www.advancedcustomfields.com/resources/acf-load_value/) filter to populate choices as it can help speed up page load times.
   
 - **Return Format**  
   Specifies the value format returned by ACF functions. Select from Value, Label or Both(Array).
