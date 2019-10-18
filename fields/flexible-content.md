@@ -26,7 +26,7 @@ The Flexible Content field acts as a blank canvas to which you can add an unlimi
 
 ## Settings
 - **Layouts**  
-  Creates a list of sub field groups (called layouts). With layouts predefined, you are able to add them into your field whenever and where ever you want.  
+  Creates a list of sub field groups called layouts. With layouts predefined, you are able to add them into your field whenever and where ever you want.  
   
 - **Button Label**  
   Creates custom text to appear in the 'Add Row' button.
@@ -38,14 +38,14 @@ The Flexible Content field acts as a blank canvas to which you can add an unlimi
   Sets a limit on how many layouts are allowed.
 
 ## Template usage
-The Flexible Content field is essential a wrapper for a group of layouts, so to loop through the layouts and target the sub field values, you must make use of a few extra functions. These are described below.
+The Flexible Content field is essential a wrapper for a group of layouts. To loop through the layouts and target the sub field values, you must make use of [have_rows](https://www.advancedcustomfields.com/resources/functions/have_rows/), [the_row](https://www.advancedcustomfields.com/resources/functions/have_rows/), and [the_sub_field](https://www.advancedcustomfields.com/resources/functions/the_sub_field/) functions.
 
 ### Basic Loop
-This example demonstrates how to loop through and display data with the [have_rows](https://www.advancedcustomfields.com/resources/functions/have_rows/), [the_row](https://www.advancedcustomfields.com/resources/functions/have_rows/), and [the_sub_field](https://www.advancedcustomfields.com/resources/functions/the_sub_field/) functions.
+This example demonstrates how to loop through and display data.
 ```
 <?php
 
-// Check if the flexible content field has rows of data
+// Check if the flexible content field has data
 if( have_rows('flexible_content_field_name') ):
 
      // Loop through data
@@ -77,21 +77,21 @@ This example demonstrates how to loop through a nested repeater field named 'ima
 ```
 <?php
 
-// check if the flexible content field has rows of data
+// Check if the flexible content field has rows of data
 if( have_rows('flexible_content_field_name') ):
 
- 	// loop through the rows of data
+ 	// Loop through the rows of data
     while ( have_rows('flexible_content_field_name') ) : the_row();
 
-		// check current row layout
+		// Check current row layout
         if( get_row_layout() == 'gallery' ):
 
-        	// check if the nested repeater field has rows of data
+        	// Check if the nested repeater field has data
         	if( have_rows('images') ):
 
 			 	echo '<ul>';
 
-			 	// loop through the rows of data
+			 	// Loop through the rows of data
 			    while ( have_rows('images') ) : the_row();
 
 					$image = get_sub_field('image');
@@ -110,7 +110,7 @@ if( have_rows('flexible_content_field_name') ):
 
 else :
 
-    // no layouts found
+    // No layouts found
 
 endif;
 
