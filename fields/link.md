@@ -18,7 +18,7 @@ The Link field allows a link to be selected or defined (url, title, target) by u
 	</figure>
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-link-field-settings.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-link-field-settings.png" alt="List of checkbox field settings shown when setting up a Link field" />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-link-field-settings.png" alt="List of field settings shown when setting up a Link field" />
 		</a>
 		<figcaption>The Link field settings</figcaption>
 	</figure>
