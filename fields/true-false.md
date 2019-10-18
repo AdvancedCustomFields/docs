@@ -13,13 +13,13 @@ The True / False field allows you to select a value that is either 1 or 0.
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-true-false-field-interface.png">
 			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-true-false-field-interface.png" alt="True/false field that allows you to check a box or toggle a switch" />
 		</a>
-		<figcaption>The True false field interface</figcaption>
+		<figcaption>The True / False field interface</figcaption>
 	</figure>
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-true-false-field-settings.png">
 			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-true-false-field-settings.png" alt="List of settings shown when creating a True/false field" />
 		</a>
-		<figcaption>The True false field settings</figcaption>
+		<figcaption>The True / False field settings</figcaption>
 	</figure>
 </div>
 

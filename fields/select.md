@@ -35,19 +35,19 @@ The Select field creates a drop-down list to select one or more choices from.
   The default value(s) selected when first editing the field’s value. Enter only values, not labels.
   
 - **Allow Null**  
-  If selected, the select list will begin with an empty choice labelled “- Select -“. If using the ‘Stylized UI’ setting, this choice will be replaced by a ‘x’ icon allowing you to remove the selected value(s).
+  If selected, the select list will begin with an empty choice labelled “- Select -“. If using the _Stylized UI_ setting, this choice will be replaced by a ‘x’ icon allowing you to remove the selected value(s).
   
 - **Multiple**  
-  Allows you to select more than one choice. If using the ‘Stylized UI’ setting, you may also drag/drop reorder the selected choices.
+  Allows you to select more than one choice. If using the _Stylized UI_ setting, you may also drag/drop reorder the selected choices.
   
 - **Stylized UI**  
   This setting will use the Select2 JavaScript library to enhance your select field with more functionality (search, ajax, reorder).
   
 - **AJAX**  
-  This setting appears if using the ‘Stylized UI’ and uses AJAX to populate the select field’s choices. Useful if using the [acf/load_value](https://www.advancedcustomfields.com/resources/acf-load_value/) filter to populate choices as it can help speed up page load times.
+  This setting appears if using the _Stylized UI_ and uses AJAX to populate the select field’s choices. Useful if using the [acf/load_value](https://www.advancedcustomfields.com/resources/acf-load_value/) filter to populate choices as it can help speed up page load times.
   
 - **Return Format**  
-  Specifies the value format returned by ACF functions. Select from Value, Label or Both(Array).
+  Specifies the value format returned by ACF functions. Select from Value, Label or Both (array).
 
 ## Template usage
 
@@ -72,7 +72,7 @@ if( $colors ): ?>
 ```
 
 ### Display value and label
-This example demonstrates how to load a selected value and label without using the ‘Format value’ setting.
+This example demonstrates how to load a selected value and label without using the _Format value_ setting.
 
 ```
 <?php
@@ -84,7 +84,7 @@ $label = $field['choices'][ $value ];
 ```
 
 ### Format value setting
-This example demonstrates how to load a selected value and label using the ‘Format value’ setting (set to ‘Both’).
+This example demonstrates how to load a selected value and label using the _Format value_ setting (set to `Both`).
 
 ```
 <?php

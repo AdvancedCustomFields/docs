@@ -35,7 +35,7 @@ The Link field allows a link to be selected or defined (url, title, target) by u
 The Link field will return either an array or string depending on the _return value_ setting. Below are some examples of how you can use this data.
 
 ### Basic Display (array)
-This example demonstrates how to display the selected link when using the Link Array return type.
+This example demonstrates how to display the selected link when using the `Link Array` return type.
 ```
 <?php 
 
@@ -51,7 +51,7 @@ if( $link ):
 ```
 
 ### Basic display (string)
-This example demonstrates how to display the selected link when using the _Link URL_ return type.
+This example demonstrates how to display the selected link when using the `Link URL` return type.
 ```
 <?php 
 

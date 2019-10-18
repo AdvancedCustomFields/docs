@@ -42,7 +42,7 @@ The Google Maps API has a daily limit on the number of sites able to use this fr
 ## Google Map API
 It may be necessary to register a Google API key in order to allow the Google API to load correctly. Please follow this link to get a [Google API key](https://developers.google.com/maps/documentation/javascript/get-api-key).
 
-To register your Google API key, please use the `acf/fields/google_map/api` filter like so:
+To register your Google API key, please use the `acf/fields/google_map/api` filter:
 
 ```
 function my_acf_google_map_api( $api ){
@@ -66,8 +66,6 @@ function my_acf_init() {
 
 add_action('acf/init', 'my_acf_init');
 ```
-
-
 
 ## Template usage  
 The following code examples show how to display saved values onto a map.
@@ -305,4 +303,3 @@ To solve this problem, simply trigger the 'resize’ event on the map variable a
 // Popup is shown and map is not visible.
 google.maps.event.trigger(map, 'resize');
 ```
-

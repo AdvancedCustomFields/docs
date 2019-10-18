@@ -6,7 +6,7 @@ status: draft
 ---
 
 ## Description
-The date time picker field creates a jQuery date & time selection popup.
+The Date Time Picker field creates a jQuery date & time selection popup.
 
 ## Screenshots
 <div class="gallery">
@@ -14,13 +14,13 @@ The date time picker field creates a jQuery date & time selection popup.
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-date-time-picker-interface.png">
 			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-date-time-picker-interface.png" alt="A time date field that allows you to choose a specific date and time" />
 		</a>
-		<figcaption>The date time picker field interface</figcaption>
+		<figcaption>The Date Time Picker field interface</figcaption>
 	</figure>
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-date-time-picker-settings.png">
 			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-date-time-picker-settings.png" alt="List of field settings shown when setting up a date time picker field" />
 		</a>
-		<figcaption>The date time picker field settings</figcaption>
+		<figcaption>The Date Time Picker field settings</figcaption>
 	</figure>
 </div>
 
@@ -38,7 +38,7 @@ The date time picker field creates a jQuery date & time selection popup.
   Specifies the day to start the week on.
 
 ## Template usage
-The date picker field returns a date-time string using the *Return Format* Setting.
+The Date Time Picker field returns a date-time string using the _Return Format_ setting.
 
 ### Display value
 This example demonstrates how to display a date-time value.
@@ -157,7 +157,7 @@ function my_update_value_date_time_picker( $value, $post_id, $field ) {
 The value selected can be returned and displayed in different formats but will be saved to the database as ‘Y-m-d H:i:s’. This format is used throughout the WordPress database tables and will allow for straight-foward database querying.
 
 ### Date format strings
-To customize the 'Display Format' and 'Return Format' settings further, refer to the full list of date format strings within the [PHP date() documentation](http://php.net/manual/en/function.date.php).
+To customize the _Display Format_ and _Return Format_ settings further, refer to the full list of date format strings within the [PHP date() documentation](http://php.net/manual/en/function.date.php).
 
 ### Translations
 If you require the date to be displayed in a non English language, WordPress contains a function called [date_i18n()](http://codex.wordpress.org/Function_Reference/date_i18n) which will perform the translation for you.

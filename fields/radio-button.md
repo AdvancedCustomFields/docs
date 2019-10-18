@@ -5,7 +5,7 @@ group: Choice
 ---
 
 ## Description
-The Radio button field creates a list of select-able inputs.
+The Radio Button field creates a list of select-able inputs.
 
 ## Screenshots
 <div class="gallery">
@@ -13,13 +13,13 @@ The Radio button field creates a list of select-able inputs.
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-radio-button-field-interface.png">
 			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-radio-button-field-interface.png" alt="Radio button field that allows you to select option(s)" />
 		</a>
-		<figcaption>The Radio button field interface</figcaption>
+		<figcaption>The Radio Button field interface</figcaption>
 	</figure>
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-radio-button-field-settings.png.png">
 			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-radio-button-field-settings.png" alt="List of settings shown when creating a Radio button field" />
 		</a>
-		<figcaption>The Radio button field settings</figcaption>
+		<figcaption>The Radio Button field settings</figcaption>
 	</figure>
 </div>
 
@@ -60,9 +60,10 @@ This example demonstrates how to display the selected value.
 ```
 
 ### Display value and label
-This example demonstrates how to load a selected value and label without using the ‘Format value’ setting.
+This example demonstrates how to load a selected value and label without using the _Format value_ setting.
 
-```<?php
+```
+<?php
 $field = get_field_object('color');
 $value = $field['value'];
 $label = $field['choices'][ $value ];
@@ -72,7 +73,7 @@ $label = $field['choices'][ $value ];
 ```
 
 ### Format value setting
-This example demonstrates how to load a selected value and label using the ‘Format value’ setting (set to ‘Both’).
+This example demonstrates how to load a selected value and label using the _Format value_ setting (set to `Both`).
 
 ```
 <?php

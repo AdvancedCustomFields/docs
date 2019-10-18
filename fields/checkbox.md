@@ -73,7 +73,7 @@ if( $colors ): ?>
 ```
 
 ### Display labels in a list
-This example demonstrates how to display the selected labels in an unordered list when "Return Format" is set to "Value".
+This example demonstrates how to display the selected labels in an unordered list when _Return Format_ is set to `Value`.
 ```
 <?php
 
@@ -91,7 +91,7 @@ if( $colors ): ?>
 <?php endif; ?>
 ```
 
-This example demonstrates how to display the selected labels in an unordered list when "Return Format" is set to "Both".
+This example demonstrates how to display the selected labels in an unordered list when _Return Format_ is set to `Both`.
 ```
 <?php
 $colors = get_field('colors');
@@ -135,4 +135,4 @@ if( $posts ) {
 ## Notes
 
 ### Save custom
-If using the [local JSON](https://www.advancedcustomfields.com/resources/local-json/) feature, any custom values saved to the field’s choices will not appear on page reload. This is because the JSON file will not be updated and will override any field settings found in the DB.
+If using the [local JSON](https://www.advancedcustomfields.com/resources/local-json/) feature, any custom values saved to the field’s choices will not appear on page reload. This is because the JSON file will not be updated and will override any field settings found in the database.

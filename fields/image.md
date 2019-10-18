@@ -48,7 +48,7 @@ The Image field allows an image to be uploaded and selected by using the native 
   Adds upload validation for specific file types. Enter a comma separated list to specify which file types are allowed or leave blank to accept all types.
 
 ## Template usage  
-The image field will return either an array, a string or an integer value depending on the *Return Value* set.
+The Image field will return either an array, a string or an integer value depending on the _Return Value_ set.
 
 ### Display image (ID)
 This example demonstrates how to display the selected image when using the `Image ID` return type. This example uses the [wp_get_attachment_image()](https://developer.wordpress.org/reference/functions/wp_get_attachment_image/) function to generate the image HTML.
@@ -115,7 +115,7 @@ if( $image ):
 ```
 
 ### Display image (URL)
-This example demonstrates how to display the selected image when using the 'Image URL' return type. This return type allows us to efficiently display a basic image but prevents us from loading any extra data about the image.
+This example demonstrates how to display the selected image when using the `Image URL` return type. This return type allows us to efficiently display a basic image but prevents us from loading any extra data about the image.
 ```
 <?php if( get_field('image') ): ?>
 	<img src="<?php the_field('image'); ?>" />

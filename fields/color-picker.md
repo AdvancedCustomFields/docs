@@ -5,7 +5,7 @@ group: jQuery
 ---
 
 ## Description
-The color picker field provides an interactive way to select a hex color string using [Iris](https://automattic.github.io/Iris/).
+The Color Picker field provides an interactive way to select a hex color string using [Iris](https://automattic.github.io/Iris/).
 
 ## Screenshots
 <div class="gallery">
@@ -13,25 +13,25 @@ The color picker field provides an interactive way to select a hex color string 
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-color-picker-interface.jpg">
 			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-color-picker-interface.jpg" alt="acf-user-field-interface" />
 		</a>
-		<figcaption>The color picker editor field interface</figcaption>
+		<figcaption>The Color Picker editor field interface</figcaption>
 	</figure>
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-color-picker-settings.png">
 			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-color-picker-settings.png" alt="acf-user-field-settings" />
 		</a>
-		<figcaption>The color picker editor field settings</figcaption>
+		<figcaption>The Color Picker editor field settings</figcaption>
 	</figure>
 </div>
 
 ## Settings
 - **Default Value**  
-  The default value initially loaded into the color picker when first editing the field’s value.
+  The default value initially loaded into the Color Picker when first editing the field’s value.
 
 ## Template usage
-The color picker field will return a string value containing the HEX color value including the prefix ‘#’. Below are examples using a color picker field named "color".
+The Color Picker field will return a string value containing the HEX color value including the prefix ‘#’. Below are examples using a Color Picker field named "color".
 
 ### Display value within inline styles
-This example demonstrates how to generate an inline style using a Color picker value.
+This example demonstrates how to generate an inline style using a Color Picker value.
 ```
 <div style="background-color:<?php the_field('color'); ?>">
 
@@ -39,7 +39,7 @@ This example demonstrates how to generate an inline style using a Color picker v
 ```
 
 ### Display value within style tags
-This example demonstrates how to generate a CSS class using a Color picker value.
+This example demonstrates how to generate a CSS class using a Color Picker value.
 ```
 <style type="text/css">
 .primary-background {
