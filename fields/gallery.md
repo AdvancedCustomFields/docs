@@ -5,7 +5,7 @@ group: Content
 ---
 
 ## Description
-The gallery field provides an interactive interface for managing a collection of attachments.
+The Gallery field provides an interactive interface for managing a collection of attachments.
 
 ## Screenshots
 <div class="gallery">
@@ -57,10 +57,10 @@ The gallery field provides an interactive interface for managing a collection of
   Adds upload validation for specific file types. Enter a comma separated list to specify which file types are allowed or leave blank to accept all types.
 
 ## Template usage  
-The gallery field will return an array of attachments where each attachment is either an array, a string or an integer value depending on the *Return Format* set.
+The Gallery field will return an array of attachments where each attachment is either an array, a string or an integer value depending on the _Return Format_ set.
 
 ### Display list of images
-This example demonstrates how to loop over a gallery field value and display a list of images. It uses the [wp_get_attachment_image()](https://developer.wordpress.org/reference/functions/wp_get_attachment_image/) function to generate the image HTML. The field in this example uses ID as the *Return Format*.
+This example demonstrates how to loop over a Gallery field value and display a list of images. It uses the [wp_get_attachment_image()](https://developer.wordpress.org/reference/functions/wp_get_attachment_image/) function to generate the image HTML. The field in this example uses `ID` as the _Return Format_.
 
 [tip]
 This function also generates the srcset attribute allowing for [responsive images](https://make.wordpress.org/core/2015/11/10/responsive-images-in-wordpress-4-4/)!
@@ -82,7 +82,7 @@ if( $images ): ?>
 ```
 
 ### Display list of images with custom HTML
-This example also demonstrates how to loop over a gallery field value and display a list of images. The field in this example uses Array as the *Return Format*.
+This example also demonstrates how to loop over a Gallery field value and display a list of images. The field in this example uses `Array` as the _Return Format_.
 ```
 <?php 
 $images = get_field('gallery');
@@ -101,7 +101,7 @@ if( $images ): ?>
 ```
 
 ### Display images in a slider
-This example demonstrates how to display the images from a Gallery field in the correct markup required for a WooThemes [Flexslider](http://www.woothemes.com/flexslider/) to work. The field in this example uses Array as the *Return Format*.
+This example demonstrates how to display the images from a Gallery field in the correct markup required for a WooThemes [Flexslider](http://www.woothemes.com/flexslider/) to work. The field in this example uses `Array` as the _Return Format_.
 ```
 <?php 
 $images = get_field('gallery');
@@ -129,7 +129,7 @@ if( $images ): ?>
 ```
 
 ### Create a WordPress Gallery
-This example demonstrates how to display the images from a Gallery field in a WordPress gallery by generating and rendering a gallery shortcode. The field in this example uses ID as the *Return Format*.
+This example demonstrates how to display the images from a Gallery field in a WordPress gallery by generating and rendering a gallery shortcode. The field in this example uses `ID` as the _Return Format_.
 
 ```
 <?php

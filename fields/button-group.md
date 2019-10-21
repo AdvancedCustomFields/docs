@@ -45,13 +45,13 @@ The Button Group field provides a neat UI for selecting a value.
 ## Template usage  
 
 ### Display value
-This example demonstrates how to display the selected value using the 'Return Format' setting 'Value'.
+This example demonstrates how to display the selected value using the _Return Format_ setting `Value`.
 ```
 <p>Color: <?php the_field('color'); ?></p>
 ```
 
 ### Display value and label
-This example demonstrates how to display the selected value and label using the 'Return Format' setting 'Both'.
+This example demonstrates how to display the selected value and label using the _Return Format_ setting `Both`.
 
 ```
 <?php

@@ -27,31 +27,31 @@ The Text field creates a basic text input, useful for storing single string valu
 - Formatting setting removed in version 5.0.0.
 
 ## Settings
-- **Default Value**
+- **Default Value**  
   The default value shown when creating a new post.
-
-- **Placeholder**
+  
+- **Placeholder**  
   Appears within input when no value exists.
-
-- **Prepend**
+  
+- **Prepend**  
   Adds a visual text element before the input.
-
-- **Append**
+  
+- **Append**  
   Adds a visual text element after the input.
-
-- **Character Limit**
+  
+- **Character Limit**  
   Limits the number of characters allowed.
 
 ## Template usage
 
 ### Display value
-This example demonstrates how to display a text field named "heading" within a `<h2>` tag.
+This example demonstrates how to display a Text field named "heading" within a `<h2>` tag.
 ```
 <h2><?php the_field('heading'); ?></h2>
 ```
 
 ### Load value
-This example demonstrates how to load the value of a text field named "confirm" and perform an action based on its value.
+This example demonstrates how to load the value of a Text field named "confirm" and perform an action based on its value.
 ```
 $confirm = get_field('confirm');
 if( $confirm === 'SEND_EMAIL' ) {

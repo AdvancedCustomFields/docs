@@ -5,7 +5,7 @@ group: Content
 ---
 
 ## Description
-The file field allows a file to be uploaded and selected by using the native WP media popup.
+The File field allows a file to be uploaded and selected by using the native WP media popup.
 
 ## Screenshots
 <div class="gallery">
@@ -45,9 +45,9 @@ The file field allows a file to be uploaded and selected by using the native WP 
   Adds upload validation for specific file types. Enter a comma separated list to specify which file types are allowed or leave blank for all types.
 
 ## Template usage
-The file field will return either an array, a string or an integer value depending on the `return value` set. Below are some examples of how you can use this data.
+The File field will return either an array, a string or an integer value depending on the _Return Value_ set. Below are some examples of how you can use this data.
 
-### Basic display (Array)
+### Basic display (array)
 This example demonstrates how to display the selected file when using the `array` return type. This return type allows us to easily access data such as `url` and `filename`.
 
 ```
@@ -58,7 +58,7 @@ if( $file ): ?>
 <?php endif; ?>
 ```
 
-### Advanced display (Array)
+### Advanced display (array)
 This example demonstrates how to display a custom link when using the `array` return type. This return type allows us to easily access data such as `url`, `title`, `type` and more.
 
 ```
