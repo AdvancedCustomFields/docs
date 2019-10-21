@@ -8,6 +8,16 @@
         "path": "actions\/acf-save_post.md"
     },
     {
+        "title": "Accordion",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "accordion",
+        "path": "fields\/accordion.md",
+        "group": "Layout",
+        "status": "draft"
+    },
+    {
         "title": "Button Group",
         "description": "",
         "category": "field-types",
@@ -63,6 +73,16 @@
         "group": "Content"
     },
     {
+        "title": "Flexible Content",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "flexible-content",
+        "path": "fields\/flexible-content.md",
+        "group": "Layout",
+        "status": "draft"
+    },
+    {
         "title": "Gallery",
         "description": "",
         "category": "field-types",
@@ -70,6 +90,16 @@
         "slug": "gallery",
         "path": "fields\/gallery.md",
         "group": "Content"
+    },
+    {
+        "title": "Google Map",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "google-map",
+        "path": "fields\/google-map.md",
+        "group": "jQuery",
+        "status": "draft"
     },
     {
         "title": "Image",
@@ -81,6 +111,16 @@
         "group": "Content"
     },
     {
+        "title": "Link",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "link",
+        "path": "fields\/link.md",
+        "group": "Relational",
+        "status": "draft"
+    },
+    {
         "title": "oEmbed",
         "description": "",
         "category": "field-types",
@@ -88,6 +128,16 @@
         "slug": "oembed",
         "path": "fields\/oembed.md",
         "group": "Content"
+    },
+    {
+        "title": "Page Link",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "page-link",
+        "path": "fields\/page-link.md",
+        "group": "Relational",
+        "status": "draft"
     },
     {
         "title": "Radio Button",
