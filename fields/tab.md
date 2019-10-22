@@ -32,7 +32,7 @@ When editing a field group, be aware that all fields following the Tab field (or
 
 ## Settings
 - **Placement**  
-  Changes the tab style from a top aligned row to a left aligned sidebar. The _left aligned_ option will be ignored if the field group appears in a table element (editing a user, attachment, taxonomy or field group label setting on left).
+  Changes the tab style from a top aligned row to a left aligned sidebar. The `left aligned` option will be ignored if the field group appears in a table element (editing a user, attachment, taxonomy or field group label setting on left).
   
 - **Endpoint**  
   Defines an endpoint for the previous Tab group. When used in combination with an empty field label, this field can be used as a tab stopper.
