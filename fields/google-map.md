@@ -245,7 +245,7 @@ This example demonstrates how to display multiple Google Map field values on the
 
 ## Notes
 
-## Rendering a hidden map
+### Rendering a hidden map
 Initializing a Google Map on a hidden element can lead to unexpected results when shown. To solve this problem, trigger a "resize" event on the map variable after the map element is visible.
 ```
 google.maps.event.trigger(map, 'resize');
