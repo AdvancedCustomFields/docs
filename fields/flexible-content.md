@@ -2,7 +2,6 @@
 title: Flexible Content
 category: field-types
 group: Layout
-status: draft
 ---
 
 ## Description
@@ -42,7 +41,7 @@ Using layouts and sub fields to design the available blocks, this field type act
 ## Template usage
 The Flexible Content field returns a multi-dimensional array containing the layouts and their sub field values.
 
-To loop over the layouts and access the sub field values, just use the [have_rows](https://www.advancedcustomfields.com/resources/functions/have_rows/), [the_row](https://www.advancedcustomfields.com/resources/functions/have_rows/), [get_sub_field](https://www.advancedcustomfields.com/resources/functions/get_sub_field/), and [the_sub_field](https://www.advancedcustomfields.com/resources/functions/the_sub_field/) functions.
+Accessing the value is done via the [have_rows](https://www.advancedcustomfields.com/resources/functions/have_rows/), [the_row](https://www.advancedcustomfields.com/resources/functions/have_rows/), [get_sub_field](https://www.advancedcustomfields.com/resources/functions/get_sub_field/), and [the_sub_field](https://www.advancedcustomfields.com/resources/functions/the_sub_field/) functions.
 
 ### Loop example
 This example demonstrates how to loop over a Flexible Content field value and access sub fields from different layouts.
