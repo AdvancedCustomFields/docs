@@ -96,8 +96,7 @@
         "keywords": [],
         "slug": "google-map",
         "path": "fields\/google-map.md",
-        "group": "jQuery",
-        "status": "draft"
+        "group": "jQuery"
     },
     {
         "title": "Image",

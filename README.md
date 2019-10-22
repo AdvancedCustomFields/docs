@@ -14,6 +14,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [File](https://github.com/AdvancedCustomFields/docs/blob/master/fields/file.md)
 - [Flexible Content](https://github.com/AdvancedCustomFields/docs/blob/master/fields/flexible-content.md)
 - [Gallery](https://github.com/AdvancedCustomFields/docs/blob/master/fields/gallery.md)
+- [Google Map](https://github.com/AdvancedCustomFields/docs/blob/master/fields/google-map.md)
 - [Image](https://github.com/AdvancedCustomFields/docs/blob/master/fields/image.md)
 - [Link](https://github.com/AdvancedCustomFields/docs/blob/master/fields/link.md)
 - [oEmbed](https://github.com/AdvancedCustomFields/docs/blob/master/fields/oembed.md)
