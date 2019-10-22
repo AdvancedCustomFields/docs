@@ -6,9 +6,9 @@ status: draft
 ---
 
 ## Description
-The Google Map field creates an interactive map with the ability to place a marker. It features a search input, location finder button and click/drag events to place the marker. The data saved and returned is an array containing the markers lat, lng, and address.
+The Google Map field provides an interactive map interface for selecting a location. This field type uses the Google Maps JS API to provide autocomplete searching, reverse geocoding lookup and an interactive marker.
 
-The Google Maps API has a daily limit on the number of sites able to use this free service. To lift this restriction, please register a Google API key following the steps documented later in this article.
+<badge>New</badge> The Google Map field now saves more data! See the Template usage section below for info.
 
 ## Screenshots
 <div class="gallery">
@@ -27,7 +27,8 @@ The Google Maps API has a daily limit on the number of sites able to use this fr
 </div>
 
 ## Changelog
-- Added `acf/fields/google_map/api` filter in version 4.3.9 (ACF) and 5.3.10 (ACF PRO)
+- Added more location data to the value in version 5.8.6.
+- Added `acf/fields/google_map/api` filter in version 4.3.9
 
 ## Settings
 - **Center**  
