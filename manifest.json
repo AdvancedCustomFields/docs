@@ -117,8 +117,7 @@
         "keywords": [],
         "slug": "link",
         "path": "fields\/link.md",
-        "group": "Relational",
-        "status": "draft"
+        "group": "Relational"
     },
     {
         "title": "oEmbed",

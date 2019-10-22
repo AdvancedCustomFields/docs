@@ -2,7 +2,6 @@
 title: Link
 category: field-types
 group: Relational
-status: draft
 ---
 
 ## Description
@@ -29,7 +28,7 @@ The Link field allows a link to be selected or defined (url, title, target) by u
 
 ## Settings
 - **Return value**  
-  Specifies the format of the returned data. Choose from Link Array (array or data) or Link URL (string).
+  Specifies the format of the returned data. Choose from Link Array (array of data) or Link URL (string).
 
 ## Template usage  
 The Link field will return either an array or string depending on the _return value_ setting. Below are some examples of how you can use this data.
@@ -38,9 +37,7 @@ The Link field will return either an array or string depending on the _return va
 This example demonstrates how to display the selected link when using the `Link Array` return type.
 ```
 <?php 
-
 $link = get_field('link');
-
 if( $link ): 
 	$link_url = $link['url'];
 	$link_title = $link['title'];
@@ -54,12 +51,8 @@ if( $link ):
 This example demonstrates how to display the selected link when using the `Link URL` return type.
 ```
 <?php 
-
 $link = get_field('link');
-
 if( $link ): ?>
-	
 	<a class="button" href="<?php echo esc_url( $link ); ?>">Continue Reading</a>
-
 <?php endif; ?>
 ```
