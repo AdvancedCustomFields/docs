@@ -135,8 +135,7 @@
         "keywords": [],
         "slug": "page-link",
         "path": "fields\/page-link.md",
-        "group": "Relational",
-        "status": "draft"
+        "group": "Relational"
     },
     {
         "title": "Radio Button",

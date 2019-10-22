@@ -2,13 +2,12 @@
 title: Page Link
 category: field-types
 group: Relational
-status: draft
 ---
 
 ## Description
-The Page Link field allows the selection of 1 or more posts, pages or custom post types.
+The Page Link field creates a drop-down list to select one or more posts, pages, CPTs or archive URLs from.
 
-This field is useful for easily linking to another post because it will return the post’s permalink. To get more data from the selected post, please use the [post object](https://www.advancedcustomfields.com/resources/post-object/) field.
+This field type returns only a URL string as the value making it convenient for links. To get more data from a selected post, please use the [post object](https://www.advancedcustomfields.com/resources/post-object/) field instead.
 
 ## Screenshots
 <div class="gallery">
@@ -38,7 +37,7 @@ This field is useful for easily linking to another post because it will return t
   Filters available posts via 1 or more taxonomies.
   
 - **Allow Null**  
-  Allows no value to be selected. If selected, the select list will begin with an empty choice labelled “- Select -“.
+  Allows the current selection to be cleared and an empty value to be saved.
   
 - **Allow Archives**  
   Includes post type archive URLs within the select list of options.
@@ -58,30 +57,15 @@ This example demonstrates how to display a selected page link value.
 This example demonstrates how to load and display multiple selected page link values.
 ```
 <?php 
-
 $urls = get_field('urls');
-
 if( $urls ): ?>
 <h3>Further reading</h3>
 <ul>
 	<?php foreach( $urls as $url ): ?>
 	<li>
-		<a href="<?php echo esc_url( $url ); ?>"><?php echo esc_attr( $url ); ?></a>
+		<a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $url ); ?></a>
 	</li>
 	<?php endforeach; ?>
 </ul>
-<?php endif; ?>
-```
-
-### Display additional link data
-This example demonstrates how to load the selected page link value in its raw form (`post_id`) and use this to load extra data about the post.
-```
-<?php 
-
-// Get value without formatting.
-$post_id = get_field('url', false, false);
-
-if( $post_id ): ?>
-<a href="<?php echo get_the_permalink( $post_id ); ?>"><?php echo get_the_title( $post_id ); ?></a>
 <?php endif; ?>
 ```

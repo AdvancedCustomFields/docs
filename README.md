@@ -15,6 +15,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [Image](https://github.com/AdvancedCustomFields/docs/blob/master/fields/image.md)
 - [Link](https://github.com/AdvancedCustomFields/docs/blob/master/fields/link.md)
 - [oEmbed](https://github.com/AdvancedCustomFields/docs/blob/master/fields/oembed.md)
+- [Page Link](https://github.com/AdvancedCustomFields/docs/blob/master/fields/page-link.md)
 - [Radio Button](https://github.com/AdvancedCustomFields/docs/blob/master/fields/radio-button.md)
 - [Range](https://github.com/AdvancedCustomFields/docs/blob/master/fields/range.md)
 - [Select](https://github.com/AdvancedCustomFields/docs/blob/master/fields/select.md)
