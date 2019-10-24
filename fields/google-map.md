@@ -7,7 +7,7 @@ group: jQuery
 ## Description
 The Google Map field provides an interactive map interface for selecting a location. This field type uses the Google Maps JS API to provide autocomplete searching, reverse geocoding lookup and an interactive marker.
 
-<b class="badge">Upcoming</b> The Google Map field saves more data in version 5.8.6!
+<b class="badge">New</b> The Google Map field saves more location data in version 5.8.6!
 
 ## Screenshots
 <div class="gallery">
@@ -59,7 +59,9 @@ add_action('acf/init', 'my_acf_init');
 ```
 
 ## Template usage
-The Google Map field returns an array of data for the selected location including address, lat and lng.
+The Google Map field returns an array of data for the selected location. The minimum data returned will include *address*, *lat* and *lng* values.
+
+<b class="badge">New</b> Since version 5.8.6, the minimum data will also include the current *zoom* level alongside optional data for *street_number*, *street_name*, *city*, *state*, *post_code* and *country*. Not all location results will return values for optional data keys, therefore it is important to first check if the data exists. Some optional data is also provided in a shortened format and is saved with a key suffix of "_short".
 
 To display the saved location into a Google Map, please use the helper code.
 
@@ -241,6 +243,32 @@ This example demonstrates how to display multiple Google Map field values on the
 	<?php endwhile; ?>
 	</div>
 <?php endif; ?>
+```
+
+### Display location address details
+<b class="badge">New</b> This example demonstrates how to display location address details. These details can be found in a value saved since version 5.6.8.
+```
+<?php 
+$location = get_field('location');
+if( $location ) {
+	
+	// Loop over segments and construct HTML.
+	$address = '';
+	foreach( array('street_number', 'street_name', 'city', 'state', 'post_code', 'country') as $i => $k ) {
+		if( isset( $location[ $k ] ) ) {
+			$address .= sprintf( '<span class="segment-%s">%s</span>, ', $k, $location[ $k ] );
+		}
+	}
+	
+	// Trim trailing comma.
+	$address = trim( $address, ', ' );
+	
+	// Display HTML.
+	echo '<p>' . $address . '.</p>';
+}
+```
+```
+<p>123, Foo Bar Street, Melbourne, Victoria, 3000, Australia.</p>
 ```
 
 ## Notes
