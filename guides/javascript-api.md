@@ -545,6 +545,20 @@ acf.add_filter('google_map_marker_args', function( args, field ){
 });
 ```
 
+### google_map_result
+This filter allows the google maps field value to be modified after an API request has been made and a result has been returned.
+```js
+acf.add_filter('google_map_result', function( result, geocoderResult, map, field ){
+	
+	// do something to result
+	
+	
+	// return
+	return result;
+			
+});
+```
+
 ### select2_args
 This filter allows the select2 settings to be customized for each select field before the select2 instance is created.
 ```js
