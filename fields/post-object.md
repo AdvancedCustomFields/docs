@@ -6,7 +6,7 @@ status: draft
 ---
 
 ## Description
-The Post Object field creates a select field with the chioces of pages, posts, and custom post types.
+The Post Object field creates a select field with the choices of pages, posts, and custom post types.
 
 ## Screenshots
 <div class="gallery">
@@ -62,7 +62,7 @@ if( $post_object ):
 <?php endif; ?>
 ```
 
-### Display data (multiple post objects) using `setup_postdata`
+### Display data (with setup_postdata)
 This example demonstrates how to loop through post objects (assuming this is a multi-select field). With this method, you can use all the normal WordPress functions as the $post object is [temporarily initialized](http://codex.wordpress.org/Template_Tags/get_posts#Reset_after_Postlists_with_offset) within the Loop.
 ```
 <?php
@@ -83,8 +83,8 @@ if( $post_objects ): ?>
 <?php endif; ?>
 ```
 
-### Display data (multiple post objects) without using `setup_postdata`
-This example demonstrates how to display data by looping through post objects (assuming this is a multi-select field). With this method, the $post obect is never changed, so all functions need a second parameter of the post ID in question.
+### Display data (without setup_postdata)
+This example demonstrates how to display data by looping through post objects (assuming this is a multi-select field). With this method, the $post object is never changed, so all functions need a second parameter of the post ID in question.
 ```
 <?php
 
