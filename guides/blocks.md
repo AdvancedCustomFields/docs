@@ -137,7 +137,7 @@ if( !empty($block['align']) ) {
 	$className .= ' align' . $block['align'];
 }
 
-// Load values and assing defaults.
+// Load values and assign defaults.
 $text = get_field('testimonial') ?: 'Your testimonial here...';
 $author = get_field('author') ?: 'Author name';
 $role = get_field('role') ?: 'Author role';
