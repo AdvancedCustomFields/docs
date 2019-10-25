@@ -63,7 +63,7 @@ if( $post_object ):
 ```
 
 ### Display data (with setup_postdata)
-This example demonstrates how to loop through post objects (assuming this is a multi-select field). With this method, you can use all the normal WordPress functions as the $post object is [temporarily initialized](http://codex.wordpress.org/Template_Tags/get_posts#Reset_after_Postlists_with_offset) within the Loop.
+This example demonstrates how to loop through post objects (assuming this is a multi-select field). With this method, you can use all the normal WordPress functions as the `$post` object is [temporarily initialized](http://codex.wordpress.org/Template_Tags/get_posts#Reset_after_Postlists_with_offset) within the Loop.
 ```
 <?php
 
