@@ -37,7 +37,7 @@ The Taxonomy field allows the selection of one or more taxonomy terms. Not only 
   
 - **Allow Null**  
   Allows no value to be selected.
-
+  
 - **Create Terms**  
   Allows new terms to be created whilst editing.
   
@@ -46,12 +46,12 @@ The Taxonomy field allows the selection of one or more taxonomy terms. Not only 
   
 - **Load Terms**  
   Loads value from post's terms.
-
+  
 - **Return Value**  
   Specifies the format of the returned data. Choose from Term Object or Term ID.
 
 ## Template usage  
-The Taxonomy field will return one or more values (objects or IDs) depending on the `Return Value` setting. Below are some examples of how you can use this data.
+The Taxonomy field will return one or more values (objects or IDs) depending on the _Return Value_ setting. Below are some examples of how you can use this data.
 
 ### Display data (single value)
 This example demonstrates how to get and display a single term object. This would imply that your field type setting is radio button or select.
