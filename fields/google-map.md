@@ -146,7 +146,7 @@ function initMarker( $marker, map ) {
 
 	// Create marker instance.
 	var marker = new google.maps.Marker({
-		position : latlng,
+		position : latLng,
 		map: map
 	});
 
