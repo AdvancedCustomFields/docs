@@ -2,11 +2,10 @@
 title: Taxonomy
 category: field-types
 group: Relational
-status: draft
 ---
 
 ## Description
-The Taxonomy field allows the selection of one or more taxonomy terms. Not only will this field save its selection as meta data, but you can also select an option to save the ‘post to term’ relationship data for `WP_Query` taxonomy queries.
+The Taxonomy field allows the selection of one or more taxonomy terms.
 
 ## Screenshots
 <div class="gallery">
@@ -33,88 +32,71 @@ The Taxonomy field allows the selection of one or more taxonomy terms. Not only 
   Selects the taxonomy you wish to select term(s) from.
   
 - **Appearance**  
-  Selects the type of interface (checkbox, multi-select, radio buttons, select).
+  Selects the type of interface displayed (checkbox, multi-select, radio buttons, select).
   
 - **Allow Null**  
-  Allows no value to be selected.
+  Allows the current selection to be cleared and an empty value to be saved.
   
 - **Create Terms**  
   Allows new terms to be created whilst editing.
   
 - **Save Terms**  
-  Connects selected terms to the post.
+  Connects selected terms to the post object.
   
 - **Load Terms**  
-  Loads value from post's terms.
+  Loads selected terms from the post object.
   
 - **Return Value**  
-  Specifies the format of the returned data. Choose from Term Object or Term ID.
+  Specifies the format of the returned data. Choose from Term Object (WP_Term) or Term ID (int).
 
 ## Template usage  
 The Taxonomy field will return one or more values (objects or IDs) depending on the _Return Value_ setting. Below are some examples of how you can use this data.
 
-### Display data (single value)
+### Display single value
 This example demonstrates how to get and display a single term object. This would imply that your field type setting is radio button or select.
 ```
 <?php 
-
 $term = get_field('taxonomy_field_name');
-
 if( $term ): ?>
-
     <h2><?php echo esc_html( $term->name ); ?></h2>
     <p><?php echo esc_html( $term->description ); ?></p>
-
 <?php endif; ?>
 ```
 
-### Display data (multiple values)
+### Display multiple values
 This example demonstrates how to get and loop over multiple selected term objects. This would imply that your field type setting is checkbox or multi-select.
 ```
 <?php 
-
 $terms = get_field('taxonomy_field_name');
-
 if( $terms ): ?>
-
     <ul>
-
     <?php foreach( $terms as $term ): ?>
-
         <h2><?php echo esc_html( $term->name ); ?></h2>
         <p><?php echo esc_html( $term->description ); ?></p>
         <a href="<?php echo esc_url( get_term_link( $term ) ); ?>">View all '<?php echo esc_html( $term->name ); ?>' posts</a>
-
     <?php endforeach; ?>
-
     </ul>
-
 <?php endif; ?>
 ```
 
-### Get field from selected term
-This example demonstrates how to load a custom field value from the `$term` object. Passing the `$term` object as the `$post_id` parameter was introduced in version 4.3.3. Prior to this, you must construct a `post_id` value as described in [this tutorial](https://www.advancedcustomfields.com/resources/get-values-from-a-taxonomy-term/).
+### Display values from a selected term
+The Advanced Custom Fields plugin can be used to [add custom fields to taxonomy terms](https://www.advancedcustomfields.com/resources/adding-fields-taxonomy-term/). Building on this, the following examples demonstrates how to load a custom field value from a selected term value.
 ```
 <?php 
-
 $term = get_field('taxonomy_field_name');
-
 if( $term ): ?>
-
-    <h2><?php echo esc_html( $term->name ); ?></h2>
-    <p><?php echo esc_html( $term->description ); ?></p>
-    <p>Color: <?php the_field('color', $term); ?></p>
-
+    <h2>Term name: <?php echo esc_html( $term->name ); ?></h2>
+    <p>Term color: <?php the_field('color', $term); ?></p>
 <?php endif; ?>
 ```
 
 ## Notes
 
-### Customization of Query
-The Taxonomy field contains filters that allow for further customization by modifying the `$args` variable used to query the database. The filter needed will shift depending on the _Appearance_ setting of your Taxonomy field.
-
-For settings Select and Multi Select, please use the [acf/fields/taxonomy/query](https://www.advancedcustomfields.com/resources/acf-fields-taxonomy-query/) filter.
-For settings Checkbox and Radio, please use the [acf/fields/taxonomy/wp_list_categories](https://www.advancedcustomfields.com/resources/acf-fields-taxonomy-wp_list_categories/) filter.
+### Customizing query args
+The query arguments used to find and display taxonomy terms can be customized via one of the following filters depending on the *Appearance* setting of your Taxonomy field.
+  
+For settings *Select* and *Multi Select*, use the [acf/fields/taxonomy/query](https://www.advancedcustomfields.com/resources/acf-fields-taxonomy-query/) filter.  
+For settings *Checkbox* and *Radio*, use the [acf/fields/taxonomy/wp_list_categories](https://www.advancedcustomfields.com/resources/acf-fields-taxonomy-wp_list_categories/) filter.
 
 ### Customization of Text
-To customize the text displayed for each taxonomy term item, please use the [acf/fields/taxonomy/result](https://www.advancedcustomfields.com/resources/acf-fields-taxonomy-result/).
+The text displayed for each taxonomy term can be customized via the [acf/fields/taxonomy/result](https://www.advancedcustomfields.com/resources/acf-fields-taxonomy-result/) filter.

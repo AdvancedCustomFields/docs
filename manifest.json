@@ -215,8 +215,7 @@
         "keywords": [],
         "slug": "taxonomy",
         "path": "fields\/taxonomy.md",
-        "group": "Relational",
-        "status": "draft"
+        "group": "Relational"
     },
     {
         "title": "Text",

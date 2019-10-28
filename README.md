@@ -25,6 +25,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [Range](https://github.com/AdvancedCustomFields/docs/blob/master/fields/range.md)
 - [Select](https://github.com/AdvancedCustomFields/docs/blob/master/fields/select.md)
 - [Tab](https://github.com/AdvancedCustomFields/docs/blob/master/fields/tab.md)
+- [Taxonomy](https://github.com/AdvancedCustomFields/docs/blob/master/fields/taxonomy.md)
 - [Text](https://github.com/AdvancedCustomFields/docs/blob/master/fields/text.md)
 - [Text Area](https://github.com/AdvancedCustomFields/docs/blob/master/fields/textarea.md)
 - [True / False](https://github.com/AdvancedCustomFields/docs/blob/master/fields/true-false.md)
