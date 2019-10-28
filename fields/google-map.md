@@ -183,7 +183,7 @@ function centerMap( map ) {
 
 	// Create map boundaries from all map markers.
 	var bounds = new google.maps.LatLngBounds();
-	map.markers.forEach(function(){
+	map.markers.forEach(function( marker ){
 		bounds.extend({
 			lat: marker.position.lat(),
 			lng: marker.position.lng()
