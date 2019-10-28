@@ -99,6 +99,16 @@
         "group": "jQuery"
     },
     {
+        "title": "Group",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "group",
+        "path": "fields\/group.md",
+        "group": "Layout",
+        "status": "draft"
+    },
+    {
         "title": "Image",
         "description": "",
         "category": "field-types",
@@ -135,6 +145,16 @@
         "group": "Relational"
     },
     {
+        "title": "Post Object",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "post-object",
+        "path": "fields\/post-object.md",
+        "group": "Relational",
+        "status": "draft"
+    },
+    {
         "title": "Radio Button",
         "description": "",
         "category": "field-types",
@@ -153,6 +173,26 @@
         "group": "Basic"
     },
     {
+        "title": "Relationship",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "relationship",
+        "path": "fields\/relationship.md",
+        "group": "Relational",
+        "status": "draft"
+    },
+    {
+        "title": "Repeater",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "repeater",
+        "path": "fields\/repeater.md",
+        "group": "Layout",
+        "status": "draft"
+    },
+    {
         "title": "Select",
         "description": "",
         "category": "field-types",
@@ -160,6 +200,26 @@
         "slug": "select",
         "path": "fields\/select.md",
         "group": "Choice"
+    },
+    {
+        "title": "Tab",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "tab",
+        "path": "fields\/tab.md",
+        "group": "Layout",
+        "status": "draft"
+    },
+    {
+        "title": "Taxonomy",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "taxonomy",
+        "path": "fields\/taxonomy.md",
+        "group": "Relational",
+        "status": "draft"
     },
     {
         "title": "Text",
