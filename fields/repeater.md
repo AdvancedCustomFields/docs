@@ -107,24 +107,6 @@ This example demonstrates how to use the [get_sub_field](https://www.advancedcus
 <?php endif; ?>
 ```
 
-### Loop example (before version 4.3.0)
-Prior to version 4.3.0, a function called `has_sub_field` was available (and still is) to loop through the rows of data. The one key difference to this function is you cannot use it within an `if` statement.
-```
-<?php if(get_field('repeater_field_name')): ?>
-
-    <ul>
-
-    <?php while(has_sub_field('repeater_field_name')): ?>
-
-        <li>sub_field_1 = <?php the_sub_field('sub_field_1'); ?>, sub_field_2 = <?php the_sub_field('sub_field_2'); ?>, etc</li>
-
-    <?php endwhile; ?>
-
-    </ul>
-
-<?php endif; ?>
-```
-
 ### Foreach Loop
 This example demonstrates how you can use [get_field](https://www.advancedcustomfields.com/resources/functions/get_field/) function to return all the row data for a repeater field. This is useful for querying the data for a specific row.
 ```
