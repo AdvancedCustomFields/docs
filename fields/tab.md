@@ -2,7 +2,6 @@
 title: Tab
 category: field-types
 group: Layout
-status: draft
 ---
 
 ## Description
@@ -29,7 +28,7 @@ When editing a field group, be aware that all fields following the Tab field (or
 ## Changelog
 - Added `Placement` setting in version 5.1.7.
 - Added `Endpoint` setting in version 5.2.8.
-- Added functionality within a Repeater or Flexible Content field in version 5.0.0.
+- Added sub field compatibility in version 5.0.0.
 
 ## Settings
 - **Placement**  
