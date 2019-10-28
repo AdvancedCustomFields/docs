@@ -6,7 +6,7 @@ status: draft
 ---
 
 ## Description
-The Post Object field creates a select field with the choices of pages, posts, and custom post types.
+The Post Object field creates a drop-down list to select one or more posts, pages or CPTs from.
 
 ## Screenshots
 <div class="gallery">
@@ -26,17 +26,22 @@ The Post Object field creates a select field with the choices of pages, posts, a
 
 ## Settings
 - **Post Type**  
-  Filters available posts via 1 or more post type.
+  Filters the selectable results via 1 or more post type.
   
 - **Filter from Taxonomy**  
-  Filters available posts via 1 or more taxonomy.
+  Filters the selectable results via 1 or more taxonomy term.
   
 - **Allow Null?**  
   Allows the current selection to be cleared and an empty value to be saved.
-
+  
 - **Multiple**  
-  Allows you to select more than one choice.
-
+  Allows you to select more than one choice. You may also drag/drop reorder the selected choices.
+  
+- **Return Format**
+  Specifies the returned value format. Defaults to 'object'.  
+  **Post Object** will return the WP_Post object.  
+  **Post ID** will return the post ID.  
+  
 ## Template usage  
 The Post Object field will return either a single post object (using [get_post](https://codex.wordpress.org/Function_Reference/get_post)) or an array of post objects (using [get_posts](https://codex.wordpress.org/Function_Reference/get_posts).
 
