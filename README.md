@@ -11,6 +11,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [Checkbox](https://github.com/AdvancedCustomFields/docs/blob/master/fields/checkbox.md)
 - [Color Picker](https://github.com/AdvancedCustomFields/docs/blob/master/fields/color-picker.md)
 - [Date Picker](https://github.com/AdvancedCustomFields/docs/blob/master/fields/date-picker.md)
+- [Date Time Picker](https://github.com/AdvancedCustomFields/docs/blob/master/fields/date-time-picker.md)
 - [File](https://github.com/AdvancedCustomFields/docs/blob/master/fields/file.md)
 - [Flexible Content](https://github.com/AdvancedCustomFields/docs/blob/master/fields/flexible-content.md)
 - [Gallery](https://github.com/AdvancedCustomFields/docs/blob/master/fields/gallery.md)

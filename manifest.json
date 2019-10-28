@@ -59,8 +59,7 @@
         "keywords": [],
         "slug": "date-time-picker",
         "path": "fields\/date-time-picker.md",
-        "group": "jQuery",
-        "status": "draft"
+        "group": "jQuery"
     },
     {
         "title": "File",
