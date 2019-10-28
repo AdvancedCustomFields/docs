@@ -2,7 +2,6 @@
 title: Group
 category: field-types
 group: Layout
-status: draft
 ---
 
 ## Description
@@ -34,7 +33,7 @@ The Group field uses both the parent and child field names when saving and loadi
   Defines the sub fields which will appear within this group.
   
 - **Layout**  
-  Defines the layout style used to render the field interface. Available settings are:  
+  Defines the layout style used to render the field interface.  
   **Block**: Sub fields are displayed in blocks, one after the other.  
   **Table**: Sub fields are displayed in a single row table. Labels will appear in the table header.  
   **Row**: Sub fields are displayed in a two column table. Labels will appear in the first column.  

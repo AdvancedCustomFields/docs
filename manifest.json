@@ -105,8 +105,7 @@
         "keywords": [],
         "slug": "group",
         "path": "fields\/group.md",
-        "group": "Layout",
-        "status": "draft"
+        "group": "Layout"
     },
     {
         "title": "Image",
