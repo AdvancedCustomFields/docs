@@ -45,7 +45,7 @@ The Gallery field provides an interactive interface for managing a collection of
   The minimum number of attachments required for field validation.
   
 - **Maximum Selection**  
-  The maximum number of attachments required for field validation.
+  The maximum number of attachments allowed for field validation.
   
 - **Minimum**  
   Adds upload validation for minimum width in pixels (integer), height in pixels (integer) and filesize in MB (integer). The filesize may also be entered as a string containing the unit. eg. `’400 KB’`.

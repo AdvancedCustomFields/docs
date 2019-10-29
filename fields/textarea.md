@@ -30,6 +30,12 @@ The Textarea field creates a basic textarea input, useful to store simple (unsty
 ## Settings
 - **Default Value**  
   The default value shown when creating a new post.
+
+- **Placeholder Text**  
+  Appears within input when no value exists.
+
+- **Character Limit**  
+  Limits the number of characters allowed.
   
 - **Rows**  
   Sets the height of this field.
