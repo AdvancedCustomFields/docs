@@ -29,6 +29,9 @@ This is one of the most useful fields for editing content as it allows for both 
 - Added Visual / Text options for `Tabs` in version 5.0.0
 
 ## Settings
+- **Default Value**  
+  The default value shown when creating a new post.
+  
 - **Tabs**  
   Selects which modes are shown to the user. Each Wysiwyg editor contains a visual and text mode. Choose from Visual and Text, Visual Only, or Text Only.
   
