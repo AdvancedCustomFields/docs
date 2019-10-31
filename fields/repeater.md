@@ -71,8 +71,8 @@ endif;
 ?>
 ```
 
-### Store variables within Loop
-This example demonstrates how to use the [get_sub_field](https://www.advancedcustomfields.com/resources/functions/get_sub_field/) function to store variables within the Loop.
+### Display a slider
+This example demonstrates how to use the [get_sub_field](https://www.advancedcustomfields.com/resources/functions/get_sub_field/) function to generate HTML for a basic slider.
 ```
 <?php if( have_rows('repeater_field_name') ): ?>
 
@@ -111,7 +111,9 @@ This example demonstrates how to use the [get_sub_field](https://www.advancedcus
 ```
 
 ### Foreach Loop
-This example demonstrates how you can use [get_field](https://www.advancedcustomfields.com/resources/functions/get_field/) function to return all the row data for a repeater field. This is useful for querying the data for a specific row.
+This example demonstrates how you can use [get_field](https://www.advancedcustomfields.com/resources/functions/get_field/) function to return all the row data for a repeater field.
+
+This is useful for querying the data for a specific row.
 ```
 <?php 
 
