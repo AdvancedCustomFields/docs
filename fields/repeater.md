@@ -35,7 +35,10 @@ The Repeater field provides a way to create a set of sub fields which can be rep
   Sets a limit on how many rows of data are allowed.
   
 - **Layout**  
-  Changes the layout style of the appearance of the sub fields.
+  Defines the layout style of the appearance of the sub fields.
+  _Block_: Sub fields are displayed in blocks, one after the other.  
+  _Table_: Sub fields are displayed in a single row table. Labels will appear in the table header.  
+  _Row_: Sub fields are displayed in a two column table. Labels will appear in the first column.  
   
 - **Button Label**  
   The text shown in the 'Add Row' button.
