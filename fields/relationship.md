@@ -30,11 +30,14 @@ The Relationship field creates a more stylized version of the Post Object field.
   
 - **Filter by Taxonomy**  
   Filters available posts via 1 or more taxonomy.
-
+  
 - **Filters**  
-  Selects the search filter methods displayed. 
-
-- **Minimum Posts**
+  Selects the search filter methods displayed.
+  
+- **Elements**  
+  Selects elements to display within each result.
+  
+- **Minimum Posts**  
   Sets a limit on how many posts are required.
   
 - **Maximum Posts**  
@@ -42,8 +45,8 @@ The Relationship field creates a more stylized version of the Post Object field.
   
 - **Return Format**  
   Specifies the returned value format. Defaults to 'object'.  
-  **Post Object** will return the WP_Post object.  
-  **Post ID** will return the post ID.  
+  _Post Object_ will return the WP_Post object.  
+  _Post ID_ will return the post ID.  
 
 ## Template usage  
 The Relationship field will return an array of post objects in the same way that the [get_posts](http://codex.wordpress.org/Template_Tags/get_posts) function would.
