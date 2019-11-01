@@ -24,9 +24,6 @@ By default, the _parent_slug_ setting is set to ‘acf-options’ (the default o
 
 [See list of available parameters](https://www.advancedcustomfields.com/resources/acf_add_options_page/)
 
-## Return
-*(array)* The validated and final page settings. This is useful to find the page's menu_slug and use it later when adding child options pages. 
-
 ## Examples
 
 ### Default options sub page
@@ -48,14 +45,14 @@ This example demonstrates how to create a customized options sub page and store 
 ```
 if( function_exists('acf_add_options_page') ) {
   
-  // Add parent
+  // Add parent.
   $parent = acf_add_options_page(array(
     'page_title'  => 'Theme General Settings',
     'menu_title'  => 'Theme Settings',
     'redirect'    => false,
   ));
   
-  // Add sub page
+  // Add sub page.
   acf_add_options_sub_page(array(
     'page_title'  => 'Social Settings',
     'menu_title'  => 'Social',
