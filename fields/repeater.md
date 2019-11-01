@@ -111,19 +111,17 @@ This example demonstrates how to use the [get_sub_field](https://www.advancedcus
 ```
 
 ### Foreach Loop
-This example demonstrates how you can use [get_field](https://www.advancedcustomfields.com/resources/functions/get_field/) function to return all the row data for a repeater field.
+This example demonstrates how you can use [get_field](https://www.advancedcustomfields.com/resources/functions/get_field/) function to return all the row data for a Repeater field formatted in a list.
 
 This is useful for querying the data for a specific row.
 ```
 <?php 
 
 $rows = get_field('repeater_field_name');
-if($rows)
-{
+if( $rows ) {
     echo '<ul>';
 
-    foreach($rows as $row)
-    {
+    foreach( $rows as $row ) {
         echo '<li>sub_field_1 = ' . $row['sub_field_1'] . ', sub_field_2 = ' . $row['sub_field_2'] .', etc</li>';
     }
 
