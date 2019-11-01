@@ -48,7 +48,7 @@ This example demonstrates how to query posts for all stores that are open.
 
 It assumes a custom post type called 'store' exists with a custom field for each day's open and close time in the following naming convention: 'monday_open_time', 'monday_close_time', 'tuesday_open_time', etc.
 
-When working with the [meta_query array](https://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters), remember that WordPress reads this as `$meta $compare $value` (‘monday_open_time’ < $time)
+When working with the [meta_query array](https://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters), remember that WordPress reads this as `$meta $compare $value` (eg. ‘monday_open_time’ < $time)
 ```
 <?php
 

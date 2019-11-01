@@ -33,13 +33,13 @@ The Clone field may be used in one of two ways. It can replace itself with the s
   Defines fields you would like to clone.
   
 - **Display**  
-  Specifies the style used to render clone fields.
-  _Seamless_: Completely replaces the clone field with selected fields. Useful to re-use fields within a Repeater or Flexible Content field.
+  Specifies the style used to render clone fields.  
+  _Seamless_: Completely replaces the clone field with selected fields. Useful to re-use fields within a Repeater or Flexible Content field.  
   _Group_: Displays selected fields within a group. Useful to re-use an existing group containing 'button' settings, as seen in following examples.
   
 - **Layout**  
   Defines the layout style used to render the field interface.  
-  _Block_: Fields are displayed in blocks, one after the other. Labels are top aligned. 
+  _Block_: Fields are displayed in blocks, one after the other. Labels are top aligned.  
   _Table_: Fields are displayed in a table with each field in its own column. Labels will appear in the table header.  
   _Row_: Fields are displayed in a two column table. Labels will appear in the first column.  
   
