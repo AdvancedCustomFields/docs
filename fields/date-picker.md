@@ -51,7 +51,7 @@ This example demonstrates how to convert a string date value into a DateTime obj
 $date_string = get_field('date');
 
 // Create DateTime object from value (formats must match).
-$date = DateTime::createFromFormat('Ymd', date_string);
+$date = DateTime::createFromFormat('Ymd', $date_string);
 
 // Output current date in custom format.
 ?>
