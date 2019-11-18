@@ -6,11 +6,9 @@ status: draft
 ---
 
 ## Description
-The Clone field allows you to select and display existing fields. Rather than duplicating fields in the database, it loads and displays the selected fields at run-time.
+The Clone field allows you to re-use existing fields across multiple field groups. Rather than duplicating fields in the database, it loads and displays the selected fields at run-time.
 
-By selecting one (or more) field groups, it is possible to load in ‘module’ groups. A good example of this can be seen in the screenshots below where a single field group is created for 'Button' information. This field group is then ‘cloned’ when a button is needed.
-
-The Clone field may be used in one of two ways. It can replace itself with the selected fields (seamless) or display the selected fields as a group of sub fields.
+This field may be displayed in one of two ways. It can either replace itself with the selected fields (seamless) or display the selected fields as a group of sub fields. These two display types, along with the ability to customise the name of cloned fields, makes this field an extremely versatile tool for modular theme development.
 
 ## Screenshots
 <div class="gallery">
@@ -30,7 +28,7 @@ The Clone field may be used in one of two ways. It can replace itself with the s
 
 ## Settings
 - **Fields**  
-  Defines fields you would like to clone.
+  Defines fields you would like to clone. Select specific fields, or all fields from a specific field group.
   
 - **Display**  
   Specifies the style used to render clone fields.  
@@ -44,7 +42,7 @@ The Clone field may be used in one of two ways. It can replace itself with the s
   _Row_: Fields are displayed in a two column table. Labels will appear in the first column.  
   
 - **Prefix Field Labels**  
-  Modifies all selected field labels and prefixes the current clone field's label. Useful when using the `Seamless` display. You could name your clone field 'hero' and have it prefixed to all selected fields like 'Hero Button Text', 'Hero Button URL', etc.
+  Modifies all selected field labels and prefixes the current clone field's label. Useful when using the `Seamless` display. You could name your clone field 'Hero' and have it prefixed to all selected fields like 'Hero Button Text', 'Hero Button URL', etc.
   
 - **Prefix Field Names**
   Modifies field's name (used to save/load values) Useful when using the `Group` display. You could clone a group multiple times on one edit screen but have them save data with different names. Eg. 'hero_button_text', 'welcome_button_text', etc.
@@ -57,75 +55,58 @@ Loading the value of a cloned field is the same as loading a normal field. If us
 
 The following examples use a clone field called 'main_button' which is cloning a field group called 'Button'. The 'Button' field group contains 2 fields called 'text' and 'url'.
 
-### Load value
-This example demonstrates how to load a Clone field value with the following default settings.
-
-Note that these settings will essentially replace the clone field with the selected fields:
-  - Name: main_button
-  - Display: seamless
-  - Prefix Names: no
-  - Fields: A field group called 'Button' described above
+### Loading cloned values
+This example demonstrates how to load a Clone field value with the following default settings:
+  - **Name:** main_button
+  - **Display:** seamless
+  - **Prefix Names:** no
+  - **Fields:** A field group called 'Button' described above
 
 ```
-<?php 
-    
+<?php
 $text = get_field('text');
 $url = get_field('url');
-
-?>
 ```
 
-### Prefix Field Names
-This example demonstrates how to load a Clone field value with the following 'group' settings. Note that these settings will render the 'button' fields within a group and prefix the field names. All values will be saved / loaded with the name prefix 'main_button_'.
-  - Name: main_button
-  - Display: group
-  - Prefix Names: yes
-  - Fields: A field group called 'Button' described above
+### Loading prefixed cloned values
+This example demonstrates how to load a Clone field value with the following 'prefixed group' settings:
+  - **Name:** main_button
+  - **Display:** group
+  - **Prefix Names:** yes
+  - **Fields:** A field group called 'Button' described above
 ```
 <?php 
 
+// Load individual values.
 $text = get_field('main_button_text');
 $url = get_field('main_button_url');
 
-?>
-```
-Using the 'Group' display setting will allow ACF to load the Clone field values as an array like so.
-```
-<?php 
-
+// Load values as a group.
 $button = get_field('main_button');
-
 $text = $button['text'];
 $url = $button['url'];
-
-?>
 ```
 
-### Using Clones within a Repeater
-Clone fields may be used within a Repeater or Flexible Content field. This example demonstrates using the 'main_button' Clone field from previously examples within a Repeater field.
+### Cloned fields within a Repeater
+Clone fields may be used as a sub-field within a Repeater or Flexible Content field. This example demonstrates using the 'main_button' Clone field from previously examples within a Repeater field.
 ```
 <?php 
-
 if( have_rows('slides') ) {
-    
     while( have_rows('slides') ) {
-
-        // Increment row.
         the_row();
-
+		
+		// Load clone field as a group.
         $button = get_sub_field('button');
 
-        // Do something.
-
+        // Do something...
     }
 }
-?>
 ```
 
 ## Notes
 
 ### Limitations
-The Clone field contains a few limitations. These are found in edge cases when using Clo
+The Clone field contains a few limitations.
 
 1. Multiple cloned sub fields
 A cloned sub field may not be able to save its value if it exists next to another instance of itself. For example, imagine a repeater field (called 'Row') containing 2 clone fields both cloning in the same field (called ‘Cell’). Even if both clone fields use the _Prefix Name_ setting to make each ‘Cell’ have a unique name, they both use the same `field_key`, so they will override each other during save.
