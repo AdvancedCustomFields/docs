@@ -2,7 +2,6 @@
 title: Time Picker
 category: field-types
 group: jQuery
-status: draft
 ---
 
 ## Description

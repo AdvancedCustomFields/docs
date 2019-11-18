@@ -35,6 +35,16 @@
         "group": "Choice"
     },
     {
+        "title": "Clone",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "clone",
+        "path": "fields\/clone.md",
+        "group": "Layout",
+        "status": "draft"
+    },
+    {
         "title": "Color Picker",
         "description": "",
         "category": "field-types",
@@ -236,6 +246,15 @@
         "group": "Basic"
     },
     {
+        "title": "Time Picker",
+        "description": "",
+        "category": "field-types",
+        "keywords": [],
+        "slug": "time-picker",
+        "path": "fields\/time-picker.md",
+        "group": "jQuery"
+    },
+    {
         "title": "True \/ False",
         "description": "",
         "category": "field-types",
@@ -269,6 +288,15 @@
         "keywords": [],
         "slug": "acf_add_options_page",
         "path": "functions\/acf_add_options_page.md"
+    },
+    {
+        "title": "acf_add_options_sub_page()",
+        "description": "Add a global options sub page to the WordPress dashboard.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "acf_add_options_sub_page",
+        "path": "functions\/acf_add_options_sub_page.md",
+        "status": "draft"
     },
     {
         "title": "acf_register_block_type()",
