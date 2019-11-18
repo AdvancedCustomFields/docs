@@ -32,16 +32,16 @@ The Relationship field creates a more stylized version of the Post Object field.
   Filters available posts via 1 or more taxonomy.
   
 - **Filters**  
-  Selects the search filter methods displayed.
+  Specifies which filters are displayed.
   
 - **Elements**  
-  Selects elements to display within each result.
+  Specifies which result elements are displayed.
   
 - **Minimum Posts**  
   Sets a limit on how many posts are required.
   
 - **Maximum Posts**  
-  Sets a limit on how many posts are allowed. Leave field blank or set to `-1` for infinite selections.
+  Sets a limit on how many posts are allowed.
   
 - **Return Format**  
   Specifies the returned value format. Defaults to 'object'.  
