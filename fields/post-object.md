@@ -25,13 +25,13 @@ The Post Object field creates a drop-down list to select one or more posts, page
 </div>
 
 ## Settings
-- **Post Type**  
+- **Filter by Post Type**  
   Filters the selectable results via 1 or more post type.
   
-- **Filter from Taxonomy**  
+- **Filter by Taxonomy**  
   Filters the selectable results via 1 or more taxonomy term.
   
-- **Allow Null?**  
+- **Allow Null**  
   Allows the current selection to be cleared and an empty value to be saved.
   
 - **Multiple**  

@@ -34,9 +34,9 @@ The Group field uses both the parent and child field names when saving and loadi
   
 - **Layout**  
   Defines the layout style used to render the field interface.  
-  **Block**: Sub fields are displayed in blocks, one after the other.  
-  **Table**: Sub fields are displayed in a single row table. Labels will appear in the table header.  
-  **Row**: Sub fields are displayed in a two column table. Labels will appear in the first column.  
+  _Block_: Sub fields are displayed in blocks, one after the other.  
+  _Table_: Sub fields are displayed in a single row table. Labels will appear in the table header.  
+  _Row_: Sub fields are displayed in a two column table. Labels will appear in the first column.  
 
 ## Template Usage
 The Group field field returns an array containing each sub field's value in a `name => value` format.

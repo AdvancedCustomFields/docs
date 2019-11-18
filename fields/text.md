@@ -30,7 +30,7 @@ The Text field creates a basic text input, useful for storing single string valu
 - **Default Value**  
   The default value shown when creating a new post.
   
-- **Placeholder**  
+- **Placeholder Text**  
   Appears within input when no value exists.
   
 - **Prepend**  

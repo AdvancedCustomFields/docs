@@ -35,7 +35,10 @@ The Repeater field provides a way to create a set of sub fields which can be rep
   Sets a limit on how many rows of data are allowed.
   
 - **Layout**  
-  Changes the layout style of the appearance of the sub fields.
+  Defines the layout style of the appearance of the sub fields.
+  _Block_: Sub fields are displayed in blocks, one after the other.  
+  _Table_: Sub fields are displayed in a single row table. Labels will appear in the table header.  
+  _Row_: Sub fields are displayed in a two column table. Labels will appear in the first column.  
   
 - **Button Label**  
   The text shown in the 'Add Row' button.
@@ -68,8 +71,8 @@ endif;
 ?>
 ```
 
-### Store variables within Loop
-This example demonstrates how to use the [get_sub_field](https://www.advancedcustomfields.com/resources/functions/get_sub_field/) function to store variables within the Loop.
+### Display a slider
+This example demonstrates how to use the [get_sub_field](https://www.advancedcustomfields.com/resources/functions/get_sub_field/) function to generate HTML for a basic slider.
 ```
 <?php if( have_rows('repeater_field_name') ): ?>
 
@@ -107,36 +110,18 @@ This example demonstrates how to use the [get_sub_field](https://www.advancedcus
 <?php endif; ?>
 ```
 
-### Loop example (before version 4.3.0)
-Prior to version 4.3.0, a function called `has_sub_field` was available (and still is) to loop through the rows of data. The one key difference to this function is you cannot use it within an `if` statement.
-```
-<?php if(get_field('repeater_field_name')): ?>
-
-    <ul>
-
-    <?php while(has_sub_field('repeater_field_name')): ?>
-
-        <li>sub_field_1 = <?php the_sub_field('sub_field_1'); ?>, sub_field_2 = <?php the_sub_field('sub_field_2'); ?>, etc</li>
-
-    <?php endwhile; ?>
-
-    </ul>
-
-<?php endif; ?>
-```
-
 ### Foreach Loop
-This example demonstrates how you can use [get_field](https://www.advancedcustomfields.com/resources/functions/get_field/) function to return all the row data for a repeater field. This is useful for querying the data for a specific row.
+This example demonstrates how you can use [get_field](https://www.advancedcustomfields.com/resources/functions/get_field/) function to return all the row data for a Repeater field formatted in a list.
+
+This is useful for querying the data for a specific row.
 ```
 <?php 
 
 $rows = get_field('repeater_field_name');
-if($rows)
-{
+if( $rows ) {
     echo '<ul>';
 
-    foreach($rows as $row)
-    {
+    foreach( $rows as $row ) {
         echo '<li>sub_field_1 = ' . $row['sub_field_1'] . ', sub_field_2 = ' . $row['sub_field_2'] .', etc</li>';
     }
 

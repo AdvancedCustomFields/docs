@@ -39,7 +39,7 @@ This field type returns only a URL string as the value making it convenient for 
 - **Allow Null**  
   Allows the current selection to be cleared and an empty value to be saved.
   
-- **Allow Archives**  
+- **Allow Archives URLs**  
   Includes post type archive URLs within the select list of options.
   
 - **Multiple**  
