@@ -135,8 +135,8 @@ This example demonstrates how to display the images from a Gallery field in a Wo
 <?php
 
 // Load value (array of ids).
-$images = get_field('gallery');
-if( $images ) {
+$image_ids = get_field('gallery');
+if( $image_ids ) {
 	
 	// Generate string of ids ("123,456,789").
 	$images_string = implode( ',', $image_ids );
