@@ -6,9 +6,9 @@ status: draft
 ---
 
 ## Description
-This function will add a new options sub page to the wp-admin sidebar.
+Adds a new options sub page to the admin menu.
 
-All data saved on an options page is global. This means it is not attached to a particular post or page, but is saved in the `wp_options` table.
+Options pages are used to store global settings. These settings are not attached to a particular post, but are instead stored in the `wp_options` table.
 
 ## Parameters
 ```
@@ -44,21 +44,21 @@ This example demonstrates how to create a customized options sub page and store 
 #### functions.php
 ```
 if( function_exists('acf_add_options_page') ) {
-  
+
   // Add parent.
   $parent = acf_add_options_page(array(
     'page_title'  => 'Theme General Settings',
     'menu_title'  => 'Theme Settings',
     'redirect'    => false,
   ));
-  
+
   // Add sub page.
   acf_add_options_sub_page(array(
     'page_title'  => 'Social Settings',
     'menu_title'  => 'Social',
     'parent_slug' => $parent['menu_slug'],
   ));
-  
+
 }
 ```
 
