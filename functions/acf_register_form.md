@@ -29,7 +29,7 @@ Registers a form to later be used by the [acf_form()](https://www.advancedcustom
  
 - **new_post**
   (Array) An array of post data used to create a post. See [wp_insert_post](https://developer.wordpress.org/reference/functions/wp_insert_post/) for available parameters.
-  The above 'post_id' setting must contain a value of 'new_post'.
+  The above `post_id` setting must contain a value of 'new_post'.
   ```
   'new_post' => false,
   ```
@@ -71,7 +71,7 @@ Registers a form to later be used by the [acf_form()](https://www.advancedcustom
   ```
  
 - **return**
-  (String) The URL to be redirected to after the form is submit. Defaults to the current URL with a GET parameter '?updated=true'.
+  (String) The URL to be redirected to after the form is submitted. Defaults to the current URL with a GET parameter '?updated=true'.
   A special placeholder '%post_url%' will be converted to post's permalink (helpful if creating a new post).
   ```
   'return' => '',
@@ -109,7 +109,7 @@ Registers a form to later be used by the [acf_form()](https://www.advancedcustom
   ```
  
 - **instruction_placement**
-  (String) Determines where field instructions are places in relation to fields. Defaults to 'label'.
+  (String) Determines where field instructions are placed in relation to fields. Defaults to 'label'.
   Choice of 'label' (below labels) or 'field' (below fields).
   ```
   'instruction_placement' => 'label',
@@ -130,7 +130,7 @@ Registers a form to later be used by the [acf_form()](https://www.advancedcustom
   ```
  
 - **honeypot**
-  (Boolean) Whether to include a hidden input field to capture non human form submission. Defaults to true.
+  (Boolean) Whether to include a hidden input field to capture non-human form submission. Defaults to true.
   ```
   'honeypot' => true,
   ```
