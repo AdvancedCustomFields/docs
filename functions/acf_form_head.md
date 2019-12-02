@@ -39,7 +39,7 @@ This example demonstrates a basic `acf_form()` to edit the current post.
 The following are ways to customize the saving process.
 
 ### acf/pre_submit_form
-This filter is run when a form has been submitted and is valid. Use this filter to modify or use the `$form` before $_POST data is processed.
+This filter is run when a form has been submitted and is valid. Use this filter to modify or use the `$form` before `$_POST` data is processed.
 ```
 function my_acf_pre_submit_form( $form ) {
 
@@ -55,7 +55,7 @@ add_filter('acf/pre_submit_form', 'my_acf_pre_submit_form', 10, 1);
 ```
 
 ### acf/pre_save_post
-This filter is run when a form has been submitted and has a value. This filter is run after 'acf/pre_submit_form'. Use this filter to modify or use the `$post_id` and `$form` before $_POST data is processed.
+This filter is run when a form has been submitted and has a value. It runs after 'acf/pre_submit_form'. Use this filter to modify or use the `$post_id` and `$form` before `$_POST` data is processed.
 ```
 function my_acf_pre_save_post( $post_id, $form ) {
 
@@ -83,7 +83,7 @@ add_action('acf/save_post', 'my_acf_save_post', 20);
 ```
 
 ### acf/submit_form
-This action runs after ACF has processed and saved the `acf_form` $_POST data. Use this action to perform custom logic before the 'return' setting is used to redirect the browser.
+This action runs after ACF has processed and saved the `acf_form`'s `$_POST` data. Use this action to perform custom logic before the 'return' setting is used to redirect the browser.
 ```
 function my_acf_submit_form( $form, $post_id ) {
 
