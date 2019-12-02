@@ -6,7 +6,7 @@ status: draft
 ---
 
 ## Description
-Registers a form to later be used by the [acf_form()](https://www.advancedcustomfields.com/resources/acf_form/) function. There are many settings available to customize a form which are set by adding to the $settings array (see below).
+Registers a form to later be used by the [acf_form()](https://www.advancedcustomfields.com/resources/acf_form/) function. There are many settings available to customize a form which are set by adding to the `$settings` array (see below).
 
 ## Parameters
 ```
@@ -199,7 +199,7 @@ acf_register_form(array(
 ```
 
 ## Changelog
-- 'kses' added in version 5.6.5.
-- 'uploader' added in version 5.2.4.
-- 'honeypot' added in version 5.3.4
-- 'html_updated_message', 'html_submit_button', and 'html_submit_spinner' added in version 5.5.10
+- `kses` added in version 5.6.5.
+- `uploader` added in version 5.2.4.
+- `honeypot` added in version 5.3.4
+- `html_updated_message`, `html_submit_button`, and `html_submit_spinner` added in version 5.5.10
