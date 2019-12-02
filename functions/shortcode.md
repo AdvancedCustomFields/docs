@@ -17,6 +17,7 @@ Place the shortcode marker with the desired field within your WYSIWYG content. T
 ## Examples
 
 ### Basic usage
+This example demonstrates inserting two shortcodes for the ACF fields 'name' and 'age.'.
 
 ```
 This is a story about a boy named [acf field="name"]. He is [acf field="age"] years old.
