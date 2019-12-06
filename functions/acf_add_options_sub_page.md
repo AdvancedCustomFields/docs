@@ -35,7 +35,7 @@ if( function_exists('acf_add_options_sub_page') ) {
 ```
 
 ### Customized options sub page
-This example shows how to create a customized options page and store the data in a variable for later use.
+This example shows how to create a customized options sub page and store the data in a variable for later use.
 
 #### functions.php
 ```
