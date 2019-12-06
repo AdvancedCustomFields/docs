@@ -189,10 +189,10 @@ This example shows how to register a block using the render_template setting.
 
 #### functions.php
 ```
-add_action('acf/init', 'my_register_blocks');
-function my_register_blocks() {
+add_action('acf/init', 'my_acf_blocks_init');
+function my_acf_blocks_init() {
 	
-	// check function exists.
+	// Check function exists.
 	if( function_exists('acf_register_block_type') ) {
 		
 		// Register a testimonial block.
