@@ -299,6 +299,24 @@
         "status": "draft"
     },
     {
+        "title": "acf_form()",
+        "description": "Creates a front end form.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "acf_form",
+        "path": "functions\/acf_form.md",
+        "status": "draft"
+    },
+    {
+        "title": "acf_form_head()",
+        "description": "Validates and saves data submitted from an acf_form().",
+        "category": "functions",
+        "keywords": [],
+        "slug": "acf_form_head",
+        "path": "functions\/acf_form_head.md",
+        "status": "draft"
+    },
+    {
         "title": "acf_register_block_type()",
         "description": "Registers a custom block type in the Gutenberg editor.",
         "category": "functions",
@@ -308,6 +326,15 @@
         "redirects": [
             "acf_register_block"
         ]
+    },
+    {
+        "title": "acf_register_form()",
+        "description": "Registers a front end form.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "acf_register_form",
+        "path": "functions\/acf_register_form.md",
+        "status": "draft"
     },
     {
         "title": "add_row()",
@@ -453,6 +480,15 @@
         "slug": "have_rows",
         "path": "functions\/have_rows.md",
         "group": "Loop"
+    },
+    {
+        "title": "Shortcode",
+        "description": "Used within a content editor to display a custom field\u2019s value.",
+        "category": "functions",
+        "keywords": [],
+        "slug": "shortcode",
+        "path": "functions\/shortcode.md",
+        "status": "draft"
     },
     {
         "title": "the_field()",
