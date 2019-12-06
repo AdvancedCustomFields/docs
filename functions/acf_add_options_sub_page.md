@@ -2,7 +2,6 @@
 title: acf_add_options_sub_page()
 description: Add a global options sub page to the WordPress dashboard.
 category: functions
-status: draft
 ---
 
 ## Description

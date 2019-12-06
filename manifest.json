@@ -295,8 +295,7 @@
         "category": "functions",
         "keywords": [],
         "slug": "acf_add_options_sub_page",
-        "path": "functions\/acf_add_options_sub_page.md",
-        "status": "draft"
+        "path": "functions\/acf_add_options_sub_page.md"
     },
     {
         "title": "acf_form()",
