@@ -113,35 +113,25 @@ This example shows how to create a customized options page and store the data in
 
 #### functions.php
 ```
-function register_acf_options_pages() {
+add_action('acf/init', 'my_acf_op_init');
+function my_acf_op_init() {
 	
 	// Check function exists.
-	if( !function_exists('acf_add_options_page') )
-		return;
-	
-	// register options page.
-	$option_page = acf_add_options_page(array(
-		'page_title' 	=> __('Theme General Settings'),
-		'menu_title' 	=> __('Theme Settings'),
-		'menu_slug' 	=> 'theme-general-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
+	if( function_exists('acf_add_options_page') ) {
+		
+		// Register options page.
+		$option_page = acf_add_options_page(array(
+			'page_title' 	=> __('Theme General Settings'),
+			'menu_title' 	=> __('Theme Settings'),
+			'menu_slug' 	=> 'theme-general-settings',
+			'capability'	=> 'edit_posts',
+			'redirect'		=> false
+		));
+	}
 }
-
-// Hook into acf initialization.
-add_action('acf/init', 'register_acf_options_pages');
 ```
 
 ## Notes
 
 ### Priority
 This function must be used before the action `admin_menu` (priority 99) as this is when admin pages are registered in WordPress core. We advise using the "acf/init" action.
-
-### Deprecated settings
-Some settings have been deprecated over time. ACF will automatically migrate changed settings, but we advise using the correct setting names wherever possible.
-
-- Changed "title" to "page_title" in version 5.0.0.
-- Changed "menu" to "menu_title" in version 5.0.0.
-- Changed "slug" to "menu_slug" in version 5.0.0.
-- Changed "parent" to "parent_slug" in version 5.0.0. 

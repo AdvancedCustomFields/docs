@@ -8,64 +8,61 @@ status: draft
 ## Description
 Adds a new options sub page to the admin menu.
 
-Options pages are used to store global settings. These settings are not attached to a particular post, but are instead stored in the `wp_options` table.
+Options pages are used to store global settings. These settings are not tied to a specific post, but are instead stored in the `wp_options` table.
+
+Once registered, your page will appear in the admin menu. You can then assign fields to your page via the "Options Page" location rule when editing a field group.
+
+This function is essentially a wrapper for [acf_add_options_page()](https://www.advancedcustomfields.com/resources/acf_add_options_page/) providing a default value for the *parent_slug* attribute of "acf-options".
 
 ## Parameters
 ```
-<?php acf_add_options_sub_page( $page ); ?>
+acf_add_options_sub_page( [$settings] );
 ```
 
-### $page
-*(mixed)* *(Optional)* A string for the page title, or an array of settings. If left blank, default settings will be used.
-
-The parameters of `acf_add_options_sub_page()` are similar to those of [acf_add_options_page()](https://www.advancedcustomfields.com/resources/acf_add_options_page/) but with 1 difference; The ‘parent_slug’ setting cannot be blank.
-
-By default, the _parent_slug_ setting is set to ‘acf-options’ (the default options page). If desired, this can be changed to any other admin page.
-
-[See list of available parameters](https://www.advancedcustomfields.com/resources/acf_add_options_page/)
+### $settings
+*(array)* *(Optional)* Array of arguments for registering an options page. [See list of available parameters](https://www.advancedcustomfields.com/resources/acf_add_options_page/)
 
 ## Examples
 
 ### Default options sub page
-This example shows how to create an options sub page called 'Social'. The following code is placed in the `functions.php` file.
-
-By calling this function without a custom ‘parent_slug’, the default will be used. Furthermore, if the default options page does not yet exist, it will be added.
+This example shows how to create a default options sub page.
 
 #### functions.php
 ```
 if( function_exists('acf_add_options_sub_page') ) {
-  acf_add_options_sub_page('Social');
+	acf_add_options_sub_page();
 }
 ```
 
 ### Customized options sub page
-This example demonstrates how to create a customized options sub page and store the data in a variable for later use.
+This example shows how to create a customized options page and store the data in a variable for later use.
 
 #### functions.php
 ```
-if( function_exists('acf_add_options_page') ) {
-
-  // Add parent.
-  $parent = acf_add_options_page(array(
-    'page_title'  => 'Theme General Settings',
-    'menu_title'  => 'Theme Settings',
-    'redirect'    => false,
-  ));
-
-  // Add sub page.
-  acf_add_options_sub_page(array(
-    'page_title'  => 'Social Settings',
-    'menu_title'  => 'Social',
-    'parent_slug' => $parent['menu_slug'],
-  ));
-
+add_action('acf/init', 'my_acf_op_init');
+function my_acf_op_init() {
+	
+	// Check function exists.
+	if( function_exists('acf_add_options_sub_page') ) {
+		
+		// Add parent.
+		$parent = acf_add_options_page(array(
+			'page_title'  => __('Theme General Settings'),
+			'menu_title'  => __('Theme Settings'),
+			'redirect'    => false,
+		));
+		
+		// Add sub page.
+		acf_add_options_sub_page(array(
+			'page_title'  => __('Social Settings'),
+			'menu_title'  => __('Social'),
+			'parent_slug' => $parent['menu_slug'],
+		));
+	}
 }
 ```
 
 ## Notes
 
 ### Priority
-This function must be used before the action `admin_menu` (priority 99) as this is when admin pages are registered in WordPress core.
-
-### Requirements
-This function requires at least ACF PRO version 5.0.0. or the [Options Page Add-on](https://www.advancedcustomfields.com/add-ons/options-page/).
+This function must be used before the action `admin_menu` (priority 99) as this is when admin pages are registered in WordPress core. We advise using the "acf/init" action.
