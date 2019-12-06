@@ -53,7 +53,7 @@ function my_acf_op_init() {
 		));
 		
 		// Add sub page.
-		acf_add_options_sub_page(array(
+		$child = acf_add_options_sub_page(array(
 			'page_title'  => __('Social Settings'),
 			'menu_title'  => __('Social'),
 			'parent_slug' => $parent['menu_slug'],
