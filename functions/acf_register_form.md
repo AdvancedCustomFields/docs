@@ -171,16 +171,25 @@ This example demonstrates how to register a form in the `functions.php` file and
 
 #### functions.php
 ```
-acf_register_form(array(
-  'id'       => 'new-event',
-  'post_id'  => 'new_post',
-  'new_post' => array(
-    'post_type'   => 'event',
-    'post_status' => 'publish'
-  ),
-  'post_title'  => true,
-  'post_content'=> true,
-));
+add_action('acf/init', 'my_acf_form_init');
+function my_acf_form_init() {
+	
+	// Check function exists.
+	if( function_exists('acf_register_form') ) {
+		
+		// Register form.
+		acf_register_form(array(
+			'id'       => 'new-event',
+			'post_id'  => 'new_post',
+			'new_post' => array(
+				'post_type'   => 'event',
+				'post_status' => 'publish'
+			),
+			'post_title'  => true,
+			'post_content'=> true,
+		));
+	}
+}
 ```
 
 #### page-new-event.php
@@ -188,11 +197,11 @@ acf_register_form(array(
 <?php acf_form_head(); ?>
 <?php get_header(); ?>
 
-  <div id="primary" class="content-area">
-    <div id="content">
-      <?php acf_form('new-event'); ?>
-    </div><!-- #content -->
-  </div><!-- #primary -->
+<div id="primary" class="content-area">
+	<div id="content">
+		<?php acf_form('new-event'); ?>
+	</div><!-- #content -->
+</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
