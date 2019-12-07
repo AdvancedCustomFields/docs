@@ -331,8 +331,7 @@
         "category": "functions",
         "keywords": [],
         "slug": "acf_register_form",
-        "path": "functions\/acf_register_form.md",
-        "status": "draft"
+        "path": "functions\/acf_register_form.md"
     },
     {
         "title": "add_row()",
