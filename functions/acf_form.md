@@ -2,11 +2,12 @@
 title: acf_form()
 description: Creates a front end form.
 category: functions
-status: draft
 ---
 
 ## Description
-Creates a `<form>` to add or edit a post. There are many settings available to customize the form and these are set by adding to the `$options` array as explained below. You may also register a form using the [acf_register_form()](https://www.advancedcustomfields.com/resources/acf_register_form/) function.
+Displays a form to add or edit a post. There are many settings available to customize the form and these are set by adding to the `$options` array as explained below. 
+
+You may also register a form using the [acf_register_form()](https://www.advancedcustomfields.com/resources/acf_register_form/) function.
 
 ## Parameters
 ```
@@ -241,7 +242,7 @@ This example demonstrates how to create a new post when submitting the form.
 
 ## Notes
 
-### Use within AJAX modal
+### Displaying within an AJAX modal
 When displaying an ACF form within an AJAX modal (or any other dynamically appended method), please note that the page will require some extra PHP and JavaScript code.
 
 - **PHP**  
@@ -251,7 +252,7 @@ When displaying an ACF form within an AJAX modal (or any other dynamically appen
   acf_enqueue_uploader();
   ```
   
-- **JS**
+- **JS**  
   The following JS must be run after the AJAX request has completed and new HTML (containing the ACF form) has been appended to the DOM. This will allow ACF to initialize the fields within the newly added HTML.
   ```
   // Trigger the append action and provide the newly appended jQuery element.

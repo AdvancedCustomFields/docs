@@ -303,8 +303,7 @@
         "category": "functions",
         "keywords": [],
         "slug": "acf_form",
-        "path": "functions\/acf_form.md",
-        "status": "draft"
+        "path": "functions\/acf_form.md"
     },
     {
         "title": "acf_form_head()",
