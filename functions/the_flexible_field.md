@@ -1,6 +1,6 @@
 ---
 title: the_flexible_field()
-description: Used to loop through rows of a repeater or flexible content field
+description: Used to loop through rows of a flexible content field
 category: functions
 status: draft
 ---
