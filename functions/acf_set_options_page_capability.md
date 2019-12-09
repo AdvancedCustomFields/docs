@@ -19,7 +19,7 @@ The term ‘capability’ refers to the user roles and permissions that grant ac
 ```
 
 ### $capability
-*(String)* The name for the parent Options Page menu capability. Defaults to `edit_posts`.
+*(String)* (Required) The name for the parent Options Page menu capability. Defaults to `edit_posts`.
  
 ## Examples
 
