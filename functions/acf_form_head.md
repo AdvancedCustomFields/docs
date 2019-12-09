@@ -23,13 +23,13 @@ This example demonstrates a basic `acf_form()` to edit the current post.
 <?php acf_form_head(); ?>
 <?php get_header(); ?>
 
-  <div id="primary" class="content-area">
-    <div id="content" class="site-content" role="main">
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
 
-      <?php acf_form(); ?>
+		<?php acf_form(); ?>
 
-    </div><!-- #content -->
-  </div><!-- #primary -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
@@ -43,12 +43,12 @@ This filter is run when a form has been submitted and is valid. Use this filter 
 ```
 function my_acf_pre_submit_form( $form ) {
 
-  // Create post using $form['new_post'].
+	// Create post using $form['new_post'].
 
-  // Modify $form['redirect'].
+	// Modify $form['redirect'].
 
-  // Return form after modifications.
-  return $form;
+	// Return form after modifications.
+	return $form;
 }
 
 add_filter('acf/pre_submit_form', 'my_acf_pre_submit_form', 10, 1);
@@ -59,10 +59,10 @@ This filter is run when a form has been submitted and has a value. It runs after
 ```
 function my_acf_pre_save_post( $post_id, $form ) {
 
-  // Create post using $form and update $post_id.
+	// Create post using $form and update $post_id.
 
-  // Return.
-  return $post_id;
+	// Return.
+	return $post_id;
 }
 
 add_filter('acf/pre_save_post', 'my_acf_pre_save_post', 10, 2);
@@ -73,10 +73,10 @@ This action runs when ACF saves custom field data to a post. This function is no
 ```
 function my_acf_save_post( $post_id ) {
 
-    // Get new value.
-    $value = get_field('my_field', $post_id);
+	// Get new value.
+	$value = get_field('my_field', $post_id);
 
-    // Do something.
+	// Do something.
 }
 
 add_action('acf/save_post', 'my_acf_save_post', 20);
@@ -87,12 +87,12 @@ This action runs after ACF has processed and saved the `acf_form`'s `$_POST` dat
 ```
 function my_acf_submit_form( $form, $post_id ) {
 
-    // Get new value.
-    $value = get_field('my_field', $post_id);
+	// Get new value.
+	$value = get_field('my_field', $post_id);
 
-    // Redirect.
-    wp_redirect( 'http://www.website.com/' . $value );
-  exit;
+	// Redirect.
+	wp_redirect( 'http://www.website.com/' . $value );
+	exit;
 }
 
 add_action('acf/submit_form', 'my_acf_submit_form', 10, 2);
