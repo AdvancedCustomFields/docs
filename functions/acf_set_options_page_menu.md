@@ -5,7 +5,7 @@ category: functions
 status: draft
 ---
 
-[blockquote] This function is outdated. Please use the [acf/options_page/settings](https://www.advancedcustomfields.com/resources/acfoptions_pagesettings/) instead.
+[blockquote] This function is outdated. Please use the [acf/options_page/settings](https://www.advancedcustomfields.com/resources/acf-options_page-settings/) instead.
 [/blockquote]
 
 ## Description
