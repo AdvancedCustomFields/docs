@@ -1,6 +1,7 @@
 ---
 title: acf_set_options_page_title()
 description: Changes the name of the main Options page title
+category: functions
 status: draft
 ---
 
