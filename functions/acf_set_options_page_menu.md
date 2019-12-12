@@ -5,8 +5,7 @@ category: functions
 status: draft
 ---
 
-[blockquote] This function is outdated. Please use the [acf/options_page/settings](https://www.advancedcustomfields.com/resources/acf-options_page-settings/) instead.
-[/blockquote]
+> This function is outdated. Please use the [acf/options_page/settings](https://www.advancedcustomfields.com/resources/acf-options_page-settings/) instead.
 
 ## Description
 This function is used in combination with the [Options Page Add-on](https://www.advancedcustomfields.com/add-ons/options-page/) to change the name of the main options page menu item. This function is to be used inside your functions.php file and must be run before the ‘init’ action.

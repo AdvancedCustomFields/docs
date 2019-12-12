@@ -5,8 +5,7 @@ category: functions
 status: draft
 ---
 
-[blockquote] This function is outdated. Please use the [have_rows()](https://www.advancedcustomfields.com/resources/have_rows/) function instead.
-[/blockquote]
+> This function is outdated. Please use the [have_rows()](https://www.advancedcustomfields.com/resources/have_rows/) function instead.
 
 ## Description
 This function is used in a “while loop” to loop through each row of  a repeater field.  This function requires the [Repeater field](https://www.advancedcustomfields.com/add-ons/repeater-field/).

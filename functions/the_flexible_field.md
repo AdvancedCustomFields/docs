@@ -5,8 +5,7 @@ category: functions
 status: draft
 ---
 
-[blockquote] This function is outdated. Please use the [have_rows()](https://www.advancedcustomfields.com/resources/have_rows/) function instead.
-[/blockquote]
+> This function is outdated. Please use the [have_rows()](https://www.advancedcustomfields.com/resources/have_rows/) function instead.
 
 ## Description
 This function is used in a “while loop” to loop through each row of a flexible content field. This function requires the flexible content field.
