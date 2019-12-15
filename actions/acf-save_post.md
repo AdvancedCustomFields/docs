@@ -1,6 +1,6 @@
 ---
 title: acf/save_post
-description: Called when saving $_POST data.
+description: Called when saving `$_POST` data.
 category: actions
 ---
 
