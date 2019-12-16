@@ -1,13 +1,16 @@
 ---
 title: the_flexible_field()
-description: Used to loop through rows of a flexible content field
+description: Loops through rows of a flexible content field
 category: functions
 status: draft
+deprecated: true
 ---
 
-> This function is outdated. Please use the [have_rows()](https://www.advancedcustomfields.com/resources/have_rows/) function instead.
-
 ## Description
+[tip]
+This function has been deprecated. Please use the [have_rows()](https://www.advancedcustomfields.com/resources/have_rows/) function instead.
+[/tip]
+
 This function is used in a “while loop” to loop through each row of a flexible content field. This function requires the flexible content field.
 
 This function will return either: the current row (continue loop) or false (end of loop). Within the “while loop”, you can use these functions:
@@ -21,19 +24,13 @@ This function will return either: the current row (continue loop) or false (end 
 
 ## Parameters
 ```
-<?php the_flexible_field( $field_name, $post_id ); ?>
+the_flexible_field( $field_name, $post_id );
 ```
-
-### $field_name
-*(String)* (Required) The name of the flexible content field to be retrieved.
-
-### $post_id
-*(Integer)* Specific post ID where your value was entered. Defaults to current post ID. Can also be options/taxonomies/users/etc.
+- $field_name *(string)* (Required) The name of the flexible content field to be retrieved.
+- $post_id *(integer)* Specific post ID where your value was entered. Defaults to current post ID. Can also be options/taxonomies/users/etc.
  
-## Examples
-
-### Loop through Flexible Content field
-This example loops through a Flexible Content field and display its content with different views for different layouts.
+## Example
+This example demonstrates looping through a Flexible Content field displaying different content depending on the chosen layout.
 ```
 while(the_flexible_field("content")): ?>
 
