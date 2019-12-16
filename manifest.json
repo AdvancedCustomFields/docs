@@ -1,7 +1,43 @@
 [
     {
+        "title": "acf\/field_group\/admin_enqueue_scripts",
+        "description": "Called during the 'enqueue_scripts' action when editing a field group.",
+        "category": "actions",
+        "keywords": [],
+        "slug": "acf-field_group-admin_enqueue_scripts",
+        "path": "actions\/acf-field_group-admin_enqueue_scripts.md",
+        "status": "draft"
+    },
+    {
+        "title": "acf\/field_group\/admin_head",
+        "description": "Called during the admin_head action when editing a field group",
+        "category": "actions",
+        "keywords": [],
+        "slug": "acf-field_group-admin_head",
+        "path": "actions\/acf-field_group-admin_head.md",
+        "status": "draft"
+    },
+    {
+        "title": "acf\/init",
+        "description": "Called after ACF is finished loading and is similar to the WordPress init action.",
+        "category": "actions",
+        "keywords": [],
+        "slug": "acf-init",
+        "path": "actions\/acf-init.md",
+        "status": "draft"
+    },
+    {
+        "title": "acf\/input\/admin_enqueue_scripts",
+        "description": "Called during the enqueue_scripts action when editing a post.",
+        "category": "actions",
+        "keywords": [],
+        "slug": "acf-input-admin_enqueue_scripts",
+        "path": "actions\/acf-input-admin_enqueue_scripts.md",
+        "status": "draft"
+    },
+    {
         "title": "acf\/save_post",
-        "description": "Called when saving $_POST data.",
+        "description": "Called when saving `$_POST` data.",
         "category": "actions",
         "keywords": [],
         "slug": "acf-save_post",
@@ -334,6 +370,33 @@
         "path": "functions\/acf_register_form.md"
     },
     {
+        "title": "acf_set_options_page_capability()",
+        "description": "Changes capability of the main options page title",
+        "category": "functions",
+        "keywords": [],
+        "slug": "acf_set_options_page_capability",
+        "path": "functions\/acf_set_options_page_capability.md",
+        "status": "draft"
+    },
+    {
+        "title": "acf_set_options_page_menu()",
+        "description": "Changes the name of the main options page menu item",
+        "category": "functions",
+        "keywords": [],
+        "slug": "acf_set_options_page_menu",
+        "path": "functions\/acf_set_options_page_menu.md",
+        "status": "draft"
+    },
+    {
+        "title": "acf_set_options_page_title()",
+        "description": "Changes the name of the main Options page title",
+        "category": "functions",
+        "keywords": [],
+        "slug": "acf_set_options_page_title",
+        "path": "functions\/acf_set_options_page_title.md",
+        "status": "draft"
+    },
+    {
         "title": "add_row()",
         "description": "Adds a new row of data to an existing Repeater or Flexible Content field value.",
         "category": "functions",
@@ -470,6 +533,15 @@
         "group": "Loop"
     },
     {
+        "title": "has_sub_field()",
+        "description": "Used to loop through rows of a repeater or flexible content field",
+        "category": "functions",
+        "keywords": [],
+        "slug": "has_sub_field",
+        "path": "functions\/has_sub_field.md",
+        "status": "draft"
+    },
+    {
         "title": "have_rows()",
         "description": "Used to loop through a parent field's value.",
         "category": "functions",
@@ -496,6 +568,24 @@
         "path": "functions\/the_field.md",
         "parameters": "the_field($selector, [$post_id], [$format_value]);",
         "group": "Basic"
+    },
+    {
+        "title": "the_flexible_field()",
+        "description": "Used to loop through rows of a flexible content field",
+        "category": "functions",
+        "keywords": [],
+        "slug": "the_flexible_field",
+        "path": "functions\/the_flexible_field.md",
+        "status": "draft"
+    },
+    {
+        "title": "the_repeater_field()",
+        "description": "Used to loop through rows of a Repeater field",
+        "category": "functions",
+        "keywords": [],
+        "slug": "the_repeater_field",
+        "path": "functions\/the_repeater_field.md",
+        "status": "draft"
     },
     {
         "title": "the_sub_field()",
