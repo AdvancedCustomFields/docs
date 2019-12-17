@@ -1,13 +1,16 @@
 ---
 title: the_repeater_field()
-description: Used to loop through rows of a Repeater field
+description: Loop through rows of a Repeater field
 category: functions
 status: draft
+deprecated: true
 ---
 
-> This function is outdated. Please use the [have_rows()](https://www.advancedcustomfields.com/resources/have_rows/) function instead.
-
 ## Description
+[tip]
+This function is outdated. Please use the [have_rows()](https://www.advancedcustomfields.com/resources/have_rows/) function instead.
+[/tip]
+
 This function is used in a “while loop” to loop through each row of  a repeater field.  This function requires the [Repeater field](https://www.advancedcustomfields.com/add-ons/repeater-field/).
 
 This function will return either: the current row (continue loop) or false (end of loop).
@@ -22,14 +25,10 @@ Within the “while loop”, you can use these functions:
 
 ## Parameters
 ```
-<?php the_repeater_field( $field_name, $post_id ); ?>
+the_repeater_field( $field_name, $post_id );
 ```
-
-### $field_name
-*(String)* (Required) The name of the Repeater field to be retrieved. e.g. 'gallery_images'
-
-### $post_id
-*(Integer)* Specific post ID where your value was entered. Defaults to current post ID. Can also be options/taxonomies/users/etc.
+- $field_name *(string)* (Required) The name of the Repeater field to be retrieved. e.g. 'gallery_images'
+- $post_id *(integer)* Specific post ID where your value was entered. Defaults to current post ID. Can also be options/taxonomies/users/etc.
  
 ## Examples
 
@@ -45,7 +44,7 @@ if(get_field('gallery_images')): ?>
 ```
 
 ### Loop through Repeater field from another post
-This example loops through a Repeater field from a different post.
+This example demonstrates looping through a Repeater field from a different post with the ID of 123.
 
 _Note:_ You don't need to specify the $post_id for any sub field functions.
 ```
@@ -64,6 +63,7 @@ if( get_field('repeater_field_name', $post_id) )
 ```
 
 ### `post_id` examples
+The following are examples of different post ID values to apply as the second variable within `the_repeater_field` function.
 ```
 $post_id = null; // current post
 $post_id = 1;

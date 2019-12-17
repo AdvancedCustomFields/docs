@@ -1,28 +1,25 @@
 ---
 title: has_sub_field()
-description: Used to loop through rows of a repeater or flexible content field
+description: Loops through rows of a repeater or flexible content field
 category: functions
 status: draft
+deprecated: true
 ---
 
-[blockquote] This function is outdated. Please use the [have_rows()](https://www.advancedcustomfields.com/resources/have_rows/) function instead.
-[/blockquote]
-
 ## Description
-This function is used in a “while loop” to loop through each row of a repeater field / flexible content field and instantiate it for use with these functions:
+[tip] This function has been deprecated. Please use the [have_rows()](https://www.advancedcustomfields.com/resources/have_rows/) function instead.
+[/tip]
+
+This function is used in a “while loop” to loop through each row of a repeater field / flexible content field and initialize it for use with these functions:
 - [get_sub_field](https://www.advancedcustomfields.com/docs/functions/get_sub_field/)
 - [the_sub_field](https://www.advancedcustomfields.com/docs/functions/the_sub_field/)
 
 ## Parameters
 ```
-<?php has_sub_field( $field_name, $post_id ); ?>
+has_sub_field( $field_name, $post_id );
 ```
-
-### $field_name
-*(String)* (Required) The name of the repeater or flexible content field to loop through. e.g. "gallery_images"
-
-### $post_id
-*(Integer)* Specific post ID where your value was entered. Defaults to current post ID. Can also be options/taxonomies/users/etc.
+- $field_name *(string)* (Required) The name of the repeater or flexible content field to loop through. e.g. 'gallery_images'
+-$post_id *(integer)* Specific post ID where your value was entered. Defaults to current post ID. Can also be options/taxonomies/users/etc.
  
 ## Examples
 

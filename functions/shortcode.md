@@ -1,12 +1,12 @@
 ---
 title: Shortcode
-description: Used within a content editor to display a custom field’s value.
+description: Display a custom field's value within a content editor
 category: functions
 status: draft
 ---
 
 ## Description
-Shortcodes can be used within a WYGIWYG to display another field’s value. To learn more about shortcodes, [click here](http://codex.wordpress.org/Shortcode_API).
+Shortcodes can be used within a WYSIWYG to display another field’s value. To learn more about shortcodes, [click here](http://codex.wordpress.org/Shortcode_API).
 
 ## Usage
 Place the shortcode marker with the desired field within your WYSIWYG content. This shortcode runs the same as [the_field()](https://www.advancedcustomfields.com/docs/functions/the_field/) function.
@@ -18,7 +18,6 @@ Place the shortcode marker with the desired field within your WYSIWYG content. T
 
 ### Basic usage
 This example demonstrates inserting two shortcodes for the ACF fields 'name' and 'age.'.
-
 ```
 This is a story about a boy named [acf field="name"]. He is [acf field="age"] years old.
 ```
