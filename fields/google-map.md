@@ -235,7 +235,7 @@ This example demonstrates how to display multiple Google Map field values on the
 			$title = get_sub_field('description');
 			$description = get_sub_field('description');
 			?>
-			<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
+			<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>">
 				<h3><?php echo esc_html( $title ); ?></h3>
 				<p><em><?php echo esc_html( $location['address'] ); ?></em></p>
 				<p><?php echo esc_html( $description ); ?></p>
