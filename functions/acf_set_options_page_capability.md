@@ -22,7 +22,7 @@ The term ‘capability’ refers to the user roles and permissions that grant ac
 ```
 acf_set_options_page_capability( $capability );
 ```
-- `$capability` *(string)* *(Required)* The name for the parent Options Page menu capability. Defaults to 'edit_posts'.
+- `$capability` *(string)* *(Required)* The capability for the default Options Page. Defaults to 'edit_posts'.
 
 ## Example
 This example demonstrates how to change the default Options page capability to 'manage_options'.

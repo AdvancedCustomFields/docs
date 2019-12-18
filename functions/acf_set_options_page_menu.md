@@ -1,6 +1,6 @@
 ---
 title: acf_set_options_page_menu()
-description: Modifies the name of options page
+description: Modifies the default Options Page menu name setting
 category: functions
 status: draft
 deprecated: true
@@ -11,9 +11,7 @@ deprecated: true
 This function has been deprecated. Please use the [acf/options_page/settings](https://www.advancedcustomfields.com/resources/acf-options_page-settings/) setting instead.
 [/tip]
 
-This function is used in combination with the [Options Page Add-on](https://www.advancedcustomfields.com/add-ons/options-page/) to change the name of the main options page menu item in the dashboard. This function is to be used inside your functions.php file and must be run before the ‘init’ action.
-
-_Warning:_ During the updating process, this function will not be available to your functions.php file. To ensure your website does not break, you MUST wrap the function in an if function_exists statement. Please see below for a code example.
+Modifies the default Options Page menu name displayed in the admin menu item.
 
 ## Requirements
 - [Options Page Add-on](https://www.advancedcustomfields.com/add-ons/options-page/) version 1.2.0 or later
@@ -22,10 +20,10 @@ _Warning:_ During the updating process, this function will not be available to y
 ```
 acf_set_options_page_menu( $menu_name );
 ```
-- `$menu_name` *(string)* *(Required)* The name for the parent Options Page menu item
+- `$menu_name` *(string)* *(Required)* The menu name for the default Options Page.
  
 ## Example
-This example demonstrates how to change the Options page menu name to 'Extra'.
+This example demonstrates how to change the default Options page menu name to 'Extra'.
 ```
 if( function_exists('acf_set_options_page_menu') ) {
 	acf_set_options_page_menu( __('Extra') );
