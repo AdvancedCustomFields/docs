@@ -347,8 +347,7 @@
         "category": "functions",
         "keywords": [],
         "slug": "acf_form_head",
-        "path": "functions\/acf_form_head.md",
-        "status": "draft"
+        "path": "functions\/acf_form_head.md"
     },
     {
         "title": "acf_register_block_type()",
