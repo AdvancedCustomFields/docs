@@ -58,6 +58,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [get_row_layout()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_row_layout.md)
 - [get_sub_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_sub_field.md)
 - [get_sub_field_object()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_sub_field_object.md)
+- [has_sub_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/has_sub_field.md)
 - [have_rows()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/have_rows.md)
 - [the_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/the_field.md)
 - [the_flexible_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/the_flexible_field.md)
