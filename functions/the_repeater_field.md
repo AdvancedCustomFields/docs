@@ -2,7 +2,6 @@
 title: the_repeater_field()
 description: Loops through rows of a Repeater field.
 category: functions
-status: draft
 deprecated: true
 ---
 
@@ -13,7 +12,7 @@ This function is deprecated. Please use the [have_rows()](https://www.advancedcu
 
 This function is used within a while-loop to loop through each row of a repeater field.
 
-Unlike `have_rows()`, this function will step through each row by itself, causing undesired results when also used within an if-statment.
+Unlike `have_rows()`, this function will take a step through the available rows each time it is called, causing undesired results when also used within an if-statment.
 
 ## Parameters
 ```

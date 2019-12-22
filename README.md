@@ -60,6 +60,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [get_sub_field_object()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/get_sub_field_object.md)
 - [have_rows()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/have_rows.md)
 - [the_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/the_field.md)
+- [the_repeater_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/the_repeater_field.md)
 - [the_sub_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/the_sub_field.md)
 - [update_field()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/update_field.md)
 - [update_row()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/update_row.md)
