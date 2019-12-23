@@ -13,7 +13,7 @@ It is very similar to the WordPress action [admin_footer](https://codex.wordpres
 ## Changelog
 - Added in version 5.0.0
 
-## Example
+## Basic Example
 This example demonstrates how to call the action to add custom CSS or JavaScript to interact with your fields.
 ```
 function my_acf_admin_footer() {
