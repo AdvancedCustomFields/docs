@@ -2,6 +2,7 @@
 title: the_flexible_field()
 description: Loops through rows of a flexible content field
 category: functions
+group: Deprecated
 deprecated: true
 ---
 

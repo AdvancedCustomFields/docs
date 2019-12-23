@@ -2,6 +2,7 @@
 title: acf_set_options_page_menu()
 description: Modifies the default Options Page menu name setting.
 category: functions
+group: Deprecated
 deprecated: true
 ---
 

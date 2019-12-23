@@ -2,6 +2,7 @@
 title: the_repeater_field()
 description: Loops through rows of a Repeater field.
 category: functions
+group: Deprecated
 deprecated: true
 ---
 

@@ -2,6 +2,7 @@
 title: acf_set_options_page_capability()
 description: Modifies the default Options Page capability setting.
 category: functions
+group: Deprecated
 deprecated: true
 ---
 
