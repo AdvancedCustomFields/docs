@@ -15,7 +15,7 @@ This action is called on the ‘input’ page within the `form` element. It is h
 This example demonstrates how you would use add a hidden input with a specific value to a form. This function accepts 1 parameter.
 - `$args` *(array)* The current screen data including `post_id` and nonce.
 
-_Note:_ In the below code, `action_function_name` needs to be a unique function name.
+_Note:_ In the below code, 'action_function_name' needs to be a unique function name.
 ```
 function action_function_name( $args ) {
 
