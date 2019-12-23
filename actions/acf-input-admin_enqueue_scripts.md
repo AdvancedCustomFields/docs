@@ -6,7 +6,7 @@ status: draft
 ---
 
 ## Description
-This action is used to enqueue scripts and styles on pages where ACF fields are rendered. For example, the page / post edit screen, front end form, options page, etc.
+This action is used to enqueue scripts and styles on pages where ACF fields are rendered. For example, the page / post edit screen, front end form, Options page, etc.
 
 It is very similar to the WordPress action [admin_enqueue_scripts](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_enqueue_scripts).
 

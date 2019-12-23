@@ -6,7 +6,7 @@ status: draft
 ---
 
 ## Description
-This action is used in the footer of all pages where fields are rendered. Eg. page/post edit screen, front end form, Options page, etc.
+This action is used in the footer of all pages where fields are rendered. For example, the page/post edit screen, front end form, Options page, etc.
 
 It is very similar to the WordPress action [admin_footer](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_footer).
 
@@ -25,7 +25,7 @@ function my_acf_admin_footer() {
 	</style>
 
 	<script type="text/javascript">
-	(function($){
+	(function( $ ){
 
 		/* Do something... */
 
@@ -35,4 +35,6 @@ function my_acf_admin_footer() {
 }
 
 add_action('acf/input/admin_footer', 'my_acf_admin_footer');
+
+?>
 ```
