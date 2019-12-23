@@ -12,7 +12,7 @@ It is very similar to the WordPress action [admin_head](https://codex.wordpress.
 
 ## Changelog
 - Added in version 4.0.0
-- Previously known as [acf_head-input](https://www.advancedcustomfields.com/resources/actions/acf_head-input/) in version 3.0.0
+- In version 3.0.0, this action was known as [acf_head-input](https://www.advancedcustomfields.com/resources/actions/acf_head-input/)
 
 ## Example
 This example demonstrates how to call the action to add custom CSS or JavaScript to interact with your fields.
