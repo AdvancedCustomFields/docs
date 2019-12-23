@@ -8,11 +8,11 @@ status: draft
 ## Description
 This action is used in the head of all pages where fields are rendered. For example, the page / post edit screen, front end form, Options page, etc.
 
-This action is very similar to the WordPress action [admin_head](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_head).
+It is very similar to the WordPress action [admin_head](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_head).
 
 ## Changelog
 - Added in version 4.0.0
-- Previously [acf_head-input](https://www.advancedcustomfields.com/resources/actions/acf_head-input/) in version 3.0.0
+- Previously known as [acf_head-input](https://www.advancedcustomfields.com/resources/actions/acf_head-input/) in version 3.0.0
 
 ## Example
 This example demonstrates how to call the action to add custom CSS or JavaScript to interact with your fields.
