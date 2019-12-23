@@ -27,19 +27,19 @@ This example shows how to hook into the `acf/save_post` action before ACF has sa
 #### functions.php
 ```
 function my_acf_save_post( $post_id ) {
-    
-    // Bail early if no data sent.
-    if( empty($_POST['acf']) ) {
-        return;
-    }
-    
-    // Do something with all values.
-    $values = $_POST['acf'];
-    // ...
-    
-    // Check if a specific value was sent.
-    if( isset($_POST['acf']['field_abc123']) ) {
-	    // ...
+
+	// Bail early if no data sent.
+	if( empty($_POST['acf']) ) {
+		return;
+	}
+
+	// Do something with all values.
+	$values = $_POST['acf'];
+	// ...
+
+	// Check if a specific value was sent.
+	if( isset($_POST['acf']['field_abc123']) ) {
+		// ...
 	}
 }
 
@@ -53,13 +53,13 @@ This example shows how to hook into the `acf/save_post` action after ACF has sav
 ```
 function my_acf_save_post( $post_id ) {
 
-    // Do something with all values.
-    $values = get_fields( $post_id );
-    // ...
-    
-    // Check if a specific value was sent.
-    if( get_field('hero_image', $post_id) ) {
-	    // ...
+	// Do something with all values.
+	$values = get_fields( $post_id );
+	// ...
+	
+	// Check if a specific value was sent.
+	if( get_field('hero_image', $post_id) ) {
+		// ...
 	}
 }
 

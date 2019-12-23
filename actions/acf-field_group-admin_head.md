@@ -22,23 +22,21 @@ This example demonstrates how to add custom code to interact with your fields, l
 #### functions.php
 ```
 function my_acf_field_group_admin_head() {
-    
-    ?>
-    <style type="text/css">
+	?>
+	<style type="text/css">
 
-        /* Style something... */
+		/* Style something... */
 
-    </style>
+	</style>
 
-    <script type="text/javascript">
-    (function($){
+	<script type="text/javascript">
+	(function($){
 
-        /* Do something... */
+		/* Do something... */
 
-    })(jQuery);
-    </script>
-    <?php
-    
+	})(jQuery);
+	</script>
+	<?php
 }
 
 add_action('acf/field_group/admin_head', 'my_acf_field_group_admin_head');
