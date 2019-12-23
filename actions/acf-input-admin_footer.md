@@ -16,8 +16,6 @@ It is very similar to the WordPress action [admin_footer](https://codex.wordpres
 ## Example
 This example demonstrates how to call the action to add custom CSS or JavaScript to interact with your fields.
 ```
-<?php
-
 function my_acf_admin_footer() {
 	?>
 	<style type="text/css">
@@ -37,5 +35,4 @@ function my_acf_admin_footer() {
 }
 
 add_action('acf/input/admin_footer', 'my_acf_admin_footer');
-?>
 ```
