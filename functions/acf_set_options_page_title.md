@@ -2,6 +2,7 @@
 title: acf_set_options_page_title()
 description: Modifies the default Options Page title setting.
 category: functions
+group: Deprecated
 deprecated: true
 ---
 

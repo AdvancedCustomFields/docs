@@ -2,6 +2,7 @@
 title: has_sub_field()
 description: Loops through rows of a repeater or flexible content field
 category: functions
+group: Deprecated
 deprecated: true
 ---
 
