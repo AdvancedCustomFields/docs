@@ -2,6 +2,7 @@
 title: acf/acf_head-fields
 description: Called in the head of the edit field group page.
 category: actions
+group: Deprecated
 deprecated: true
 status: draft
 ---
