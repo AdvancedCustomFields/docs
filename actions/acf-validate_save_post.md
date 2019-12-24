@@ -6,7 +6,9 @@ status: draft
 ---
 
 ## Description
-This action is fired during the validation process (triggered when publishing a post) and allows you to review `$_POST` data and add validation errors.
+Used to review `$_POST` data and add validation errors.
+
+This action is fired during the validation process (triggered when publishing a post).
 
 If you are looking for a filter to validate a _specific_ field, please use [acf/validate_value](https://www.advancedcustomfields.com/resources/acf-validate_value/).
 

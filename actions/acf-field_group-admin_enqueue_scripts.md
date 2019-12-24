@@ -6,9 +6,9 @@ status: draft
 ---
 
 ## Description
-This action is called on all pages where field groups are edited.
+Used to enqueue scripts and styles on the Field Group admin edit page.
 
-This function is similar to admin_enqueue_scripts except it is _only_ for the ACF field group page.
+This action is similar to the WordPress [admin_enqueue_scripts](https://developer.wordpress.org/reference/hooks/admin_enqueue_scripts/) except it is _only_ fired when viewing the Field Group admin edit page.
 
 ## Example
 

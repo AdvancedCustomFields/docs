@@ -6,9 +6,11 @@ status: draft
 ---
 
 ## Description
-This action is called in the head of the edit field group page.
+Used to add custom code to interact with your fields.
 
-This action is very similar to the WP action [admin_head](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_head).
+This action is called in the head of the edit Field Group page.
+
+This action is very similar to the WordPress action [admin_head](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_head).
 
 ## Changelog
 - Added in version 4.0.0

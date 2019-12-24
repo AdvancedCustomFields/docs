@@ -5,9 +5,9 @@ category: actions
 ---
 
 ## Description
-This action is called when saving the submitted `$_POST` data.
-
 This action allows you to hook in **before** or **after** the data has been saved. Therefore, it is important to note that the `get_field()` function will return different values at these times.
+
+This action is called when saving the submitted `$_POST` data.
 
 ## Parameters
 ```

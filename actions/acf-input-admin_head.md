@@ -6,7 +6,7 @@ status: draft
 ---
 
 ## Description
-This action is used in the head of all pages where fields are rendered. For example, the page / post edit screen, front end form, Options page, etc.
+Used in the head of all pages where fields are rendered. For example, the page / post edit screen, front end form, Options page, etc.
 
 It is very similar to the WordPress action [admin_head](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_head).
 
