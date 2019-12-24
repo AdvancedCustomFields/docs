@@ -1,6 +1,6 @@
 ---
 title: acf/acf_head-fields
-description: Called in the head of the edit field group page.
+description: Called in the head of the edit Field Group page.
 category: actions
 group: Deprecated
 deprecated: true
@@ -9,8 +9,10 @@ status: draft
 
 ## Description
 [tip]
-This action works on version 3.5.8.2 and below. If using version 4 and above, please use [acf/field_group/admin_head](https://www.advancedcustomfields.com/resources/acf-field_group-admin_head/).
+This action is deprecated. It still works on version 3.5.8.2 and below. If using version 4 and above, please use [acf/field_group/admin_head](https://www.advancedcustomfields.com/resources/acf-field_group-admin_head/).
 [/tip]
+
+Used to add custom code to interact with your fields.
 
 This action is called in the head of the 'Edit Field Group' page.
 

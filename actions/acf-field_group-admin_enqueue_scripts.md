@@ -20,6 +20,5 @@ _Note:_ You can also use this action to register / deregister / dequeue styles.
 function my_acf_field_group_admin_enqueue_scripts() {
 	wp_enqueue_style( 'myStylesheet' );
 }
-
 add_action('acf/field_group/admin_enqueue_scripts', 'my_acf_field_group_admin_enqueue_scripts');
 ```

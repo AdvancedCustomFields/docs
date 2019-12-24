@@ -6,7 +6,9 @@ status: draft
 ---
 
 ## Description
-This action is called on the ‘input’ page within the `form` element. It is helpful in storing hidden inputs, inline scripts and templates. It will always be called if ACF fields appear within the form.
+Used for storing hidden inputs, inline scripts and templates.
+
+This action is called on the ‘input’ page within the `form` element. It will always be called if ACF fields appear within the form.
 
 ## Changelog
 - Added in version 5.0.0

@@ -10,7 +10,6 @@ Used to render HTML before or after the field type’s input.
 
 This action is called to render a field input. When creating a [custom field type](https://www.advancedcustomfields.com/resources/tutorials/creating-a-new-field-type/), this action runs the `render_field` function within the field type class.
 
-
 ## Changelog
 - Added in version 5.0.0
 - Prior to version 5.0.0, this action was known as `create_field`

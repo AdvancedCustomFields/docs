@@ -8,7 +8,7 @@ status: draft
 ## Description
 Used in the footer of all pages where fields are rendered. For example, the page/post edit screen, front end form, Options page, etc.
 
-It is very similar to the WordPress action [admin_footer](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_footer).
+It is similar to the WordPress action [admin_footer](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_footer).
 
 ## Changelog
 - Added in version 5.0.0
@@ -33,8 +33,6 @@ function my_acf_admin_footer() {
 	</script>
 	<?php
 }
-
 add_action('acf/input/admin_footer', 'my_acf_admin_footer');
-
 ?>
 ```
