@@ -19,12 +19,11 @@
     },
     {
         "title": "acf\/init",
-        "description": "Called after ACF is finished loading",
+        "description": "Fires after ACF has finished loading.",
         "category": "actions",
         "keywords": [],
         "slug": "acf-init",
-        "path": "actions\/acf-init.md",
-        "status": "draft"
+        "path": "actions\/acf-init.md"
     },
     {
         "title": "acf\/input\/admin_enqueue_scripts",
@@ -36,12 +35,68 @@
         "status": "draft"
     },
     {
+        "title": "acf\/input\/admin_footer",
+        "description": "Fires during the \"admin_footer\" action when editing a post.",
+        "category": "actions",
+        "keywords": [],
+        "slug": "acf-input-admin_footer",
+        "path": "actions\/acf-input-admin_footer.md",
+        "status": "draft"
+    },
+    {
+        "title": "acf\/input\/admin_head",
+        "description": "Called during the admin_head action when editing a post.",
+        "category": "actions",
+        "keywords": [],
+        "slug": "acf-input-admin_head",
+        "path": "actions\/acf-input-admin_head.md",
+        "status": "draft"
+    },
+    {
+        "title": "acf\/input\/form_data",
+        "description": "Called during the form element when editing a post.",
+        "category": "actions",
+        "keywords": [],
+        "slug": "acf-input-form_data",
+        "path": "actions\/acf-input-form_data.md",
+        "status": "draft"
+    },
+    {
+        "title": "acf\/render_field",
+        "description": "Called when rendering a field input.",
+        "category": "actions",
+        "keywords": [],
+        "slug": "acf-render_field",
+        "path": "actions\/acf-render_field.md",
+        "status": "draft"
+    },
+    {
         "title": "acf\/save_post",
         "description": "Called when saving `$_POST` data.",
         "category": "actions",
         "keywords": [],
         "slug": "acf-save_post",
         "path": "actions\/acf-save_post.md"
+    },
+    {
+        "title": "acf\/validate_save_post",
+        "description": "Called when validating `$_POST` data.",
+        "category": "actions",
+        "keywords": [],
+        "slug": "acf-validate_save_post",
+        "path": "actions\/acf-validate_save_post.md",
+        "status": "draft"
+    },
+    {
+        "title": "acf\/acf_head-fields",
+        "description": "Called in the head of the edit Field Group page.",
+        "category": "actions",
+        "keywords": [],
+        "slug": "acf_head-fields",
+        "path": "actions\/acf_head-fields.md",
+        "group": "Deprecated",
+        "deprecated": true,
+        "status": "draft"
     },
     {
         "title": "Accordion",

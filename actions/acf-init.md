@@ -1,16 +1,13 @@
 ---
 title: acf/init
-description: Called after ACF is finished loading
+description: Fires after ACF has finished loading.
 category: actions
-status: draft
 ---
 
 ## Description
-Used to run functions after ACF has loaded and is active.
+Fires after ACF has finished loading.
 
-This action is called after ACF is finished loading.
-
-It is similar to the WordPress [init](https://developer.wordpress.org/reference/hooks/init/) action.
+This action is similar to the WordPress [init](https://developer.wordpress.org/reference/hooks/init/) action, and should be used to extend or register items such as Blocks, Forms and Options Pages.
 
 ## Changelog
 - Added in version 5.2.7
@@ -18,13 +15,16 @@ It is similar to the WordPress [init](https://developer.wordpress.org/reference/
 ## Example
 #### functions.php
 ```
+add_action('acf/init', 'my_acf_init');
 function my_acf_init() {
 
-	// Get ACF version
+	// Get ACF version.
 	$version = acf_get_setting('version');
 
-	// Do something...   
+	// Do something.  
 }
-
-add_action('acf/init', 'my_acf_init');
 ```
+
+## Notes
+### Timing
+Under normal circumstances, this action will fire during the "init" action (priority of 5). However, it may alternatively be triggered earlier if a field value is loaded during the `functions.php` file.

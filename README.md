@@ -3,6 +3,7 @@
 Welcome to the GitHub documentation repository for the [Advanced Custom Fields](https://www.advancedcustomfields.com/) WordPress plugin.
 
 ### Actions
+- [acf/init](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-init.md)
 - [acf/save_post](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-save_post.md)
 
 ### Field Types
