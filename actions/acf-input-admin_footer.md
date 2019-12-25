@@ -1,38 +1,34 @@
 ---
 title: acf/input/admin_footer
-description: Called during the admin_footer action when editing a post.
+description: Fires during the "admin_footer" action when editing a post.
 category: actions
-status: draft
 ---
 
 ## Description
-Used in the footer of all pages where fields are rendered. For example, the page/post edit screen, front end form, Options page, etc.
+Used to output additional `<body>` HTML to pages where ACF fields appear.
 
-It is similar to the WordPress action [admin_footer](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_footer).
+This action is similar to the WordPress [admin_footer](https://codex.wordpress.org/Plugin_API/Action_Reference/admin_footer), except that it is only fired on pages where ACF fields appear - such as when editing posts, users, taxonomy terms, options pages and front-end forms.
 
 ## Changelog
 - Added in version 5.0.0
 
-## Basic Example
-This example demonstrates how to call the action to add custom CSS or JavaScript to interact with your fields.
+## Example
+This example demonstrates how to output additional inline style and script tags to customize fields.
+
+#### functions.php
 ```
+<?php
+add_action('acf/input/admin_footer', 'my_acf_admin_footer');
 function my_acf_admin_footer() {
 	?>
 	<style type="text/css">
-
-		/* Style something... */
-
+		/* CSS here. */
 	</style>
-
 	<script type="text/javascript">
 	(function( $ ){
-
-		/* Do something... */
-
+		// Javascript here.
 	})(jQuery);
 	</script>
 	<?php
 }
-add_action('acf/input/admin_footer', 'my_acf_admin_footer');
-?>
 ```

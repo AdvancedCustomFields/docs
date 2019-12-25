@@ -4,6 +4,9 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 
 ### Actions
 - [acf/init](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-init.md)
+- [acf/input/admin_enqueue_scripts](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-input-admin_enqueue_scripts.md)
+- [acf/input/admin_footer](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-input-admin_footer.md)
+- [acf/input/admin_head](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-input-admin_head.md)
 - [acf/save_post](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-save_post.md)
 
 ### Field Types

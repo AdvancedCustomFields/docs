@@ -27,12 +27,11 @@
     },
     {
         "title": "acf\/input\/admin_enqueue_scripts",
-        "description": "Called during the enqueue_scripts action when editing a post.",
+        "description": "Fires during the \"enqueue_scripts\" action when editing a post.",
         "category": "actions",
         "keywords": [],
         "slug": "acf-input-admin_enqueue_scripts",
-        "path": "actions\/acf-input-admin_enqueue_scripts.md",
-        "status": "draft"
+        "path": "actions\/acf-input-admin_enqueue_scripts.md"
     },
     {
         "title": "acf\/input\/admin_footer",
@@ -40,17 +39,15 @@
         "category": "actions",
         "keywords": [],
         "slug": "acf-input-admin_footer",
-        "path": "actions\/acf-input-admin_footer.md",
-        "status": "draft"
+        "path": "actions\/acf-input-admin_footer.md"
     },
     {
         "title": "acf\/input\/admin_head",
-        "description": "Called during the admin_head action when editing a post.",
+        "description": "Fires during the \"admin_head\" action when editing a post.",
         "category": "actions",
         "keywords": [],
         "slug": "acf-input-admin_head",
-        "path": "actions\/acf-input-admin_head.md",
-        "status": "draft"
+        "path": "actions\/acf-input-admin_head.md"
     },
     {
         "title": "acf\/input\/form_data",
