@@ -6,9 +6,9 @@ status: draft
 ---
 
 ## Description
-This action is called on all pages where field groups are edited.
+Used to enqueue scripts and styles on the Field Group admin edit page.
 
-This function is similar to admin_enqueue_scripts except it is _only_ for the ACF field group page.
+This action is similar to the WordPress [admin_enqueue_scripts](https://developer.wordpress.org/reference/hooks/admin_enqueue_scripts/) except it is _only_ fired when viewing the Field Group admin edit page.
 
 ## Example
 
@@ -18,8 +18,7 @@ This example demonstrates how to use this action to enqueue styles.
 _Note:_ You can also use this action to register / deregister / dequeue styles.
 ```
 function my_acf_field_group_admin_enqueue_scripts() {
-       wp_enqueue_style( 'myStylesheet' );
+	wp_enqueue_style( 'myStylesheet' );
 }
-
 add_action('acf/field_group/admin_enqueue_scripts', 'my_acf_field_group_admin_enqueue_scripts');
 ```
