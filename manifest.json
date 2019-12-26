@@ -51,12 +51,11 @@
     },
     {
         "title": "acf\/input\/form_data",
-        "description": "Called during the form element when editing a post.",
+        "description": "Fires after ACF generates the hidden inputs required for each form.",
         "category": "actions",
         "keywords": [],
         "slug": "acf-input-form_data",
-        "path": "actions\/acf-input-form_data.md",
-        "status": "draft"
+        "path": "actions\/acf-input-form_data.md"
     },
     {
         "title": "acf\/render_field",
