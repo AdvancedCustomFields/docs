@@ -84,17 +84,6 @@
         "status": "draft"
     },
     {
-        "title": "acf\/acf_head-fields",
-        "description": "Called in the head of the edit Field Group page.",
-        "category": "actions",
-        "keywords": [],
-        "slug": "acf_head-fields",
-        "path": "actions\/acf_head-fields.md",
-        "group": "Deprecated",
-        "deprecated": true,
-        "status": "draft"
-    },
-    {
         "title": "Accordion",
         "description": "",
         "category": "field-types",
