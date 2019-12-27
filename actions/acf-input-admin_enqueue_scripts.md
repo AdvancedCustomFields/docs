@@ -18,7 +18,7 @@ This example demonstrates how to enqueue custom styles and scripts for your fiel
 #### functions.php
 ```
 <?php
-add_action( 'acf/input/admin_enqueue_scripts', 'my_acf_admin_enqueue_scripts' );
+add_action('acf/input/admin_enqueue_scripts', 'my_acf_admin_enqueue_scripts');
 function my_acf_admin_enqueue_scripts() {
 	wp_enqueue_style( 'my-acf-input-css', get_stylesheet_directory_uri() . '/css/my-acf-input.css', false, '1.0.0' );
 	wp_enqueue_script( 'my-acf-input-js', get_stylesheet_directory_uri() . '/js/my-acf-input.js', false, '1.0.0' );
