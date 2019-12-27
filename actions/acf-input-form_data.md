@@ -23,6 +23,7 @@ This example demonstrates how to output a hidden input, and then later perform a
 
 #### functions.php
 ```
+<?php
 add_action('acf/input/form_data', 'my_acf_input_form_data');
 function my_acf_input_form_data( $data ) {
 	echo '<input type="hidden" name="_my_hidden_input" value="123" />';
