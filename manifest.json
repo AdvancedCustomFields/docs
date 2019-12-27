@@ -65,12 +65,11 @@
     },
     {
         "title": "acf\/render_field",
-        "description": "Called when rendering a field input.",
+        "description": "Fires when rendering a field.",
         "category": "actions",
         "keywords": [],
         "slug": "acf-render_field",
-        "path": "actions\/acf-render_field.md",
-        "status": "draft"
+        "path": "actions\/acf-render_field.md"
     },
     {
         "title": "acf\/save_post",

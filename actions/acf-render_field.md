@@ -1,49 +1,52 @@
 ---
 title: acf/render_field
-description: Called when rendering a field input.
+description: Fires when rendering a field.
 category: actions
-status: draft
 ---
 
 ## Description
-Used to render HTML before or after the field type’s input.
-
-This action is called to render a field input. When creating a [custom field type](https://www.advancedcustomfields.com/resources/tutorials/creating-a-new-field-type/), this action runs the `render_field` function within the field type class.
+Used to output additional HTML before or after a field's input.
 
 ## Changelog
 - Added in version 5.0.0
-- Prior to version 5.0.0, this action was known as `create_field`
 
-## Examples
-This action is called twice: globally (for all field types) and once for the specific field type.
-
-The action is passed 1 parameter:
-- `$field` *(array)* The field settings including name, label, etc.
-
-_Note:_ In the below code, 'action_function_name' needs to be a unique function name each time it is utilized.
-
-### Global
-Each time a field input is rendered, the filter `acf/render_field` is called.
+## Parameters
 ```
-function action_function_name( $field ) {
+do_action( 'acf/render_field', $field );
+```
+- `$field` *(array)* The field array containing all settings.
 
-	echo '<p>Some extra HTML</p>';
+## Modifers
+This action provides modifiers to target specific fields. The following action names are available:
+- `acf/render_field` 				Applies to all fields.
+- `acf/render_field/type={$type}` 	Applies to all fields of a specific type.
+- `acf/render_field/name={$name}` 	Applies to all fields of a specific name.
+- `acf/render_field/key={$key}` 	Applies to all fields of a specific key.
 
+## Example
+This example demonstrates how to output additional HTML after a field.
+
+#### functions.php
+```
+<?php
+function my_acf_render_field( $field ) {
+	echo '<p>Some extra HTML.</p>';
 }
-add_action( 'acf/render_field', 'action_function_name', 10, 1 );
-```
 
-### Specific
-Each time a field input is rendered, the filter `acf/render_field/type=$field_type` is called. This example demonstrates how to add extra HTML to the image field.
-```
-function action_function_name( $field ) {
+// Apply to all fields.
+add_action('acf/render_field', 'my_acf_render_field');
 
-	echo '<p>Some extra HTML for the image field</p>';
+// Apply to image fields.
+// add_action('acf/render_field/type=image', 'my_acf_render_field');
 
-}
-add_action( 'acf/render_field/type=image', 'action_function_name', 10, 1 );
+// Apply to fields named "hero_text".
+// add_action('acf/render_field/name=hero_text', 'my_acf_render_field');
+
+// Apply to field with key "field_123abcf".
+// add_action('acf/render_field/key=field_123abcf', 'my_acf_render_field');
 ```
 
 ## Notes
-- To render HTML before ACF does, use a priority of less than 10.
-- To render HTML after ACF does, use a priority of 10 or higher.
+
+### Priority
+In order to hook-in before ACF outputs any field HTML, use a priority less than 10 with either the "global" or "type" action names.
