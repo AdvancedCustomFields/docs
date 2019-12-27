@@ -1,21 +1,27 @@
 [
     {
         "title": "acf\/field_group\/admin_enqueue_scripts",
-        "description": "Called during the 'enqueue_scripts' action when editing a field group.",
+        "description": "Fires during the \"enqueue_scripts\" action when editing a field group.",
         "category": "actions",
         "keywords": [],
         "slug": "acf-field_group-admin_enqueue_scripts",
-        "path": "actions\/acf-field_group-admin_enqueue_scripts.md",
-        "status": "draft"
+        "path": "actions\/acf-field_group-admin_enqueue_scripts.md"
+    },
+    {
+        "title": "acf\/field_group\/admin_footer",
+        "description": "Fires during the \"admin_footer\" action when editing a field group.",
+        "category": "actions",
+        "keywords": [],
+        "slug": "acf-field_group-admin_footer",
+        "path": "actions\/acf-field_group-admin_footer.md"
     },
     {
         "title": "acf\/field_group\/admin_head",
-        "description": "Called during the admin_head action when editing a field group",
+        "description": "Fires during the \"admin_head\" action when editing a field group.",
         "category": "actions",
         "keywords": [],
         "slug": "acf-field_group-admin_head",
-        "path": "actions\/acf-field_group-admin_head.md",
-        "status": "draft"
+        "path": "actions\/acf-field_group-admin_head.md"
     },
     {
         "title": "acf\/init",

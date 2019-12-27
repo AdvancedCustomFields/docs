@@ -3,6 +3,9 @@
 Welcome to the GitHub documentation repository for the [Advanced Custom Fields](https://www.advancedcustomfields.com/) WordPress plugin.
 
 ### Actions
+- [acf/field_group/admin_enqueue_scripts](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-field_group-admin_enqueue_scripts.md)
+- [acf/field_group/admin_footer](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-field_group-admin_footer.md)
+- [acf/field_group/admin_head](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-field_group-admin_head.md)
 - [acf/init](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-init.md)
 - [acf/input/admin_enqueue_scripts](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-input-admin_enqueue_scripts.md)
 - [acf/input/admin_footer](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-input-admin_footer.md)
