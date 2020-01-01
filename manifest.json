@@ -25,7 +25,7 @@
     },
     {
         "title": "acf\/init",
-        "description": "Fires after ACF has finished loading.",
+        "description": "Fires after ACF is fully initialized.",
         "category": "actions",
         "keywords": [],
         "slug": "acf-init",
@@ -73,7 +73,7 @@
     },
     {
         "title": "acf\/save_post",
-        "description": "Called when saving `$_POST` data.",
+        "description": "Fires when saving $_POST data.",
         "category": "actions",
         "keywords": [],
         "slug": "acf-save_post",
@@ -81,12 +81,11 @@
     },
     {
         "title": "acf\/validate_save_post",
-        "description": "Called when validating `$_POST` data.",
+        "description": "Fires when validating `$_POST` data.",
         "category": "actions",
         "keywords": [],
         "slug": "acf-validate_save_post",
-        "path": "actions\/acf-validate_save_post.md",
-        "status": "draft"
+        "path": "actions\/acf-validate_save_post.md"
     },
     {
         "title": "Accordion",
