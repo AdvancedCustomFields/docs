@@ -69,18 +69,13 @@ You can find out more about support at our dedicated [Support FAQ](#support-ques
 
 ACF comes in two versions: [free](https://wordpress.org/plugins/advanced-custom-fields/) and [PRO](https://www.advancedcustomfields.com/pro/). The free version is fully featured, and contains most of the types of fields you're likely to need while building an average website.
 
-If you'd really like to level up, and gain access to more complex and feature rich field types such as [Galleries](https://www.advancedcustomfields.com/resources/gallery/), [Repeaters](https://www.advancedcustomfields.com/resources/repeater/), [Flexible Content Layouts](https://www.advancedcustomfields.com/resources/flexible-content/), and [Clones](https://www.advancedcustomfields.com/resources/clone/), you'll need to purchase the PRO version. This is a **one time purchase** with no onging costs.
+If you'd really like to level up, and gain access to more complex and feature rich field types such as [Blocks](https://www.advancedcustomfields.com/resources/blocks/), [Galleries](https://www.advancedcustomfields.com/resources/gallery/), [Repeaters](https://www.advancedcustomfields.com/resources/repeater/), [Flexible Content Layouts](https://www.advancedcustomfields.com/resources/flexible-content/), and [Clones](https://www.advancedcustomfields.com/resources/clone/), you'll need to purchase the PRO version.
 
-ACF PRO currently has two license levels:
-1. Personal ($25) - This covers you for 1 website with lifetime upgrades
-2. Developer ($100) - This allows you to install ACF PRO on unlimited sites, with ongoing upgrades, forever!
+ACF PRO licenses are available for purchase as yearly subscriptions. Prices shown are in USD excluding any taxes which may be added during checkout depending on your billing location. For available pricing, please see our [PRO page](https://www.advancedcustomfields.com/pro/).
 
-Please note that the purchase price is in Australian dollars (AUD), which means that its probably even cheaper where you are (unless you're in New Zealand, I guess).
+### Do I need to renew my license?
 
-
-### Are there any ongoing costs?
-
-No, there are no ongoing costs. This is a one time purchase.
+Yes. Licenses are renewed automatically each year to give you continued access to updates. You may also opt-out from auto renewals in favour of manual control from you online account.
 
 
 ### What payment methods do you accept?
@@ -98,12 +93,12 @@ If you require a 'Tax residency certificate' we have one available, please [cont
 ### What do I get with my purchase
 
 Your purchase provides you access to your own [store account page](https://www.advancedcustomfields.com/my-account/) on our site. From here you can:
- * Download the latest version of ACF PRO (and all previous versions, if you wish)
- * View and upgrade your licenses
- * View and print invoices for all your previous orders
- * Edit your contact and billing details
- * View and add new support tickets
-
+* Download the latest version of ACF PRO (and access previous versions too).
+* View and upgrade your license keys.
+* View and manage your license activations.
+* View and print invoices for all your orders.
+* Manage your contact and billing details.
+* View and create support tickets.
 
 ### Where can I download my purchase?
 
@@ -114,7 +109,6 @@ Your ACF PRO download is always available at your [store account page](https://w
 ACF PRO has been built with WordPress best practices in mind. We have designed the plugin to be as efficient and unobtrusive as possible, to allow you to build great websites without getting in your way.
 
 But, with over 50,000 plugins available in the WordPress directory, and probably at least as many themes available, some conflicts may arise. In the unusual circumstance that such an issue occurs, we will always do our utmost to try and resolve those conflicts through our [friendly support folks](/contact).
-
 
 
 ### What kind of support do you offer?
