@@ -13,6 +13,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [acf/input/form_data](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-input-form_data.md)
 - [acf/render_field](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-render_field.md)
 - [acf/save_post](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-save_post.md)
+- [acf/validate_save_post](https://github.com/AdvancedCustomFields/docs/blob/master/actions/acf-validate_save_post.md)
 
 ### Field Types
 - [Accordion](https://github.com/AdvancedCustomFields/docs/blob/master/fields/accordion.md)
