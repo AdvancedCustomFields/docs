@@ -430,18 +430,10 @@ Finally, you'll need to upload the older version to your wp-content/plugins dire
 
 ### What is a license?
 
-ACF PRO introduces a standard licensing system which unlocks future updates. There are currently 2 different licenses available, these are personal and developer. 
-
-* A personal license will unlock plugin updates on 1 website, 
-* A developer license will unlock plugin updates on **unlimited** websites.
-
-After purchasing an ACF PRO license, you will have access to the plugin files via your [store account page](https://www.advancedcustomfields.com/my-account/), and can then use the license key on the _Custom Fields > Updates_ page within the WP-Admin section of your website to activate and unlock plugin updates for the website.
+License keys are used to enable plugin updates. After purchasing an ACF PRO license, you will receive a unique license key (alongside your ACF PRO plugin download). This key can be activated from your WordPress dashboard’s plugin page. License keys can be activated, deactivated and upgraded at any time. 
 
 ### Can I upgrade my license?
-You can upgrade your license at any time. Simply login to your [store account page](https://www.advancedcustomfields.com/my-account) and follow the prompts. Your license will be upgraded and you will be charged the difference in cost!
-
-### Can I downgrade my license?
-Currently, this functionality does not exist, however it will be considered in the future.
+Yes. You can upgrade (and downgrade) your license at any time. Simply login to your [account area](https://www.advancedcustomfields.com/my-account) and find your subscription to access upgrading actions.
 
 ### How do I activate my license key?
 
