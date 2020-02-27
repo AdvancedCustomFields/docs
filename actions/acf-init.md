@@ -1,11 +1,11 @@
 ---
 title: acf/init
-description: Fires after ACF has finished loading.
+description: Fires after ACF is fully initialized.
 category: actions
 ---
 
 ## Description
-Fires after ACF has finished loading.
+Fires after ACF is fully initialized.
 
 This action is similar to the WordPress [init](https://developer.wordpress.org/reference/hooks/init/) action, and should be used to extend or register items such as Blocks, Forms and Options Pages.
 
