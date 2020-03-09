@@ -362,6 +362,14 @@
         "group": "Content"
     },
     {
+        "title": "acf\/load_field",
+        "description": "Filters the $field settings after being loaded.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-load_field",
+        "path": "filters\/acf-load_field.md"
+    },
+    {
         "title": "acf_add_options_page()",
         "description": "Adds an options page to the admin menu.",
         "category": "functions",

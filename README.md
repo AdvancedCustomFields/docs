@@ -43,6 +43,9 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [User](https://github.com/AdvancedCustomFields/docs/blob/master/fields/user.md)
 - [Wysiwyg Editor](https://github.com/AdvancedCustomFields/docs/blob/master/fields/wysiwyg-editor.md)
 
+### Filters
+- [acf/load_field](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-load_field.md)
+
 ### Functions
 - [acf_add_options_page()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/acf_add_options_page.md)
 - [acf_add_options_sub_page()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/acf_add_options_sub_page.md)
