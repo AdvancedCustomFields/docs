@@ -370,6 +370,14 @@
         "path": "filters\/acf-load_field.md"
     },
     {
+        "title": "acf\/load_value",
+        "description": "Filters the field $value after being loaded.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-load_value",
+        "path": "filters\/acf-load_value.md"
+    },
+    {
         "title": "acf_add_options_page()",
         "description": "Adds an options page to the admin menu.",
         "category": "functions",
