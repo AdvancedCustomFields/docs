@@ -41,14 +41,14 @@ function my_acf_load_field( $field ) {
 }
 
 // Apply to all fields.
-// add_action('acf/load_field', 'my_acf_load_field');
+// add_filter('acf/load_field', 'my_acf_load_field');
 
 // Apply to select fields.
-// add_action('acf/load_field/type=select', 'my_acf_load_field');
+// add_filter('acf/load_field/type=select', 'my_acf_load_field');
 
 // Apply to fields named "custom_select".
-add_action('acf/load_field/name=custom_select', 'my_acf_load_field');
+add_filter('acf/load_field/name=custom_select', 'my_acf_load_field');
 
 // Apply to field with key "field_123abcf".
-// add_action('acf/load_field/key=field_123abcf', 'my_acf_load_field');
+// add_filter('acf/load_field/key=field_123abcf', 'my_acf_load_field');
 ```

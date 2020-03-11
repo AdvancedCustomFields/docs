@@ -39,14 +39,14 @@ function my_acf_load_value( $value, $post_id, $field ) {
 }
 
 // Apply to all fields.
-add_action('acf/load_value', 'my_acf_load_value', 10, 3);
+add_filter('acf/load_value', 'my_acf_load_value', 10, 3);
 
 // Apply to textarea fields.
-// add_action('acf/load_value/type=textarea', 'my_acf_load_value', 10, 3);
+// add_filter('acf/load_value/type=textarea', 'my_acf_load_value', 10, 3);
 
 // Apply to fields named "hero_text".
-// add_action('acf/load_value/name=hero_text', 'my_acf_load_value', 10, 3);
+// add_filter('acf/load_value/name=hero_text', 'my_acf_load_value', 10, 3);
 
 // Apply to field with key "field_123abcf".
-// add_action('acf/load_value/key=field_123abcf', 'my_acf_load_value', 10, 3);
+// add_filter('acf/load_value/key=field_123abcf', 'my_acf_load_value', 10, 3);
 ```
