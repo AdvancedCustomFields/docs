@@ -386,6 +386,14 @@
         "path": "filters\/acf-load_value.md"
     },
     {
+        "title": "acf\/prepare_field",
+        "description": "Filters the $field settings in preparation for render.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-prepare_field",
+        "path": "filters\/acf-prepare_field.md"
+    },
+    {
         "title": "acf_add_options_page()",
         "description": "Adds an options page to the admin menu.",
         "category": "functions",
