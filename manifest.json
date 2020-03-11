@@ -362,6 +362,14 @@
         "group": "Content"
     },
     {
+        "title": "acf\/format_value",
+        "description": "Filters the field $value after being loaded by a template function such as get_field().",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-format_value",
+        "path": "filters\/acf-format_value.md"
+    },
+    {
         "title": "acf\/load_field",
         "description": "Filters the $field settings after being loaded.",
         "category": "filters",
