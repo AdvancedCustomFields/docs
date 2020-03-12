@@ -394,6 +394,14 @@
         "path": "filters\/acf-prepare_field.md"
     },
     {
+        "title": "acf\/update_value",
+        "description": "Filters the field $value before being saved.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-update_value",
+        "path": "filters\/acf-update_value.md"
+    },
+    {
         "title": "acf_add_options_page()",
         "description": "Adds an options page to the admin menu.",
         "category": "functions",
