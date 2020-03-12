@@ -48,6 +48,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [acf/load_field](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-load_field.md)
 - [acf/load_value](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-load_value.md)
 - [acf/prepare_field](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-prepare_field.md)
+- [acf/update_field](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-update_field.md)
 - [acf/update_value](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-update_value.md)
 
 ### Functions
