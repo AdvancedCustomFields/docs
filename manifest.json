@@ -410,6 +410,14 @@
         "path": "filters\/acf-update_value.md"
     },
     {
+        "title": "acf\/validate_attachment",
+        "description": "Used to perform validation on an attachment before it is uploaded or selected.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-validate_attachment",
+        "path": "filters\/acf-validate_attachment.md"
+    },
+    {
         "title": "acf\/validate_value",
         "description": "Used to perform validation on the field's $value before being saved.",
         "category": "filters",
