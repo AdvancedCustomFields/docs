@@ -410,6 +410,14 @@
         "path": "filters\/acf-update_value.md"
     },
     {
+        "title": "acf\/validate_value",
+        "description": "Used to perform validation on the field's $value before being saved.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-validate_value",
+        "path": "filters\/acf-validate_value.md"
+    },
+    {
         "title": "acf_add_options_page()",
         "description": "Adds an options page to the admin menu.",
         "category": "functions",

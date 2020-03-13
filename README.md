@@ -50,6 +50,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [acf/prepare_field](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-prepare_field.md)
 - [acf/update_field](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-update_field.md)
 - [acf/update_value](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-update_value.md)
+- [acf/validate_value](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-validate_value.md)
 
 ### Functions
 - [acf_add_options_page()](https://github.com/AdvancedCustomFields/docs/blob/master/functions/acf_add_options_page.md)
