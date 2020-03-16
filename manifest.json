@@ -410,6 +410,14 @@
         "path": "filters\/acf-update_value.md"
     },
     {
+        "title": "acf\/upload_prefilter",
+        "description": "Used to perform validation on an attachment before it is uploaded.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-upload_prefilter",
+        "path": "filters\/acf-upload_prefilter.md"
+    },
+    {
         "title": "acf\/validate_attachment",
         "description": "Used to perform validation on an attachment before it is uploaded or selected.",
         "category": "filters",
