@@ -394,6 +394,14 @@
         "path": "filters\/acf-prepare_field.md"
     },
     {
+        "title": "acf\/settings",
+        "description": "Filters ACF settings used throughout the plugin",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-settings",
+        "path": "filters\/acf-settings.md"
+    },
+    {
         "title": "acf\/update_field",
         "description": "Filters the $field settings before being saved.",
         "category": "filters",
