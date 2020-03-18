@@ -1,11 +1,11 @@
 ---
 title: acf/settings
-description: Filters ACF settings used throughout the plugin
+description: Filters settings used throughout the plugin
 category: filters
 ---
 
 ## Description
-Filters the various ACF settings used throughout the plugin.
+Filters the various settings that are used throughout the plugin.
 
 ## Changelog
 - Added in version 5.0.0

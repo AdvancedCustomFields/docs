@@ -362,6 +362,14 @@
         "group": "Content"
     },
     {
+        "title": "acf\/compatibility",
+        "description": "Used to enable backwards compatibility support.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-compatibility",
+        "path": "filters\/acf-compatibility.md"
+    },
+    {
         "title": "acf\/format_value",
         "description": "Filters the field $value after being loaded by a template function such as get_field().",
         "category": "filters",
@@ -395,7 +403,7 @@
     },
     {
         "title": "acf\/settings",
-        "description": "Filters ACF settings used throughout the plugin",
+        "description": "Filters settings used throughout the plugin",
         "category": "filters",
         "keywords": [],
         "slug": "acf-settings",

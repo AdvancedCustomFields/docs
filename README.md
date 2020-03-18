@@ -44,6 +44,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [Wysiwyg Editor](https://github.com/AdvancedCustomFields/docs/blob/master/fields/wysiwyg-editor.md)
 
 ### Filters
+- [acf/compatibility](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-compatibility.md)
 - [acf/format_value](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-format_value.md)
 - [acf/load_field](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-load_field.md)
 - [acf/load_value](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-load_value.md)
