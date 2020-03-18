@@ -18,8 +18,8 @@ apply_filters( "acf/compatibility/{$name}", $enabled );
 ```
 - `$enabled` *(bool)* Whether of not backwards compatibility support is enabled. Defaults to `false`.
 
-## Settings
-The following table lists the available settings which can be modified.
+## Compatibilities
+The following table lists the available compatibilities which can be enabled.
 
 <table>
 <tbody>
