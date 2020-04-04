@@ -390,8 +390,8 @@
         "description": "Filters the $args used to query posts in the Post Object field.",
         "category": "filters",
         "keywords": [],
-        "slug": "acf-fields-post_object-query-",
-        "path": "filters\/acf-fields-post_object-query-.md"
+        "slug": "acf-fields-post_object-query",
+        "path": "filters\/acf-fields-post_object-query.md"
     },
     {
         "title": "acf\/format_value",
