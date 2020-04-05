@@ -7,7 +7,7 @@ category: filters
 ## Description
 Filters the arguments for registering a block type.
 
-This filter is applied during the [acf_register_block_type()](https://www.advancedcustomfields.com/resources/acf_register_block_type/) function, after defaults have been merged, and before the block type has been registered.
+This filter is applied during the [acf_register_block_type()](https://www.advancedcustomfields.com/resources/acf_register_block_type/) function after defaults have been merged and before the block type has been registered.
 
 ## Changelog
 - Added in version 5.8.9
