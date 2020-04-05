@@ -426,6 +426,14 @@
         "path": "filters\/acf-prepare_field.md"
     },
     {
+        "title": "acf\/register_block_type_args",
+        "description": "Filters the arguments for registering a block type.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-register_block_type_args",
+        "path": "filters\/acf-register_block_type_args.md"
+    },
+    {
         "title": "acf\/settings",
         "description": "Filters settings used throughout the plugin",
         "category": "filters",
