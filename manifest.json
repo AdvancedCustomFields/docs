@@ -394,6 +394,14 @@
         "path": "filters\/acf-fields-post_object-query.md"
     },
     {
+        "title": "acf\/fields\/post_object\/result",
+        "description": "Filters the text displayed for each post in the Post Object field.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-fields-post_object-result",
+        "path": "filters\/acf-fields-post_object-result.md"
+    },
+    {
         "title": "acf\/format_value",
         "description": "Filters the field $value after being loaded by a template function such as get_field().",
         "category": "filters",

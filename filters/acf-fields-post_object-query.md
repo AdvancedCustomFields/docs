@@ -5,7 +5,7 @@ category: filters
 ---
 
 ## Description
-Filters the query `$args` used by `WP_Query` to query posts in the Post Object field.
+Filters the query `$args` used by `WP_Query` to display posts in the Post Object field.
 
 ## Changelog
 - Added in version 4.1.2
@@ -25,7 +25,7 @@ This filter provides modifiers to target specific fields. The following filter n
 - `acf/fields/post_object/query/key={$key}` 	Applies to all fields of a specific key.
 
 ## Example
-This example demonstrates how to modify the Post Object query args.
+This example demonstrates how to modify some of the Post Object query args.
 
 #### functions.php
 ```
