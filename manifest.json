@@ -406,16 +406,16 @@
         "description": "Filters the $args used to query posts in the Relationship field.",
         "category": "filters",
         "keywords": [],
-        "slug": "acf-fields-relationship-query-copy",
-        "path": "filters\/acf-fields-relationship-query-copy.md"
+        "slug": "acf-fields-relationship-query",
+        "path": "filters\/acf-fields-relationship-query.md"
     },
     {
         "title": "acf\/fields\/relationship\/result",
         "description": "Filters the text displayed for each post in the Relationship field.",
         "category": "filters",
         "keywords": [],
-        "slug": "acf-fields-relationship-result-copy",
-        "path": "filters\/acf-fields-relationship-result-copy.md"
+        "slug": "acf-fields-relationship-result",
+        "path": "filters\/acf-fields-relationship-result.md"
     },
     {
         "title": "acf\/format_value",
