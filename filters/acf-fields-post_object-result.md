@@ -8,7 +8,6 @@ category: filters
 Filters the text displayed for each post in the Post Object field.
 
 ## Changelog
-- Changed parameter from `$post_object` to `$post_id` in version 5.0.0
 - Added in version 4.1.2
 
 ## Parameters
