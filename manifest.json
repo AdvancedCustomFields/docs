@@ -418,6 +418,22 @@
         "path": "filters\/acf-fields-relationship-result.md"
     },
     {
+        "title": "acf\/fields\/taxonomy\/query",
+        "description": "Filters the $args used to query terms in the Taxonomy field.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-fields-taxonomy-query",
+        "path": "filters\/acf-fields-taxonomy-query.md"
+    },
+    {
+        "title": "acf\/fields\/taxonomy\/result",
+        "description": "Filters the text displayed for each term in the Taxonomy field.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-fields-taxonomy-result",
+        "path": "filters\/acf-fields-taxonomy-result.md"
+    },
+    {
         "title": "acf\/format_value",
         "description": "Filters the field $value after being loaded by a template function such as get_field().",
         "category": "filters",
