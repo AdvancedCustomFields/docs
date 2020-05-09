@@ -402,6 +402,22 @@
         "path": "filters\/acf-fields-post_object-result.md"
     },
     {
+        "title": "acf\/fields\/relationship\/query",
+        "description": "Filters the $args used to query posts in the Relationship field.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-fields-relationship-query-copy",
+        "path": "filters\/acf-fields-relationship-query-copy.md"
+    },
+    {
+        "title": "acf\/fields\/relationship\/result",
+        "description": "Filters the text displayed for each post in the Relationship field.",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-fields-relationship-result-copy",
+        "path": "filters\/acf-fields-relationship-result-copy.md"
+    },
+    {
         "title": "acf\/format_value",
         "description": "Filters the field $value after being loaded by a template function such as get_field().",
         "category": "filters",

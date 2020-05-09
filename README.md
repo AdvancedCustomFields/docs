@@ -49,6 +49,8 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [acf/fields/google_map/api](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-fields-google_map-api.md)
 - [acf/fields/post_object/query](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-fields-post_object-query.md)
 - [acf/fields/post_object/result](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-fields-post_object-result.md)
+- [acf/fields/relationship/query](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-fields-relationship-query-copy.md)
+- [acf/fields/relationship/result](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-fields-relationship-result-copy.md)
 - [acf/format_value](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-format_value.md)
 - [acf/load_field](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-load_field.md)
 - [acf/load_value](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-load_value.md)
