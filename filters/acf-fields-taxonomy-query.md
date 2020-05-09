@@ -1,6 +1,6 @@
 ---
 title: acf/fields/taxonomy/query
-description: Filters the $args used to query terms in the Taxonomy field.
+description: Filters the $args used to query terms in the Taxonomy field (dropdown).
 category: filters
 ---
 

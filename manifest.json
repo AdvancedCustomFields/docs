@@ -419,7 +419,7 @@
     },
     {
         "title": "acf\/fields\/taxonomy\/query",
-        "description": "Filters the $args used to query terms in the Taxonomy field.",
+        "description": "Filters the $args used to query terms in the Taxonomy field (dropdown).",
         "category": "filters",
         "keywords": [],
         "slug": "acf-fields-taxonomy-query",
@@ -432,6 +432,14 @@
         "keywords": [],
         "slug": "acf-fields-taxonomy-result",
         "path": "filters\/acf-fields-taxonomy-result.md"
+    },
+    {
+        "title": "acf\/fields\/taxonomy\/wp_list_categories",
+        "description": "Filters the $args used to query terms in the Taxonomy field (list).",
+        "category": "filters",
+        "keywords": [],
+        "slug": "acf-fields-taxonomy-wp_list_categories",
+        "path": "filters\/acf-fields-taxonomy-wp_list_categories.md"
     },
     {
         "title": "acf\/format_value",

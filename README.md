@@ -53,6 +53,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [acf/fields/relationship/result](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-fields-relationship-result.md)
 - [acf/fields/taxonomy/query](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-fields-taxonomy-query.md)
 - [acf/fields/taxonomy/result](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-fields-taxonomy-result.md)
+- [acf/fields/taxonomy/wp_list_categories](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-fields-taxonomy-wp_list_categories.md)
 - [acf/format_value](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-format_value.md)
 - [acf/load_field](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-load_field.md)
 - [acf/load_value](https://github.com/AdvancedCustomFields/docs/blob/master/filters/acf-load_value.md)
