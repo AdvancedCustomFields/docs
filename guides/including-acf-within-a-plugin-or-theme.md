@@ -8,7 +8,7 @@ redirects: ['including-acf-in-a-plugin-theme']
 ## Introduction
 The Advanced Custom Fields plugin is a powerful tool for developing bespoke websites and web-apps. Although designed primarily for individual use, it may also be used as a framework by both plugin and theme authors to power their free and premium products.
 
-We encourage authors to include ACF and have only a few simple rules to follow. This guide outlines the do's and don'ts when including ACF within you plugin or theme. 
+We encourage authors to include ACF and have only a few simple rules to follow, which we hope you respect. This guide outlines the do's and don'ts when including ACF within you plugin or theme. 
 
 ## Product Types
 When talking about a WordPress product, we can consider it as either a plugin, theme, premium plugin or premium theme.
@@ -25,6 +25,7 @@ Please see the following table of rules that govern the inclusion of our plugins
 | Include in a free theme | ✅ | ❌ |
 | Include in a premium plugin | ✅ | ✅ |
 | Include in a premium theme | ✅ | ✅ |
+| Include in an "ACF" plugin | ❌ | ❌ |
 | Share license key information | ❌ | ❌ |
 | Use as a selling point | ✅ | ❌ |
 
@@ -32,6 +33,9 @@ Please see the following table of rules that govern the inclusion of our plugins
 Although we love idea of you empowering your customers with intuitive publishing controls, we don't love the idea of you advertising this to boost sales. 
 
 When including ACF PRO within your premium theme or premium plugin, please do not advertise this in your marketing material. For example, stay away from messages like "This theme also includes ACF PRO - normally $$$ - for free!"
+
+### Notes about "ACF" plugins
+We do not allow ACF or ACF PRO to be included in any type of "ACF" extension or plugin. For example, a plugin named "ACF PRO Kit" that extends the plugin with extra features may not include ACF PRO. In this case, the "ACF PRO Kit" plugin should require ACF PRO to be installed.
 
 ## How to include plugin files
 To include ACF or ACF PRO within your plugin or theme, please download the appropriate ACF plugin files and copy them into your plugin or theme. We recommend using the folder "includes/acf" within your product files.
