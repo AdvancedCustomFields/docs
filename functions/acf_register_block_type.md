@@ -175,6 +175,21 @@ acf_register_block_type( $settings );
      ```
     'multiple' => false,
     ```
+  
+- **example**  
+  (Array) (Optional) An array of structured data used to construct a preview shown within the block-inserter.
+  All values entered into the 'data' attribute array will become available within the block render template/callback via  `$block['data']` or `get_field()`.
+  ```
+  'example'  => array(
+      'attributes' => array(
+          'mode' => 'preview',
+          'data' => array(
+      		'testimonial'	=> "Your testimonial text here",
+  			'author'		=> "John Smith"
+          )
+      )
+  )
+  ```
 
 ## Return
 *(array)* The validated and registered block settings.
@@ -434,5 +449,42 @@ acf_register_block_type(array(
 	}
 	
 })(jQuery);
-
 ```
+
+### Adding block previews 🌄
+Block previews offer an elegant solution for identifying and differentiating the various block types shown in the inserter panel.
+
+<figure>
+  <img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-blocks-example-setting.png" alt="acf-blocks-example-setting"/>
+  <figcaption>Screenshot of the inserter panel showing a block preview.</figcaption>
+</figure>
+
+#### functions.php
+```php
+acf_register_block_type(array(
+	'name'				=> 'testimonial',
+	'title'				=> __('Testimonial'),
+	'description'		=> __('A custom testimonial block.'),
+	'example'  			=> array(
+		'attributes' => array(
+			'mode' => 'preview',
+			'data' => array(
+				'testimonial'	=> "Blocks are...",
+				'author'		=> "Jane Smith",
+				'role'			=> "Person",
+				'is_preview'	=> true
+			)
+		)
+	)
+));
+```
+
+As shown above, the "example" setting is used to define an array of attributes used by WordPress to construct the preview. The available attributes to customize are _mode_ and _data_.
+
+All values defined in the _data_ attribute array will become available within the block render template/callback via `$block['data']` or `get_field()`.
+
+In the example above, three values are provided matching the names of three existing custom fields ('testimonial', 'author' & 'role'). An additional non-custom-field value ('is_preview') is also defined which could be used within the renderer to display alternative markup.
+
+
+
+
