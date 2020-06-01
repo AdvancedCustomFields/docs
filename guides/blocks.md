@@ -65,24 +65,24 @@ Similar to registering a post type, the [acf_register_block_type()](https://www.
 
 💡 This example only uses a small handful of the available settings so please be sure to read the [acf_register_block_type()](https://www.advancedcustomfields.com/resources/acf_register_block_type/) docs for a full list.
 
-```
-function register_acf_block_types() {
+```php
+add_action('acf/init', 'my_acf_init_block_types');
+function my_acf_init_block_types() {
 	
-	// register a testimonial block.
-	acf_register_block_type(array(
-		'name'				=> 'testimonial',
-		'title'				=> __('Testimonial'),
-		'description'		=> __('A custom testimonial block.'),
-		'render_template'	=> 'template-parts/blocks/testimonial/testimonial.php',
-		'category'			=> 'formatting',
-		'icon'				=> 'admin-comments',
-		'keywords'			=> array( 'testimonial', 'quote' ),
-	));
-}
-
-// Check if function exists and hook into setup.
-if( function_exists('acf_register_block_type') ) {
-	add_action('acf/init', 'register_acf_block_types');
+	// Check function exists.
+	if( function_exists('acf_register_block_type') ) {
+		
+		// register a testimonial block.
+		acf_register_block_type(array(
+			'name'				=> 'testimonial',
+			'title'				=> __('Testimonial'),
+			'description'		=> __('A custom testimonial block.'),
+			'render_template'	=> 'template-parts/blocks/testimonial/testimonial.php',
+			'category'			=> 'formatting',
+			'icon'				=> 'admin-comments',
+			'keywords'			=> array( 'testimonial', 'quote' ),
+		));
+	}
 }
 ```
 
@@ -110,7 +110,7 @@ This is done by creating a template file within your theme that matches the *ren
 One very exciting feature of ACF Blocks is that all the ACF API function such as `get_field()`, `the_field()` and `have_rows()` will work as expected!
 
 #### template-parts/blocks/testimonial/testimonial.php
-```
+```php
 <?php
 
 /**
