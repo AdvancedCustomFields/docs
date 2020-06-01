@@ -282,6 +282,7 @@ This example shows how to register a block using the render_callback setting.
 
 #### functions.php
 ```php
+<?php
 add_action('acf/init', 'my_register_blocks');
 function my_register_blocks() {
 	
