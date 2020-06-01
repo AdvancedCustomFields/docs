@@ -188,7 +188,7 @@ acf_register_block_type( $settings );
 This example shows how to register a block using the render_template setting.
 
 #### functions.php
-```
+```php
 add_action('acf/init', 'my_acf_blocks_init');
 function my_acf_blocks_init() {
 	
@@ -208,7 +208,7 @@ function my_acf_blocks_init() {
 ```
 
 #### template-parts/blocks/testimonial/testimonial.php
-```
+```php
 <?php
 
 /**
@@ -266,7 +266,7 @@ $text_color = get_field('text_color');
 This example shows how to register a block using the render_callback setting.
 
 #### functions.php
-```
+```php
 add_action('acf/init', 'my_register_blocks');
 function my_register_blocks() {
 	
