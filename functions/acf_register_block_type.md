@@ -487,3 +487,128 @@ All values defined in the "data" attribute array will become available within th
 In the example above, three values are defined matching the names of three existing custom fields ('testimonial', 'author' & 'role'). An additional non-custom-field value ('is_preview') is defined which could be used within the renderer to display alternative markup.
 
 👨‍💻 As previews are intended to communicate a visual design, we advise using the "preview" _mode_, however, it is also possible to set this to "edit" which will display the custom fields connected to that block.
+
+### Adding inner blocks 👩‍👧‍👦
+The term "Inner Blocks" refers to the ability to enable nested content - blocks within blocks. This short video demonstrates how inner blocks can be used to create a date restricted block with only basic PHP.
+
+<video style="display: block; width: 100%; background-color: #f2f1ee;" src="https://github.com/AdvancedCustomFields/assets/blob/master/2020/05/ACF%205.9%20Inner%20Blocks.mp4?raw=true" preload="metadata" controls="controls"></video>
+
+To add support for inner blocks, use the `<InnerBlocks />` Component within your render template/callback to define an editable area. This special element will be displayed as a native "block inserter area" when editing content, and the saved "inner blocks content" when viewing content.
+
+In order for the `<innerBlocks />` Component to function within the React based block editor, your block HTML must first be parsed as JSX. This can easily be done by adding support for the `__experimental_jsx` property.
+
+The following example demonstrates how to create the previous mentioned "Restricted" content block.
+
+#### functions.php
+```php
+add_action('acf/init', 'my_acf_init_blocks');
+function my_acf_init_blocks() {
+
+    // Check function exists.
+    if( function_exists('acf_register_block_type') ) {
+
+        // Register a restricted block.
+		acf_register_block_type(array(
+			'name'				=> 'restricted',
+			'title'				=> 'Restricted',
+			'description'		=> 'A restricted content block.',
+			'category'			=> 'formatting',
+			'mode'				=> 'preview',
+			'supports'			=> array(
+				'align' => true,
+				'mode' => false,
+				'__experimental_jsx' => true
+			),
+			'render_template' => 'template-parts/blocks/restricted/restricted.php',
+		));
+    }
+}
+```
+
+#### template-parts/blocks/restricted/restricted.php
+```php
+<?php
+/**
+ * Restricted Block Template.
+ *
+ * @param   array $block The block settings and attributes.
+ * @param   string $content The block inner HTML (empty).
+ * @param   bool $is_preview True during AJAX preview.
+ * @param   (int|string) $post_id The post ID this block is saved to.
+ */
+
+// Create class attribute allowing for custom "className" and "align" values.
+$classes = '';
+if( !empty($block['className']) ) {
+    $classes .= sprintf( ' %s', $block['className'] );
+}
+if( !empty($block['align']) ) {
+    $classes .= sprintf( ' align%s', $block['align'] );
+}
+
+// Load custom field values.
+$start_date = get_field('start_date');
+$end_date = get_field('end_date');
+
+// Restrict block output (front-end only).
+if( !$is_preview ) {
+    $now = time();
+    if( $start_date && strtotime($start_date) > $now ) {
+        echo sprintf( '<p>Content restricted until %s. Please check back later.</p>', $start_date );
+        return;
+    }
+    if( $end_date && strtotime($end_date) < $now ) {
+        echo sprintf( '<p>Content expired on %s.</p>', $end_date );
+        return;
+    }
+}
+
+// Define notification message shown when editing.
+if( $start_date && $end_date ) {
+    $notification = sprintf( 'Content visible from %s until %s.', $start_date, $end_date );
+} elseif( $start_date ) {
+    $notification = sprintf( 'Content visible from %s.', $start_date );
+} elseif( $end_date ) {
+    $notification = sprintf( 'Content visible until %s.', $end_date );
+} else {
+    $notification = 'Content unrestricted.';
+}
+?>
+<div class="restricted-block <?php echo esc_attr($classes); ?>">
+    <span class="restricted-block-notification"><?php echo esc_html( $notification ); ?></span>
+    <InnerBlocks  />
+</div>
+```
+
+The `<InnerBlocks />` Component may also be customized with the following attributes as documented in the [InnerBlocks Component Guide](https://github.com/WordPress/gutenberg/tree/master/packages/block-editor/src/components/inner-blocks).
+
+-	**allowedBlocks**  
+	(Array) An array of block names that restricted the types of content that can be inserted.
+	```php
+	$allowed_blocks = array( 'core/image', 'core/paragraph' );
+	echo '<innerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $allowed_blocks ) ) . '" />';
+	```
+  
+-	**template**  
+	(Array) A structured array of block content as documented in the [CPT block template guide](https://developer.wordpress.org/block-editor/developers/block-api/block-templates/). An additional attribute named _templateLock_ may be used in conjunction to lock the template content.
+	```php
+	$template = array(
+		array( 'core/paragraph', array(
+			'placeholder' => 'Add a root-level paragraph',
+		) ),
+		array( 'core/columns', array(), array(
+			array( 'core/column', array(), array(
+				array( 'core/image', array() ),
+			) ),
+			array( 'core/column', array(), array(
+				array( 'core/paragraph', array(
+					'placeholder' => 'Add a inner paragraph'
+				) ),
+			) ),
+		) )
+	);
+	echo '<innerBlocks template="' . esc_attr( wp_json_encode( $template ) ) . '" templateLock="all" />';
+	```
+-	**templateLock**  
+	(String) Locks the template content. Available settings are "all" or "insert". See the [InnerBlocks Component](https://github.com/WordPress/gutenberg/tree/master/packages/block-editor/src/components/inner-blocks) for further information.
+	
