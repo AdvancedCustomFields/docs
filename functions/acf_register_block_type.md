@@ -460,6 +460,8 @@ Block previews offer an elegant solution for identifying and differentiating the
   <figcaption>Screenshot of the inserter panel showing a block preview.</figcaption>
 </figure>
 
+To add support for block previews, use the "example" setting to define an array of attributes used by WordPress to construct the preview as shown in the following example.
+
 #### functions.php
 ```php
 acf_register_block_type(array(
@@ -480,12 +482,8 @@ acf_register_block_type(array(
 ));
 ```
 
-As shown above, the "example" setting is used to define an array of attributes used by WordPress to construct the preview. The available attributes to customize are _mode_ and _data_.
+All values defined in the "data" attribute array will become available within the block render template/callback via `$block['data']` or `get_field()`.
 
-All values defined in the _data_ attribute array will become available within the block render template/callback via `$block['data']` or `get_field()`.
+In the example above, three values are defined matching the names of three existing custom fields ('testimonial', 'author' & 'role'). An additional non-custom-field value ('is_preview') is defined which could be used within the renderer to display alternative markup.
 
-In the example above, three values are provided matching the names of three existing custom fields ('testimonial', 'author' & 'role'). An additional non-custom-field value ('is_preview') is also defined which could be used within the renderer to display alternative markup.
-
-
-
-
+👨‍💻 As previews are intended to communicate a visual design, we advise using the "preview" _mode_, however, it is also possible to set this to "edit" which will display the custom fields connected to that block.
