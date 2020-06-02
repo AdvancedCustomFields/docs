@@ -493,7 +493,7 @@ The term "Inner Blocks" refers to the ability to enable nested content - blocks 
 
 <video style="display: block; width: 100%; background-color: #f2f1ee;" src="https://github.com/AdvancedCustomFields/assets/blob/master/2020/05/ACF%205.9%20Inner%20Blocks.mp4?raw=true" preload="metadata" controls="controls"></video>
 
-To add support for inner blocks, use the `<InnerBlocks />` Component within your render template/callback to define an editable area. This special element will be displayed as a native "block inserter area" when editing content, and the saved "inner blocks content" when viewing content.
+To add support for inner blocks, use the `<InnerBlocks />` Component within your render template/callback to define an editable area. This special element will be displayed as a native "block inserter area" when editing content, and the saved "inner blocks content" when viewing content. Please note that only a single `<InnerBlocks />` Component may be used per block.
 
 In order for the `<innerBlocks />` Component to function within the React based block editor, your block HTML must first be parsed as JSX. This can easily be done by adding support for the `__experimental_jsx` property.
 
@@ -611,4 +611,3 @@ The `<InnerBlocks />` Component may also be customized with the following attrib
 	```
 -	**templateLock**  
 	(String) Locks the template content. Available settings are "all" or "insert". See the [InnerBlocks Component](https://github.com/WordPress/gutenberg/tree/master/packages/block-editor/src/components/inner-blocks) for further information.
-	
