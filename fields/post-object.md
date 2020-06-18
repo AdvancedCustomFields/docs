@@ -11,14 +11,14 @@ The Post Object field creates a drop-down list to select one or more posts, page
 ## Screenshots
 <div class="gallery">
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-post-object-interface.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-post-object-interface.png" alt="A Post Object field that allows you to select from post, pages, etc." />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-post-object-field-interface.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-post-object-field-interface.png" alt="A Post Object field that allows you to select from post, pages, etc." />
 		</a>
 		<figcaption>The Post Object field interface</figcaption>
 	</figure>
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-post-object-settings.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-post-object-settings.png" alt="List of field settings shown when setting up a Post Object field" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-post-object-field-settings.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-post-object-field-settings.png" alt="List of field settings shown when setting up a Post Object field" />
 		</a>
 		<figcaption>The Post Object field settings</figcaption>
 	</figure>
