@@ -46,7 +46,7 @@ The Relationship field provides a duel-column component to select one or more po
   Specifies the returned value format. Choose from Post Object (WP_Post) or Post ID (integer).
 
 ## Template usage  
-The Relationship field will return an array of items where each items is either a *WP_Post* object or an *integer* value depending on the Return Format set.
+The Relationship field will return an array of items where each item is either a *WP_Post* object or an *integer* value depending on the Return Format set.
 
 ### Display list of posts *(with setup_postdata)*
 This example demonstrates how to loop over a Post Object value and display a list of clickable links. Here, we use a special function named `setup_postdata()` to enable the use of WordPress template functions. The field in this example uses *Post Object* as the *Return Format* and is a multiple value.
