@@ -266,8 +266,7 @@
         "keywords": [],
         "slug": "relationship",
         "path": "fields\/relationship.md",
-        "group": "Relational",
-        "status": "draft"
+        "group": "Relational"
     },
     {
         "title": "Repeater",

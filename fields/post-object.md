@@ -11,7 +11,7 @@ The Post Object field creates an interactive drop-down to select one or more pos
 <div class="gallery">
 	<figure>
 		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-post-object-field-interface.png">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-post-object-field-interface.png" alt="A Post Object field that allows you to select from post, pages, etc." />
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-post-object-field-interface.png" alt="A searchable drop-down component, opened, and displaying some results." />
 		</a>
 		<figcaption>The Post Object field interface</figcaption>
 	</figure>
