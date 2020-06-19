@@ -5,15 +5,13 @@ group: Relational
 ---
 
 ## Description
-The Page Link field creates a drop-down list to select one or more posts, pages, CPTs or archive URLs from.
-
-This field type returns only a URL string as the value making it convenient for links. To get more data from a selected post, please use the [post object](https://www.advancedcustomfields.com/resources/post-object/) field instead.
+The Post Object field creates an interactive drop-down to select one or more posts, pages, custom post type items or archive URLs. This field type uses the Select2 library to enable search and AJAX functionality.
 
 ## Screenshots
 <div class="gallery">
 	<figure>
-		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-page-link-field-interface.jpg">
-			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-page-link-field-interface.jpg" alt="A Page Link field that allows you to choose an existing post, page or CPT from a list" />
+		<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-page-link-field-interface.png">
+			<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-page-link-field-interface.png" alt="A Page Link field that allows you to choose an existing post, page,CPT or archive URL from a list" />
 		</a>
 		<figcaption>The Page Link field interface</figcaption>
 	</figure>
@@ -31,26 +29,27 @@ This field type returns only a URL string as the value making it convenient for 
 
 ## Settings
 - **Filter by Post Type**  
-  Filters available posts via 1 or more post type.
+  Filters the selectable results via one or more post type. When left empty, all post types will be shown. As results are grouped by their post type, the selected post types here may be positioned into a specific order.
   
 - **Filter by Taxonomy**  
-  Filters available posts via 1 or more taxonomies.
+  Filters the selectable results via one or more taxonomy term.
   
 - **Allow Null**  
   Allows the current selection to be cleared and an empty value to be saved.
   
 - **Allow Archives URLs**  
   Includes post type archive URLs within the select list of options.
-  
+
 - **Multiple**  
-  Allows you to select more than one choice.
+  Allows you to select more than one choice. When enabled, you may also drag/drop to reorder the selected choices.
 
-## Template usage  
+## Template usage
+The Page Link field will return either a single URL or array of URLs. To get more data from a selected post, please use the [post object](https://www.advancedcustomfields.com/resources/post-object/) field instead.
 
-### Basic Display
+### Display single value
 This example demonstrates how to display a selected page link value.
 ```
-<a href="<?php the_field('page_link'); ?>">Read this!</a>
+<a href="<?php the_field('page_link'); ?>">Continue reading</a>
 ```
 
 ### Display multiple values
@@ -59,13 +58,13 @@ This example demonstrates how to load and display multiple selected page link va
 <?php 
 $urls = get_field('urls');
 if( $urls ): ?>
-<h3>Further reading</h3>
-<ul>
-	<?php foreach( $urls as $url ): ?>
-	<li>
-		<a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $url ); ?></a>
-	</li>
-	<?php endforeach; ?>
-</ul>
+	<h3>Further reading</h3>
+	<ul>
+		<?php foreach( $urls as $url ): ?>
+		<li>
+			<a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $url ); ?></a>
+		</li>
+		<?php endforeach; ?>
+	</ul>
 <?php endif; ?>
 ```
