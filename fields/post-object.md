@@ -2,11 +2,10 @@
 title: Post Object
 category: field-types
 group: Relational
-status: draft
 ---
 
 ## Description
-The Post Object field creates a drop-down list to select one or more posts, pages or CPTs from.
+The Post Object field creates an interactive drop-down to select one or more posts, pages or custom post type items. This field type uses the Select2 library to enable search and AJAX functionality.
 
 ## Screenshots
 <div class="gallery">
@@ -26,97 +25,78 @@ The Post Object field creates a drop-down list to select one or more posts, page
 
 ## Settings
 - **Filter by Post Type**  
-  Filters the selectable results via 1 or more post type.
+  Filters the selectable results via one or more post type. When left empty, all post types will be shown. As results are grouped by their post type, the selected post types here may be positioned into a specific order.
   
 - **Filter by Taxonomy**  
-  Filters the selectable results via 1 or more taxonomy term.
+  Filters the selectable results via one or more taxonomy term.
   
 - **Allow Null**  
   Allows the current selection to be cleared and an empty value to be saved.
   
 - **Multiple**  
-  Allows you to select more than one choice. You may also drag/drop reorder the selected choices.
+  Allows you to select more than one choice. When enabled, you may also drag/drop to reorder the selected choices.
   
 - **Return Format**
-  Specifies the returned value format. Defaults to 'object'.  
-  **Post Object** will return the WP_Post object.  
-  **Post ID** will return the post ID.  
+  Specifies the returned value format. Choose from Post Object (WP_Post) or Post ID (integer).
   
-## Template usage  
-The Post Object field will return either a single post object (using [get_post](https://codex.wordpress.org/Function_Reference/get_post)) or an array of post objects (using [get_posts](https://codex.wordpress.org/Function_Reference/get_posts).
+## Template usage
+Depending on the chosen field settings, the Post Object field will return either a single value or array of values, where each value is either a WP_Post object or an integer value.
 
-### Display data (single post object)
-This example demonstrates how to display the Post Object's data using built-in WordPress functions.
+### Display selected post
+This example demonstrates how to display basic data (such as the post_title) from a Post Object value. The field in this example uses *Post Object* as the *Return Format* and is a single value.
 ```
 <?php
-
-$post_object = get_field('post_object');
-
-if( $post_object ): 
-
-	// Override $post
-	$post = $post_object;
-	setup_postdata( $post ); 
-
-	?>
-    <div>
-    	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-    	<span>Post Object Custom Field: <?php the_field('field_name'); ?></span>
-    </div>
-    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so rest of page works correctly ?>
+$featured_post = get_field('featured_post');
+if( $featured_post ): ?>
+	<h3><?php echo esc_html( $featured_post->post_title ); ?></h3>
 <?php endif; ?>
 ```
 
-### Display data (with setup_postdata)
-This example demonstrates how to loop through post objects (assuming this is a multi-select field). With this method, you can use all the normal WordPress functions as the `$post` object is [temporarily initialized](http://codex.wordpress.org/Template_Tags/get_posts#Reset_after_Postlists_with_offset) within the Loop.
+### Display list of posts *(with setup_postdata)*
+This example demonstrates how to loop over a Post Object value and display a list of clickable links. Here, we use a special function named `setup_postdata()` to enable the use of WordPress template functions. The field in this example uses *Post Object* as the *Return Format* and is a multiple value.
 ```
 <?php
-
-$post_objects = get_field('post_objects');
-
-if( $post_objects ): ?>
+$featured_posts = get_field('featured_posts');
+if( $featured_posts ): ?>
     <ul>
-    <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
-        <?php setup_postdata($post); ?>
+    <?php foreach( $featured_posts as $post ): 
+    
+        // Setup this post for WP functions (variable must be named $post).
+		setup_postdata($post); ?>
         <li>
             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            <span>Post Object Custom Field: <?php the_field('field_name'); ?></span>
+            <span>A custom field from this post: <?php the_field( 'field_name' ); ?></span>
         </li>
     <?php endforeach; ?>
     </ul>
-    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+    <?php 
+	// Reset the global post object so that the rest of the page works correctly.
+	wp_reset_postdata(); ?>
 <?php endif; ?>
 ```
 
-### Display data (without setup_postdata)
-This example demonstrates how to display data by looping through post objects (assuming this is a multi-select field). With this method, the $post object is never changed, so all functions need a second parameter of the post ID in question.
+### Display list of posts *(without setup_postdata)*
+This example demonstrates how to loop over a Post Object value and display a list of clickable links. Here, the global post variable is never changed, so all "post" related functions need a second parameter to specify which object. The field in this example uses *Post Object* as the *Return Format* and is a multiple value.
 ```
 <?php
-
-$post_objects = get_field('post_objects');
-
-if( $post_objects ): ?>
+$featured_posts = get_field('featured_posts');
+if( $featured_posts ): ?>
     <ul>
-    <?php foreach( $post_objects as $post_object ): ?>
+    <?php foreach( $featured_posts as $featured_post ): 
+		$permalink = get_permalink( $featured_post->ID );
+		$title = get_the_title( $featured_post->ID );
+		$custom_field = get_field( 'field_name', $featured_post->ID );
+		?>
         <li>
-            <a href="<?php echo get_permalink( $post_object->ID ); ?>"><?php echo get_the_title( $post_object->ID ); ?></a>
-            <span>Post Object Custom Field: <?php the_field('field_name', $post_object->ID); ?></span>
+            <a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
+            <span>A custom field from this post: <?php echo esc_html( $custom_field ); ?></span>
         </li>
     <?php endforeach; ?>
     </ul>
 <?php endif; ?>
-```
-
-### View data for debugging
-This example demonstrates how to print the contents of the field to the page for debugging purposes.
-```
-echo '<pre>';
-    print_r( get_field('post_objects')  );
-echo '</pre>';
-die;
 ```
 
 ## Notes
 
 ### Customization
-The Post Object field contains filters to allow for customization of the [posts displayed](https://www.advancedcustomfields.com/resources/acf-fields-post_object-query/), and the [text displayed](https://www.advancedcustomfields.com/resources/acf-fields-post_object-result/) for each post.
+The Post Object field contains PHP filters to customize the [posts displayed](https://www.advancedcustomfields.com/resources/acf-fields-post_object-query/), and the [text displayed](https://www.advancedcustomfields.com/resources/acf-fields-post_object-result/) for each post.
