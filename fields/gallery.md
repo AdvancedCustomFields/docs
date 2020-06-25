@@ -142,7 +142,8 @@ if( $image_ids ) {
 	$images_string = implode( ',', $image_ids );
 	
 	// Generate and do shortcode.
-	$shortcode = sprintf( '[gallery ids="%s"]', $images_string );
+    // Note: The following string is split to simply prevent our own website from rendering the gallery shortcode.
+	$shortcode = sprintf( '[' . 'gallery ids="%s"]', esc_attr($images_string) );
 	echo do_shortcode( $shortcode );
 }
 ```
