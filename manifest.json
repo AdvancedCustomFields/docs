@@ -275,8 +275,7 @@
         "keywords": [],
         "slug": "repeater",
         "path": "fields\/repeater.md",
-        "group": "Layout",
-        "status": "draft"
+        "group": "Layout"
     },
     {
         "title": "Select",

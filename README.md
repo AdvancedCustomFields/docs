@@ -35,6 +35,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [Radio Button](https://github.com/AdvancedCustomFields/docs/blob/master/fields/radio-button.md)
 - [Range](https://github.com/AdvancedCustomFields/docs/blob/master/fields/range.md)
 - [Relationship](https://github.com/AdvancedCustomFields/docs/blob/master/fields/relationship.md)
+- [Repeater](https://github.com/AdvancedCustomFields/docs/blob/master/fields/repeater.md)
 - [Select](https://github.com/AdvancedCustomFields/docs/blob/master/fields/select.md)
 - [Tab](https://github.com/AdvancedCustomFields/docs/blob/master/fields/tab.md)
 - [Taxonomy](https://github.com/AdvancedCustomFields/docs/blob/master/fields/taxonomy.md)
