@@ -495,7 +495,7 @@ The term "Inner Blocks" refers to the ability to enable nested content - blocks 
 
 To add support for inner blocks, use the `<InnerBlocks />` Component within your render template/callback to define an editable area. This special element will be displayed as a native "block inserter area" when editing content, and the saved "inner blocks content" when viewing content. Please note that only a single `<InnerBlocks />` Component may be used per block.
 
-In order for the `<innerBlocks />` Component to function within the React based block editor, your block HTML must first be parsed as JSX. This can easily be done by adding support for the `__experimental_jsx` property.
+In order for the `<InnerBlocks />` Component to function within the React based block editor, your block HTML must first be parsed as JSX. This can easily be done by adding support for the `__experimental_jsx` property.
 
 The following example demonstrates how to create the previous mentioned "Restricted" content block.
 
@@ -586,7 +586,7 @@ The `<InnerBlocks />` Component may also be customized with the following attrib
 	(Array) An array of block names that restricted the types of content that can be inserted.
 	```php
 	$allowed_blocks = array( 'core/image', 'core/paragraph' );
-	echo '<innerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $allowed_blocks ) ) . '" />';
+	echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $allowed_blocks ) ) . '" />';
 	```
   
 -	**template**  
@@ -607,7 +607,7 @@ The `<InnerBlocks />` Component may also be customized with the following attrib
 			) ),
 		) )
 	);
-	echo '<innerBlocks template="' . esc_attr( wp_json_encode( $template ) ) . '" templateLock="all" />';
+	echo '<InnerBlocks template="' . esc_attr( wp_json_encode( $template ) ) . '" templateLock="all" />';
 	```
 -	**templateLock**  
 	(String) Locks the template content. Available settings are "all" or "insert". See the [InnerBlocks Component](https://github.com/WordPress/gutenberg/tree/master/packages/block-editor/src/components/inner-blocks) for further information.
