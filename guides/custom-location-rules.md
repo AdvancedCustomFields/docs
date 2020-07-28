@@ -9,19 +9,23 @@ status: draft
 
 Location rules are used to determine which field groups appear on which admin screen. They are defined when editing a Field Group and consist of a location type, a comparison operator, and a value. 
 
-A typical location rule will look something like "Post Type == Post".
+One example of a location rule would be "Post Type == Post".
 
 <figure style="margin: 2em 0;">
-	<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-location-rule-example.png" alt="The Field Group Locations metabox" />
+	<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-location-rule-example.png">
+		<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-location-rule-example.png" alt="The Field Group Locations metabox" />
+	</a>
 	<figcaption>The Field Group Locations metabox</figcaption>
 </figure>
 
-A diverse set of location types are included within the Advanced Custom Fields plugin to satisfy the needs of most websites. In addition to these, extra location types may be defined to provide bespoke logic for the appearance of a Field Group.
+A diverse set of location types are included within the Advanced Custom Fields plugin to satisfy the needs of most websites. In addition to these, extra location types may be defined to provide bespoke logic for the location of a Field Group.
 
 This guide will walk through the process of creating and registering a custom location type.
 
 ## Requirements
 The `ACF_Location` class mentioned in this guide requires version 5.9.0 or above. If not already, please consider updating to take advantage of this great feature!
+
+For those using a previous version, please checkout [this guide](https://www.advancedcustomfields.com/resources/custom-location-rules-v-5-8/) instead.
 
 ## Getting Started
 To create a custom location type, simply extend the `ACF_Location` class and some of its methods. Then register it with the `acf_register_location_type()` function.
@@ -42,12 +46,12 @@ acf_register_location_type( 'My_Location' );
 ```
 
 ## ACF_Location
-The `ACF_Location` class contains multiple properties and methods, not all of which need to be customized. Before jumping into a working example, please familiarize yourself with the available properties and methods listed below.
+The `ACF_Location` class contains multiple properties and methods, not all of which need to be customized. Before jumping into the working example, please familiarize yourself with the available properties and methods listed below.
 
 ### Properties
 - **name**  
   (String) A unique name that identifies the location type. For example 'post_author'.  
-  Note: A location type name may only contain lowercase alphanumeric characters and underscores.
+  A location type name may only contain lowercase alphanumeric characters and underscores.
   ```
   $this->name = 'post_author';
   ```
@@ -59,7 +63,7 @@ The `ACF_Location` class contains multiple properties and methods, not all of wh
   ```
   
 - **category**  
-  (String) (Optional) The group where this location type appears in the location rule dropdown.  
+  (String) (Optional) The group where this location type appears in the location type dropdown.  
   Accepts "post", "page", "user", "forms" or a custom label. Defaults to "post".
   ```
   $this->category = 'post';
@@ -92,7 +96,7 @@ The `ACF_Location` class contains multiple properties and methods, not all of wh
 	Compares the provided location rule against the current screen args and returns true for a positive match.
 	Returning true will allow the Field Group to appear on the current screen. Returning false will prevent the Field Group from appearing on the current screen.
 	```
-	public function match( $rule, $screen, $field_group )
+	public function match( $rule, $screen, $field_group ) {
 		return false;
 	}
 	```
@@ -132,10 +136,10 @@ The `ACF_Location` class contains multiple properties and methods, not all of wh
 
 ## Example
 
-Let's put these properties and methods to good use and create a custom location type called "Post Author". This location type will allow a Field Group to appear when editing a Post based on the Post's Author attribute.
+Let's put some of these properties and methods to good use and create a custom location type called "Post Author". This location type will allow a Field Group to appear when editing a Post based on the Post's Author attribute.
 
 ### 1. Setup
-Our first task is to define a new `ACF_Location` class, using the `initialize()` method to setup properties. In this example, we will work within the theme file **includes/class-my-acf-location-post-author.php**.
+Our first task is to define a new `ACF_Location` class, using the `initialize()` method to setup the location type's properties. In this example, we will work within the theme file **includes/class-my-acf-location-post-author.php**.
 
 #### includes/class-my-acf-location-post-author.php
 ```php
@@ -171,9 +175,11 @@ function my_acf_init_location_types() {
 
 Presto 🎉. We can edit a Field Group and select the new location type.
 
-<figure>
-	<img src="https://www.advancedcustomfields.com/wp-content/uploads/2013/01/location-types1.png" alt="acf-blocks-introduction"/>
-	<figcaption>The location rule type drop-down showing a custom location type.</figcaption>
+<figure style="margin: 2em 0;">
+	<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-location-rule-type.png">
+		<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-location-rule-type.png" alt="Screenshot of selecting the Post Author location rule type" />
+	</a>
+	<figcaption>Selecting the "Post Author" location rule type</figcaption>
 </figure>
 
 ### 2. Customizing drop-downs
@@ -201,9 +207,11 @@ public function get_values( $rule ) {
 
 Our custom location type is starting to take shape! It is now possible to create a Location Rule that reads "Post Author == Elliot" 🙌. 
 
-<figure>
-	<img src="https://www.advancedcustomfields.com/wp-content/uploads/2013/01/location-value.png" alt="acf-blocks-introduction"/>
-	<figcaption>The location rule value drop-down showing a user selected.</figcaption>
+<figure style="margin: 2em 0;">
+	<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-location-rule-value.png">
+		<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-location-rule-value.png" alt="Screenshot of selecting the Post Author location rule value" />
+	</a>
+	<figcaption>Selecting the "Post Author" location rule value</figcaption>
 </figure>
 
 Lastly, we need to define the logic that compares a rule (such as "Post Author == Elliot") to the current screen.
@@ -247,11 +255,16 @@ public function match( $rule, $screen, $field_group ) {
 
 Congratulations 🎉! The Post Author location type is now complete. 
 
-[Screenshot]
+<figure style="margin: 2em 0;">
+	<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-location-rule-complete.png">
+		<img src="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-location-rule-complete.png" alt="The 'Post Author' location type matching correctly for the rule 'Post Author == Elliot'" />
+	</a>
+	<figcaption>The "Post Author" location type matching correctly for the rule "Post Author == Elliot"</figcaption>
+</figure>
 
-### Complete
+### Complete code
 
-Here is the complete code needed for a custom "Post Author" location type.
+For reference, here is the complete code written for the custom "Post Author" location type.
 
 #### includes/class-my-acf-location-post-author.php
 ```php
@@ -270,7 +283,9 @@ class My_ACF_Location_Post_Author extends ACF_Location {
 
 	public function get_values( $rule ) {
 		$choices = array();
-		$users = get_users( $args );
+
+		// Load all users, loop over them and append to chcoices.
+		$users = get_users();
 		if( $users ) {
 			foreach( $users as $user ) {
 				$choices[ $user->ID ] = $user->display_name;
@@ -325,5 +340,3 @@ The `ACF_Location` class makes light work of creating custom location rules. In 
 - Register a new location type that can be selected within a Field Group's location rules.
 - Customize the values displayed in the location rule *value* dropdown.
 - Calculate whether or not a rule matches the current edit screen.
-
-Wishing you all the best with your project 👋.
