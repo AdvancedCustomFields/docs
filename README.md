@@ -107,6 +107,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 
 ### Guides
 - [Blocks](https://github.com/AdvancedCustomFields/docs/blob/master/guides/blocks.md)
+- [Custom location rules](https://github.com/AdvancedCustomFields/docs/blob/master/guides/custom-location-rules.md)
 - [Including ACF within a plugin or theme](https://github.com/AdvancedCustomFields/docs/blob/master/guides/including-acf-within-a-plugin-or-theme.md)
 - [JavaScript API](https://github.com/AdvancedCustomFields/docs/blob/master/guides/javascript-api.md)
 

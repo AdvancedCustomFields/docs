@@ -856,6 +856,14 @@
         "group": "Features"
     },
     {
+        "title": "Custom location rules",
+        "description": null,
+        "category": "guides",
+        "keywords": [],
+        "slug": "custom-location-rules",
+        "path": "guides\/custom-location-rules.md"
+    },
+    {
         "title": "Frequently Asked Questions",
         "description": "An extensive list of frequently asked questions to help you quickly get on with your project.",
         "category": "",

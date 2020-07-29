@@ -2,7 +2,6 @@
 title: Custom location rules
 description: 
 category: guides
-status: draft
 ---
 
 ## Introduction
