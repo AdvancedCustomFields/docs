@@ -24,7 +24,7 @@ This guide will walk through the process of creating and registering a custom lo
 ## Requirements
 The `ACF_Location` class mentioned in this guide requires version 5.9.0 or above. If not already, please consider updating to take advantage of this great feature!
 
-For those using a previous version, please checkout [this guide](https://www.advancedcustomfields.com/resources/custom-location-rules-v-5-8/) instead.
+For those using a previous version, please checkout [this guide](https://www.advancedcustomfields.com/resources/custom-location-rules--v5-8/) instead.
 
 ## Getting Started
 To create a custom location type, simply extend the `ACF_Location` class and some of its methods. Then register it with the `acf_register_location_type()` function.
