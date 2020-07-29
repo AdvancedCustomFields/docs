@@ -252,7 +252,7 @@ public function match( $rule, $screen, $field_group ) {
 }
 ```
 
-Congratulations 🎉! The Post Author location type is now complete. 
+Congratulations 🎉 The Post Author location type is now complete! A Field Group using this location type will display only when editing a Post where the Post's Author is "Eliot".
 
 <figure style="margin: 2em 0;">
 	<a href="https://raw.githubusercontent.com/AdvancedCustomFields/docs/master/assets/acf-location-rule-complete.png">
