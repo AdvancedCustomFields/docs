@@ -156,7 +156,7 @@ function my_update_value_date_time_picker( $value, $post_id, $field ) {
 The value selected can be returned and displayed in different formats but will be saved to the database as ‘Y-m-d H:i:s’. This format is used throughout the WordPress database tables and will allow for straight-foward database querying.
 
 ### Date format strings
-To customize the _Display Format_ and _Return Format_ settings further, refer to the full list of date format strings within the [PHP date() documentation](http://php.net/manual/en/function.date.php).
+To customize the _Display Format_ and _Return Format_ settings further, refer to the full list of date format strings within the [DateTime::createFromFormat() documentation](https://www.php.net/manual/en/datetime.createfromformat.php).
 
 ### Translations
 If you require the date to be displayed in a non English language, WordPress contains a function called [date_i18n()](http://codex.wordpress.org/Function_Reference/date_i18n) which will perform the translation for you.
