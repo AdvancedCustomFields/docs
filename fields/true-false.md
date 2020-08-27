@@ -53,8 +53,7 @@ This example demonstrates how to use the value of 'enable_sidebar' to conditiona
 
 ```
 <?php
-
-if( get_field('color') == 'enable_sidebar' ) {
+if( get_field('color') ) {
 	// Do something.
 }
 ```
