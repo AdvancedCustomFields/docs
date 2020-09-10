@@ -358,7 +358,7 @@ acf.addAction('valid_field/key=field_123456', myCallback);	// field with key "fi
 ### date_picker_init
 Called when a date picker has been initialized. Added in v5.5.8
 ```js
-acf.add_action('date_picker_init', function( $input, args, field ){
+acf.addAction('date_picker_init', function( $input, args, field ){
 	// $input (jQuery) text input element
 	// args (object) args given to the datepicker function
 	// field (object) field instance 
@@ -368,7 +368,7 @@ acf.add_action('date_picker_init', function( $input, args, field ){
 ### date_time_picker_init
 Called when a date time picker has been initialized. Added in v5.5.8
 ```js
-acf.add_action('date_time_picker_init', function( $input, args, field ){
+acf.addAction('date_time_picker_init', function( $input, args, field ){
 	// $input (jQuery) text input element
 	// args (object) args given to the datepicker function
 	// field (object) field instance 
@@ -378,7 +378,7 @@ acf.add_action('date_time_picker_init', function( $input, args, field ){
 ### time_picker_init
 Called when a time picker has been initialized. Added in v5.5.8
 ```js
-acf.add_action('time_picker_init', function( $input, args, field ){
+acf.addAction('time_picker_init', function( $input, args, field ){
 	// $input (jQuery) text input element
 	// args (object) args given to the datepicker function
 	// field (object) field instance 
@@ -388,7 +388,7 @@ acf.add_action('time_picker_init', function( $input, args, field ){
 ### select2_init
 Called when a Select2 element has been initialized. Added in v5.5.8
 ```js
-acf.add_action('select2_init', function( $select, args, settings, field ){
+acf.addAction('select2_init', function( $select, args, settings, field ){
 	// $select (jQuery) select element
 	// args (object) args given to the select2 function
 	// settings (object) settings given to the acf.select2 function
@@ -399,7 +399,7 @@ acf.add_action('select2_init', function( $select, args, settings, field ){
 ### wysiwyg_tinymce_init
 Called when a WYSIWYG tinymce element has been initialized. Added in v5.5.8
 ```js
-acf.add_action('wysiwyg_tinymce_init', function( ed, id, mceInit, field ){
+acf.addAction('wysiwyg_tinymce_init', function( ed, id, mceInit, field ){
 	// ed (object) tinymce object returned by the init function
 	// id (string) identifier for the tinymce instance
 	// mceInit (object) args given to the tinymce function
@@ -410,7 +410,7 @@ acf.add_action('wysiwyg_tinymce_init', function( ed, id, mceInit, field ){
 ### wysiwyg_quicktags_init
 Called when a WYSIWYG quickktags element has been initialized. Each tinymce instance can also contain a ‘text’ edit mode that shows basic ‘quicktag’ buttons. Added in v5.5.8
 ```js
-acf.add_action('wysiwyg_quicktags_init', function( qtag, id, qtInit, field ){
+acf.addAction('wysiwyg_quicktags_init', function( qtag, id, qtInit, field ){
 	// qtag (object) quick tag object returned by the init function
 	// id (string) identifier for the qtag instance
 	// qtInit (object) args given to the quick tag function
@@ -421,7 +421,7 @@ acf.add_action('wysiwyg_quicktags_init', function( qtag, id, qtInit, field ){
 ### google_map_init
 Called when a Google Map element has been initialized. Added in v5.5.11
 ```js
-acf.add_action('google_map_init', function( map, marker, field ){
+acf.addAction('google_map_init', function( map, marker, field ){
 	// map (object) google map object returned by the google.maps.Map() function
 	// marker (object) marker object returned by the google.maps.Marker() function
 	// field (object) field instance 
