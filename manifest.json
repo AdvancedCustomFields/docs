@@ -893,6 +893,15 @@
         "group": "Tutorials"
     },
     {
+        "title": "Multilingual Custom Fields",
+        "description": "",
+        "category": "guides",
+        "keywords": [],
+        "slug": "multilingual-custom-fields",
+        "path": "guides\/multilingual-custom-fields.md",
+        "group": "Tutorials"
+    },
+    {
         "title": "Test Accordion",
         "description": "",
         "category": "",

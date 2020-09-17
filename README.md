@@ -110,6 +110,7 @@ Welcome to the GitHub documentation repository for the [Advanced Custom Fields](
 - [Custom location rules](https://github.com/AdvancedCustomFields/docs/blob/master/guides/custom-location-rules.md)
 - [Including ACF within a plugin or theme](https://github.com/AdvancedCustomFields/docs/blob/master/guides/including-acf-within-a-plugin-or-theme.md)
 - [JavaScript API](https://github.com/AdvancedCustomFields/docs/blob/master/guides/javascript-api.md)
+- [Multilingual Custom Fields](https://github.com/AdvancedCustomFields/docs/blob/master/guides/multilingual-custom-fields.md)
 
 ### Other
 - [Frequently Asked Questions](https://github.com/AdvancedCustomFields/docs/blob/master/guides/frequently-asked-questions.md)
