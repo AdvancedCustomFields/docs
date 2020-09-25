@@ -80,7 +80,7 @@ Yes. Licenses are renewed automatically each year to give you continued access t
 
 ### What payment methods do you accept?
 
-You can safely purchase ACF PRO with your PayPal account, or with a credit card through PayPal or Stripe.
+You can safely purchase ACF PRO with your credit card through Stripe's secure payment gateway.
 
 
 ### Are you registered for tax?
@@ -430,10 +430,23 @@ Finally, you'll need to upload the older version to your wp-content/plugins dire
 
 ### What is a license?
 
-License keys are used to enable plugin updates. After purchasing an ACF PRO license, you will receive a unique license key (alongside your ACF PRO plugin download). This key can be activated from your WordPress dashboard’s plugin page. License keys can be activated, deactivated and upgraded at any time. 
+License keys are used to enable plugin updates. After purchasing an ACF PRO license, you will receive a unique license key and access to download plugin files via our members area.
 
-### Can I upgrade my license?
-Yes. You can upgrade (and downgrade) your license at any time. Simply login to your [account area](https://www.advancedcustomfields.com/my-account) and find your subscription to access upgrading actions.
+After installing and activating the ACF PRO plugin, you may then activate your license key from the "Custom Fields > Updates" admin screen to register that website for plugin updates.
+
+### Can I upgrade/downgrade my license?
+Yes. You can upgrade or downgrade your license at any time. Simply login to your [account area](https://www.advancedcustomfields.com/my-account) and navigate to the Subscriptions page. Once viewing your subscription, please use the "Upgrade or Downgrade" button shown next to the Product title and follow the prompts to sign-up to a new tier and complete the checkout.
+
+If this button does not appear, the problem may be due to a PayPal related API issue. In order to solve this limitation, please use the "Change payment" button to first enter a valid credit card via the Stripe payment gateway.
+
+License upgrade costs are pro-rated. The calculated amount will take into account the current subscription length and the difference in price between tiers. For example, Jane subscribed to a Personal license ($49 USD yearly) and then decides to upgrade to the Freelancer tier ($149 USD yearly) after exactly 3 months. The initial "upgrade fee" will be calculated as `($149 - $49) / 12 * 9 = $75 USD` with a then ongoing yearly subscription fee of $149 USD.
+
+License downgrades are free, however, we encourage you to [contact support](/contact) and ask if a partial refund can be applied.
+
+### Can I opt out of yearly subscriptions?
+Yes. By default, your subscription will be setup to auto-renew 12 months after sign-up. To opt out, simply login to your [account area](https://www.advancedcustomfields.com/my-account) and navigate to the Subscriptions page. Once viewing your subscription, please toggle the "Auto renew" switch to the off position.
+
+With auto renewals disabled, your subscription will end at the end of the 12 month period. However, it will still be possible to manually renew or enable auto updates again to continue receiving access to the latest plugin releases.
 
 ### How do I activate my license key?
 
