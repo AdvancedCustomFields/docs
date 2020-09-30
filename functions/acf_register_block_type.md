@@ -99,6 +99,18 @@ acf_register_block_type( $settings );
   'align' => 'full',
   ```
   
+-	**align_text**  
+	 (String) (Optional) The default block text alignment (see supports setting for more info). Available settings are "left", "center" and "right". Defaults to the current language's text alignment.
+	 ```
+	 'align_text' => 'center',
+	 ``` 
+	 
+-	**align_content**  
+	   (String) (Optional) The default block content alignment (see supports setting for more info). Available settings are "top", "center" and "bottom". When utilising the "Matrix" control type, additional settings are available to specify all 9 positions from "top left" to "bottom right". Defaults to "top".
+	   ```
+	   'align_content' => 'center',
+	   ``` 
+	   
 - **render_template**  
   (String) The path to a template file used to render the block HTML. This can either be a relative path to a file within the active theme or a full path to any file.
   ```
@@ -154,7 +166,7 @@ acf_register_block_type( $settings );
   ```
   
   - **align**  
-    This property adds block controls which allow the user to change the block’s alignment. Defaults to `true`. Set to `false` to hide the alignment toolbar. Set to an array of specific alignment names to customize the toolbar.
+    This property enables a toolbar button to control the block’s alignment. Defaults to `true`. Set to `false` to hide the alignment toolbar. Set to an array of specific alignment names to customize the toolbar.
     ```
     // disable alignment toolbar
     'align' => false,
@@ -162,7 +174,23 @@ acf_register_block_type( $settings );
     // customize alignment toolbar
     'align' => array( 'left', 'right', 'full' ),
     ```
-
+	
+  - **align_text**  
+	This property enables a toolbar button to control the block's text alignment. Defaults to `false`. Set to `true` to show the alignment toolbar button.  
+	The current selected alignment value will be accessible within the render callback/template via `$block['align_text']`.
+	```
+	// Show text alignment toolbar.
+	'align_text' => true,
+	```
+	
+  - **align_content**  
+	This property enables a toolbar button to control the block's inner content alignment. Defaults to `false`. Set to `true` to show the alignment toolbar button.  
+	The current selected alignment value will be accessible within the render callback/template via `$block['align_content']`.
+	```
+	// Show content alignment toolbar.
+	'align_content' => true,
+	```
+	
   - **mode**  
     This property allows the user to toggle between edit and preview modes via a button. Defaults to `true`.
     ```
@@ -196,6 +224,8 @@ acf_register_block_type( $settings );
 
 ## Changelog
 - Added in version 5.8.0
+- Added "align_text" settings in version 5.9.0.
+- Added "align_content" settings in version 5.9.0.
 
 ## Examples
 
