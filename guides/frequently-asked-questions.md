@@ -472,6 +472,27 @@ No personal data such as usernames or emails or IP addresses are recorded.
 
 If you'd like to find out more about our approach to data and privacy, please read our [Privacy Policy](https://www.advancedcustomfields.com/legal/privacy/)
 
+### How many times can I activate my license?
+
+The maximum number of "active" activations is limited by the license tier. Currently, we offer three tiers with increasing limits:
+- **Personal:** 1 website.
+- **Freelancer:** 10 websites.
+- **Agency:** Unlimited websites.
+
+In addition, we provide an extra *n* activations for "development + staging" websites. For example, a Freelancer license can be activated on 10 production websites and 10 development websites. Similarly, a Freelancer license can be activated on 10 production websites, 6 staging websites and 4 development sites.
+
+To better understand how we determine if a website is considered a production, staging or development environment, please consult the following ruleset:
+- **Dev:** Is URL a single segment? (localhost)
+- **Dev:** Is URL an IP address? (192.168.0.1)
+- **Dev:** Does the URL contain a dev related segment? (dev.website.com, website.dev, website.dev.cc)
+- **Dev:** Does the URL contain a dev-related subdomain? (test., testing., sandbox., dev., local.)
+- **Dev:** Does the URL contain a dev-related TLD? (.local, .loc, .localhost, .test, .dev)​​
+- **Stage:** Does Does the URL contain a stage-related subdomain? (stage., staging.)
+- **Stage:** Does Does the URL contain a stage-related parent? (staging-sitename.kinsta.cloud, sitename.flywheelstaging.com, test.wpengine.com)
+- **Prod:** All other URLs.
+
+Remember you can upgrade or downgrade your license at anytime, and our [support team](/contact) is always here to help answer your questions!
+
 ## Support Questions
 
 ### What kind of support do you provide?
