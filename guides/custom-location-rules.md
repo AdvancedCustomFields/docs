@@ -2,6 +2,7 @@
 title: Custom location rules
 description: 
 category: guides
+group: Tutorials
 ---
 
 ## Introduction
