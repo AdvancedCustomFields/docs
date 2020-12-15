@@ -29,6 +29,9 @@ Be mindful that `<script>` tags will be escaped at all times so any JavaScript p
 </div>
 
 ## Changelog
+- Added `new_lines` setting in version 5.3.1
+- Added `esc_html` setting to show HTML as plain text in version 5.1.9
+- Added `wrapper` settings in version 5.1.8
 
 ## Settings
 - **Message**  

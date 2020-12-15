@@ -24,7 +24,11 @@ The Email field creates an email input for storing email addresses.
 </div>
 
 ## Changelog
-- Email validation added in 5.9.4
+- Added server-side validation in version 5.9.4
+- Added `multiple` to the allowed attributes for an email field in version 5.7.2
+- Added `prepend`, `append` and `placeholder` settings in version 4.2.0
+- Added front-end validation in version 4.1.5
+- Field added in version 4.0.0
 
 ## Settings
 - **Default Value**  

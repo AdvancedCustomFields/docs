@@ -24,6 +24,8 @@ The Password field creates a text field that renders placeholder characters inst
 </div>
 
 ## Changelog
+- Added `prepend`, `append` and `placeholder` settings in version 4.2.0
+- Field added in version 4.0.0
 
 ## Settings  
 - **Placeholder Text**  

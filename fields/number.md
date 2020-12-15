@@ -24,6 +24,12 @@ The Number field creates a basic numerical input for storing numbers.
 </div>
 
 ## Changelog
+- Fixed bug causing blank values to save as 0 in version 4.3.6
+- Added `prepend`, `append` and `placeholder` settings in version 4.2.0
+- Fixed step size decimal bug in version 4.1.7
+- Added `min`, `max` and `step` settings in version 4.1.6
+- Added `default` setting in version 3.4.1
+- Field added in version 3.3.8
 
 ## Settings
 - **Default Value**  
