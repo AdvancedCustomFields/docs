@@ -160,7 +160,7 @@ acf_register_block_type( $settings );
   ```
   
 - **supports**  
-  (Array) (Optional) An array of features to support. All properties from the JavaScript [block supports](https://wordpress.org/gutenberg/handbook/block-api/) documentation may be used. The following options are supported:
+  (Array) (Optional) An array of features to support. All properties from the JavaScript [block supports](https://developer.wordpress.org/block-editor/developers/block-api/block-supports/) documentation may be used. The following options are supported:
   ```
   'supports' => array( /* ... */ ),
   ```
