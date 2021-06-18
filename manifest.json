@@ -907,8 +907,8 @@
         "description": "",
         "category": "",
         "keywords": [],
-        "slug": "accordion",
-        "path": "tests\/accordion.md",
+        "slug": "test-accordion",
+        "path": "tests\/test-accordion.md",
         "status": "draft"
     }
 ]
