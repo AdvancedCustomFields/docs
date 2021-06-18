@@ -861,7 +861,8 @@
         "category": "guides",
         "keywords": [],
         "slug": "custom-location-rules",
-        "path": "guides\/custom-location-rules.md"
+        "path": "guides\/custom-location-rules.md",
+        "group": "Tutorials"
     },
     {
         "title": "Frequently Asked Questions",
@@ -878,7 +879,7 @@
         "keywords": [],
         "slug": "including-acf-within-a-plugin-or-theme",
         "path": "guides\/including-acf-within-a-plugin-or-theme.md",
-        "group": "Features",
+        "group": "How to",
         "redirects": [
             "including-acf-in-a-plugin-theme"
         ]
