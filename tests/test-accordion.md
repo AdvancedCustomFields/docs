@@ -1,7 +1,9 @@
 ---
-title: Test Accordion
+title: Test Accordion 2
 status: draft
 ---
+
+New content!
 
 ## Description
 Some normal content here.
